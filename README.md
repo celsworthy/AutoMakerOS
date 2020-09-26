@@ -7,13 +7,23 @@ The open-source version of the software is "a work in progress". Notes on how to
 
 AutoMaker Developer Notes
 
+Until now installation packages for AutoMaker have been built using the commercial BitRock InstallBuilder tool. As there was insufficient time to develop an alternative, open source install builder, the software has been released without one. A simple work around that involves overlaying a new version onto an existing installation is described below.
+
 Building
 
 Clone the git repositories
 
-git clone https://github.com/CEL-UK/AutoMakerOS.git
+git clone https://github.com/celsworthy/AutoMakerOS.git
 
-Use NetBeans IDE to build.
+AutoMaker is written in Java and uses JavaFX graphics. Java OpenJDK Version 11 or higher, with JavaFX, must be installed, along with Apache NetBeans Version 12 or higher.
+
+Liberica BellSoft offer suitable versions of Java for Windows, MacOS and Linux, including a version for the Raspberry Pi, which is required for Root). The website is here:
+
+    https://bell-sw.com/pages/downloads/#/java-11-lts
+
+Apache NetBeans can be downloaded from here:
+
+    https://netbeans.apache.org/download
 
 The repository includes several NetBeans projects. Build them in this order:
 
@@ -234,7 +244,7 @@ To create a new image:
 With luck and a following wind, the system will reboot into Root.
 
 Updating Root
-======
+=============
 When copying a development version onto the RPi, first delete the following:
 
 	rm -rf /home/pi/ARM-32bit/Root/lib/
