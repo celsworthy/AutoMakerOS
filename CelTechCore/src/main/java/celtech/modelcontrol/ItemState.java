@@ -10,12 +10,12 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 public abstract class ItemState
 {
 
-    public int modelId;
-    public double x;
-    public double y;
-    public double preferredXScale;
-    public double preferredYScale;
-    public double preferredRotationTurn;
+    public int modelId = -1;
+    public double x = 0.0;
+    public double y = 0.0;
+    public double preferredXScale = 1.0;
+    public double preferredYScale = 1.0;
+    public double preferredRotationTurn = 0.0;
     
     public abstract void assignFrom(ItemState fromState);
 

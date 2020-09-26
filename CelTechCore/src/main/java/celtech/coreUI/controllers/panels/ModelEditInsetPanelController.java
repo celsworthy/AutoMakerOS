@@ -7,6 +7,7 @@ import celtech.Lookup;
 import celtech.appManager.ApplicationMode;
 import celtech.appManager.ApplicationStatus;
 import celtech.appManager.Project;
+import celtech.appManager.ProjectMode;
 import celtech.appManager.undo.UndoableProject;
 import celtech.coreUI.LayoutSubmode;
 import celtech.coreUI.ProjectGUIRules;
@@ -17,16 +18,14 @@ import celtech.coreUI.visualisation.ShapeProviderThreeD;
 import celtech.modelcontrol.ModelContainer;
 import celtech.modelcontrol.ModelGroup;
 import celtech.modelcontrol.ProjectifiableThing;
-import celtech.modelcontrol.TranslateableTwoD;
 import celtech.modelcontrol.ScaleableTwoD;
 import celtech.modelcontrol.ScaleableThreeD;
 import celtech.modelcontrol.ResizeableTwoD;
-import celtech.modelcontrol.Groupable;
 import celtech.modelcontrol.ResizeableThreeD;
 import celtech.modelcontrol.RotatableThreeD;
 import celtech.modelcontrol.RotatableTwoD;
-import celtech.modelcontrol.Translateable;
 import celtech.modelcontrol.TranslateableThreeD;
+import celtech.modelcontrol.TranslateableTwoD;
 import celtech.roboxbase.utils.Math.MathUtils;
 import java.net.URL;
 import java.text.DecimalFormat;
@@ -113,6 +112,15 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
     private Label depthCaption;
 
     @FXML
+    private Label twistCaption;
+
+    @FXML
+    private Label leanCaption;
+
+    @FXML
+    private Label turnCaption;
+
+    @FXML
     private RestrictedNumberField scaleTextWidthField;
 
     @FXML
@@ -152,6 +160,9 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
     private VBox rotatePanel;
 
     @FXML
+    private VBox materialPanel;
+
+    @FXML
     private ToggleButton moveButton;
 
     @FXML
@@ -184,7 +195,7 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
     private ChangeListener<Number> xAxisListener = null;
     private ChangeListener<Number> yAxisListener = null;
 
-    private final String scaleFormat = "######.###";
+    private final DecimalFormat scaleFormatter = new DecimalFormat("######.###");
     private final String rotationFormat = "%.0f";
     /**
      * The last scale ratio that was applied to the current selection. This
@@ -271,18 +282,31 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
 
     private void updateProportionalLabels(boolean proportionalOn)
     {
-        scaleTextDepthField.setVisible(proportionalOn);
-        scaleTextHeightField.setVisible(proportionalOn);
-        scaleTextWidthField.setVisible(proportionalOn);
-        depthTextField.setVisible(!proportionalOn);
-        heightTextField.setVisible(!proportionalOn);
-        widthTextField.setVisible(!proportionalOn);
-        scaleXCaption.setVisible(proportionalOn);
-        scaleYCaption.setVisible(proportionalOn);
-        scaleZCaption.setVisible(proportionalOn);
-        depthCaption.setVisible(!proportionalOn);
-        heightCaption.setVisible(!proportionalOn);
-        widthCaption.setVisible(!proportionalOn);
+        boolean isTwoDScaleable = false;
+        boolean isThreeDScaleable = false;
+        if (currentProject != null)
+        {
+            ProjectifiableThing firstModel = Lookup.getProjectGUIState(currentProject).getProjectSelection().getSelectedModelsSnapshot().iterator().next();
+            isTwoDScaleable = ScaleableTwoD.class.isInstance(firstModel);
+            isThreeDScaleable = ScaleableThreeD.class.isInstance(firstModel);
+            // If isThreeDScaleable is true, then isTwoDScaleable will be true
+            // because ScaleableThreeD extends ScaleableTwoD. So scaleX/width and
+            // scaleY/height will be visible for both 2D and 3D shapes.
+        }
+        scaleXCaption.setVisible(isTwoDScaleable && proportionalOn);
+        scaleTextWidthField.setVisible(isTwoDScaleable && proportionalOn);
+        widthCaption.setVisible(isTwoDScaleable && !proportionalOn);
+        widthTextField.setVisible(isTwoDScaleable && !proportionalOn);
+
+        scaleYCaption.setVisible(isTwoDScaleable && proportionalOn);
+        scaleTextHeightField.setVisible(isTwoDScaleable && proportionalOn);
+        heightCaption.setVisible(isTwoDScaleable && !proportionalOn);
+        heightTextField.setVisible(isTwoDScaleable && !proportionalOn);
+
+        scaleZCaption.setVisible(isThreeDScaleable && proportionalOn);
+        scaleTextDepthField.setVisible(isThreeDScaleable && proportionalOn);
+        depthCaption.setVisible(isThreeDScaleable && !proportionalOn);
+        depthTextField.setVisible(isThreeDScaleable && !proportionalOn);
     }
 
     @Override
@@ -391,12 +415,15 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
 
             if (showDisplay)
             {
-                boolean foundMaterial0 = false;
-                boolean foundMaterial1 = false;
-                boolean displayMaterialButtons = false;
+                ProjectMode mode = currentProject.getMode();
 
-                if (Lookup.getProjectGUIState(currentProject).getProjectSelection().getSelectedModelsSnapshot().size() > 0)
+                if (mode == ProjectMode.MESH)
                 {
+                    boolean foundMaterial0 = false;
+                    boolean foundMaterial1 = false;
+                    boolean displayMaterialButtons = false;
+            
+                    materialPanel.setVisible(true);
                     Iterator<ProjectifiableThing> selectedModelIterator = Lookup.getProjectGUIState(currentProject).getProjectSelection().getSelectedModelsSnapshot().iterator();
 
                     while (selectedModelIterator.hasNext())
@@ -428,58 +455,61 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
                             displayMaterialButtons = true;
                         }
                     }
-
-                    ProjectifiableThing firstModel = Lookup.getProjectGUIState(currentProject).getProjectSelection().getSelectedModelsSnapshot().iterator().next();
-
-                    boolean isTwoDTranslateable = TranslateableTwoD.class.isInstance(firstModel);
-                    boolean isThreeDTranslateable = TranslateableThreeD.class.isInstance(firstModel);
-
-                    xAxisTextField.setVisible(isTwoDTranslateable || isThreeDTranslateable);
-                    yAxisTextField.setVisible(isTwoDTranslateable || isThreeDTranslateable);
-
-                    boolean isTwoDScaleable = ScaleableTwoD.class.isInstance(firstModel);
-                    boolean isThreeDScaleable = ScaleableThreeD.class.isInstance(firstModel);
-
-                    scaleXCaption.setVisible((isTwoDScaleable || isThreeDScaleable) && useProportionalScaleSwitch.selectedProperty().get());
-                    widthCaption.setVisible((isTwoDScaleable || isThreeDScaleable) && !useProportionalScaleSwitch.selectedProperty().get());
-                    widthTextField.setVisible((isTwoDScaleable || isThreeDScaleable) && !useProportionalScaleSwitch.selectedProperty().get());
-                    scaleTextWidthField.setVisible((isTwoDScaleable || isThreeDScaleable) && useProportionalScaleSwitch.selectedProperty().get());
-                    scaleYCaption.setVisible((isTwoDScaleable || isThreeDScaleable) && useProportionalScaleSwitch.selectedProperty().get());
-                    heightCaption.setVisible((isTwoDScaleable || isThreeDScaleable) && !useProportionalScaleSwitch.selectedProperty().get());
-                    heightTextField.setVisible((isTwoDScaleable || isThreeDScaleable) && !useProportionalScaleSwitch.selectedProperty().get());
-                    scaleTextHeightField.setVisible((isTwoDScaleable || isThreeDScaleable) && useProportionalScaleSwitch.selectedProperty().get());
-                    scaleZCaption.setVisible(isThreeDScaleable && useProportionalScaleSwitch.selectedProperty().get());
-                    depthCaption.setVisible(isThreeDScaleable && !useProportionalScaleSwitch.selectedProperty().get());
-                    depthTextField.setVisible(isThreeDScaleable && !useProportionalScaleSwitch.selectedProperty().get());
-                    scaleTextDepthField.setVisible(isThreeDScaleable && useProportionalScaleSwitch.selectedProperty().get());
-
-                    boolean isTwoDRotatable = RotatableTwoD.class.isInstance(firstModel);
-                    boolean isThreeDRotatable = RotatableThreeD.class.isInstance(firstModel);
-
-                    rotationXTextField.setVisible(isThreeDRotatable);
-                    rotationYTextField.setVisible(isThreeDRotatable);
-                    rotationZTextField.setVisible(isTwoDRotatable || isThreeDRotatable);
-                }
-
-                if (displayMaterialButtons)
-                {
-                    setMaterial0Button.setVisible(true);
-                    setMaterial1Button.setVisible(true);
-                    if (foundMaterial0 && !foundMaterial1)
+                    if (displayMaterialButtons)
                     {
-                        materialButtons.selectToggle(setMaterial0Button);
-                    } else if (!foundMaterial0 && foundMaterial1)
-                    {
-                        materialButtons.selectToggle(setMaterial1Button);
-                    } else
-                    {
-                        materialButtons.selectToggle(null);
+                        setMaterial0Button.setVisible(true);
+                        setMaterial1Button.setVisible(true);
+                        if (foundMaterial0 && !foundMaterial1)
+                        {
+                            materialButtons.selectToggle(setMaterial0Button);
+                        }
+                        else if (!foundMaterial0 && foundMaterial1)
+                        {
+                            materialButtons.selectToggle(setMaterial1Button);
+                        }
+                        else
+                        {
+                            materialButtons.selectToggle(null);
+                        }
                     }
-                } else
+                    else
+                    {
+                        setMaterial0Button.setVisible(false);
+                        setMaterial1Button.setVisible(false);
+                    }
+                }   
+                else
                 {
-                    setMaterial0Button.setVisible(false);
-                    setMaterial1Button.setVisible(false);
+                    // No materials in SVG project.
+                    materialPanel.setVisible(false);
                 }
+
+                ProjectifiableThing firstModel = Lookup.getProjectGUIState(currentProject).getProjectSelection().getSelectedModelsSnapshot().iterator().next();
+
+                boolean isTwoDTranslateable = TranslateableTwoD.class.isInstance(firstModel);
+                // boolean isThreeDTranslateable = TranslateableThreeD.class.isInstance(firstModel);
+                // If isThreeDTranslateable is true, then isTwoDTranslateable will be true
+                // because TranslateableThreeD extends TranslateableTwoD. So
+                // the following two fields will be set visible for both 2D and 3D shapes.
+
+                xAxisTextField.setVisible(isTwoDTranslateable);
+                yAxisTextField.setVisible(isTwoDTranslateable);
+
+                boolean usePSS = useProportionalScaleSwitch.selectedProperty().get();
+                updateProportionalLabels(usePSS);
+
+                boolean isThreeDRotatable = RotatableThreeD.class.isInstance(firstModel);
+                boolean isTwoDRotatable = RotatableTwoD.class.isInstance(firstModel);
+                // If isThreeDRotatable is true, then isTwoDRotatable will be true
+                // because RotatableThreeD extends RotatableTwoD. So turn will be visible
+                // for both 2D and 3D shapes.
+                 
+                twistCaption.setVisible(isThreeDRotatable);
+                rotationXTextField.setVisible(isThreeDRotatable);
+                leanCaption.setVisible(isThreeDRotatable);
+                rotationYTextField.setVisible(isThreeDRotatable);
+                turnCaption.setVisible(isTwoDRotatable);
+                rotationZTextField.setVisible(isTwoDRotatable);
             }
         }
 
@@ -563,7 +593,7 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
     {
         Set<ModelContainer> modelGroups = currentProject.getAllModels().stream().map(ModelContainer.class::cast).filter(
                 mc -> mc instanceof ModelGroup).collect(Collectors.toSet());
-        Set<Groupable> modelContainers = (Set) Lookup.getProjectGUIState(currentProject).getProjectSelection().getSelectedModelsSnapshot();
+        Set<ProjectifiableThing> modelContainers = Lookup.getProjectGUIState(currentProject).getProjectSelection().getSelectedModelsSnapshot();
         undoableProject.group(modelContainers);
         Set<ModelContainer> changedModelGroups = currentProject.getAllModels().stream().map(ModelContainer.class::cast).filter(
                 mc -> mc instanceof ModelGroup).collect(Collectors.toSet());
@@ -890,29 +920,29 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
 
     private void showScaleForXYZ(double scaleRatio)
     {
-        DecimalFormat myFormatter = new DecimalFormat(scaleFormat);
-        String scaleString = myFormatter.format(scaleRatio * 100f);
-        scaleTextWidthField.setValue(scaleRatio * 100);
+        double scalePercentage = 100.0 * scaleRatio;
+        String scaleString = scaleFormatter.format(scalePercentage);
+        scaleTextWidthField.setValue(scalePercentage);
         scaleTextWidthField.setText(scaleString);
-        scaleTextHeightField.setValue(scaleRatio * 100);
+        scaleTextHeightField.setValue(scalePercentage);
         scaleTextHeightField.setText(scaleString);
-        scaleTextDepthField.setValue(scaleRatio * 100);
+        scaleTextDepthField.setValue(scalePercentage);
         scaleTextDepthField.setText(scaleString);
 
-        lastScaleWidth = 100.0;
-        lastScaleHeight = 100.0;
-        lastScaleDepth = 100.0;
+        lastScaleWidth = scalePercentage;
+        lastScaleHeight = scalePercentage;
+        lastScaleDepth = scalePercentage;
     }
 
     private void populateScaleXField(Number t1)
     {
         if (!inMultiSelectWithFixedAR())
         {
-            scaleTextWidthField.setValue(t1.doubleValue() * 100);
-            DecimalFormat myFormatter = new DecimalFormat(scaleFormat);
-            String scaleString = myFormatter.format(t1.doubleValue() * 100f);
+            double scalePercentage = t1.doubleValue() * 100.0;
+            scaleTextWidthField.setValue(scalePercentage);
+            String scaleString = scaleFormatter.format(scalePercentage);
             scaleTextWidthField.setText(scaleString);
-            lastScaleWidth = t1.doubleValue() * 100;
+            lastScaleWidth = scalePercentage;
         }
     }
 
@@ -920,11 +950,11 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
     {
         if (!inMultiSelectWithFixedAR())
         {
-            scaleTextHeightField.setValue(t1.doubleValue() * 100);
-            DecimalFormat myFormatter = new DecimalFormat(scaleFormat);
-            String scaleString = myFormatter.format(t1.doubleValue() * 100f);
+            double scalePercentage = t1.doubleValue() * 100.0;
+            scaleTextHeightField.setValue(scalePercentage);
+            String scaleString = scaleFormatter.format(scalePercentage);
             scaleTextHeightField.setText(scaleString);
-            lastScaleHeight = t1.doubleValue() * 100;
+            lastScaleHeight = scalePercentage;
         }
     }
 
@@ -932,11 +962,11 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
     {
         if (!inMultiSelectWithFixedAR())
         {
-            scaleTextDepthField.setValue(t1.doubleValue() * 100);
-            DecimalFormat myFormatter = new DecimalFormat(scaleFormat);
-            String scaleString = myFormatter.format(t1.doubleValue() * 100f);
+            double scalePercentage = t1.doubleValue() * 100.0;
+            scaleTextDepthField.setValue(scalePercentage);
+            String scaleString = scaleFormatter.format(scalePercentage);
             scaleTextDepthField.setText(scaleString);
-            lastScaleDepth = t1.doubleValue() * 100;
+            lastScaleDepth = scalePercentage;
         }
     }
 
@@ -1084,7 +1114,7 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
         {
             lastY = newY;
         }
-        undoableProject.translateModelsDepthPositionTo(projectSelection.getSelectedModelsSnapshot(Translateable.class), newY);
+        undoableProject.translateModelsDepthPositionTo(projectSelection.getSelectedModelsSnapshot(TranslateableTwoD.class), newY);
     }
 
     private void updateX()
@@ -1335,25 +1365,19 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
                 || newScaleWidth < 0)
         {
             return;
-        } else
-        {
-            lastScaleWidth = newScaleWidth;
         }
 
-        double scaleFactor = limitScaleFactor(newScaleWidth / 100.0, ApplicableDimension.WIDTH);
-        if (MathUtils.compareDouble(scaleFactor, newScaleWidth / 100.0, 0.00001) != MathUtils.EQUAL)
-        {
-            newScaleWidth = scaleFactor * 100.0;
-            lastScaleDepth = newScaleWidth;
-        }
-
-        Set<ScaleableThreeD> selectedThreeDShapes = projectSelection.getSelectedModelsSnapshot(ScaleableThreeD.class);
+        double unlimitedScaleFactor = newScaleWidth / 100.0;
+        double scaleFactor = limitScaleFactor(unlimitedScaleFactor, ApplicableDimension.WIDTH);
+        newScaleWidth = scaleFactor * 100.0;
+        lastScaleWidth = newScaleWidth;
 
         if (inMultiSelectWithFixedAR())
         {
             double ratio = scaleFactor / lastScaleRatio;
             lastScaleRatio = scaleFactor;
 
+            Set<ScaleableThreeD> selectedThreeDShapes = projectSelection.getSelectedModelsSnapshot(ScaleableThreeD.class);
             if (selectedThreeDShapes.size() > 0)
             {
                 undoableProject.scaleXYZRatioSelection(
@@ -1366,7 +1390,8 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
                         ratio);
             }
             showScaleForXYZ(lastScaleRatio);
-        } else
+        }
+        else
         {
             undoableProject.scaleXModels(projectSelection.getSelectedModelsSnapshot(ScaleableTwoD.class),
                     scaleFactor, inFixedAR());
@@ -1399,11 +1424,15 @@ public class ModelEditInsetPanelController implements Initializable, ProjectAwar
         } else if (projectSelection.getNumModelsSelectedProperty().get() == 1)
         {
             ProjectifiableThing modelContainer = getSingleSelection();
-            if (modelContainer instanceof ScaleableTwoD)
+            boolean isTwoDScaleable = ScaleableTwoD.class.isInstance(modelContainer);
+            boolean isThreeDScaleable = ScaleableThreeD.class.isInstance(modelContainer);
+
+            if (isTwoDScaleable)
             {
                 populateScaleXField(((ScaleableTwoD) modelContainer).getXScale());
                 populateScaleYField(((ScaleableTwoD) modelContainer).getYScale());
-            } else if (modelContainer instanceof ScaleableThreeD)
+            }
+            if (isThreeDScaleable)
             {
                 populateScaleZField(((ScaleableThreeD) modelContainer).getZScale());
             }

@@ -6,7 +6,7 @@ package celtech.coreUI;
 import celtech.appManager.Project;
 import celtech.appManager.undo.CommandStack;
 import celtech.coreUI.visualisation.ProjectSelection;
-import celtech.modelcontrol.ModelContainer;
+import celtech.modelcontrol.ProjectifiableThing;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
@@ -24,7 +24,7 @@ public class ProjectGUIState
     
     private final CommandStack commandStack;
     
-    private final ObservableSet<ModelContainer> excludedFromSelection = FXCollections.observableSet();
+    private final ObservableSet<ProjectifiableThing> excludedFromSelection = FXCollections.observableSet();
     
     private final ProjectGUIRules projectGUIRules;
 
@@ -45,7 +45,7 @@ public class ProjectGUIState
         return projectGUIRules;
     }
     
-    public ObservableSet<ModelContainer> getExcludedFromSelection() {
+    public ObservableSet<ProjectifiableThing> getExcludedFromSelection() {
         return excludedFromSelection;
     }
     

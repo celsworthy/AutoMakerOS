@@ -12,7 +12,6 @@ import celtech.appManager.ShapeContainerProject;
 import celtech.appManager.undo.UndoableProject;
 import celtech.coreUI.visualisation.metaparts.ModelLoadResult;
 import celtech.coreUI.visualisation.metaparts.ModelLoadResultType;
-import celtech.modelcontrol.Groupable;
 import celtech.roboxbase.utils.RectangularBounds;
 import celtech.modelcontrol.ModelContainer;
 import celtech.modelcontrol.ModelGroup;
@@ -148,7 +147,7 @@ public class ModelLoader
                 allProjectifiableThings.addAll(result.getProjectifiableThings());
             }
 
-            addToProject(project, allProjectifiableThings, false, dontGroupModelsOverride, printer);
+            addToProject(project, allProjectifiableThings, true, dontGroupModelsOverride, printer);
 
         }
 
@@ -216,6 +215,10 @@ public class ModelLoader
             }
             offerShrinkAndAddToProject(projectToUse, relayout, callMeBack, dontGroupModelsOverride, Lookup.getSelectedPrinterProperty().get());
         });
+        modelLoaderService.setOnFailed((WorkerStateEvent t) ->
+        {
+            System.out.println("Load failed: " + t.toString());
+        });
         modelLoaderService.start();
     }
 
@@ -241,8 +244,7 @@ public class ModelLoader
                 addModelSequence(undoableProject, modelContainer, shouldCentre, printer);
             } else if (!dontGroupModelsOverride)
             {
-                Set<Groupable> thingsToGroup = (Set) modelContainers;
-                modelContainer = ((ModelContainerProject) project).createNewGroupAndAddModelListeners(thingsToGroup);
+                modelContainer = ((ModelContainerProject) project).createNewGroupAndAddModelListeners(modelContainers);
                 addModelSequence(undoableProject, modelContainer, shouldCentre, printer);
             } else
             {

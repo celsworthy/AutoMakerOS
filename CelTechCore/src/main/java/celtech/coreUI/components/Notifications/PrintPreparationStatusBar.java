@@ -7,6 +7,7 @@ import celtech.Lookup;
 import celtech.appManager.GCodeGeneratorManager;
 import celtech.appManager.ModelContainerProject;
 import celtech.appManager.Project;
+import celtech.appManager.ProjectMode;
 import celtech.roboxbase.printerControl.model.Printer;
 import celtech.roboxbase.printerControl.model.PrinterException;
 import java.net.URL;
@@ -158,7 +159,9 @@ public class PrintPreparationStatusBar extends AppearingProgressBar implements I
     }
     
     public void unbindFromProject() {
-        if (project != null) {
+        if(project instanceof ModelContainerProject) 
+        
+        {
             gCodeGenManager = ((ModelContainerProject) project).getGCodeGenManager();
             if (gCodeGenManager != null) {
                 gCodeGenManager.selectedTaskRunningProperty().removeListener(serviceStatusListener);

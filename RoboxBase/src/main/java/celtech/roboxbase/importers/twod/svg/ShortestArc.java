@@ -10,7 +10,7 @@ import libertysystems.stenographer.StenographerFactory;
 public class ShortestArc
 {
 
-    private final Stenographer steno = StenographerFactory.getStenographer(DragKnifeCompensator.class.getName());
+    private final Stenographer steno = StenographerFactory.getStenographer(ShortestArc.class.getName());
 
     private double stepValue = Math.PI / 18;
     private double angularDifference = 0;
@@ -41,10 +41,10 @@ public class ShortestArc
         if (angularDifference < 0)
         {
             stepValue = -stepValue;
-            steno.info("Direction = backwards");
+            //steno.info("Direction = backwards");
         } else
         {
-            steno.info("Direction = forwards");
+            //steno.info("Direction = forwards");
         }
     }
 

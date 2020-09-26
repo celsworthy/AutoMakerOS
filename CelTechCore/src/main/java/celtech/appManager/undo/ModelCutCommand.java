@@ -5,7 +5,6 @@ package celtech.appManager.undo;
 
 import celtech.Lookup;
 import celtech.appManager.ModelContainerProject;
-import celtech.modelcontrol.Groupable;
 import celtech.modelcontrol.ItemState;
 import celtech.modelcontrol.ModelContainer;
 import celtech.modelcontrol.ModelGroup;
@@ -19,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 import javafx.scene.shape.CullFace;
 import javafx.scene.shape.MeshView;
 import javafx.scene.shape.TriangleMesh;
@@ -29,11 +29,10 @@ import libertysystems.stenographer.StenographerFactory;
  *
  * @author tony
  */
-public class CutCommand extends Command
+public class ModelCutCommand extends Command
 {
 
-    private final Stenographer steno = StenographerFactory.getStenographer(
-            CutCommand.class.getName());
+    private final Stenographer steno = StenographerFactory.getStenographer(ModelCutCommand.class.getName());
 
     /**
      * Cuts for groups have to be treated differently to cuts of single models
@@ -44,15 +43,15 @@ public class CutCommand extends Command
     {
 
         ModelGroup originalGroup;
-        Set<Groupable> modelsForTopGroup;
-        Set<Groupable> modelsForBottomGroup;
+        Set<ProjectifiableThing> modelsForTopGroup;
+        Set<ProjectifiableThing> modelsForBottomGroup;
         Set<ModelContainer> modelsToRemoveFromProject;
         Set<ModelContainer> modelsToAddToProject;
         ModelGroup topGroup;
         ModelGroup bottomGroup;
 
-        public GroupingOperation(ModelGroup originalGroup, Set<Groupable> modelsForTopGroup,
-                Set<Groupable> modelsForBottomGroup, Set<ModelContainer> modelsToRemoveFromProject,
+        public GroupingOperation(ModelGroup originalGroup, Set<ProjectifiableThing> modelsForTopGroup,
+                Set<ProjectifiableThing> modelsForBottomGroup, Set<ModelContainer> modelsToRemoveFromProject,
                 Set<ModelContainer> modelsToAddToProject)
         {
             this.originalGroup = originalGroup;
@@ -142,11 +141,14 @@ public class CutCommand extends Command
 
     boolean cutWorked = false;
 
-    public CutCommand(ModelContainerProject project, Set<ModelContainer> modelContainers, float cutHeightValue)
+    public ModelCutCommand(ModelContainerProject project, Set<ProjectifiableThing> modelContainers, float cutHeightValue)
     {
         this.project = project;
         this.cutHeightValue = cutHeightValue;
-        this.modelContainers = modelContainers;
+        this.modelContainers = modelContainers.stream()
+                                              .filter(pt -> pt instanceof ModelContainer)
+                                              .map(ModelContainer.class::cast)
+                                              .collect(Collectors.toSet());
     }
 
     @Override
@@ -301,8 +303,8 @@ public class CutCommand extends Command
         Set<ModelContainer> modelsToRemoveFromProject = new HashSet<>();
         Set<ModelContainer> modelsToAddToProject = new HashSet<>();
 
-        Set<Groupable> topModelContainers = new HashSet<>();
-        Set<Groupable> bottomModelContainers = new HashSet<>();
+        Set<ProjectifiableThing> topModelContainers = new HashSet<>();
+        Set<ProjectifiableThing> bottomModelContainers = new HashSet<>();
 
         Set<ModelContainer> allMeshViews = modelGroup.getModelsHoldingMeshViews();
 

@@ -1,0 +1,10 @@
+{
+    "name" : "DragKnife",
+    "hasDragKnife" : true,
+    "dragKnifeRadius" : 0.2,
+    "overcut" : 0.5,
+    "passes" : 1,
+    "xOffset" : 8.0,
+    "yOffset" : 0.0,
+    "zOffset" : 0.0
+}

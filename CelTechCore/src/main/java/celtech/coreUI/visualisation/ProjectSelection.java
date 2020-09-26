@@ -6,6 +6,7 @@ package celtech.coreUI.visualisation;
 import celtech.appManager.Project;
 import celtech.appManager.Project.ProjectChangesListener;
 import celtech.appManager.ProjectManager;
+import celtech.appManager.ProjectMode;
 import celtech.appManager.TimelapseSettingsData;
 import celtech.modelcontrol.ModelContainer;
 import celtech.modelcontrol.ModelGroup;
@@ -16,6 +17,8 @@ import celtech.modelcontrol.ScaleableThreeD;
 import celtech.modelcontrol.ScaleableTwoD;
 import celtech.roboxbase.configuration.fileRepresentation.PrinterSettingsOverrides;
 import static celtech.roboxbase.utils.DeDuplicator.suggestNonDuplicateName;
+import celtech.modelcontrol.ShapeContainer;
+import celtech.modelcontrol.ShapeGroup;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -103,12 +106,18 @@ public class ProjectSelection implements ProjectChangesListener
             if (modelContainer instanceof ModelGroup)
             {
                 numGroupsSelected.set(numGroupsSelected.get() + 1);
-                if (modelContainer instanceof ModelContainer)
-                {
-                    ((ModelContainer) modelContainer).updateOriginalModelBounds();
-                    ((ModelContainer) modelContainer).notifyScreenExtentsChange();
-                    ((ModelContainer) modelContainer).notifyShapeChange();
-                }
+                ModelGroup modelGroup = (ModelGroup) modelContainer;
+                modelGroup.updateOriginalModelBounds();
+                modelGroup.notifyScreenExtentsChange();
+                modelGroup.notifyShapeChange();
+            }
+            else if (modelContainer instanceof ShapeGroup)
+            {
+                numGroupsSelected.set(numGroupsSelected.get() + 1);
+                ShapeGroup shapeGroup = (ShapeGroup) modelContainer;
+                shapeGroup.updateOriginalModelBounds();
+                shapeGroup.notifyScreenExtentsChange();
+                shapeGroup.notifyShapeChange();
             }
             for (SelectedModelContainersListener selectedModelContainersListener : selectedModelContainersListeners)
             {
@@ -136,6 +145,14 @@ public class ProjectSelection implements ProjectChangesListener
                 modelGroup.updateOriginalModelBounds();
                 modelGroup.notifyScreenExtentsChange();
                 modelGroup.notifyShapeChange();
+            }
+            else if (projectifiableThing instanceof ShapeGroup)
+            {
+                numGroupsSelected.set(numGroupsSelected.get() - 1);
+                ShapeGroup shapeGroup = (ShapeGroup) projectifiableThing;
+                shapeGroup.updateOriginalModelBounds();
+                shapeGroup.notifyScreenExtentsChange();
+                shapeGroup.notifyShapeChange();
             }
             for (SelectedModelContainersListener selectedModelContainersListener : selectedModelContainersListeners)
             {
@@ -243,17 +260,27 @@ public class ProjectSelection implements ProjectChangesListener
     {
         if(!project.isProjectNameModified()) 
         {
-            ModelContainer modelContainer = (ModelContainer) projectifiableThing;
-            Optional<ModelContainer> childModel = modelContainer.getChildModelContainers().stream().findFirst();
-            String projectName;
-            if(childModel.isPresent()) {
-                // Regex looks for split on any period follwed by any number of non-periods and the end of input
-                projectName = childModel.get().getModelName().split("\\.(?=[^\\.]+$)")[0];
-            } else {
-                // Regex looks for split on any period follwed by any number of non-periods and the end of input
-                projectName = modelContainer.getModelName().split("\\.(?=[^\\.]+$)")[0];
+            String projectName = "Project";
+                
+            if (project.getMode() == ProjectMode.MESH)
+            {
+                ModelContainer modelContainer = (ModelContainer) projectifiableThing;
+                Optional<ModelContainer> childModel = modelContainer.getChildModelContainers().stream().findFirst();
+                if(childModel.isPresent()) {
+                    // Regex looks for split on any period follwed by any number of non-periods and the end of input
+                    projectName = childModel.get().getModelName().split("\\.(?=[^\\.]+$)")[0];
+                } else {
+                    // Regex looks for split on any period follwed by any number of non-periods and the end of input
+                    projectName = modelContainer.getModelName().split("\\.(?=[^\\.]+$)")[0];
+                }
+
             }
-            
+            else if (project.getMode() == ProjectMode.SVG)
+            {
+                ShapeContainer shapeContainer = (ShapeContainer) projectifiableThing;
+                projectName = shapeContainer.getModelName().split("\\.(?=[^\\.]+$)")[0];
+            }
+
             Set<String> currentProjectNames = ProjectManager.getInstance().getOpenAndAvailableProjectNames();
             projectName = suggestNonDuplicateName(projectName, currentProjectNames);
             project.setProjectName(projectName);

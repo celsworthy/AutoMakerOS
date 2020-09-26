@@ -151,6 +151,18 @@ public class GCodePreviewTask extends Task<Boolean> {
         writeCommand(command.toString());
     }
     
+    public void setStylusMovesVisible(boolean flag)
+    {
+        StringBuilder command = new StringBuilder();
+        if (flag)
+            command.append("show stylus");
+        else
+            command.append("hide stylus");
+        command.trimToSize();
+
+        writeCommand(command.toString());
+    }
+    
     public void clearGCode()
     {
         writeCommand("clear");
@@ -174,8 +186,6 @@ public class GCodePreviewTask extends Task<Boolean> {
     protected Boolean call() throws Exception {
         Boolean succeeded = false;
         ArrayList<String> commands = new ArrayList<>();
-        
-
         String jvmLocation = System.getProperties().getProperty("java.home") + File.separator + "bin" + File.separator + "java";
         commands.add(jvmLocation);
         if (BaseConfiguration.getMachineType() == MachineType.MAC)

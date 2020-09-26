@@ -89,6 +89,7 @@ public class ProjectTab extends Tab implements ProjectCallback
     private VBox rhInsetContainer = null;
     private LoadedPanelData settingsInsetPanelData = null;
     private LoadedPanelData timeCostInsetPanelData = null;
+    private LoadedPanelData stylusSettingsInsetPanelData = null;
     private LoadedPanelData modelActionsInsetPanelData = null;
     private LoadedPanelData timelapseInsetPanelData = null;
     
@@ -175,25 +176,42 @@ public class ProjectTab extends Tab implements ProjectCallback
                     rhInsetContainer.getChildren().remove(timelapseInsetPanelData.getNode());
                     timelapseInsetPanelData = null;
                 }
+                if (stylusSettingsInsetPanelData != null)
+                {
+                    stylusSettingsInsetPanelData.getController().shutdownController();
+                    rhInsetContainer.getChildren().remove(stylusSettingsInsetPanelData.getNode());
+                    stylusSettingsInsetPanelData = null;
+                }
             } else
             {
-                if (timeCostInsetPanelData == null)
+                switch (project.getMode())
                 {
-                    timeCostInsetPanelData = loadInsetPanel("timeCostInsetPanel.fxml", project);
-                    timeCostInsetPanelData.getNode().setVisible(false);
-                    rhInsetContainer.getChildren().add(timeCostInsetPanelData.getNode());
-                }
-                if (settingsInsetPanelData == null)
-                {
-                    settingsInsetPanelData = loadInsetPanel("settingsInsetPanel.fxml", project);
-                    settingsInsetPanelData.getNode().setVisible(false);
-                    rhInsetContainer.getChildren().add(settingsInsetPanelData.getNode());
-                }
-                if (timelapseInsetPanelData == null)
-                {
-                    timelapseInsetPanelData = loadInsetPanel("timelapseInsetPanel.fxml", project);
-                    timelapseInsetPanelData.getNode().setVisible(false);
-                    rhInsetContainer.getChildren().add(timelapseInsetPanelData.getNode());
+                    case SVG:
+                        if (stylusSettingsInsetPanelData == null)
+                        {
+                            stylusSettingsInsetPanelData = loadInsetPanel("stylusSettingsInsetPanel.fxml", project);
+                            stylusSettingsInsetPanelData.getNode().setVisible(false);
+                            rhInsetContainer.getChildren().add(0, stylusSettingsInsetPanelData.getNode());
+                        }
+                        break;
+                    
+                    case MESH:
+                        if (settingsInsetPanelData == null)
+                        {
+                            settingsInsetPanelData = loadInsetPanel("settingsInsetPanel.fxml", project);
+                            settingsInsetPanelData.getNode().setVisible(false);
+                            rhInsetContainer.getChildren().add(settingsInsetPanelData.getNode());
+                        }
+                        if (timeCostInsetPanelData == null)
+                        {
+                            timeCostInsetPanelData = loadInsetPanel("timeCostInsetPanel.fxml", project);
+                            timeCostInsetPanelData.getNode().setVisible(false);
+                            rhInsetContainer.getChildren().add(0, timeCostInsetPanelData.getNode());
+                        }
+                        break;
+                    
+                    default:
+                        break;
                 }
             }
         }
@@ -274,7 +292,6 @@ public class ProjectTab extends Tab implements ProjectCallback
         AnchorPane.setLeftAnchor(modelActionsInsetPanelData.getNode(), 30.0);
         basePane.getChildren().add(modelActionsInsetPanelData.getNode());
 
-        dimensionLineManager = new DimensionLineManager(basePane, project, hideDimensions);
 
         layoutSubmode = Lookup.getProjectGUIState(project).getLayoutSubmodeProperty();
 
@@ -328,6 +345,8 @@ public class ProjectTab extends Tab implements ProjectCallback
 
     private void setup3DView()
     {
+        dimensionLineManager = new DimensionLineManager(basePane, project, hideDimensions);
+
         nonSpecificModelIndicator.setVisible(false);
         viewManager = new ThreeDViewManager((ModelContainerProject) project,
                 tabDisplayWidthProperty,
@@ -350,8 +369,8 @@ public class ProjectTab extends Tab implements ProjectCallback
     {
         nonSpecificModelIndicator.setVisible(false);
         svgViewManager = new SVGViewManager(project);
-        svgViewManager.setMaxWidth(basePane.getWidth());
-        svgViewManager.setMaxHeight(basePane.getHeight());
+        //svgViewManager.setMaxWidth(basePane.getWidth());
+        //svgViewManager.setMaxHeight(basePane.getHeight());
 
         AnchorPane.setBottomAnchor(svgViewManager, 0.0);
         AnchorPane.setTopAnchor(svgViewManager, 0.0);
@@ -359,6 +378,14 @@ public class ProjectTab extends Tab implements ProjectCallback
         AnchorPane.setRightAnchor(svgViewManager, 0.0);
 
         basePane.getChildren().add(0, svgViewManager);
+        
+        // Not sure why, but if the base pane is passed to the dimension line manager as the
+        // parent to which dimensions are added/removed, if a dimension is moved outside the base pane,
+        // it resizes to fit. This triggers the svgViewManager to resize, which then causes the bed
+        // to resize. This behaviour does not happen if the svgViewManager is passed as the parent
+        // pane to which dimensions are added/removed.
+        dimensionLineManager = new DimensionLineManager(svgViewManager, project, hideDimensions);
+        hideDimensions.bind(svgViewManager.getDragModeProperty().isNotEqualTo(DragMode.IDLE));
     }
 
     private LoadedPanelData loadInsetPanel(String innerPanelFXMLName, Project project)
@@ -374,7 +401,7 @@ public class ProjectTab extends Tab implements ProjectCallback
             projectAwareController.setProject(project);
         } catch (IOException ex)
         {
-            steno.error("Unable to load inset panel: " + innerPanelFXMLName + "  " + ex);
+            steno.exception("Unable to load inset panel: " + innerPanelFXMLName, ex);
         }
         return new LoadedPanelData(insetPanel, projectAwareController);
     }
@@ -648,7 +675,11 @@ public class ProjectTab extends Tab implements ProjectCallback
     public Rectangle2D getPreviewRectangle()
     {
         Rectangle2D nRectangle = null;
-        Node ss = viewManager.getSubScene();
+        Node ss = null;
+        if (viewManager != null)
+            ss = viewManager.getSubScene();
+        else if (svgViewManager != null)
+            ss = svgViewManager;
         Bounds ssBounds = ss.localToScreen(ss.getBoundsInLocal());
         Bounds rhBounds = rhInsetContainer.localToScreen(rhInsetContainer.getBoundsInLocal());
 

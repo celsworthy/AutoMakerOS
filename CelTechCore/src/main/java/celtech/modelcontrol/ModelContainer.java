@@ -40,6 +40,7 @@ import javafx.geometry.Point3D;
 import javafx.scene.Camera;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.CullFace;
 import javafx.scene.shape.MeshView;
@@ -75,14 +76,12 @@ public class ModelContainer extends ProjectifiableThing implements Serializable,
         TranslateableThreeD,
         ResizeableThreeD,
         RotatableThreeD,
-        Groupable,
         ScreenExtentsProviderThreeD,
         ShapeProviderThreeD
 {
-
+    private static final Stenographer steno = StenographerFactory.getStenographer(ShapeContainer.class.getName());
     private static final long serialVersionUID = 1L;
     protected static int nextModelId = 1;
-    private Stenographer steno;
     private boolean isInvalidMesh = false;
 
     protected Translate transformDropToBedYAdjust;
@@ -266,8 +265,6 @@ public class ModelContainer extends ProjectifiableThing implements Serializable,
         setModelFile(modelFile);
         modelId = nextModelId;
         nextModelId += 1;
-
-        steno = StenographerFactory.getStenographer(ModelContainer.class.getName());
 
         if (modelFile != null)
         {
@@ -1178,7 +1175,8 @@ public class ModelContainer extends ProjectifiableThing implements Serializable,
         {
             double epsilon = 0.001;
 
-            //We have to negate the print volume height for this test as up = -ve Y in jfx!
+            // For 3D models. X is width, Z is depth, Y is -Height.
+            // We have to negate the print volume height for this test as up = -ve Y in jfx!
             if (MathUtils.compareDouble(bounds.getMinX(), 0, epsilon) == MathUtils.LESS_THAN
                     || MathUtils.compareDouble(bounds.getMaxX(), printVolumeWidth,
                             epsilon) == MathUtils.MORE_THAN
@@ -1195,11 +1193,6 @@ public class ModelContainer extends ProjectifiableThing implements Serializable,
                 isOffBed.set(false);
             }
         }
-    }
-
-    public BooleanProperty isOffBedProperty()
-    {
-        return isOffBed;
     }
 
     /**
@@ -1356,7 +1349,7 @@ public class ModelContainer extends ProjectifiableThing implements Serializable,
                 float zPos = originalPoints.get(pointOffset + 2);
 
                 Point3D pointInScene = meshView.localToScene(xPos, yPos, zPos);
-
+                
                 Point3D pointInBed = rootModelContainer.localToParent(
                         rootModelContainer.sceneToLocal(pointInScene));
 //                System.out.println("point is " + xPos + " " + yPos + " " + zPos + " in bed is "
@@ -1403,6 +1396,7 @@ public class ModelContainer extends ProjectifiableThing implements Serializable,
         ModelContainer parentModelContainer = getParentModelContainer();
         if (parentModelContainer == null)
         {
+            // If not in a group, the parent is "the bed".
             return calculateBoundsInBedCoordinateSystem();
         }
 

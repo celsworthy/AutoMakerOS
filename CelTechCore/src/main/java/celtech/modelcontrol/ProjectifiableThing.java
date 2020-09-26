@@ -50,7 +50,7 @@ public abstract class ProjectifiableThing extends Group implements ScreenExtents
      * could be reloaded with duplicate values from saved models into other
      * projects.
      */
-    protected int modelId;
+    protected int modelId = -1;
     private SimpleStringProperty modelName;
     protected Translate transformBedCentre;
     protected Scale transformScalePreferred;
@@ -58,7 +58,7 @@ public abstract class ProjectifiableThing extends Group implements ScreenExtents
     protected Translate transformMoveToPreferred;
     protected List<Transform> rotationTransforms;
     protected RectangularBounds lastTransformedBoundsInParent;
-    protected RectangularBounds originalModelBounds;
+    protected RectangularBounds originalModelBounds = null;
     protected static final Point3D Y_AXIS = new Point3D(0, 1, 0);
     protected static final Point3D Z_AXIS = new Point3D(0, 0, 1);
     protected static final Point3D X_AXIS = new Point3D(1, 0, 0);
@@ -66,9 +66,9 @@ public abstract class ProjectifiableThing extends Group implements ScreenExtents
     protected DoubleProperty preferredYScale;
     protected DoubleProperty preferredRotationTurn;
 
-    protected double bedCentreOffsetX;
-    protected double bedCentreOffsetY;
-    protected double bedCentreOffsetZ;
+    protected double bedCentreOffsetX = 0.0;
+    protected double bedCentreOffsetY = 0.0;
+    protected double bedCentreOffsetZ = 0.0;
 
     public ProjectifiableThing()
     {
@@ -259,6 +259,11 @@ public abstract class ProjectifiableThing extends Group implements ScreenExtents
 
     public abstract void checkOffBed();
 
+    public BooleanProperty isOffBedProperty()
+    {
+        return isOffBed;
+    }
+
     public abstract void moveToCentre();
 
     public void setBedReference(Group bed)
@@ -279,7 +284,7 @@ public abstract class ProjectifiableThing extends Group implements ScreenExtents
 
     public abstract RectangularBounds calculateBoundsInBedCoordinateSystem();
 
-    protected final void setScalePivotToCentreOfModel()
+    protected void setScalePivotToCentreOfModel()
     {
         transformScalePreferred.setPivotX(getBoundsInLocal().getMinX()
                 + getBoundsInLocal().getWidth() / 2.0);
@@ -358,5 +363,10 @@ public abstract class ProjectifiableThing extends Group implements ScreenExtents
     public double getTransformedCentreX()
     {
         return lastTransformedBoundsInParent.getCentreX();
+    }
+    
+    public RectangularBounds getLastTransformedBoundsInParent()
+    {
+        return lastTransformedBoundsInParent;
     }
 }

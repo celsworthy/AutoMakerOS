@@ -1,6 +1,5 @@
 package celtech.coreUI.visualisation;
 
-import celtech.CoreTest;
 import celtech.Lookup;
 import celtech.appManager.ApplicationMode;
 import celtech.appManager.ApplicationStatus;
@@ -118,7 +117,7 @@ public class ThreeDViewManager implements Project.ProjectChangesListener, Screen
 
     private final ReadOnlyDoubleProperty widthPropertyToFollow;
     private final ReadOnlyDoubleProperty heightPropertyToFollow;
-    private final Set<ModelContainer> inSelectedGroupButNotSelected;
+    private final Set<ProjectifiableThing> inSelectedGroupButNotSelected;
 
     private final Xform bedTranslateXform = new Xform(Xform.RotateOrder.YXZ, "BedXForm");
     private final Group bed = new Group();
@@ -810,22 +809,12 @@ public class ThreeDViewManager implements Project.ProjectChangesListener, Screen
         widthPropertyToFollow = widthProperty;
         heightPropertyToFollow = heightProperty;
 
-        widthPropertyToFollow.addListener(new ChangeListener<Number>()
-        {
-            @Override
-            public void changed(ObservableValue<? extends Number> ov, Number t, Number t1)
-            {
-                notifyListenersOfCameraViewChange();
-            }
+        widthPropertyToFollow.addListener((ObservableValue<? extends Number> ov, Number t, Number t1) -> {
+            notifyModelsOfCameraViewChange();
         });
 
-        heightPropertyToFollow.addListener(new ChangeListener<Number>()
-        {
-            @Override
-            public void changed(ObservableValue<? extends Number> ov, Number t, Number t1)
-            {
-                notifyListenersOfCameraViewChange();
-            }
+        heightPropertyToFollow.addListener((ObservableValue<? extends Number> ov, Number t, Number t1) -> {
+            notifyModelsOfCameraViewChange();
         });
 
         root3D.setId("Root");
@@ -999,22 +988,21 @@ public class ThreeDViewManager implements Project.ProjectChangesListener, Screen
     /**
      * Add / rebuild the correct assets to the bed according to the printer type
      *
-     * @param brobox
+     * @param roboxPro
      * @return
      */
-    private void buildBed(boolean brobox) {
+    private void buildBed(boolean roboxPro) {
         URL bedOuterURL, peiSheetURL, bedClipsURL, bedGraphicURL;
         double bedZOffset, bedXOffset, bedYOffset;
         double peiDrop;
         bed.getChildren().clear();
-        if (brobox)
+        if (roboxPro)
         {
-            bedOuterURL = CoreTest.class
-                    .getResource(ApplicationConfiguration.modelResourcePath + "bed_frame_210x300.obj");
-            peiSheetURL = CoreTest.class.getResource(ApplicationConfiguration.modelResourcePath
+            bedOuterURL = getClass().getResource(ApplicationConfiguration.modelResourcePath + "bed_frame_210x300.obj");
+            peiSheetURL = getClass().getResource(ApplicationConfiguration.modelResourcePath
                     + "bed_glass_210x300.obj");
             bedClipsURL = null;
-            bedGraphicURL = CoreTest.class.getResource(ApplicationConfiguration.imageResourcePath
+            bedGraphicURL = getClass().getResource(ApplicationConfiguration.imageResourcePath
                     + "Bed Graphic - RoboxPro.png");
             bedZOffset = 210;
             bedYOffset = 0;
@@ -1022,14 +1010,10 @@ public class ThreeDViewManager implements Project.ProjectChangesListener, Screen
             peiDrop = 0.5;
         } else
         {
-            bedOuterURL = CoreTest.class
-                    .getResource(ApplicationConfiguration.modelResourcePath + "bedBase.obj");
-            peiSheetURL = CoreTest.class.getResource(ApplicationConfiguration.modelResourcePath
-                    + "pei.obj");
-            bedClipsURL = CoreTest.class.getResource(ApplicationConfiguration.modelResourcePath
-                    + "clips.obj");
-            bedGraphicURL = CoreTest.class.getResource(ApplicationConfiguration.imageResourcePath
-                    + "Bed Graphic - Robox.png");
+            bedOuterURL = getClass().getResource(ApplicationConfiguration.modelResourcePath + "bedBase.obj");
+            peiSheetURL = getClass().getResource(ApplicationConfiguration.modelResourcePath + "pei.obj");
+            bedClipsURL = getClass().getResource(ApplicationConfiguration.modelResourcePath + "clips.obj");
+            bedGraphicURL = getClass().getResource(ApplicationConfiguration.imageResourcePath + "Bed Graphic - Robox.png");
             bedZOffset = 150;
             bedYOffset = 0;
             bedXOffset = 0;

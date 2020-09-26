@@ -83,7 +83,7 @@ public class ApplicationConfiguration
 
     public static final String[] supported2DModelExtensions =
     {
-//        "svg"
+        "svg"
     };
 
     public static final String[] supportedProcessedModelExtensions =

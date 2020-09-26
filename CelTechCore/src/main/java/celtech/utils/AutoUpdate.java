@@ -242,6 +242,7 @@ public class AutoUpdate extends Thread
     private void startUpdate()
     {
         String osName = System.getProperty("os.name");
+        boolean isArch64 = System.getProperty("os.arch").endsWith("64");
 
         MachineType machineType = BaseConfiguration.getMachineType();
 

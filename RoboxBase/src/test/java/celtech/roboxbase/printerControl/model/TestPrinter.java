@@ -34,6 +34,7 @@ import celtech.roboxbase.printerControl.model.statetransitions.calibration.Singl
 import celtech.roboxbase.printerControl.model.statetransitions.calibration.XAndYStateTransitionManager;
 import celtech.roboxbase.printerControl.model.statetransitions.purge.PurgeStateTransitionManager;
 import celtech.roboxbase.services.gcodegenerator.GCodeGeneratorResult;
+import celtech.roboxbase.services.gcodegenerator.StylusGCodeGeneratorResult;
 import celtech.roboxbase.services.printing.DatafileSendAlreadyInProgress;
 import celtech.roboxbase.services.printing.DatafileSendNotInitialised;
 import celtech.roboxbase.utils.AxisSpecifier;
@@ -1264,6 +1265,11 @@ public class TestPrinter implements Printer
 
     @Override
     public ObservableList<FirmwareError> getCurrentErrors() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void printStylusProject(PrintableProject printableProject, Optional<StylusGCodeGeneratorResult> potentialGCodeGenResult, boolean safetyFeaturesRequired) throws PrinterException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

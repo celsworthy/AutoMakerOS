@@ -184,9 +184,9 @@
                     <children>
                         <GridPane alignment="CENTER" hgap="5.0" vgap="0.0" VBox.vgrow="ALWAYS">
                             <children>
-                                <Label text="%modelEdit.lean" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                                <Label text="%modelEdit.twist" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                                <Label text="%modelEdit.turn" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <Label fx:id="leanCaption" text="%modelEdit.lean" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label fx:id="twistCaption" text="%modelEdit.twist" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <Label fx:id="turnCaption" text="%modelEdit.turn" GridPane.columnIndex="0" GridPane.rowIndex="2" />
                                 <RestrictedNumberField fx:id="rotationXTextField" allowNegative="true" allowedDecimalPlaces="2" drivesUndoableOperation="true" maxLength="7" prefColumnCount="4" text="100" GridPane.columnIndex="1" />
                                 <RestrictedNumberField fx:id="rotationYTextField" allowNegative="true" allowedDecimalPlaces="2" drivesUndoableOperation="true" maxLength="7" prefColumnCount="4" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                 <RestrictedNumberField fx:id="rotationZTextField" allowNegative="true" allowedDecimalPlaces="2" drivesUndoableOperation="true" maxLength="7" prefColumnCount="4" text="100" GridPane.columnIndex="1" GridPane.rowIndex="2" />
@@ -214,14 +214,16 @@
                 <Insets />
             </VBox.margin>
         </StackPane>
-        <Label layoutX="125.0" layoutY="60.0" text="%modelEdit.MaterialLabel" textAlignment="RIGHT" />
-        <ToggleButton fx:id="setMaterial0Button" contentDisplay="TEXT_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setMaterial0" styleClass="model-material1-button" text="%modelEdit.Material1">
-            <toggleGroup>
-                <ToggleGroup fx:id="materialButtons" />
-            </toggleGroup>
-        </ToggleButton>
-        <ToggleButton fx:id="setMaterial1Button" contentDisplay="TEXT_ONLY" layoutX="107.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setMaterial1" styleClass="model-material2-button" text="%modelEdit.Material2" toggleGroup="$materialButtons" />
-        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#flipMaterials" text="%modelEdit.flipMaterials" />       
+        <VBox fx:id="materialPanel" alignment="CENTER">
+            <Label layoutX="125.0" layoutY="60.0" text="%modelEdit.MaterialLabel" textAlignment="RIGHT" />
+            <ToggleButton fx:id="setMaterial0Button" contentDisplay="TEXT_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setMaterial0" styleClass="model-material1-button" text="%modelEdit.Material1">
+                <toggleGroup>
+                    <ToggleGroup fx:id="materialButtons" />
+                </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="setMaterial1Button" contentDisplay="TEXT_ONLY" layoutX="107.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setMaterial1" styleClass="model-material2-button" text="%modelEdit.Material2" toggleGroup="$materialButtons" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#flipMaterials" text="%modelEdit.flipMaterials" />       
+        </VBox>
     </children>
     <padding>
         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

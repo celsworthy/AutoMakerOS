@@ -68,6 +68,11 @@
 			  <Image url="@../../images/statusRender/RBX10/RoboxPro%20SingleEX%20Head.png" />
 		   </image>
 		</ImageView>
+		<ImageView fx:id="stylusHead" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+		   <image>
+			  <Image url="@../../images/statusRender/RBX10/RoboxPro%20StylusPro%20Head.png" />
+		   </image>
+		</ImageView>
 		<ImageView fx:id="bed" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
 		   <image>
 			  <Image url="@../../images/statusRender/RBX10/Bed.png" />

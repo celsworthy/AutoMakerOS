@@ -19,6 +19,7 @@ import celtech.roboxbase.printerControl.comms.commands.MacroPrintException;
 import celtech.roboxbase.services.camera.CameraTriggerManager;
 import celtech.roboxbase.services.ControllableService;
 import celtech.roboxbase.services.gcodegenerator.GCodeGeneratorResult;
+import celtech.roboxbase.services.gcodegenerator.StylusGCodeGeneratorResult;
 import celtech.roboxbase.services.printing.GCodePrintResult;
 import celtech.roboxbase.services.printing.TransferGCodeToPrinterService;
 import celtech.roboxbase.utils.PrintJobUtils;
@@ -375,6 +376,48 @@ public class PrintEngine implements ControllableService
                 && potentialGCodeGenResult.get().isSuccess())
         {
             printFromProject(printableProject);
+            return true;
+        }
+        
+        return false;
+    }
+
+    public synchronized boolean printStylusProject(PrintableProject printableProject, Optional<StylusGCodeGeneratorResult> potentialGCodeGenResult, boolean safetyFeaturesRequired)
+    {
+        canDisconnectDuringPrint = true;
+        etcAvailable.set(false);
+
+        cameraIsEnabled = false;
+
+        if (associatedPrinter.printerStatusProperty().get() == PrinterStatus.IDLE 
+                && potentialGCodeGenResult.isPresent()
+                && potentialGCodeGenResult.get().isSuccess())
+        {
+            String jobUUID = SystemUtils.generate16DigitID();
+            String printJobDirectoryName = BaseConfiguration.getPrintSpoolDirectory() + jobUUID;
+            printableProject.setJobUUID(jobUUID);
+        
+            try {
+                FileUtils.copyFile(new File(potentialGCodeGenResult.get().getRawOutputFileName()), 
+                                   new File(printJobDirectoryName + File.separator + jobUUID + ".gcode"));
+                FileUtils.copyFile(new File(potentialGCodeGenResult.get().getCompensatedOutputFileName()), 
+                                   new File(printJobDirectoryName + File.separator + jobUUID + "_robox.gcode"));
+                // This should probably be done by the GCode generator.
+                PrintJobStatistics statistics = new PrintJobStatistics();
+                statistics.setPrintJobID(jobUUID);
+                statistics.setPrintedWithHeadID("RBX01-SP");
+                statistics.setPrintedWithHeadType("STYLUS_HEAD");
+                statistics.setProjectName(printableProject.toString());
+                statistics.setProfileName(printableProject.getPrintQuality().toString());
+                statistics.writeStatisticsToFile(printJobDirectoryName + File.separator + jobUUID + ".statistics");
+            } catch (IOException ex) {
+                steno.exception("Error when copying stylus project into print job directory", ex);
+            }
+
+            deleteOldPrintJobDirectories();
+
+            PrintJob newPrintJob = new PrintJob(jobUUID);
+            printFileFromDisk(newPrintJob);
             return true;
         }
         

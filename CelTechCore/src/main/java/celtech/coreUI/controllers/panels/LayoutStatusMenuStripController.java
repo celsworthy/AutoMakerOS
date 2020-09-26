@@ -7,6 +7,7 @@ import celtech.appManager.ModelContainerProject;
 import celtech.appManager.Project;
 import celtech.appManager.Project.ProjectChangesListener;
 import celtech.appManager.ProjectMode;
+import celtech.appManager.ShapeContainerProject;
 import celtech.appManager.TimelapseSettingsData;
 import celtech.appManager.undo.CommandStack;
 import celtech.appManager.undo.UndoableProject;
@@ -23,10 +24,10 @@ import celtech.coreUI.components.buttons.GraphicButtonWithLabel;
 import celtech.coreUI.components.buttons.GraphicToggleButtonWithLabel;
 import celtech.coreUI.visualisation.ModelLoader;
 import celtech.coreUI.visualisation.ProjectSelection;
-import celtech.modelcontrol.Groupable;
 import celtech.modelcontrol.ModelContainer;
 import celtech.modelcontrol.ModelGroup;
 import celtech.modelcontrol.ProjectifiableThing;
+import celtech.modelcontrol.ShapeGroup;
 import celtech.roboxbase.BaseLookup;
 import celtech.roboxbase.PrinterColourMap;
 import celtech.roboxbase.appManager.NotificationType;
@@ -40,18 +41,22 @@ import celtech.roboxbase.configuration.Filament;
 import celtech.roboxbase.configuration.RoboxProfile;
 import celtech.roboxbase.configuration.SlicerType;
 import celtech.roboxbase.configuration.datafileaccessors.FilamentContainer;
+import celtech.roboxbase.configuration.datafileaccessors.HeadContainer;
 import celtech.roboxbase.configuration.fileRepresentation.CameraProfile;
 import celtech.roboxbase.configuration.fileRepresentation.CameraSettings;
 import celtech.roboxbase.configuration.fileRepresentation.PrinterSettingsOverrides;
 import celtech.roboxbase.configuration.utils.RoboxProfileUtils;
 import celtech.roboxbase.printerControl.model.Head;
+import celtech.roboxbase.printerControl.model.Head.HeadType;
 import celtech.roboxbase.printerControl.model.Printer;
 import celtech.roboxbase.printerControl.model.PrinterConnection;
 import celtech.roboxbase.printerControl.model.PrinterException;
 import celtech.roboxbase.printerControl.model.PrinterListChangesListener;
 import celtech.roboxbase.printerControl.model.Reel;
+import celtech.roboxbase.services.gcodegenerator.StylusGCodeGeneratorResult;
 import celtech.roboxbase.services.camera.CameraTriggerData;
 import celtech.roboxbase.services.gcodegenerator.GCodeGeneratorResult;
+import celtech.roboxbase.services.slicer.PrintQualityEnumeration;
 import celtech.roboxbase.utils.PrintJobUtils;
 import celtech.roboxbase.utils.PrinterUtils;
 import celtech.roboxbase.utils.SystemUtils;
@@ -245,6 +250,7 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
     private final BooleanProperty modelsOffBedWithRaft = new SimpleBooleanProperty(false);
     private final BooleanProperty modelOffBedWithSpiral = new SimpleBooleanProperty(false);
     private final BooleanProperty headIsSingleX = new SimpleBooleanProperty(false);
+    private final BooleanProperty headTypeIsStylus = new SimpleBooleanProperty(false);
     private ConditionalNotificationBar modelsOffBedNotificationBar;
     private ConditionalNotificationBar modelsOffBedWithHeadNotificationBar;
     private ConditionalNotificationBar modelsOffBedWithRaftNotificationBar;
@@ -283,13 +289,19 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
         if (currentProject instanceof ModelContainerProject)
         {
             ModelContainerProject projectToWorkOn = (ModelContainerProject) currentProject;
-            Set<ProjectifiableThing> modelGroups = projectToWorkOn.getTopLevelThings().stream().filter(
-                    mc -> mc instanceof ModelGroup).collect(Collectors.toSet());
-            Set<ProjectifiableThing> modelContainers = Lookup.getProjectGUIState(currentProject).getProjectSelection().getSelectedModelsSnapshot();
-            Set<Groupable> thingsToGroup = (Set) modelContainers;
-            undoableSelectedProject.group(thingsToGroup);
-            Set<ModelContainer> changedModelGroups = currentProject.getAllModels().stream().map(ModelContainer.class::cast).filter(
-                    mc -> mc instanceof ModelGroup).collect(Collectors.toSet());
+            Set<ProjectifiableThing> modelGroups = projectToWorkOn.getTopLevelThings()
+                                                                  .stream()
+                                                                  .filter(mc -> mc instanceof ModelGroup)
+                                                                  .collect(Collectors.toSet());
+            Set<ProjectifiableThing> modelContainers = Lookup.getProjectGUIState(currentProject)
+                                                             .getProjectSelection()
+                                                             .getSelectedModelsSnapshot();
+            undoableSelectedProject.group(modelContainers);
+            Set<ModelGroup> changedModelGroups = currentProject.getAllModels()
+                                                               .stream()
+                                                               .filter(mc -> mc instanceof ModelGroup)
+                                                               .map(ModelGroup.class::cast)
+                                                               .collect(Collectors.toSet());
             changedModelGroups.removeAll(modelGroups);
 
             Lookup.getProjectGUIState(currentProject).getProjectSelection().deselectAllModels();
@@ -300,21 +312,50 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
                         changedModelGroups.iterator().next());
             }
         }
+        else if (currentProject instanceof ShapeContainerProject)
+        {
+            ShapeContainerProject projectToWorkOn = (ShapeContainerProject) currentProject;
+            Set<ProjectifiableThing> shapeGroups = projectToWorkOn.getTopLevelThings()
+                                                                  .stream()
+                                                                  .filter(mc -> mc instanceof ShapeGroup)
+                                                                  .collect(Collectors.toSet());
+            Set<ProjectifiableThing> shapeContainers = Lookup.getProjectGUIState(currentProject)
+                                                             .getProjectSelection()
+                                                             .getSelectedModelsSnapshot();
+            undoableSelectedProject.group(shapeContainers);
+            Set<ShapeGroup> changedShapeGroups = currentProject.getAllModels()
+                                                               .stream()
+                                                               .filter(mc -> mc instanceof ShapeGroup)
+                                                               .map(ShapeGroup.class::cast)
+                                                               .collect(Collectors.toSet());
+            changedShapeGroups.removeAll(shapeGroups);
+
+            Lookup.getProjectGUIState(currentProject).getProjectSelection().deselectAllModels();
+            if (changedShapeGroups.size() == 1)
+            {
+                changedShapeGroups.iterator().next().notifyScreenExtentsChange();
+                Lookup.getProjectGUIState(currentProject).getProjectSelection().addSelectedItem(
+                        changedShapeGroups.iterator().next());
+            }
+        }
     }
 
     @FXML
     void ungroup(ActionEvent event)
     {
         Project currentProject = Lookup.getSelectedProjectProperty().get();
-
-        if (currentProject instanceof ModelContainerProject)
-        {
-            Set<ProjectifiableThing> modelContainers = Lookup.getProjectGUIState(currentProject).getProjectSelection().getSelectedModelsSnapshot();
-
-            Set<ModelContainer> thingsToUngroup = (Set) modelContainers;
-            undoableSelectedProject.ungroup(thingsToUngroup);
-            Lookup.getProjectGUIState(currentProject).getProjectSelection().deselectAllModels();
-        }
+        Set<ProjectifiableThing> existingContainers = currentProject.getTopLevelThings()
+                                                                    .stream()
+                                                                    .collect(Collectors.toSet());
+        Set<ProjectifiableThing> modelContainers = Lookup.getProjectGUIState(currentProject).getProjectSelection().getSelectedModelsSnapshot();
+        undoableSelectedProject.ungroup(modelContainers);
+        Lookup.getProjectGUIState(currentProject).getProjectSelection().deselectAllModels();
+        currentProject.getTopLevelThings()
+                      .stream()
+                      .filter(sc -> !existingContainers.contains(sc))
+                      .forEach((nc) -> Lookup.getProjectGUIState(currentProject)
+                                             .getProjectSelection()
+                                             .addSelectedItem(nc));
     }
 
     @FXML
@@ -339,12 +380,9 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
         }
     }
 
-    @FXML
-    void printPressed(ActionEvent event)
+    private void printModelContainerProject(ModelContainerProject currentProject)
     {
         Printer printer = Lookup.getSelectedPrinterProperty().get();
-        
-        Project currentProject = Lookup.getSelectedProjectProperty().get();
 
         if (!currentProject.isProjectSaved())
         {
@@ -441,7 +479,7 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
                         try 
                         {
                             Optional<GCodeGeneratorResult> potentialGCodeGenResult = ((ModelContainerProject) currentProject)
-                                    .getGCodeGenManager().getPrepResult(currentProject.getPrintQuality());
+                                    .getGCodeGenManager().getModelPrepResult(currentProject.getPrintQuality());
                             if(potentialGCodeGenResult.isPresent())
                             {
                                 printer.printProject(printableProject, potentialGCodeGenResult, Lookup.getUserPreferences().isSafetyFeaturesOn());
@@ -457,6 +495,72 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
                 // Run the task from GCodeGenManager so it can be managed...
                 ((ModelContainerProject) currentProject).getGCodeGenManager().replaceAndExecutePrintOrSaveTask(fetchGCodeResultAndPrint);
             }
+        }
+    }
+
+    private void printShapeContainerProject(ShapeContainerProject currentProject)
+    {
+        Printer printer = Lookup.getSelectedPrinterProperty().get();
+        // Check the head is the stylus head.
+        Head.HeadType headType = HeadContainer.defaultHeadType;
+        if (printer != null && printer.headProperty().get() != null)
+            headType = printer.headProperty().get().headTypeProperty().get();
+        if (headType == Head.HeadType.STYLUS_HEAD)
+        {
+            Task<Boolean> generateGCodeAndPrint = new Task<Boolean>() 
+            {
+                @Override
+                protected Boolean call() throws Exception 
+                {
+                    try 
+                    {
+                        Optional<StylusGCodeGeneratorResult> prepResultOpt = currentProject.getGCodeGenManager().getStylusGCodeGenResult();
+
+                        if (prepResultOpt.isPresent() &&  prepResultOpt.get().getResultOK())
+                        {
+                            Printer printer = Lookup.getSelectedPrinterProperty().get();
+                            StylusGCodeGeneratorResult prepResult = prepResultOpt.get();
+                            String projectLocation = ApplicationConfiguration.getProjectDirectory()
+                                + currentProject.getProjectName();
+                            PrintableProject printableProject = new PrintableProject(currentProject.getProjectName(), 
+                                                                                     currentProject.getPrintQuality(),
+                                                                                     projectLocation);
+                            printer.printStylusProject(printableProject, prepResultOpt, Lookup.getUserPreferences().isSafetyFeaturesOn());
+
+                            return true;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        steno.error("Error during print project " + ex.getMessage());
+
+                    }
+                    return false;
+                }
+            };
+
+            // Run the task from GCodeGenManager so it can be managed...
+            currentProject.getGCodeGenManager().replaceAndExecutePrintOrSaveTask(generateGCodeAndPrint);
+        }
+    }
+    
+    @FXML
+    void printPressed(ActionEvent event)
+    {
+        Project currentProject = Lookup.getSelectedProjectProperty().get();
+
+        switch (currentProject.getMode())
+        {
+            case MESH:
+                printModelContainerProject((ModelContainerProject)currentProject);
+                break;
+
+            case SVG:
+                printShapeContainerProject((ShapeContainerProject)currentProject);
+                break;
+                
+            default:
+                break;
         }
     }
     
@@ -481,7 +585,7 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
                     String projectLocation = ApplicationConfiguration.getProjectDirectory()
                             + currentProject.getProjectName();
                     Optional<GCodeGeneratorResult> potentialGCodeGenResult = ((ModelContainerProject) currentProject)
-                            .getGCodeGenManager().getPrepResult(currentProject.getPrintQuality());
+                            .getGCodeGenManager().getModelPrepResult(currentProject.getPrintQuality());
                     if(potentialGCodeGenResult.isPresent() 
                             && potentialGCodeGenResult.get().isSuccess())
                     {
@@ -625,15 +729,26 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
             iterator.next();
             iterator.remove();
         }
-        String descriptionOfFile = Lookup.i18n("dialogs.meshFileChooserDescription");
 
         Project currentProject = Lookup.getSelectedProjectProperty().get();
         ProjectMode currentProjectMode = (currentProject == null) ? ProjectMode.NONE : currentProject.getMode();
-        modelFileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter(descriptionOfFile,
-                        ApplicationConfiguration.
-                                getSupportedFileExtensionWildcards(
-                                        currentProjectMode)));
+        if (currentProjectMode == ProjectMode.NONE) {
+            modelFileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter(Lookup.i18n("dialogs.meshFileChooserDescription"),
+                    ApplicationConfiguration.getSupportedFileExtensionWildcards(
+                        ProjectMode.MESH)),
+                new FileChooser.ExtensionFilter(Lookup.i18n("dialogs.svgFileChooserDescription"),
+                    ApplicationConfiguration.getSupportedFileExtensionWildcards(
+                        ProjectMode.SVG)));
+        }
+        else {
+            String descriptionKey = (currentProjectMode == ProjectMode.MESH ? "dialogs.meshFileChooserDescription"
+                                                                            : "dialogs.svgFileChooserDescription");
+            modelFileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter(Lookup.i18n(descriptionKey),
+                    ApplicationConfiguration.getSupportedFileExtensionWildcards(
+                        currentProjectMode)));
+        }
         modelFileChooser.setInitialDirectory(ApplicationConfiguration.getLastDirectoryFile(DirectoryMemoryProperty.LAST_MODEL_DIRECTORY));
         List<File> files;
 
@@ -1243,9 +1358,13 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
             dmHeadOnSingleExtruderMachineNotificationBar.setAppearanceCondition(printer.headProperty().get().headTypeProperty().isEqualTo(Head.HeadType.DUAL_MATERIAL_HEAD)
                     .and(printer.extrudersProperty().get(0).isFittedProperty().not().or(printer.extrudersProperty().get(1).isFittedProperty().not())));
             headIsSingleX.set(printer.headProperty().get().typeCodeProperty().get().equalsIgnoreCase("RBXDV-S1"));
+            headTypeIsStylus.set(printer.headProperty().get().headTypeProperty().get() == HeadType.STYLUS_HEAD);
         }
         else
+        {
             headIsSingleX.set(false);
+            headTypeIsStylus.set(false);
+        }
  
         if (project instanceof ModelContainerProject)
         {
@@ -1317,6 +1436,10 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
                                                   printer.effectiveFilamentsProperty()));
             singleXHeadRequiredForFilledMaterialNotificationBar.setAppearanceCondition(filledMaterialAndNotSingleXHead
                                                                                            .and(applicationStatus.modeProperty().isEqualTo(ApplicationMode.SETTINGS)));
+        }
+        else
+        {
+            clearConditionalNotificationBarConditions();
         }
     }
 
@@ -1559,14 +1682,14 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
 
             for (ProjectifiableThing projectifiableThing : selectedProject.getTopLevelThings())
             {
+                if (projectifiableThing.isOffBedProperty().get())
+                {
+                    aModelIsOffTheBed = true;
+                }
+
                 if (projectifiableThing instanceof ModelContainer)
                 {
                     ModelContainer modelContainer = (ModelContainer) projectifiableThing;
-
-                    if (modelContainer.isOffBedProperty().get())
-                    {
-                        aModelIsOffTheBed = true;
-                    }
 
                     if (zReduction > 0.0 
                             && modelContainer.isModelTooHighWithOffset(zReduction))
@@ -1589,8 +1712,13 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
             }
         }
 
+        //if (aModelIsOffTheBed)
+        //    System.out.println("dealWithOutOfBoundsModels - aModelIsOffTheBed = TRUE");
+        //else
+        //    System.out.println("dealWithOutOfBoundsModels - aModelIsOffTheBed = FALSE");
         if (aModelIsOffTheBed != modelsOffBed.get())
         {
+            //System.out.println("    setting modelsOffBed to " + Boolean.toString(aModelIsOffTheBed));
             modelsOffBed.set(aModelIsOffTheBed);
         }
 
@@ -1693,7 +1821,7 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
     {
         if (project instanceof ModelContainerProject)
         {
-            if (printer != null && project != null)
+            if (printer != null)
             {
                 printButton.disableProperty().unbind();
                 ObservableList<Boolean> usedExtruders = ((ModelContainerProject) project).getUsedExtruders(printer);
@@ -1751,6 +1879,24 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
                 printButton.disableProperty().bind(canPrintProject.not());
             }
         }
+        else if (project instanceof ShapeContainerProject)
+        {
+            if (printer != null)
+            {
+                printButton.disableProperty().unbind();
+                canPrintProject.unbind();
+                canPrintProject.bind(
+                        Bindings.isNotEmpty(project.getTopLevelThings())
+                                .and(printer.canPrintProperty())
+                                .and(project.canPrintProperty())
+                                .and(printer.getPrinterAncillarySystems().doorOpenProperty().not()
+                                        .or(Lookup.getUserPreferences().safetyFeaturesOnProperty().not()))
+                                .and(headTypeIsStylus)
+                                .and(modelsOffBed.not())
+                                .and(printerConnectionOffline.not()));
+                printButton.disableProperty().bind(canPrintProject.not());
+            }
+        }
     }
 
     /**
@@ -1769,6 +1915,7 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
         deleteModelButton.disableProperty().unbind();
         duplicateModelButton.disableProperty().unbind();
         snapToGroundButton.disableProperty().unbind();
+//        addCloudModelButton.disableProperty().unbind();
         distributeModelsButton.disableProperty().unbind();
         groupButton.disableProperty().unbind();
         groupButton.visibleProperty().unbind();
@@ -1793,13 +1940,21 @@ public class LayoutStatusMenuStripController implements PrinterListChangesListen
 
         addModelButton.disableProperty().bind(
                 snapToGround.or(projectGUIRules.canAddModel().not()));
-//        addCloudModelButton.disableProperty().bind(snapToGround.or(projectGUIRules.canAddModel().not()));
-
         distributeModelsButton.disableProperty().bind(
                 notSelectModeOrNoLoadedModels.or(projectGUIRules.canAddModel().not()));
-        snapToGroundButton.disableProperty().bind(
-                noLoadedModels.or(projectGUIRules.canSnapToGroundSelection().not()));
 
+        if (project instanceof ShapeContainerProject)
+        {
+//            addCloudModelButton.disableProperty().set(true);
+            snapToGroundButton.disableProperty().set(true);
+        }
+        else
+        {
+//            addCloudModelButton.disableProperty().bind(snapToGround.or(projectGUIRules.canAddModel().not()));
+            snapToGroundButton.disableProperty().bind(
+                noLoadedModels.or(projectGUIRules.canSnapToGroundSelection().not()));
+        }
+        
         groupButton.disableProperty().bind(
                 noLoadedModels.or(projectGUIRules.canGroupSelection().not()));
         groupButton.visibleProperty().bind(ungroupButton.visibleProperty().not());

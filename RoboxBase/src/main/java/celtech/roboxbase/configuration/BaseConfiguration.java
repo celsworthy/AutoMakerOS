@@ -79,6 +79,11 @@ public class BaseConfiguration
     public static final String headDirectoryPath = "Heads";
     public static final String headFileExtension = ".roboxhead";
 
+    private static String stylusSettingsDirectory = null;
+    private static String userStylusSettingsDirectory = null;
+    public static final String stylusSettingsPath = "StylusSettings";
+    public static final String stylusSettingsFileExtension = ".stylussettings";
+
     public static final String modelStorageDirectoryPath = "Models";
     public static final String userTempDirectoryPath = "Temp";
     private static String userTempFileDirectory = null;
@@ -866,6 +871,30 @@ public class BaseConfiguration
         return userFilamentFileDirectory;
     }
 
+    public static String getApplicationStylusSettingsDirectory()
+    {
+        if (stylusSettingsDirectory == null)
+        {
+            stylusSettingsDirectory = BaseConfiguration.getCommonApplicationDirectory() + stylusSettingsPath + File.separator;
+        }
+
+        return stylusSettingsDirectory;
+    }
+
+    public static String getUserStylusSettingsDirectory()
+    {
+        userStylusSettingsDirectory = BaseConfiguration.getUserStorageDirectory() + stylusSettingsPath + File.separator;
+
+        File dirHandle = new File(userStylusSettingsDirectory);
+
+        if (!dirHandle.exists())
+        {
+            dirHandle.mkdirs();
+        }
+
+        return userStylusSettingsDirectory;
+    }
+    
     public static String getApplicationInstallationLanguage()
     {
         if (BaseConfiguration.getInstallationProperties() == null)

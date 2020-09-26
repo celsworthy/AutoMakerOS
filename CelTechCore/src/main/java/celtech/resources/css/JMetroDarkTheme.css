@@ -2681,6 +2681,14 @@ color-picker-label .text-field {
     -fx-font-family: "Source Sans Pro";
 }
 
+/**
+* Settings Inset Panel
+*/
+#stylusSettingsInsetRoot {
+    -fx-background-color: mid_grey_50;
+    -fx-font-family: "Source Sans Pro";
+}
+
 #pleaseCreateProfile {
     -fx-font-family: "Source Sans Pro";
     -fx-font-size: 18px;

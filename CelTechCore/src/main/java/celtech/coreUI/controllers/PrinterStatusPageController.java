@@ -106,6 +106,8 @@ public class PrinterStatusPageController implements Initializable, PrinterListCh
 
     private ImageView singleNozzleHead;
 
+    private ImageView stylusHead;
+
     private ImageView ambientLight;
     private ColorAdjust ambientColourEffect = new ColorAdjust();
 
@@ -418,6 +420,9 @@ public class PrinterStatusPageController implements Initializable, PrinterListCh
                     case "singleNozzleHead":
                         singleNozzleHead = (ImageView)pgNode;
                         break;
+                    case "stylusHead":
+                        stylusHead = (ImageView)pgNode;
+                        break;
                     case "ambientLight":
                         ambientLight = (ImageView)pgNode;
                         ambientLight.setEffect(ambientColourEffect);
@@ -604,26 +609,32 @@ public class PrinterStatusPageController implements Initializable, PrinterListCh
         boolean singleMaterialHeadVisible = false;
         boolean dualMaterialHeadVisible = false;
         boolean singleNozzleHeadVisible = false;
+        boolean stylusHeadVisible = false;
         
         if (printerToUse != null)
         {
             Head printerHead = printerToUse.headProperty().get();
             if (printerHead != null)
             {
-                if (printerHead.headTypeProperty().get() == Head.HeadType.SINGLE_MATERIAL_HEAD)
+                switch (printerHead.headTypeProperty().get())
                 {
-                    if (printerHead.getNozzles().size() == 1)
-                    {
-                        singleNozzleHeadVisible = true;
-                    }
-                    else
-                    {
-                        singleMaterialHeadVisible = true;
-                    }
-                }
-                else if (printerHead.headTypeProperty().get() == Head.HeadType.DUAL_MATERIAL_HEAD)
-                {
-                    dualMaterialHeadVisible = true;
+                    case SINGLE_MATERIAL_HEAD:
+                        if (printerHead.getNozzles().size() == 1)
+                            singleNozzleHeadVisible = true;
+                        else
+                            singleMaterialHeadVisible = true;
+                        break;
+                
+                    case DUAL_MATERIAL_HEAD:
+                        dualMaterialHeadVisible = true;
+                        break;
+    
+                    case STYLUS_HEAD:
+                        stylusHeadVisible = true;
+                        break;
+                    
+                    default:
+                        break;
                 }
             }
         }
@@ -631,6 +642,7 @@ public class PrinterStatusPageController implements Initializable, PrinterListCh
         singleMaterialHead.setVisible(singleMaterialHeadVisible);
         dualMaterialHead.setVisible(dualMaterialHeadVisible);
         singleNozzleHead.setVisible(singleNozzleHeadVisible);
+        stylusHead.setVisible(stylusHeadVisible);
     }
 
     private void setAdvancedControlsVisibility()

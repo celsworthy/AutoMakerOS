@@ -15,10 +15,10 @@ public class ThreeDItemState extends ItemState
      * Container. It is used as an efficient way of applying Undo and Redo
      * to changes to a Set of ModelContainers.
      */
-    public double z;
-    public double preferredZScale;
-    public double preferredRotationTwist;
-    public double preferredRotationLean;
+    public double z = 0.0;
+    public double preferredZScale = 1.0;
+    public double preferredRotationTwist = 0.0;
+    public double preferredRotationLean = 0.0;
 
     public ThreeDItemState()
     {

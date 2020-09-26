@@ -4,7 +4,7 @@
 package celtech.coreUI;
 
 import celtech.coreUI.visualisation.ProjectSelection;
-import celtech.modelcontrol.ModelContainer;
+import celtech.modelcontrol.ProjectifiableThing;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.BooleanBinding;
 import javafx.collections.ObservableSet;
@@ -15,12 +15,12 @@ import javafx.collections.ObservableSet;
 public class ProjectGUIRules
 {
 
-    private final ObservableSet<ModelContainer> excludedFromSelection;
+    private final ObservableSet<ProjectifiableThing> excludedFromSelection;
 
     private final ProjectSelection projectSelection;
 
     public ProjectGUIRules(ProjectSelection projectSelection,
-        ObservableSet<ModelContainer> excludedFromSelection)
+        ObservableSet<ProjectifiableThing> excludedFromSelection)
     {
         this.projectSelection = projectSelection;
         this.excludedFromSelection = excludedFromSelection;

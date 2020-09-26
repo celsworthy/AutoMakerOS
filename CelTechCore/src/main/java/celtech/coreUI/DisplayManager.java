@@ -7,9 +7,11 @@ import celtech.appManager.ModelContainerProject;
 import celtech.appManager.Project;
 import celtech.appManager.ProjectCallback;
 import celtech.appManager.ProjectManager;
+import celtech.appManager.ProjectMode;
 import celtech.appManager.undo.CommandStack;
 import celtech.appManager.undo.UndoableProject;
 import celtech.configuration.ApplicationConfiguration;
+import celtech.configuration.DirectoryMemoryProperty;
 import celtech.coreUI.components.Notifications.NotificationArea;
 import celtech.coreUI.components.ProgressDialog;
 import celtech.coreUI.components.ProjectTab;
@@ -40,6 +42,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Set;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
@@ -49,6 +52,7 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -116,6 +120,7 @@ public class DisplayManager implements EventHandler<KeyEvent>, KeyCommandListene
     private static Tab printerStatusTab;
     private static Tab addPageTab;
     private Tab lastLayoutTab;
+    private FileChooser projectChooser;
 
     /*
      * Project loading
@@ -608,6 +613,7 @@ public class DisplayManager implements EventHandler<KeyEvent>, KeyCommandListene
                 dontGroupStartupModels);
 
         rootAnchorPane.layout();
+        
 
         steno.debug("end configure display manager");
     }
@@ -695,7 +701,7 @@ public class DisplayManager implements EventHandler<KeyEvent>, KeyCommandListene
         }
         return pTab;
     }
-    
+
     public void shutdown()
     {
         // This is here solely so it shutdown can be called on it when the application closes.
@@ -926,7 +932,7 @@ public class DisplayManager implements EventHandler<KeyEvent>, KeyCommandListene
         //Try sending the keyEvent to the in-focus project
         handle(keyEvent);
     }
-
+    
     private void loadProject(File projectFile) {
         try {
             Project p = projectManager.getProjectIfOpen(FilenameUtils.getBaseName(projectFile.getName()))

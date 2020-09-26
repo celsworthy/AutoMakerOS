@@ -19,6 +19,10 @@ public class GCodeGeneratorResult
     private String postProcOutputFileName = null;
     private SliceResult slicerResult = null;
     private GCodePostProcessingResult postProcessingResult = null;
+    
+    public GCodeGeneratorResult()
+    {
+    }
 
     /**
      *

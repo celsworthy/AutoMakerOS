@@ -6,8 +6,7 @@ package celtech.appManager.undo;
 import celtech.Lookup;
 import celtech.appManager.ModelContainerProject;
 import celtech.appManager.Project;
-import celtech.modelcontrol.Groupable;
-import celtech.roboxbase.configuration.Filament;
+import celtech.appManager.ShapeContainerProject;
 import celtech.modelcontrol.ModelContainer;
 import celtech.modelcontrol.ProjectifiableThing;
 import celtech.modelcontrol.ResizeableThreeD;
@@ -16,8 +15,6 @@ import celtech.modelcontrol.RotatableThreeD;
 import celtech.modelcontrol.RotatableTwoD;
 import celtech.modelcontrol.ScaleableThreeD;
 import celtech.modelcontrol.ScaleableTwoD;
-import celtech.modelcontrol.Translateable;
-import celtech.modelcontrol.TranslateableThreeD;
 import celtech.modelcontrol.TranslateableTwoD;
 import java.util.Set;
 import javafx.scene.shape.MeshView;
@@ -74,7 +71,7 @@ public class UndoableProject
         });
     }
 
-    public void translateModelsDepthPositionTo(Set<Translateable> modelContainers, double position)
+    public void translateModelsDepthPositionTo(Set<TranslateableTwoD> modelContainers, double position)
     {
         doTransformCommand(() ->
         {
@@ -180,6 +177,13 @@ public class UndoableProject
                 ((ModelContainerProject) project).rotateTurnModels(modelContainers, rotation);
             });
         }
+        else if (project instanceof ShapeContainerProject)
+        {
+            doTransformCommand(() ->
+            {
+                ((ShapeContainerProject) project).rotateTurnModels(modelContainers, rotation);
+            });
+        }
     }
 
     public void translateModelsBy(Set<TranslateableTwoD> modelContainers, double x, double y,
@@ -269,30 +273,43 @@ public class UndoableProject
         commandStack.do_(setUserExtruder0Command);
     }
 
-    public void group(Set<Groupable> modelContainers)
+    public void group(Set<ProjectifiableThing> modelContainers)
     {
         if (project instanceof ModelContainerProject)
         {
-            Command groupCommand = new GroupCommand(((ModelContainerProject) project), modelContainers);
+            Command groupCommand = new ModelGroupCommand(((ModelContainerProject) project), modelContainers);
+            commandStack.do_(groupCommand);
+        }
+        else if (project instanceof ShapeContainerProject)
+        {
+            Command groupCommand = new ShapeGroupCommand(((ShapeContainerProject) project), modelContainers);
             commandStack.do_(groupCommand);
         }
     }
 
-    public void ungroup(Set<ModelContainer> modelContainers)
+    public void ungroup(Set<ProjectifiableThing> modelContainers)
     {
         if (project instanceof ModelContainerProject)
         {
-            Command ungroupCommand = new UngroupCommand(((ModelContainerProject) project), modelContainers);
+            Command ungroupCommand = new ModelUngroupCommand(((ModelContainerProject) project), modelContainers);
+            commandStack.do_(ungroupCommand);
+        }
+        else if (project instanceof ShapeContainerProject)
+        {
+            Command ungroupCommand = new ShapeUngroupCommand(((ShapeContainerProject) project), modelContainers);
             commandStack.do_(ungroupCommand);
         }
     }
 
-    public void cut(Set<ModelContainer> modelContainers, float cutHeightValue)
+    public void cut(Set<ProjectifiableThing> modelContainers, float cutHeightValue)
     {
         if (project instanceof ModelContainerProject)
         {
-            Command cutCommand = new CutCommand(((ModelContainerProject) project), modelContainers, cutHeightValue);
+            Command cutCommand = new ModelCutCommand(((ModelContainerProject) project), modelContainers, cutHeightValue);
             commandStack.do_(cutCommand);
+        }
+        else if (project instanceof ShapeContainerProject)
+        {
         }
     }
 }

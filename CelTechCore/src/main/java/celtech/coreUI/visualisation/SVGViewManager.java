@@ -6,51 +6,40 @@ import celtech.appManager.ApplicationStatus;
 import celtech.appManager.Project;
 import celtech.appManager.TimelapseSettingsData;
 import celtech.appManager.undo.UndoableProject;
-import celtech.coreUI.visualisation.svg.PrintableShape;
-import celtech.coreUI.visualisation.svg.TextPath;
+import celtech.configuration.ApplicationConfiguration;
 import celtech.modelcontrol.ProjectifiableThing;
 import celtech.modelcontrol.TranslateableTwoD;
-import celtech.roboxbase.configuration.BaseConfiguration;
+import celtech.roboxbase.configuration.datafileaccessors.PrinterContainer;
+import celtech.roboxbase.configuration.fileRepresentation.PrinterDefinitionFile;
 import celtech.roboxbase.configuration.fileRepresentation.PrinterSettingsOverrides;
-import celtech.roboxbase.importers.twod.svg.DragKnifeCompensator;
-import celtech.roboxbase.importers.twod.svg.SVGConverterConfiguration;
-import celtech.roboxbase.postprocessor.nouveau.nodes.GCodeEventNode;
-import celtech.roboxbase.postprocessor.nouveau.nodes.StylusLiftNode;
-import celtech.roboxbase.postprocessor.nouveau.nodes.StylusPlungeNode;
-import celtech.roboxbase.postprocessor.nouveau.nodes.StylusScribeNode;
-import celtech.roboxbase.postprocessor.nouveau.nodes.StylusSwivelNode;
-import celtech.roboxbase.postprocessor.nouveau.nodes.TravelNode;
-import celtech.roboxbase.postprocessor.stylus.PrintableShapesToGCode;
-import celtech.roboxbase.utils.models.PrintableShapes;
-import celtech.roboxbase.utils.models.ShapeForProcessing;
-import celtech.utils.threed.importers.svg.ShapeContainer;
+import celtech.roboxbase.printerControl.model.Printer;
+import celtech.modelcontrol.ShapeContainer;
+import celtech.roboxbase.utils.Math.MathUtils;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.ReadOnlyDoubleProperty;
+import javafx.beans.property.ReadOnlyObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.event.EventType;
+import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.geometry.Point3D;
-import javafx.geometry.Side;
 import javafx.scene.Group;
 import javafx.scene.Node;
-import javafx.scene.control.ContextMenu;
-import javafx.scene.control.MenuItem;
-import javafx.scene.input.ContextMenuEvent;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.PickResult;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.input.ZoomEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.scene.transform.Affine;
@@ -62,11 +51,31 @@ import libertysystems.stenographer.StenographerFactory;
 /**
  *
  * @author ianhudson
+ * 
+ * The coordinate systems can be quite confusing.
+ * In JFX, the origin is the top left corner of the screen.
+ * X goes left to right, Y goes top to bottom and Z goes into the screen.
+ * Thus, for a 3D shape X is width, Y is height and Z is depth.
+ * 
+ * For a 2D shape, X is width, Y is height. (There is no Z.)
+ * This seems to be how it is drawn on the screen.
+ * TODO - For the bed, the origin should be in the bottom left corner, and
+ * Y should go from bottom to top.
+ * 
+ * When a 2D shape is placed on the 3D bed, the 2D Shapes X axis lies along the 3D beds X axis,
+ * and the 2D shapes Y axis lies along the 3D beds Z axis, which is very confusing.
+ * 
+ * There is also scope for confusion because the TranslateableTwoD class translates x and z,
+ * but the shape container subclass actually modifies x and y.
+ * 
+ * Curiously, the ScaleableTwoD scales x and y, not x and z.
  */
 public class SVGViewManager extends Pane implements Project.ProjectChangesListener
 {
-
-    private final Stenographer steno = StenographerFactory.getStenographer(SVGViewManager.class.getName());
+    private final static Stenographer steno = StenographerFactory.getStenographer(SVGViewManager.class.getName());
+    private final static double LENGTH_EPSILON = 0.0005;
+    private static Image bedImage = null; // Shared across all SVG views.
+    private static Image proBedImage = null; // Shared across all SVG views.
     private final Project project;
     private final UndoableProject undoableProject;
     private final ApplicationStatus applicationStatus = ApplicationStatus.getInstance();
@@ -77,76 +86,102 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
     private Point2D lastDragPosition = null;
     private double mousePosX;
     private double mousePosY;
-    private double mouseOldX;
-    private double mouseOldY;
+    private double mousePreviousX;
+    private double mousePreviousY;
+    
+    private double fitScale = 1.0;
+    private double minScale = 1.0;    
+    private double maxScale = 1.0;    
+    private double xOffsetAtFitScale = 0.0;
+    private double yOffsetAtFitScale = 0.0;
 
-    private final double bedWidth = 210;
-    private final double bedHeight = 150;
+    private double bedWidth = 210;
+    private double bedHeight = 150;
     private final double bedBorder = 10;
+    private final Affine bedMirror = new Affine();
 
     private Group partsAndBed = new Group();
     private final Translate bedTranslate = new Translate();
     private final Scale bedScale = new Scale();
     private final Rectangle bed = new Rectangle(bedWidth, bedHeight);
     private final Group parts = new Group();
-    private final Group gCodeOverlay = new Group();
-
-    private Pane parentPane = null;
-
+    private ImageView bedImageView;
+    private ImageView proBedImageView;
+    
     private final ObjectProperty<DragMode> dragMode = new SimpleObjectProperty(DragMode.IDLE);
     private boolean justEnteredDragMode;
 
-    private ContextMenu bedContextMenu = null;
-    
     public SVGViewManager(Project project)
     {
+        //steno.info("SVGViewManager");
         this.project = project;
         this.undoableProject = new UndoableProject(project);
 
-        parentPane = this;
-
         this.setPickOnBounds(false);
+        
+        getChildren().add(partsAndBed);
 
         createBed();
+        
+        // In JFX, the origin is at the top left, with the X axis
+        // pointing left to right and the Y axis pointing top to bottom:
+        //
+        // O--X-->--------------------------------------
+        // Y                                           |
+        // V                                           |
+        // |                                           |
+        // |                                           |
+        // |                                           |
+        // |                                           |
+        // |                                           |
+        // ---------------------------------------------
+        
+        // The following transform mirrors in Y, and moves the origin
+        // to the bottom left.
+        bedMirror.setMyy(-1.0);
+        bedMirror.setTy(bedHeight);
 
-        partsAndBed.getChildren().addAll(bed, parts);
-        partsAndBed.getTransforms().addAll(bedTranslate, bedScale);
-
-        Affine jfxToRealWorld = new Affine();
-        jfxToRealWorld.appendScale(1, -1);
-        jfxToRealWorld.appendTranslation(0, -bedHeight);
-
-        gCodeOverlay.getTransforms().addAll(bedTranslate, bedScale, jfxToRealWorld);
-
-        getChildren().add(partsAndBed);
-        getChildren().add(gCodeOverlay);
+        // The bed rectangle represents the printer bed.
+        // The parts group holds all the ShapeContainers. It has the origin
+        // at the centre of the workspace and is translated by half the
+        // bed width and height to bring it into printer space, with 
+        // the origin at the front left of the bed (looking from the front
+        // of the printer to the back).
+        
+        partsAndBed.getChildren().addAll(bed, bedImageView, proBedImageView, parts);
+        
+        partsAndBed.getTransforms().addAll(bedTranslate, bedScale, bedMirror);
+        // getTransforms().addAll(t, s, a) are applied in the order (x') = t s a (x)
+        //                                                          (y')         (y)
+        //partsAndBed.getTransforms().addAll(bedTranslate, bedScale);
 
         projectSelection = Lookup.getProjectGUIState(project).getProjectSelection();
         loadedModels = project.getTopLevelThings();
-
         applicationStatus.modeProperty().addListener(applicationModeListener);
 
-        parentPane.addEventHandler(MouseEvent.ANY, mouseEventHandler);
-        parentPane.addEventHandler(ZoomEvent.ANY, zoomEventHandler);
-        parentPane.addEventHandler(ScrollEvent.ANY, scrollEventHandler);
+        addEventHandler(MouseEvent.ANY, mouseEventHandler);
+        addEventHandler(ZoomEvent.ANY, zoomEventHandler);
+        addEventHandler(ScrollEvent.ANY, scrollEventHandler);
+        setStyle("-fx-background-color: blue;");
 
-//        setStyle("-fx-background-color: blue;");
-        this.maxWidthProperty().addListener(new ChangeListener<Number>()
+        Lookup.getSelectedPrinterProperty().addListener(new ChangeListener<Printer>()
         {
             @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue)
+            public void changed(ObservableValue<? extends Printer> ov, Printer t, Printer t1)
             {
-                resizeBed();
+                whenCurrentPrinterChanged(t1);
             }
         });
+        whenCurrentPrinterChanged(Lookup.getSelectedPrinterProperty().get());
 
-        this.maxHeightProperty().addListener(new ChangeListener<Number>()
-        {
-            @Override
-            public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue)
-            {
+        this.widthProperty().addListener((ObservableValue<? extends Number> observable, Number oldValue, Number newValue) -> {
+            if (newValue.doubleValue() > 0.0)
                 resizeBed();
-            }
+        });
+
+        this.heightProperty().addListener((ObservableValue<? extends Number> observable, Number oldValue, Number newValue) -> {
+            if (newValue.doubleValue() > 0.0)
+                resizeBed();
         });
 
         /**
@@ -154,112 +189,53 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
          */
         project.addProjectChangesListener(this);
 
-        for (ProjectifiableThing projectifiableThing : project.getAllModels())
+        for (ProjectifiableThing projectifiableThing : loadedModels)
         {
-            projectifiableThing.setBedReference(gCodeOverlay);
-            parts.getChildren().add(projectifiableThing);
-//            projectifiableThing.shrinkToFitBed();
+            if (projectifiableThing instanceof ShapeContainer)
+            {
+                ShapeContainer shape = (ShapeContainer)projectifiableThing;
+                //steno.info("SVGViewManager::SVGViewManager - Bounds are " + shape.getBoundsInLocal());
+                parts.getChildren().add(shape);
+                shape.setBedReference(partsAndBed);
+            }
         }
     }
 
     private void createBed()
     {
-        bed.setFill(Color.ANTIQUEWHITE);
+        //steno.info("createBed");
+        bed.setFill(Color.LIGHTGREY);
         // The bed is in mm units
-
-        bedContextMenu = new ContextMenu();
-
-        String cm1Text = "Add Text";
-        String cm2Text = "Add Box";
-        String cm3Text = "Add Circle";
-        String cm4Text = "Generate GCode";
-
-        MenuItem addTextMenuItem = new MenuItem(cm1Text);
-        MenuItem addRectangleMenuItem = new MenuItem(cm2Text);
-        MenuItem addCircleMenuItem = new MenuItem(cm3Text);
-        MenuItem generateGCodeMenuItem = new MenuItem(cm4Text);
-
-        addTextMenuItem.setOnAction((ActionEvent e) ->
-        {
-            TextPath newPath = new TextPath();
-
-            ShapeContainer newShapeContainer = new ShapeContainer("Text", newPath);
-
-            Point2D pointToPlaceAt = partsAndBed.screenToLocal(bedContextMenu.getAnchorX(), bedContextMenu.getAnchorY());
-
-            newShapeContainer.translateTo(pointToPlaceAt.getX(), pointToPlaceAt.getY());
-
-            Lookup.getSelectedProjectProperty().get().addModel(newShapeContainer);
-        });
-
-        addRectangleMenuItem.setOnAction((ActionEvent e) ->
-        {
-            Rectangle newShape = new Rectangle(10, 10);
-
-            ShapeContainer newShapeContainer = new ShapeContainer("Rectangle", newShape);
-
-            Point2D pointToPlaceAt = partsAndBed.screenToLocal(bedContextMenu.getAnchorX(), bedContextMenu.getAnchorY());
-
-            newShapeContainer.translateTo(pointToPlaceAt.getX(), pointToPlaceAt.getY());
-
-            Lookup.getSelectedProjectProperty().get().addModel(newShapeContainer);
-        });
-
-        addCircleMenuItem.setOnAction((ActionEvent e) ->
-        {
-
-            Circle newShape = new Circle(10);
-            newShape.setSmooth(true);
-
-            ShapeContainer newShapeContainer = new ShapeContainer("Circle", newShape);
-
-            Point2D pointToPlaceAt = partsAndBed.screenToLocal(bedContextMenu.getAnchorX(), bedContextMenu.getAnchorY());
-            newShapeContainer.translateTo(pointToPlaceAt.getX(), pointToPlaceAt.getY());
-
-            Lookup.getSelectedProjectProperty().get().addModel(newShapeContainer);
-        });
-
-        generateGCodeMenuItem.setOnAction((ActionEvent e) ->
-        {
-            List<ShapeForProcessing> shapes = new ArrayList<>();
-            parts.getChildren().forEach(child ->
-            {
-                if (child instanceof ShapeContainer)
-                {
-                    ShapeContainer shapeContainer = (ShapeContainer) child;
-                    shapeContainer.getShapes().forEach((shape) ->
-                    {
-                        shapes.add(new ShapeForProcessing(shape, shapeContainer));
-                    });
-                }
-            });
-
-            PrintableShapes ps = new PrintableShapes(shapes, Lookup.getSelectedProjectProperty().get().getProjectName(), "test2D");
-            List<GCodeEventNode> gcodeData = PrintableShapesToGCode.parsePrintableShapes(ps);
-            DragKnifeCompensator dnc = new DragKnifeCompensator();
-            List<GCodeEventNode> dragKnifeCompensatedGCodeNodes = dnc.doCompensation(gcodeData, 0.2);
-            PrintableShapesToGCode.writeGCodeToFile(BaseConfiguration.getPrintSpoolDirectory() + "stylusTestRaw.gcode", gcodeData);
-            PrintableShapesToGCode.writeGCodeToFile(BaseConfiguration.getPrintSpoolDirectory() + "stylusTestCompensated.gcode", dragKnifeCompensatedGCodeNodes);
-            renderGCode(dragKnifeCompensatedGCodeNodes);
-        });
-
-        bedContextMenu.getItems().addAll(addTextMenuItem, addRectangleMenuItem, addCircleMenuItem, generateGCodeMenuItem);
-
-        bed.setOnContextMenuRequested(new EventHandler<ContextMenuEvent>()
-        {
-            @Override
-            public void handle(ContextMenuEvent event)
-            {
-                Point3D parentPoint = partsAndBed.localToParent(event.getPickResult().getIntersectedPoint());
-                bedContextMenu.show(parentPane, Side.TOP, parentPoint.getX(), parentPoint.getY());
-            }
-        });
+        
+        URL proBedGraphicURL = getClass().getResource(ApplicationConfiguration.imageResourcePath
+                + "Bed Graphic - RoboxPro.png");
+        URL bedGraphicURL = getClass().getResource(ApplicationConfiguration.imageResourcePath
+                + "Bed Graphic - Robox.png");
+        if (bedImage == null)
+            bedImage = new Image(bedGraphicURL.toExternalForm());
+        bedImageView = new ImageView(bedImage);
+        bedImageView.setVisible(false);
+        bedImageView.setScaleY(-1);
+        
+        if (proBedImage == null)
+            proBedImage = new Image(proBedGraphicURL.toExternalForm());
+        proBedImageView = new ImageView(proBedImage);
+        proBedImageView.setVisible(false);
+        proBedImageView.setScaleY(-1);
     }
 
-    private void resizeBed()
+    private void calculateBedFitScale()
     {
-        double viewAreaWidth = maxWidthProperty().get();
-        double viewAreaHeight = maxHeightProperty().get();
+        //steno.info("calculateBedFitScale");
+        
+        double viewAreaWidth = widthProperty().get();
+        if (viewAreaWidth < 70)
+            viewAreaWidth = 70;
+        viewAreaWidth -= 2 * bedBorder;
+        double viewAreaHeight = heightProperty().get();
+        if (viewAreaHeight < 70)
+            viewAreaHeight = 70;
+        viewAreaHeight -= 2 * bedBorder;
         double displayAspect = viewAreaWidth / viewAreaHeight;
         double aspect = bedWidth / bedHeight;
 
@@ -268,81 +244,196 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
         if (displayAspect >= aspect)
         {
             // Drive from height
-            newWidth = (viewAreaHeight * aspect) - bedBorder;
-            newHeight = viewAreaHeight - bedBorder;
+            newWidth = viewAreaHeight * aspect;
+            newHeight = viewAreaHeight;
         } else
         {
             //Drive from width
-            newHeight = (viewAreaWidth / aspect) - bedBorder;
-            newWidth = viewAreaWidth - bedBorder;
+            newHeight = viewAreaWidth / aspect;
+            newWidth = viewAreaWidth;
         }
 
-        double scale = newWidth / bedWidth;
+        fitScale = newWidth / bedWidth;
+        minScale = 0.1 * fitScale;
+        maxScale = 10.0 * fitScale;
 
-        bedScale.setX(scale);
-        bedScale.setY(scale);
+        xOffsetAtFitScale = ((viewAreaWidth - newWidth) / 2) + bedBorder;
+        yOffsetAtFitScale = ((viewAreaHeight - newHeight) / 2) + bedBorder;
 
-        double xOffset = ((viewAreaWidth - newWidth) / 2);
-        double yOffset = ((viewAreaHeight - newHeight) / 2);
+        //System.out.println("calculateBedFitScale");
+        //System.out.println("  widthProperty = " +
+        //                   Double.toString(widthProperty().get()) + 
+        //                   ", heightProperty = " + 
+        //                   Double.toString(heightProperty().get()));
+        //System.out.println("  bed = (" +
+        //                   Double.toString(bedWidth) + 
+        //                   ", " + 
+        //                   Double.toString(bedHeight) +
+        //                   ")");
+        //System.out.println("  viewArea = (" +
+        //                   Double.toString(viewAreaWidth) + 
+        //                   ", " + 
+        //                   Double.toString(viewAreaHeight) + 
+        //                   ")");
+        //System.out.println("  fitScale = " +
+        //                   Double.toString(fitScale));
+        //System.out.println("  offsetAtFitScale = (" +
+        //                   Double.toString(xOffsetAtFitScale) + 
+        //                   ", " + 
+        //                   Double.toString(yOffsetAtFitScale) + 
+        //                   ")");
+    }
 
-        bedTranslate.setX(xOffset);
-        bedTranslate.setY(yOffset);
+    private void resizeBed()
+    {
+        // steno.info("resizeBed");
+        calculateBedFitScale();
+        
+        bedScale.setX(fitScale);
+        bedScale.setY(fitScale);
+
+        bedTranslate.setX(xOffsetAtFitScale);
+        bedTranslate.setY(yOffsetAtFitScale);
+
+        //System.out.println("  originOnScreen = " + localToScreen(0,0));
+        //System.out.println("  cornerOnScreen = " + localToScreen(widthProperty().get(),heightProperty().get()));
+        //System.out.println("  bedOriginOnScreen = " + bed.localToScreen(0,0));
+        //System.out.println("  bedCornerOnScreen = " + bed.localToScreen(bedWidth, bedHeight));
+
+        notifyScreenExtentsChange();
     }
 
     @Override
     public void whenModelAdded(ProjectifiableThing projectifiableThing)
     {
-        steno.info("Bounds are " + projectifiableThing.getBoundsInLocal());
-        projectifiableThing.setBedReference(gCodeOverlay);
-        parts.getChildren().add(projectifiableThing);
-//        projectifiableThing.shrinkToFitBed();
+        if (projectifiableThing instanceof ShapeContainer)
+        {
+            ShapeContainer shape = (ShapeContainer)projectifiableThing;
+            parts.getChildren().add(shape);
+            shape.setBedReference(partsAndBed);
+            //shape.setBedCentreOffsetTransform();
+    //        projectifiableThing.shrinkToFitBed();
+        }
     }
 
     @Override
     public void whenModelsRemoved(Set<ProjectifiableThing> projectifiableThing)
     {
+        //steno.info("whenModelsRemoved");
         parts.getChildren().removeAll(projectifiableThing);
     }
 
     @Override
     public void whenAutoLaidOut()
     {
+        //steno.info("whenAutoLaidOut");
     }
 
     @Override
     public void whenModelsTransformed(Set<ProjectifiableThing> projectifiableThing
     )
     {
+        //steno.info("whenModelsTransformed");
     }
 
     @Override
     public void whenModelChanged(ProjectifiableThing modelContainer, String propertyName
     )
     {
+        //steno.info("whenModelChanged");
     }
 
     @Override
     public void whenPrinterSettingsChanged(PrinterSettingsOverrides printerSettings
     )
     {
+        //steno.info("whenPrinterSettingsChanged");
     }
 
+    private void debugPrintBounds(String message, Bounds b)
+    {
+        System.out.println(message +
+                           "(" + 
+                           Double.toString(b.getMinX()) + 
+                           ", " + 
+                           Double.toString(b.getMinY()) + 
+                           ", " + 
+                           Double.toString(b.getMaxX()) + 
+                           ", " + 
+                           Double.toString(b.getMaxY()) + 
+                           ") [ " + 
+                           Double.toString(b.getCenterX()) + 
+                           ", " + 
+                           Double.toString(b.getCenterY()) + 
+                           "]");
+    }
+    
+    private void debugPrintNode(String padding, Node n)
+    {
+        ShapeContainer sc = null;
+        if (n instanceof ShapeContainer)
+        {
+            sc = (ShapeContainer)n;
+            System.out.println(padding + sc.getClass().getSimpleName() +
+                               "[" + Integer.toString(sc.getModelId()) + "]");
+        }
+        else
+            System.out.println(padding + n.getClass().getSimpleName() +
+                    "[" + Integer.toString(n.hashCode()) + "]");
+        Node p = n.getParent();
+        if (p instanceof ProjectifiableThing)
+        {
+            System.out.println(padding + "  P = " + p.getClass().getSimpleName() +
+                               "[" + Integer.toString(((ProjectifiableThing)p).getModelId()) + "]");
+        }
+        else
+            System.out.println(padding + "  P = " + p.getClass().getSimpleName() +
+                    "[" + Integer.toString(p.hashCode()) + "]");
+        debugPrintBounds(padding + "  S L: ", n.getBoundsInLocal());
+        debugPrintBounds(padding + "  S P: ", n.getBoundsInParent());
+        if (sc != null)
+            sc.debugPrintTransforms(padding + "  S: ");
+    }
+    
+    private void debugPrintAllBounds(String message)
+    {
+        System.out.println(message);
+        debugPrintBounds("  this L: ", getBoundsInLocal());
+        debugPrintBounds("  this P: ", getBoundsInParent());
+        debugPrintBounds("  partsAndBed L: ", partsAndBed.getBoundsInLocal());
+        debugPrintBounds("  partsAndBed P: ", partsAndBed.getBoundsInParent());
+        debugPrintBounds("  bed L: ", bed.getBoundsInLocal());
+        debugPrintBounds("  bed P: ", bed.getBoundsInParent());
+        System.out.println("  bed O: " + sceneToLocal(bed.localToScene(0.0, 0.0)));
+        List<Node> nodesToPrint = new ArrayList<>();
+        int index = 0;
+        nodesToPrint.addAll(parts.getChildren());
+        while (index < nodesToPrint.size())
+        {
+            Node n = nodesToPrint.get(index);
+            index++;
+            debugPrintNode("  ", n);
+            if (n instanceof Group)
+                nodesToPrint.addAll(((Group)n).getChildren());
+        }
+    }
+    
     @Override
     public void whenTimelapseSettingsChanged(TimelapseSettingsData timelapseSettings)
     {
     }
 
-
     private final EventHandler<MouseEvent> mouseEventHandler = event ->
     {
-
-        mouseOldX = mousePosX;
-        mouseOldY = mousePosY;
+        mousePreviousX = mousePosX;
+        mousePreviousY = mousePosY;
         mousePosX = event.getSceneX();
         mousePosY = event.getSceneY();
 
+        //debugPrintAllBounds("mouseEvent");
         if (event.getEventType() == MouseEvent.MOUSE_PRESSED)
         {
+            //steno.info("MouseEvent.MOUSE_PRESSED");
             if (event.isPrimaryButtonDown()
                     || event.isSecondaryButtonDown())
             {
@@ -351,17 +442,22 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
 
         } else if (event.getEventType() == MouseEvent.MOUSE_DRAGGED)
         {
+            //steno.info("MouseEvent.MOUSE_DRAGGED");
             dragShape(shapeBeingDragged, event);
 
         } else if (event.getEventType() == MouseEvent.MOUSE_RELEASED)
         {
+            //steno.info("MouseEvent.MOUSE_RELEASED");
             shapeBeingDragged = null;
+            lastDragPosition = null;
+            //steno.info("Setting DragMode to IDLE");
             dragMode.set(DragMode.IDLE);
         }
     };
 
     private final EventHandler<ZoomEvent> zoomEventHandler = event ->
     {
+        //steno.info("Zoom event handler");
         if (!Double.isNaN(event.getZoomFactor()) && event.getZoomFactor() > 0.8
                 && event.getZoomFactor() < 1.2)
         {
@@ -374,13 +470,117 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
 
     private final EventHandler<ScrollEvent> scrollEventHandler = event ->
     {
-        double newScale = bedScale.getX() + (0.01 * event.getDeltaY());
-        bedScale.setX(newScale);
-        bedScale.setY(newScale);
-    };
+        //steno.info("Scroll event handler");
+        // What is the current position of the mouse in bed coordinates.
+        mousePreviousX = mousePosX;
+        mousePreviousY = mousePosY;
+        mousePosX = event.getSceneX();
+        mousePosY = event.getSceneY();
 
+        setAndConstrainBedScale(bedScale.getX() + 0.01 * event.getDeltaY(), true);
+    };
+    
+    private void setAndConstrainBedScale(double newScale, boolean scaleAboutMousePosition)
+    {
+        if (newScale < minScale)
+            newScale = minScale;
+        if (newScale > maxScale)
+            newScale = maxScale;
+        if (newScale != bedScale.getX())
+        {
+            // Change the bed offset so that the point at the centre of the view
+            // (or the position under the mouse if scaleAboutMousePosition is
+            // true) remains in the same place after the scale change.
+            double newOffsetX = bedTranslate.getX();
+            double newOffsetY = bedTranslate.getY();
+            double viewPointX = mousePosX;
+            double viewPointY = mousePosY;
+            if (!scaleAboutMousePosition)
+            {
+                // use centre of view instead of mouse position.
+                Point2D viewCentre = localToScene(0.5 * widthProperty().get(),
+                                                  0.5 * heightProperty().get());
+                viewPointX = viewCentre.getX();
+                viewPointY = viewCentre.getY();
+            }
+            Point2D mousePaneLocal = sceneToLocal(viewPointX, viewPointY);
+            Point2D mouseLocal = partsAndBed.sceneToLocal(viewPointX, viewPointY);
+            newOffsetX = mousePaneLocal.getX() - newScale * mouseLocal.getX();
+            newOffsetY = mousePaneLocal.getY() + newScale * (mouseLocal.getY() - bedHeight);
+
+            bedScale.setX(newScale);
+            bedScale.setY(newScale);
+            setAndConstrainBedOffset(newOffsetX, newOffsetY);
+            notifyScreenExtentsChange();
+        }
+    }
+    
+    private void setAndConstrainBedOffset(double proposedXOffset, double proposedYOffset)
+    {
+        double newOffsetX = proposedXOffset;
+        double newOffsetY = proposedYOffset;
+                
+        bedTranslate.setX(newOffsetX);
+        bedTranslate.setY(newOffsetY);
+        // Adjust to ensure edges of bed do not creep around screen.
+        //Bounds parentBounds = getBoundsInLocal();
+        Bounds pbBounds = partsAndBed.getBoundsInParent();
+        double viewAreaWidth = widthProperty().get();
+        double viewAreaHeight = heightProperty().get();
+        double bedAreaWidth = bedScale.getX() * bedWidth;
+        double bedAreaHeight = bedScale.getY() * bedHeight;
+
+        if (bedAreaWidth <= viewAreaWidth)
+        {
+            // Bed width is smaller than parent.
+            // Centre in parent.
+            newOffsetX = 0.5 * (viewAreaWidth - bedAreaWidth);
+        }
+        else if (newOffsetX < viewAreaWidth - bedAreaWidth)
+        {
+            // Bed width is larger than parent, but right edge is inside  parent.
+            // Keep right edge at right of parent.
+            newOffsetX = viewAreaWidth - bedAreaWidth;
+        }
+        else if (pbBounds.getMinX() > 0.0)
+        {
+            // Bed width is larger than parent, but left edge is inside  parent.
+            // Keep left edge at left of parent.
+            newOffsetX = 0.0;
+        }
+
+        if (bedAreaHeight <= viewAreaHeight)
+        {
+            // Bed height is smaller than parent.
+            // Centre in parent.
+            newOffsetY = 0.5 * (viewAreaHeight - bedAreaHeight);
+        }
+        else if (newOffsetY < viewAreaHeight - bedAreaHeight)
+        {
+            // Bed width is larger than parent, but bottom edge is inside  parent.
+            // Keep bottom edge at bottom of parent.
+            newOffsetY = viewAreaHeight - bedAreaHeight;
+        }
+        else if (newOffsetY > 0.0)
+        {
+            // Bed width is larger than parent, but top edge is inside  parent.
+            // Keep top edge at top of parent.
+            newOffsetY = 0.0;
+        }
+
+        bedTranslate.setX(newOffsetX);
+        bedTranslate.setY(newOffsetY);
+    }
+
+    private void notifyScreenExtentsChange()
+    {
+        if (loadedModels != null)
+            loadedModels.forEach(m -> m.notifyScreenExtentsChange());
+    }
+    
     private ShapeContainer findShapeContainerParent(Node shape)
     {
+        //steno.info("findShapeContainerParent");
         ShapeContainer sc = null;
         Node currentNode = shape;
 
@@ -398,22 +598,20 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
 
     private void handleMouseSingleClickedEvent(MouseEvent event)
     {
+        //steno.info("handleMouseSingleClickedEvent");
         boolean handleThisEvent = true;
-        steno.info("source was " + event.getSource());
-        steno.info("target was " + event.getTarget());
+        //steno.info("    source: " + event.getSource());
+        //steno.info("    target: " + event.getTarget());
         PickResult pickResult = event.getPickResult();
-        steno.info("picked was " + pickResult.getIntersectedNode());
         Point3D pickedPoint = pickResult.getIntersectedPoint();
         Node intersectedNode = pickResult.getIntersectedNode();
-
+        //steno.info("   picked: " + intersectedNode + " @ " + pickedPoint);
+                
         boolean shortcut = event.isShortcutDown();
 
-        if (intersectedNode != bed)
-        {
-            bedContextMenu.hide();
-        }
         if (event.isPrimaryButtonDown())
         {
+            //steno.info("    event.isPrimaryButtonDown");
             if (intersectedNode != bed
                     && intersectedNode instanceof Shape)
             {
@@ -429,7 +627,7 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
                         projectSelection.addSelectedItem(sc);
                     }
                 }
-                steno.info("Picked: " + intersectedNode + " at " + pickedPoint);
+                //steno.info("    Setting drag mode to TRANSLATING");
                 dragMode.set(DragMode.TRANSLATING);
                 justEnteredDragMode = true;
                 dragShape((Shape) intersectedNode, event);
@@ -438,32 +636,55 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
                 projectSelection.deselectAllModels();
             }
         }
-//        } else if (event.isSecondaryButtonDown())
-//        {
+        else if (event.isSecondaryButtonDown())
+        {
+            //steno.info("    event.isSecondaryButtonDown");
+            shapeBeingDragged = bed;
+            dragMode.set(DragMode.TRANSLATING);
+            justEnteredDragMode = true;
+            lastDragPosition = null;
+            dragShape(bed, event);
+            
 ////            intersectedNode.fireEvent(new ContextMenuEvent(ContextMenuEvent.CONTEXT_MENU_REQUESTED,
 ////                    event.getX(), event.getY(),
 ////                    event.getScreenX(), event.getScreenY(),
 ////                    false,
 ////                    pickResult));
-//        }
+        }
     }
 
     private void dragShape(Shape shapeToDrag, MouseEvent event)
     {
+        //steno.info("dragShape");
         Point2D newPosition = new Point2D(event.getSceneX(), event.getSceneY());
-        if (shapeBeingDragged != null)
+        if (shapeBeingDragged != null && lastDragPosition != null)
         {
-            steno.info("New position = " + newPosition);
-            Point2D resultantPosition = partsAndBed.sceneToLocal(newPosition).subtract(partsAndBed.sceneToLocal(lastDragPosition));
-            steno.info("Resultant " + resultantPosition);
-//            if (shapeBeingDragged == bed)
-//            {
-//                bedTranslate.setX(bedTranslate.getX() + resultantPosition.getX());
-//                bedTranslate.setY(bedTranslate.getY() + resultantPosition.getY());
-//            } else
+            //steno.info("New position = " + newPosition);
+            Point2D positionDelta = partsAndBed.sceneToLocal(newPosition).subtract(partsAndBed.sceneToLocal(lastDragPosition));
+            //steno.info("Position delta = " + positionDelta);
+            if (shapeBeingDragged == bed)
             {
-
-                undoableProject.translateModelsBy(projectSelection.getSelectedModelsSnapshot(TranslateableTwoD.class), resultantPosition.getX(), resultantPosition.getY(),
+                if (!event.isShiftDown() && !event.isAltDown() && positionDelta.magnitude() > LENGTH_EPSILON)
+                {
+                    // bedTranslate is applied after bedScale and bedMirror, so these transforms
+                    // must be applied to the positionDelta.
+                    setAndConstrainBedOffset(bedTranslate.getX() + bedScale.getX() * positionDelta.getX(),
+                                             bedTranslate.getY() - bedScale.getY() * positionDelta.getY());
+                    notifyScreenExtentsChange();
+                }
+                else if (event.isAltDown() && !event.isShiftDown() && !event.isControlDown())
+                {
+                    double mouseDeltaX = mousePosX - mousePreviousX;
+                    double mouseDeltaY = mousePosY - mousePreviousY;
+                    double scaleDelta = 0.01 * Math.sqrt(mouseDeltaX * mouseDeltaX + mouseDeltaY * mouseDeltaY);
+                    if (mouseDeltaY > 0.0)
+                        scaleDelta = -scaleDelta;
+                    setAndConstrainBedScale(bedScale.getX() + scaleDelta, false);
+                }
+            } 
+            else if (shapeBeingDragged != bed) 
+            {
+                undoableProject.translateModelsBy(projectSelection.getSelectedModelsSnapshot(TranslateableTwoD.class), positionDelta.getX(), positionDelta.getY(),
                         !justEnteredDragMode);
             }
 
@@ -476,18 +697,21 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
     private final ChangeListener<ApplicationMode> applicationModeListener
             = (ObservableValue<? extends ApplicationMode> ov, ApplicationMode oldMode, ApplicationMode newMode) ->
             {
+                //steno.info("applicationModeListener");
                 if (oldMode != newMode)
                 {
                     switch (newMode)
                     {
                         case SETTINGS:
-                            parentPane.removeEventHandler(MouseEvent.ANY, mouseEventHandler);
+                            removeEventHandler(MouseEvent.ANY, mouseEventHandler);
+                            removeEventHandler(ZoomEvent.ANY, zoomEventHandler);
+                            removeEventHandler(ScrollEvent.ANY, scrollEventHandler);
                             deselectAllModels();
                             break;
                         default:
-                            parentPane.addEventHandler(MouseEvent.ANY, mouseEventHandler);
-                            parentPane.addEventHandler(ZoomEvent.ANY, zoomEventHandler);
-                            parentPane.addEventHandler(ScrollEvent.ANY, scrollEventHandler);
+                            addEventHandler(MouseEvent.ANY, mouseEventHandler);
+                            addEventHandler(ZoomEvent.ANY, zoomEventHandler);
+                            addEventHandler(ScrollEvent.ANY, scrollEventHandler);
                             break;
                     }
 //                    updateModelColours();
@@ -496,6 +720,7 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
 
     private void selectModel(ShapeContainer selectedNode, boolean multiSelect)
     {
+        //steno.info("selectModel");
         if (selectedNode == null)
         {
             projectSelection.deselectAllModels();
@@ -511,6 +736,7 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
 
     private void deselectAllModels()
     {
+        //steno.info("deselectAllModels");
         for (ProjectifiableThing modelContainer : loadedModels)
         {
             deselectModel((ShapeContainer) modelContainer);
@@ -519,101 +745,69 @@ public class SVGViewManager extends Pane implements Project.ProjectChangesListen
 
     public void deselectModel(ShapeContainer pickedModel)
     {
+        //steno.info("deselectModel");
         if (pickedModel.isSelected())
         {
             projectSelection.removeModelContainer(pickedModel);
         }
     }
-
-    private void renderGCode(List<GCodeEventNode> gcodeNodes)
+    
+    public ReadOnlyObjectProperty<DragMode> getDragModeProperty()
     {
-        gCodeOverlay.getChildren().clear();
-
-        double currentX = 0;
-        double currentY = 0;
-        boolean isInContact = false;
-
-        for (GCodeEventNode node : gcodeNodes)
+        return dragMode;
+    }
+     
+    private void whenCurrentPrinterChanged(Printer printer)
+    {
+        PrinterDefinitionFile printerConfiguration = null;
+        if (printer != null &&
+            printer.printerConfigurationProperty().get() != null)
         {
-            if (node instanceof StylusLiftNode)
-            {
-                //Not in contact
-                isInContact = false;
-//                Circle contactCircle = new Circle(0.5);
-//                contactCircle.setFill(Color.RED);
-//                contactCircle.setCenterX(currentX);
-//                contactCircle.setCenterY(currentY);
-//                gCodeOverlay.getChildren().add(contactCircle);
-            } else if (node instanceof StylusPlungeNode)
-            {
-                //Now in contact
-                isInContact = true;
-//                Circle contactCircle = new Circle(0.5);
-//                contactCircle.setFill(Color.GREEN);
-//                contactCircle.setCenterX(currentX);
-//                contactCircle.setCenterY(currentY);
-//                gCodeOverlay.getChildren().add(contactCircle);
-            } else if (node instanceof StylusScribeNode)
-            {
-                StylusScribeNode scribeNode = (StylusScribeNode) node;
-                Line newLine = new Line();
-                newLine.setStartX(currentX);
-                newLine.setStartY(currentY);
-                currentX = scribeNode.getMovement().getX();
-                currentY = scribeNode.getMovement().getY();
-                newLine.setEndX(currentX);
-                newLine.setEndY(currentY);
-                newLine.setStrokeWidth(0.1);
+            printerConfiguration = printer.printerConfigurationProperty().get();
+        }
+        else
+        {
+            printerConfiguration = PrinterContainer.getPrinterByID(PrinterContainer.defaultPrinterID);
+        }
+        deselectAllModels();
 
-                if (isInContact)
-                {
-                    newLine.setStroke(Color.GREEN);
-                } else
-                {
-                    newLine.setStroke(Color.RED);
-                }
-                gCodeOverlay.getChildren().add(newLine);
-            } else if (node instanceof StylusSwivelNode)
-            {
-                StylusSwivelNode scribeNode = (StylusSwivelNode) node;
-                Line newLine = new Line();
-                newLine.setStartX(currentX);
-                newLine.setStartY(currentY);
-                currentX = scribeNode.getMovement().getX();
-                currentY = scribeNode.getMovement().getY();
-                newLine.setEndX(currentX);
-                newLine.setEndY(currentY);
-                newLine.setStrokeWidth(0.1);
+        bedWidth = printerConfiguration.getPrintVolumeWidth();
+        bedHeight = printerConfiguration.getPrintVolumeDepth();
+        ImageView bedView = null;
+        if (printerConfiguration.getTypeCode().equals("RBX10"))
+        {
+            bedImageView.setVisible(false);
+            bedView = proBedImageView;
+        }
+        else
+        {
+            proBedImageView.setVisible(false);
+            bedView = bedImageView;
+        }   
+        bed.setWidth(bedWidth);
+        bed.setHeight(bedHeight);
 
-                if (isInContact)
-                {
-                    newLine.setStroke(Color.PURPLE);
-                } else
-                {
-                    newLine.setStroke(Color.BLUE);
-                }
-                gCodeOverlay.getChildren().add(newLine);
-            } else if (node instanceof TravelNode)
-            {
-                TravelNode travelNode = (TravelNode) node;
-                Line newLine = new Line();
-                newLine.setStartX(currentX);
-                newLine.setStartY(currentY);
-                currentX = travelNode.getMovement().getX();
-                currentY = travelNode.getMovement().getY();
-                newLine.setEndX(currentX);
-                newLine.setEndY(currentY);
-                newLine.setStrokeWidth(0.5);
+        bedView.setVisible(true);
+        bedView.setFitWidth(bedWidth);
+        bedView.setFitHeight(bedHeight);
 
-                if (isInContact)
-                {
-                    newLine.setStroke(Color.GREEN);
-                } else
-                {
-                    newLine.setStroke(Color.RED);
-                }
-                gCodeOverlay.getChildren().add(newLine);
-            }
+        // Bed mirror transform also translates by the bed height so the origin is at
+        // the bottom left after the mirror.
+        bedMirror.setTy(bedHeight);
+        resizeBed();
+        
+        // The parts group holds all the ShapeContainers in the project and has the origin
+        // at the centre of the workspace.
+        //
+        // The bed has the origin at front left corner (looking from the front of the printer to the back).
+        // The parts group is translated by half the bed width and height to place
+        // the origin of the group at the centre of the bed.
+        //
+        if (parts != null)
+        {
+            parts.setTranslateX(0.5 * bedWidth);
+            parts.setTranslateY(0.5 * bedHeight);
         }
     }
+
 }

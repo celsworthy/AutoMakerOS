@@ -201,7 +201,7 @@ public class ProjectManager implements Savable, Serializable
         openAndAvailableProjectNames.addAll(getAvailableProjectNames());
         return openAndAvailableProjectNames;
     }
-    
+
     public Optional<Project> getProjectIfOpen(String projectName)
     {
         return openProjects.stream()

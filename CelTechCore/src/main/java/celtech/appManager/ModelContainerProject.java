@@ -4,7 +4,6 @@ import celtech.Lookup;
 import celtech.configuration.ApplicationConfiguration;
 import celtech.configuration.fileRepresentation.ModelContainerProjectFile;
 import celtech.configuration.fileRepresentation.ProjectFile;
-import celtech.modelcontrol.Groupable;
 import celtech.modelcontrol.ItemState;
 import celtech.modelcontrol.ModelContainer;
 import celtech.modelcontrol.ModelGroup;
@@ -95,6 +94,7 @@ public class ModelContainerProject extends Project
     @Override
     protected void initialise()
     {
+        setMode(ProjectMode.MESH);
         lastCalculatedUsedExtruders = FXCollections.observableArrayList();
         lastCalculatedUsedExtruders.add(0, false);
         lastCalculatedUsedExtruders.add(1, false);
@@ -670,7 +670,7 @@ public class ModelContainerProject extends Project
 
     /**
      * Return a Map of child_model_id -> parent_model_id for all model:group and
-     * group:grou
+     * group:group.
      *
      * @return p relationships.
      */
@@ -736,9 +736,9 @@ public class ModelContainerProject extends Project
         {
             if (allModelsInstantiated(entry.getValue()))
             {
-                Set<Groupable> modelContainers = getModelContainersOfIds(entry.getValue())
+                Set<ProjectifiableThing> modelContainers = getModelContainersOfIds(entry.getValue())
                         .stream()
-                        .filter((model) -> (model instanceof Groupable))
+                        .filter((model) -> (model instanceof ProjectifiableThing))
                         .collect(Collectors.toSet());
                 int groupModelId = entry.getKey();
                 ModelGroup group = group(modelContainers, groupModelId);
@@ -1111,13 +1111,12 @@ public class ModelContainerProject extends Project
         projectModified();
     }
 
-    @Override
-    protected void checkNotAlreadyInGroup(Set<Groupable> modelContainers)
+    protected void checkNotAlreadyInGroup(Set<ProjectifiableThing> modelContainers)
     {
         Set<ModelContainer> modelsAlreadyInGroups = getDescendentModelsInAllGroups();
-        for (Groupable model : modelContainers)
+        for (ProjectifiableThing model : modelContainers)
         {
-            if (modelsAlreadyInGroups.contains(model))
+            if (modelsAlreadyInGroups.contains((ModelContainer)model))
             {
                 throw new RuntimeException("Model " + model + " is already in a group");
             }
@@ -1131,8 +1130,7 @@ public class ModelContainerProject extends Project
      * @param modelContainers
      * @return
      */
-    @Override
-    public ModelGroup createNewGroupAndAddModelListeners(Set<Groupable> modelContainers)
+    public ModelGroup createNewGroupAndAddModelListeners(Set<ProjectifiableThing> modelContainers)
     {
         checkNotAlreadyInGroup(modelContainers);
         ModelGroup modelGroup = new ModelGroup((Set) modelContainers);
@@ -1143,5 +1141,79 @@ public class ModelContainerProject extends Project
         }
         modelGroup.checkOffBed();
         return modelGroup;
+    }
+
+    public ModelGroup group(Set<ProjectifiableThing> modelContainers)
+    {
+        removeModels(modelContainers);
+        ModelGroup modelGroup = createNewGroup(modelContainers);
+        addModel(modelGroup);
+        return modelGroup;
+    }
+
+    public ModelGroup group(Set<ProjectifiableThing> modelContainers, int groupModelId)
+    {
+        removeModels(modelContainers);
+        ModelGroup modelGroup = createNewGroup(modelContainers, groupModelId);
+        addModel(modelGroup);
+        return modelGroup;
+    }
+
+    /**
+     * Create a new group from models that are not yet in the project.
+     *
+     * @param modelContainers
+     * @param groupModelId
+     * @return
+     */
+    public ModelGroup createNewGroup(Set<ProjectifiableThing> modelContainers, int groupModelId)
+    {
+        checkNotAlreadyInGroup(modelContainers);
+        ModelGroup modelGroup = new ModelGroup((Set) modelContainers, groupModelId);
+        modelGroup.checkOffBed();
+        modelGroup.notifyScreenExtentsChange();
+        return modelGroup;
+    }
+
+    /**
+     * Create a new group from models that are not yet in the project.
+     *
+     * @param modelContainers
+     * @return
+     */
+    public ModelGroup createNewGroup(Set<ProjectifiableThing> modelContainers)
+    {
+        checkNotAlreadyInGroup(modelContainers);
+
+        ModelGroup modelGroup = new ModelGroup((Set) modelContainers);
+        modelGroup.checkOffBed();
+        modelGroup.notifyScreenExtentsChange();
+        return modelGroup;
+    }
+
+    public void ungroup(Set<? extends ModelContainer> modelContainers)
+    {
+        List<ProjectifiableThing> ungroupedModels = new ArrayList<>();
+
+        for (ModelContainer modelContainer : modelContainers)
+        {
+            if (modelContainer instanceof ModelGroup)
+            {
+                ModelGroup modelGroup = (ModelGroup) modelContainer;
+                Set<ProjectifiableThing> modelGroups = new HashSet<>();
+                modelGroups.add(modelGroup);
+                removeModels(modelGroups);
+                for (ModelContainer childModelContainer : modelGroup.getChildModelContainers())
+                {
+                    addModel(childModelContainer);
+                    childModelContainer.setBedCentreOffsetTransform();
+                    childModelContainer.applyGroupTransformToThis(modelGroup);
+                    childModelContainer.updateLastTransformedBoundsInParent();
+                    ungroupedModels.add(childModelContainer);
+                }
+                Set<ProjectifiableThing> changedModels = new HashSet<>(modelGroup.getChildModelContainers());
+                fireWhenModelsTransformed(changedModels);
+            }
+        }
     }
 }

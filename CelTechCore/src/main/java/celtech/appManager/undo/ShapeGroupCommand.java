@@ -4,9 +4,9 @@
 package celtech.appManager.undo;
 
 import celtech.appManager.Project;
-import celtech.modelcontrol.Groupable;
+import celtech.appManager.ShapeContainerProject;
 import celtech.modelcontrol.ItemState;
-import celtech.modelcontrol.ModelContainer;
+import celtech.modelcontrol.ShapeContainer;
 import celtech.modelcontrol.ProjectifiableThing;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,27 +15,27 @@ import java.util.Set;
  *
  * @author tony
  */
-public class GroupCommand extends Command
+public class ShapeGroupCommand extends Command
 {
 
-    Project project;
-    Set<Groupable> modelContainers;
+    ShapeContainerProject project;
+    Set<ProjectifiableThing> modelContainers;
     private Set<ItemState> states;
-    ModelContainer group;
+    ShapeContainer group;
 
-    public GroupCommand(Project project, Set<Groupable> modelContainers)
+    public ShapeGroupCommand(ShapeContainerProject project, Set<ProjectifiableThing> modelContainers)
     {
         states = new HashSet<>();
         this.project = project;
-        this.modelContainers = (Set)modelContainers;
+        this.modelContainers = modelContainers;
     }
 
     @Override
     public void do_()
     {
-        for (Groupable modelContainer : modelContainers)
+        for (ProjectifiableThing modelContainer : modelContainers)
         {
-            states.add(((ProjectifiableThing)modelContainer).getState());
+            states.add(modelContainer.getState());
         }
         doGroup();
     }
@@ -43,7 +43,7 @@ public class GroupCommand extends Command
     @Override
     public void undo()
     {
-        Set<ModelContainer> modelContainers = new HashSet<>();
+        Set<ShapeContainer> modelContainers = new HashSet<>();
         modelContainers.add(group);
         project.ungroup(modelContainers);
         project.setModelStates(states);

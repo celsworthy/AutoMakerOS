@@ -1,0 +1,10 @@
+{
+    "name" : "Biro",
+    "hasDragKnife" : false,
+    "dragKnifeRadius" : 0.0,
+    "overcut" : 0.0,
+    "passes" : 1,
+    "xOffset" : 8.0,
+    "yOffset" : 0.0,
+    "zOffset" : 0.0
+}

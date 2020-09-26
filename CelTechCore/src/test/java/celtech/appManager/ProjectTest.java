@@ -9,7 +9,6 @@ import celtech.configuration.ApplicationConfiguration;
 import celtech.configuration.fileRepresentation.ModelContainerProjectFile;
 import celtech.roboxbase.configuration.Filament;
 import celtech.configuration.fileRepresentation.ProjectFile;
-import celtech.modelcontrol.Groupable;
 import celtech.modelcontrol.ModelContainer;
 import celtech.modelcontrol.ModelGroup;
 import celtech.modelcontrol.ProjectifiableThing;
@@ -100,7 +99,7 @@ public class ProjectTest extends ConfiguredTest
         toTranslate.add(mc2);
         project.translateModelsBy(toTranslate, 10, 20);
 
-        Set<Groupable> modelContainers = new HashSet<>();
+        Set<ProjectifiableThing> modelContainers = new HashSet<>();
         modelContainers.add(mc1);
         modelContainers.add(mc2);
         ModelGroup group = project.group(modelContainers);
@@ -121,7 +120,7 @@ public class ProjectTest extends ConfiguredTest
         project.addModel(mc3);
         project.addModel(mc4);
 
-        Set<Groupable> modelContainers = new HashSet<>();
+        Set<ProjectifiableThing> modelContainers = new HashSet<>();
         modelContainers.add(mc1);
         modelContainers.add(mc2);
         ModelContainer group = project.group(modelContainers);

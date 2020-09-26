@@ -81,7 +81,7 @@ public class GetTimeWeightCost
     {
         ModelContainerProject mProject = (ModelContainerProject)project;
         Printer printer = Lookup.getSelectedPrinterProperty().get();
-        Optional<GCodeGeneratorResult> resultOpt = mProject.getGCodeGenManager().getPrepResult(printQuality);
+        Optional<GCodeGeneratorResult> resultOpt = mProject.getGCodeGenManager().getModelPrepResult(printQuality);
         if (resultOpt.isPresent())
         {
             if (resultOpt.get().isSuccess())

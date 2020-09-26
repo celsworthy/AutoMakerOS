@@ -96,12 +96,19 @@ public class RoboxProfileSettingsContainer {
     }
     
     public Optional<RoboxProfile> getRoboxProfileWithName(String profileName, SlicerType slicerType, String headType) {
-        List<RoboxProfile> profilesForHead = getRoboxProfilesForSlicer(slicerType).get(headType);
-        Optional<RoboxProfile> roboxProfile = (profilesForHead != null)
-                    ? profilesForHead.stream()
+        Optional<RoboxProfile> roboxProfile = Optional.empty();
+        try {
+            List<RoboxProfile> profilesForHead = getRoboxProfilesForSlicer(slicerType).get(headType);
+            if (profilesForHead != null) {
+                roboxProfile = profilesForHead.stream()
                         .filter(profile -> profile.getName().equals(profileName))
-                        .findAny()
-                    : Optional.empty();
+                        .findAny();
+            }
+        }
+        catch (Exception ex) {
+            STENO.exception("Failed to get profile with name", ex);
+        }
+            
         return roboxProfile;
     }
     

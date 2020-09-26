@@ -91,6 +91,7 @@ import celtech.roboxbase.printerControl.model.statetransitions.purge.PurgeAction
 import celtech.roboxbase.printerControl.model.statetransitions.purge.PurgeStateTransitionManager;
 import celtech.roboxbase.printerControl.model.statetransitions.purge.PurgeTransitions;
 import celtech.roboxbase.services.gcodegenerator.GCodeGeneratorResult;
+import celtech.roboxbase.services.gcodegenerator.StylusGCodeGeneratorResult;
 import celtech.roboxbase.services.printing.DatafileSendAlreadyInProgress;
 import celtech.roboxbase.services.printing.DatafileSendNotInitialised;
 import celtech.roboxbase.utils.AxisSpecifier;
@@ -185,6 +186,7 @@ public final class HardwarePrinter implements Printer, ErrorConsumer
     private final BooleanProperty canCalibrateNozzleHeight = new SimpleBooleanProperty(false);
     private final BooleanProperty canCalibrateXYAlignment = new SimpleBooleanProperty(false);
     private final BooleanProperty canCalibrateNozzleOpening = new SimpleBooleanProperty(false);
+    private final BooleanProperty isStylusHead = new SimpleBooleanProperty(false);
     private final BooleanProperty usedExtrudersLoaded = new SimpleBooleanProperty(false);
 
     private boolean headIntegrityChecksInhibited = false;
@@ -361,7 +363,8 @@ public final class HardwarePrinter implements Printer, ErrorConsumer
                 canCalibrateNozzleHeight.set(false);
                 canCalibrateXYAlignment.unbind();
                 canCalibrateXYAlignment.set(false);
-
+                isStylusHead.set(false);
+                
                 if (newHeadValue != null)
                 {
                     if (head.get().valveTypeProperty().get() == Head.ValveType.FITTED)
@@ -377,6 +380,8 @@ public final class HardwarePrinter implements Printer, ErrorConsumer
                                                 .and(Bindings.valueAt(reels, 1).isNotNull())))
                         );
                     }
+                    if (head.get().headTypeProperty().get() == Head.HeadType.STYLUS_HEAD)
+                        isStylusHead.set(true);
                     canCalibrateXYAlignment.bind(printerStatus.isEqualTo(PrinterStatus.IDLE)
                             .and(Bindings.size(head.get().getNozzles()).greaterThan(1))
                             .and(extrudersProperty().get(0).filamentLoadedProperty())
@@ -471,8 +476,9 @@ public final class HardwarePrinter implements Printer, ErrorConsumer
         usedExtrudersLoaded.bind(extruders.get(0).filamentLoaded);
         
         canResume.bind((pauseStatus.isEqualTo(PauseStatus.PAUSED)
-                .or(pauseStatus.isEqualTo(PauseStatus.PAUSE_PENDING)))
-                .or(pauseStatus.isEqualTo(PauseStatus.SELFIE_PAUSE))
+                .or(pauseStatus.isEqualTo(PauseStatus.PAUSE_PENDING))
+                .or(pauseStatus.isEqualTo(PauseStatus.SELFIE_PAUSE)))
+                .and(extruders.get(0).filamentLoaded.or(isStylusHead))
                 .and(usedExtrudersLoaded));
     }
 
@@ -2263,6 +2269,19 @@ public final class HardwarePrinter implements Printer, ErrorConsumer
         if (usedExtruders.get(1))
         {
             usedExtrudersLoaded.bind(extruders.get(1).filamentLoaded);
+        }
+    }
+
+    @Override
+    public void printStylusProject(PrintableProject printableProject, Optional<StylusGCodeGeneratorResult> potentialGCodeGenResult, boolean safetyFeaturesRequired) throws PrinterException
+    {
+        try
+        {
+            transmitDirectGCode(GCodeConstants.switchBedHeaterOff, false);
+            boolean gCodeGenSuccessful = printEngine.printStylusProject(printableProject, potentialGCodeGenResult, safetyFeaturesRequired);
+        } catch (RoboxCommsException ex)
+        {
+            steno.error("Error whilst sending preheat commands");
         }
     }
 

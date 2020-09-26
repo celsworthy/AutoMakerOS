@@ -390,10 +390,10 @@ public class ProfileLibraryPanelController implements Initializable, MenuInnerPa
             }
             return p1.getName().compareToIgnoreCase(p2.getName()); // Custom profiles are ordered alphabetically.
         });
-        
+
         List<String> nameList  = filesForHeadType.stream()
-                                .map(RoboxProfile::getName)
-                                .collect(Collectors.toList());
+                                                 .map(RoboxProfile::getName)
+                                                 .collect(Collectors.toList());
         cmbPrintProfile.setItems(FXCollections.observableArrayList(nameList));
     }
     

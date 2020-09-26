@@ -119,23 +119,26 @@ public class ModelLoaderTask extends Task<ModelLoadResults>
     private ModelLoadResult loadTheFile(String modelFileToLoad)
     {
         ModelLoadResult modelLoadResult = null;
-        
-        if (modelFileToLoad.toUpperCase().endsWith("OBJ"))
-        {
-            ObjImporter reader = new ObjImporter();
-            modelLoadResult = reader.loadFile(this, modelFileToLoad, percentProgress, false);
-        } else if (modelFileToLoad.toUpperCase().endsWith("STL"))
-        {
-            STLImporter reader = new STLImporter();
-            modelLoadResult = reader.loadFile(this, new File(modelFileToLoad),
-                    percentProgress);
-        } else if (modelFileToLoad.toUpperCase().endsWith("SVG"))
-        {
-            SVGImporter reader = new SVGImporter();
-            modelLoadResult = reader.loadFile(this, new File(modelFileToLoad),
-                    percentProgress);
+        try {
+            if (modelFileToLoad.toUpperCase().endsWith("OBJ"))
+            {
+                ObjImporter reader = new ObjImporter();
+                modelLoadResult = reader.loadFile(this, modelFileToLoad, percentProgress, false);
+            } else if (modelFileToLoad.toUpperCase().endsWith("STL"))
+            {
+                STLImporter reader = new STLImporter();
+                modelLoadResult = reader.loadFile(this, new File(modelFileToLoad),
+                        percentProgress);
+            } else if (modelFileToLoad.toUpperCase().endsWith("SVG"))
+            {
+                SVGImporter reader = new SVGImporter();
+                modelLoadResult = reader.loadFile(this, new File(modelFileToLoad),
+                        percentProgress);
+            }
         }
-        
+        catch (Exception ex) {
+            System.out.println("Model load failed : " + ex.getMessage());
+        }        
         return modelLoadResult;
     }
 

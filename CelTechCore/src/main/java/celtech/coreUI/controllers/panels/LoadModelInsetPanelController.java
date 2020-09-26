@@ -88,7 +88,10 @@ public class LoadModelInsetPanelController implements Initializable
             modelFileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter(descriptionOfFile,
                                                 ApplicationConfiguration.getSupportedFileExtensionWildcards(
-                                                    ProjectMode.MESH)));
+                                                    ProjectMode.MESH)),
+                new FileChooser.ExtensionFilter(descriptionOfFile,
+                                                ApplicationConfiguration.getSupportedFileExtensionWildcards(
+                                                    ProjectMode.SVG)));
 
             modelFileChooser.setInitialDirectory(ApplicationConfiguration.getLastDirectoryFile(DirectoryMemoryProperty.LAST_MODEL_DIRECTORY));
 

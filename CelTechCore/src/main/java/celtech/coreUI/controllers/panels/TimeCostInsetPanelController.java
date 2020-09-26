@@ -6,6 +6,7 @@ import celtech.appManager.ApplicationStatus;
 import celtech.appManager.GCodeGeneratorManager;
 import celtech.appManager.ModelContainerProject;
 import celtech.appManager.Project;
+import celtech.appManager.ProjectMode;
 import celtech.coreUI.controllers.ProjectAwareController;
 import celtech.modelcontrol.ModelContainer;
 import celtech.modelcontrol.ProjectifiableThing;
@@ -117,7 +118,9 @@ public class TimeCostInsetPanelController implements Initializable, ProjectAware
         @Override
         public void changed(ObservableValue<? extends ApplicationMode> observable, ApplicationMode oldValue, ApplicationMode newValue)
         {
-            if (newValue == ApplicationMode.SETTINGS)
+            if (newValue == ApplicationMode.SETTINGS &&
+                currentProject != null &&
+                currentProject.getMode() == ProjectMode.MESH)
             {
                 timeCostInsetRoot.setVisible(true);
                 timeCostInsetRoot.setMouseTransparent(false);
@@ -240,15 +243,13 @@ public class TimeCostInsetPanelController implements Initializable, ProjectAware
     {
         if (currentProject != null && currentProject instanceof ModelContainerProject)
             ((ModelContainerProject)currentProject).getGCodeGenManager().getDataChangedProperty().removeListener(this.gCodePrepChangeListener);
-
         
         currentProject = project;
-        if(currentProject != null) {
+
+        if (currentProject != null && currentProject instanceof ModelContainerProject) {
             selectPrintProfile(currentProject.getPrintQuality());
-        }
-        
-        if (currentProject != null && currentProject instanceof ModelContainerProject)
             ((ModelContainerProject)currentProject).getGCodeGenManager().getDataChangedProperty().addListener(this.gCodePrepChangeListener);
+        }
     }
     
     private void selectPrintProfile(PrintQualityEnumeration printQuality) {
@@ -275,7 +276,10 @@ public class TimeCostInsetPanelController implements Initializable, ProjectAware
      */
     private void updateFields(Project project)
     {
-        if (settingPrintQuality || ApplicationStatus.getInstance().modeProperty().get() != ApplicationMode.SETTINGS)
+        if (settingPrintQuality ||
+            project == null ||
+            project.getMode() != ProjectMode.MESH ||
+            ApplicationStatus.getInstance().modeProperty().get() != ApplicationMode.SETTINGS)
         {
             return;
         }
