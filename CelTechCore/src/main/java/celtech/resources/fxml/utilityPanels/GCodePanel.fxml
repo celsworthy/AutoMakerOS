@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="gcodeEditParent" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" spacing="5.0" styleClass="slideOutPanel" stylesheets="@../../css/JMetroDarkTheme.css" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.panels.GCodePanelController">
+    <children>
+      <ListView fx:id="gcodeTranscript" maxHeight="1.7976931348623157E308" styleClass="gcode-transcript" VBox.vgrow="ALWAYS" />
+        <HBox fx:id="gcodePanel" alignment="CENTER" spacing="5.0">
+            <children>
+                <RestrictedTextField fx:id="gcodeEntryField" forceUpperCase="false" maxLength="50" minWidth="0.0" onAction="#sendGCodeA" prefColumnCount="5" restrict="A-Za-z0-9!?. \-_#" HBox.hgrow="ALWAYS" />
+                <Button fx:id="sendGCodeButton" minWidth="0.0" mnemonicParsing="false" onAction="#sendGCodeA" text="%gcodeEntry.sendGCode" />
+            </children>
+        </HBox>
+    </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

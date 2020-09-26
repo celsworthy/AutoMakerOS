@@ -1,0 +1,24 @@
+{
+  "version" : 1,
+  "typeCode" : "RBX10",
+  "friendlyName" : "RoboxPRO",
+  "editions" : [ {
+    "typeCode" : "SK",
+    "friendlyName" : "RoboxPRO (UK)"
+  },
+  {
+    "typeCode" : "SU",
+    "friendlyName" : "RoboxPRO (USA/Canada)"
+  }
+  ],
+    "compatibleHeads" : [
+	"RBX01-SM",
+	"RBX01-DM",
+	"RBX01-S2",
+	"RBXDV-S1",
+	"RBXDV-S3"
+  ],
+  "printVolumeWidth" : 300,
+  "printVolumeDepth" : 210,
+  "printVolumeHeight" : 400
+}

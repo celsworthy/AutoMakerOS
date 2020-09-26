@@ -1,0 +1,20 @@
+#
+# Robox filament definition file
+#
+name = FiberForce NYLFORCE Glass
+material = P12
+reelID = RBX-P12-FOGL1
+brand = FiberForce
+category = Engineering
+diameter_mm = 1.75
+filament_multiplier = 0.92
+feed_rate_multiplier = 1.0
+ambient_temperature_C = 60
+first_layer_bed_temperature_C = 120
+bed_temperature_C = 120
+first_layer_nozzle_temperature_C = 260
+nozzle_temperature_C = 255
+display_colour = #FEFFED
+cost_gbp_per_kg = 124.85
+default_length_m = 240
+filled = yes

@@ -1,0 +1,88 @@
+;------------------------
+; ROBOX driver file
+;------------------------
+[Version]
+CatalogFile.ntx86=RoboxX86.cat
+CatalogFile.ntamd64=RoboxX64.cat
+Signature="$Windows NT$"
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%MANUFACTURER%
+LayoutFile=layout.inf
+DriverVer=02/12/2014,1.0.0.0
+
+[Manufacturer]
+%MANUFACTURER%=DeviceList, NTamd64
+
+[DestinationDirs]
+FakeModemCopyFileSelection=12
+DefaultDestDir=12
+
+;------------------------------------------------------------------------------
+;              Windows 2000/XP/Vista32 Support
+;------------------------------------------------------------------------------
+[DriverInstall.nt]
+include=mdmcpq.inf,usb.inf
+CopyFiles=FakeModemCopyFileSection
+AddReg=DriverInstall.nt.AddReg
+
+[DriverInstall.nt.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,usbser.sys
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[DriverInstall.nt.Services]
+include=mdmcpq.inf
+AddService=usbser, 0x00000002, DriverService.nt
+
+[DriverService.nt]
+DisplayName=%SERVICE%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%12%\usbser.sys
+
+;------------------------------------------------------------------------------
+;              Windows Vista64 Support
+;------------------------------------------------------------------------------
+
+[DriverInstall.NTamd64]
+include=mdmcpq.inf,usb,inf
+CopyFiles=FakeModemCopyFileSection
+AddReg=DriverInstall.NTamd64.AddReg
+
+[DriverInstall.NTamd64.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,usbser.sys
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[DriverInstall.NTamd64.Services]
+AddService=usbser, 0x00000002, DriverService.NTamd64
+
+[DriverService.NTamd64]
+DisplayName=%SERVICE%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%12%\usbser.sys
+
+
+;------------------------------------------------------------------------------
+;            VID/PID Settings
+;------------------------------------------------------------------------------
+[SourceDisksFiles]
+[SourceDisksNames]
+[DeviceList]
+%DESCRIPTION%=DriverInstall, USB\VID_16D0&PID_081B
+[DeviceList.NTamd64]
+%DESCRIPTION%=DriverInstall, USB\VID_16D0&PID_081B
+
+;------------------------------------------------------------------------------
+;              String Definitions
+;------------------------------------------------------------------------------
+[Strings]
+
+DRIVERFILENAME ="usbser"
+MANUFACTURER="C Enterprise (UK) Ltd."
+DESCRIPTION="Robox v1.0"
+SERVICE="USB Serial emulation driver"

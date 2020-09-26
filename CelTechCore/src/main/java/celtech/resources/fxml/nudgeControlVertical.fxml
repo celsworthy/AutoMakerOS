@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<fx:root type="javafx.scene.layout.VBox" stylesheets="@../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Button fx:id="upButton" onAction="#upPressed" contentDisplay="GRAPHIC_ONLY" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" styleClass="jog-button">
+            <graphic>
+                <Polygon fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE">
+                    <points>
+                        <Double fx:value="-20.0" />
+                        <Double fx:value="20.0" />
+                        <Double fx:value="20.0" />
+                        <Double fx:value="20.0" />
+                        <Double fx:value="0.0" />
+                        <Double fx:value="-20.0" />
+                    </points>
+                </Polygon>
+            </graphic>
+        </Button>
+        <RestrictedNumberField fx:id="numberDisplay" allowedDecimalPlaces="2" maxLength="4" prefColumnCount="3" />
+        <Button fx:id="downButton" onAction="#downPressed" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" styleClass="jog-button">
+            <graphic>
+                <Polygon fill="DODGERBLUE" rotate="180.0" stroke="BLACK" strokeType="INSIDE">
+                    <points>
+                        <Double fx:value="-20.0" />
+                        <Double fx:value="20.0" />
+                        <Double fx:value="20.0" />
+                        <Double fx:value="20.0" />
+                        <Double fx:value="0.0" />
+                        <Double fx:value="-20.0" />
+                    </points>
+                </Polygon>
+            </graphic>
+        </Button>
+    </children>
+</fx:root>

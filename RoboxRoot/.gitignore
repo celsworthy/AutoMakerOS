@@ -1,0 +1,7 @@
+/target/
+*.log
+*.gz
+src/main/bootstrap/export/
+src/main/bootstrap/export_loading/
+src/main/bootstrap/RootExport/
+src/main/bootstrap/RootExportMinified/

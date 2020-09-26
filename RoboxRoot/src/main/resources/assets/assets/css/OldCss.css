@@ -1,0 +1,213 @@
+.printer-name {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.robox-icon {
+  color: #ffffff;
+}
+
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.row.filament-1 {
+}
+
+.row.filament {
+  background-color: #303030;
+  margin: 0px 5px;
+}
+
+.rbx-material-1 {
+  color: rgb(0,158,227);
+  fill: rgb(0,158,227);
+}
+
+.row.end-margin {
+  margin-bottom: 15px;
+}
+
+.margin-right {
+  margin-right: 5px;
+}
+
+.filament-title {
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0.0;
+}
+
+.col-auto.filament-icon {
+  margin: 0px 0px 0px 0px;
+}
+
+.filament-1-icon {
+  background-color: inherit;
+}
+
+.filament-2-icon {
+  background-color: inherit;
+}
+
+.align-self-end {
+  -ms-flex-item-align: end !important;
+  align-self: flex-end !important;
+}
+
+.col-auto {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+
+.row.filament-2 {
+  margin-top: 5px;
+}
+
+.rbx-material-2 {
+  color: rgb(255,102,27);
+  fill: rgb(255,102,27);
+}
+
+.col.filament-description {
+  background-color: #414141;
+  font-size: 26px;
+  margin: 0 5px 0 5px;
+}
+
+.row.temperature {
+  margin: 5px 5px 0px 5px;
+  background-color: #303030;
+}
+
+.rbx-bed {
+  color: rgb(255,200,0);
+  fill: rgb(255,200,0);
+}
+
+.rbx-ambient {
+  color: #1eb43c;
+}
+
+.row.job-progress {
+  background-color: #009ee3;
+  color: white;
+  margin: 5px;
+  padding: 0 0 5px 0;
+  min-height: 170px;
+  height: calc(100vh - 590px);
+}
+
+.margin-top {
+  margin-top: 5px;
+}
+
+.job-title {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.align-self-center {
+  -ms-flex-item-align: center !important;
+  align-self: center !important;
+}
+
+.horizontal-separator {
+  height: 2px;
+  margin: 2px;
+  background-color: white;
+}
+
+.progress.job-progress {
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 5px 0px 5px 0px;
+  height: 30px;
+}
+
+.centred-text {
+  text-align: center;
+}
+
+.job-status {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.rbx-dialog {
+  color: white;
+  background-color: #414141;
+}
+
+.no-resize {
+  resize: none;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+.rbx-page {
+  background-color: #414141;
+  height: 100vh;
+}
+
+#printer-name-field {
+  padding-left: 3em;
+}
+
+.row.printer-name {
+  background-color: #414141;
+  margin: 5px;
+  height: 163px;
+}
+
+.container.main-container {
+  margin: 5px 5px 90px 5px;
+  height: calc(100vh - 100px);
+}
+
+.alert-info {
+  color: #502c61;
+  background-color: #ebddf1;
+  border-color: #e2cfec;
+}
+
+.alert-info > p {
+  margin-bottom: 16px;
+}
+
+.print-status-icon {
+  height: 30px;
+  margin: 0px 10px 5px 0px;
+}
+
+.eject-button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  right: 45px;
+  top: 16px;
+  z-index: 999;
+}
+
+img.idle {
+  height: 30vh;
+  width: 30vh;
+  margin: 2.125vh 12.875vh;
+}
+

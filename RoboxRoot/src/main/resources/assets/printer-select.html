@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Robox :: Printer Select/Status</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/OldCss.css">
+    <link rel="stylesheet" href="assets/css/RoboxRoot.css">
+    <link rel="stylesheet" href="assets/css/RootFonts.css">
+</head>
+
+<body id="printer-select" class="canvas-grey no-touch-action">
+    <div class="container menu">
+        <div class="row menu-grid-button ps_row rbx-hidden">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 menu-grid-button-l">
+                <div class="row printer-select-button printer-selector" id="printer-1" role="button">
+                    <div>
+                        <div class="icon-status pull-right"></div>
+                        <div class="progress rbx-progress select rbx-invisible" id="progress-bar">
+                            <div class="progress-bar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"><span class="sr-only">25%</span></div>
+                        </div>
+                        <p class="printer-select-name no-margins">&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-sm-offset-1 col-xs-6 menu-grid-button-r">
+                <div class="row printer-select-button printer-selector" id="printer-2" role="button">
+                    <div>
+                        <div class="icon-status pull-right"></div>
+                        <div class="progress rbx-progress select rbx-invisible" id="progress-bar">
+                            <div class="progress-bar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"><span class="sr-only">75%</span></div>
+                        </div>
+                        <p class="printer-select-name no-margins">&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row menu-grid-button ps_row rbx-hidden">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 menu-grid-button-l">
+                <div class="row printer-select-button printer-selector" id="printer-3" role="button">
+                    <div>
+                        <div class="icon-status pull-right"></div>
+                        <div class="progress rbx-progress select rbx-invisible" id="progress-bar">
+                            <div class="progress-bar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%;"><span class="sr-only">12%</span></div>
+                        </div>
+                        <p class="printer-select-name no-margins">&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-sm-offset-1 col-xs-6 menu-grid-button-r">
+                <div class="row printer-select-button printer-selector" id="printer-4" role="button">
+                    <div>
+                        <div class="icon-status pull-right"></div>
+                        <div class="progress rbx-progress select rbx-invisible" id="progress-bar">
+                            <div class="progress-bar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%;"><span class="sr-only">88%</span></div>
+                        </div>
+                        <p class="printer-select-name no-margins">&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row menu-grid-button ps_row rbx-hidden">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 menu-grid-button-l">
+                <div class="row printer-select-button printer-selector" id="printer-5" role="button">
+                    <div>
+                        <div class="icon-status pull-right"></div>
+                        <div class="progress rbx-progress select rbx-invisible">
+                            <div class="progress-bar dark" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width: 32%;"></div>
+                        </div>
+                        <p class="printer-select-name no-margins">&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-sm-offset-1 col-xs-6 menu-grid-button-r">
+                <div class="row printer-select-button printer-selector" id="printer-6" role="button">
+                    <div>
+                        <div class="icon-status pull-right"></div>
+                        <div class="progress rbx-progress select rbx-invisible">
+                            <div class="progress-bar dark" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                        </div>
+                        <p class="printer-select-name no-margins">&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ps_none rbx-hidden" style="height: 89.5vh;display: flex;align-items: center;flex-wrap: wrap;">
+            <div><img style="height: 30vh;margin: auto;display: block;" src="assets/img/Icon-NoUSB.svg">
+                <h1 class="localised" style="width: 58.25vh;padding-top: 2vh;" data-i18n="no-machines-connected">No Printers Connected</h1>
+                <p class="rbx-text-note-white localised" data-i18n="please-connect-machine">Please connect a machine with USB.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container footer">
+        <div style="width:66.666%;display:inline-block;height:100%;float:left;">
+            <p class="server-name no-margins" style="padding-top: 1.5vh;font-weight: 500;">.</p>
+            <p class="server-ip-address no-margins">---.---.---.---</p>
+        </div><a class="btn btn-default menu-bottom-button right-footer-button" role="button" id="right-button" href="menu-horz.html?id=settings-s"> </a></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/i18next.min.js"></script>
+    <script src="assets/js/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="assets/js/i18nextXHRBackend.min.js"></script>
+    <script src="assets/js/jquery-i18next.min.js"></script>
+    <script src="assets/js/core-vars.js"></script>
+    <script src="assets/js/jquery.base64.js"></script>
+    <script src="assets/js/core-funcs.js"></script>
+    <script src="assets/js/promise-funcs.js"></script>
+    <script src="assets/js/access-pin.js"></script>
+    <script src="assets/js/error-handling.js"></script>
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/console.js"></script>
+    <script src="assets/js/control.js"></script>
+    <script src="assets/js/head-eeprom.js"></script>
+    <script src="assets/js/job-progress.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/menu-horz.js"></script>
+    <script src="assets/js/pin-reset.js"></script>
+    <script src="assets/js/print-adjust.js"></script>
+    <script src="assets/js/printer-colour.js"></script>
+    <script src="assets/js/printer-name.js"></script>
+    <script src="assets/js/server-name.js"></script>
+    <script src="assets/js/printer-select.js"></script>
+    <script src="assets/js/purge-intro.js"></script>
+    <script src="assets/js/purge.js"></script>
+    <script src="assets/js/reprint.js"></script>
+    <script src="assets/js/wireless-settings.js"></script>
+    <script src="assets/js/usb-print.js"></script>
+    <script src="assets/js/page-init.js"></script>
+</body>
+
+</html>

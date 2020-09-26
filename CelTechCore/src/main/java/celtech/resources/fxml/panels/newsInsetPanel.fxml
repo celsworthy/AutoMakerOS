@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import celtech.coreUI.components.*?>
+<?import celtech.coreUI.components.buttons.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="container" style="-fx-background-color: black;" styleClass="inset-panel-background-redux" stylesheets="@../../css/JMetroDarkTheme.css" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+    <children>        
+        <HBox styleClass="inset-panel" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox alignment="CENTER" minHeight="100.0" styleClass="regularText" HBox.hgrow="ALWAYS">
+               <children>
+                  <StackPane fx:id="webContentContainer">
+                     <children>
+                        <Label style="-fx-font-size: 24;" text="There are no unread news stories" />
+                     </children>
+                  </StackPane>
+               </children></VBox>
+            </children>
+        </HBox>
+        <BorderPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0" styleClass="menubar">
+            <right>
+                <HBox alignment="CENTER">
+                    <children>
+                        <GraphicButtonWithLabel fx:id="forwardButton" fxmlFileName="forwardButton" labelText="%buttonText.next" onAction="#forwardPressed" />
+                    </children>
+                    <BorderPane.margin>
+                        <Insets right="10.0" />
+                    </BorderPane.margin>
+                </HBox>
+            </right>
+            <left>
+                <HBox alignment="CENTER" spacing="5">
+                    <children>
+                        <GraphicButtonWithLabel fx:id="cancelButton" fxmlFileName="cancelButton" labelText="%buttonText.cancel" onAction="#cancelPressed" />
+                    </children>
+                    <BorderPane.margin>
+                        <Insets left="10.0" />
+                    </BorderPane.margin>
+                </HBox>
+            </left>
+            <center>
+                <HBox alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets right="10.0" />
+                    </BorderPane.margin>
+                </HBox>
+            </center>
+        </BorderPane>
+    </children>
+</VBox>

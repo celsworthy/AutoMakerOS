@@ -1,0 +1,24 @@
+;7_point_Bed_probing-Set_Washout
+G0 Y20
+G28 Z
+G0 Z2
+G0 X105
+G28 Z
+G0 Z2
+G0 X20
+G28 Z
+G0 Z2
+G0 Y130
+G28 Z
+G0 Z2
+G0 X105
+G28 Z
+G0 Z2
+G0 X190
+G28 Z
+G0 Z2
+G0 X105 Y75
+G28 Z
+G0 Z2
+
+G39 S0.5		;set washout over the first 2mm

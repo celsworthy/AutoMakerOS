@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane id="PrinterColourPane" fx:id="printerColourPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800" prefWidth="480.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celuk.groot.controllers.PrinterColourController">
+   <children>
+      <VBox fx:id="printerColourVBox" alignment="TOP_CENTER">
+         <children>
+            <Label fx:id="printerColourTitle" alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="page-title" text="printerColour.title" />
+            <VBox fx:id="colourVBox" styleClass="panel" VBox.vgrow="SOMETIMES">
+               <children>
+                  <Label fx:id="colourPrompt" styleClass="medium-text" text="printerColour.colourPrompt">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <GridPane hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="panel" vgap="5.0" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="16.667" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="16.667" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="16.667" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="16.667" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="16.667" valignment="CENTER" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="16.667" valignment="CENTER" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <Button id="oneKey" fx:id="colour17Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Button id="twoKey" fx:id="colour18Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Button id="dashKey" fx:id="colour13Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.rowIndex="4" />
+                        <Button fx:id="colour1Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" />
+                        <Button fx:id="colour2Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="1" />
+                        <Button fx:id="colour3Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="2" />
+                        <Button fx:id="colour4Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.rowIndex="1" />
+                        <Button fx:id="colour5Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="colour6Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button fx:id="colour7Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.rowIndex="2" />
+                        <Button fx:id="colour8Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button fx:id="colour9Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button fx:id="colour10Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.rowIndex="3" />
+                        <Button fx:id="colour11Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button fx:id="colour12Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Button fx:id="colour14Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button fx:id="colour15Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Button fx:id="colour16Button" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#colourAction" styleClass="colour-button" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <Label fx:id="savePrompt" text="common.savePrompt">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="medium-text" />
+                        <String fx:value="italic-text" />
+                     </styleClass>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <GridPane fx:id="bottomBarGrid" styleClass="bottom-bar">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="leftButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#leftButtonAction" prefHeight="63.0">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-back" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="middleButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#middleButtonAction" prefHeight="63.0" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-home" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="rightButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rightButtonAction" prefHeight="63.0" GridPane.columnIndex="2">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-save" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <String fx:value="styles/Styles.css" />
+      <String fx:value="styles/PrinterColour.css" />
+   </stylesheets>
+</StackPane>

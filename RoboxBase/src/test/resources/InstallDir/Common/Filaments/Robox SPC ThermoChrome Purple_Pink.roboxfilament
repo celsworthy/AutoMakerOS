@@ -1,0 +1,20 @@
+#
+# Robox filament definition file
+#
+name = Robox T/C Purple/Pink
+material = PLA
+reelID = RBX-SPC-TC001
+brand = Robox
+category = Classic
+diameter_mm = 1.75
+filament_multiplier = 0.93
+feed_rate_multiplier = 1.0
+ambient_temperature_C = 27
+first_layer_bed_temperature_C = 65
+bed_temperature_C = 65
+first_layer_nozzle_temperature_C = 220
+nozzle_temperature_C = 190
+display_colour = #604775
+cost_gbp_per_kg = 46.34
+default_length_m = 240
+filled = no

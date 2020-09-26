@@ -1,0 +1,36 @@
+<autoUpdateProject>
+    <fullName>AutoMaker</fullName>
+    <shortName>AutoMaker</shortName>
+    <vendor>C Enterprise (UK) Limited</vendor>
+    <version>1.0</version>
+    <leftImage>LeftImage - AutoMaker 163x314.png</leftImage>
+    <logoImage>../RoboxIcon48x48.png</logoImage>
+    <splashImage>Splash - AutoMaker 600x400.png</splashImage>
+    <wmImage>../RoboxIcon48x48.png</wmImage>
+    <singleInstanceCheck>1</singleInstanceCheck>
+    <osxApplicationBundleIcon>../RoboxIcon.icns</osxApplicationBundleIcon>
+    <windowsExecutableIcon>../RoboxIcon.ico</windowsExecutableIcon>
+    <enableSslSupport>1</enableSslSupport>
+    <postUpdateDownloadActionList>
+        <!-- Launch the installer -->
+        <runProgram>
+            <program>hdiutil</program>
+            <programArguments>attach ${downloadedFilePath} -autoopen &amp;</programArguments>
+            <ruleList>
+                <platformTest>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </runProgram>
+        <runProgram>
+            <program>${downloadedFilePath}</program>
+            <programArguments>&amp;</programArguments>
+            <ruleList>
+                <platformTest>
+                    <negate>1</negate>
+                    <type>osx</type>
+                </platformTest>
+            </ruleList>
+        </runProgram>
+    </postUpdateDownloadActionList>
+</autoUpdateProject>

@@ -1,0 +1,1 @@
+{"@class":"celtech.comms.remote.tx.AbortPrint","packetType":"ABORT_PRINT","messagePayload":null,"sequenceNumber":-1,"includeSequenceNumber":false,"includeCharsOfDataInOutput":false}

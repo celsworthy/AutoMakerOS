@@ -1,0 +1,20 @@
+#
+# Robox filament definition file
+#
+name = Robox tech Yellow
+material = ABS
+reelID = RBX-ABS-TCYL1
+brand = Robox
+category = Tech
+diameter_mm = 1.75
+display_colour = #FFC83C
+filament_multiplier = 0.93
+feed_rate_multiplier = 1.0
+ambient_temperature_C = 60
+first_layer_bed_temperature_C = 110
+bed_temperature_C = 100
+first_layer_nozzle_temperature_C = 235
+nozzle_temperature_C = 230
+cost_gbp_per_kg = 44.83
+default_length_m = 240
+filled = no

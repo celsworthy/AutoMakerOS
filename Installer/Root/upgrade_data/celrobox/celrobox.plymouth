@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=celrobox
+Description=CEL Robox Splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/celrobox
+ScriptFile=/usr/share/plymouth/themes/celrobox/celrobox.script

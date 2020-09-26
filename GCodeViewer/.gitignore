@@ -1,0 +1,10 @@
+/target/
+*.log
+*.log.*
+/nb-configuration.xml
+*.gcode
+GCodeViewerGUI.json
+release/
+proguard/
+proguard.mapping*
+GCodeViewer/

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxWidth="1.7976931348623157E308" spacing="5.0" styleClass="inset-panel" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.utilityPanels.SnapshotPanelController">
+   <children>
+      <HBox spacing="5.0">
+         <children>
+      <ComboBox fx:id="cameraProfileChooser" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="20.0" promptText="%snapshotPanel.selectCameraProfile">
+               <styleClass>
+                  <String fx:value="regularText" />
+                  <String fx:value="cmbCleanCombo" />
+               </styleClass>
+            </ComboBox>
+      <ComboBox fx:id="cameraChooser" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="20.0" promptText="%snapshotPanel.selectCameraLabel">
+               <styleClass>
+                  <String fx:value="regularText" />
+                  <String fx:value="cmbCleanCombo" />
+               </styleClass>
+            </ComboBox>
+         </children>
+      </HBox>
+      <ImageView fx:id="snapshotView" fitHeight="162.0" fitWidth="288.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

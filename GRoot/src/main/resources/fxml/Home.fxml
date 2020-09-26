@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane id="HomePane" fx:id="homePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800" prefWidth="480.0" stylesheets="styles/Styles.css, styles/Home.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celuk.groot.controllers.HomeController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox fx:id="printerHBox" alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="panel" VBox.vgrow="NEVER">
+               <children>
+                  <Button fx:id="printerButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#printerButtonAction" prefHeight="72.0" prefWidth="72.0" text="" HBox.hgrow="NEVER">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="machine-icon" />
+                     </styleClass>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin></Button>
+                  <VBox fx:id="printerNameVBox" maxWidth="1.7976931348623157E308" styleClass="panel" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="modelLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="machine-model" text="Robox" />
+                        <Label fx:id="nameLabel" maxWidth="1.7976931348623157E308" styleClass="machine-name" text="Printer" />
+                        <Label fx:id="addressLabel" maxWidth="1.7976931348623157E308" styleClass="machine-address" text="---.---.---.---">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <GridPane fx:id="filamentGrid" hgap="2.0" styleClass="panel">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+                <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="filament1TypeLabel" contentDisplay="TEXT_ONLY" text=" ">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="material-1" />
+                        <String fx:value="filament-type" />
+                     </styleClass></Label>
+                  <Label fx:id="filament1DescriptionLabel" contentDisplay="TEXT_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="filament-description" text=" " GridPane.columnSpan="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding></Label>
+                  <Label fx:id="filament1RemainingLabel" contentDisplay="TEXT_ONLY" styleClass="filament-length" text=" " GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin></Label>
+                  <Pane fx:id="filament1Pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="half-reel-image" GridPane.columnIndex="2" />
+                  <Button fx:id="filament1EjectButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ejectButtonAction" prefHeight="48.0" prefWidth="48.0" text="Eject" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="material-1-eject" />
+                     </styleClass>
+                     <GridPane.margin>
+                        <Insets bottom="13.0" left="26.0" right="26.0" top="27.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Label fx:id="filament2TypeLabel" contentDisplay="TEXT_ONLY" text=" " GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="material-2" />
+                        <String fx:value="filament-type" />
+                     </styleClass></Label>
+                  <Label fx:id="filament2DescriptionLabel" contentDisplay="TEXT_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="filament-description" text=" " GridPane.columnSpan="3" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding></Label>
+                  <Label fx:id="filament2RemainingLabel" contentDisplay="TEXT_ONLY" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" styleClass="filament-length" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </GridPane.margin></Label>
+                  <Pane fx:id="filament2Pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="half-reel-image" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="filament2EjectButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ejectButtonAction" prefHeight="48.0" prefWidth="48.0" text="Eject" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="material-2-eject" />
+                     </styleClass>
+                     <GridPane.margin>
+                        <Insets bottom="13.0" left="26.0" right="26.0" top="27.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+            <GridPane fx:id="temperatureGrid" hgap="5.0" styleClass="panel">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="leftNozzleTempLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="-" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="material-2" />
+                        <String fx:value="temperature-text" />
+                     </styleClass></Label>
+                  <Label fx:id="leftNozzleTitleLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="common.leftNozzle" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="material-2" />
+                        <String fx:value="temperature-title" />
+                     </styleClass></Label>
+                  <Label fx:id="rightNozzleTempLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="material-1" />
+                        <String fx:value="temperature-text" />
+                     </styleClass></Label>
+                  <Label fx:id="rightNozzleTitleLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="common.rightNozzle" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="material-1" />
+                        <String fx:value="temperature-title" />
+                     </styleClass></Label>
+                  <Label fx:id="bedTempLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="bed" />
+                        <String fx:value="temperature-text" />
+                     </styleClass></Label>
+                  <Label fx:id="bedTitleLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="common.bed" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="bed" />
+                        <String fx:value="temperature-title" />
+                     </styleClass></Label>
+                  <Label fx:id="ambientTempLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="ambient" />
+                        <String fx:value="temperature-text" />
+                     </styleClass></Label>
+                  <Label fx:id="ambientTitleLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="common.ambient" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="ambient" />
+                        <String fx:value="temperature-title" />
+                     </styleClass></Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+            <VBox fx:id="idleVBox" maxHeight="1.7976931348623157E308" styleClass="centered-background-image" VBox.vgrow="ALWAYS">
+               <children>
+                  <GridPane fx:id="jobStatusGrid" hgap="5.0" maxHeight="1.7976931348623157E308" VBox.vgrow="SOMETIMES">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" />
+                      <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="jobNameTitleLabel" styleClass="job-description-title" text="printJob.name" GridPane.halignment="RIGHT" />
+                        <Label fx:id="jobCreatedTitleLabel" styleClass="job-description-title" text="printJob.created" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+                        <Label fx:id="jobDurationTitleLabel" styleClass="job-description-title" text="printJob.duration" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                        <Label fx:id="jobNameLabel" styleClass="job-description-text" text=" " GridPane.columnIndex="1" />
+                        <Label fx:id="jobCreatedLabel" styleClass="job-description-text" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="jobDurationLabel" styleClass="job-description-text" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="jobProfileTitleLabel" styleClass="job-description-title" text="printJob.profile" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+                        <Label fx:id="jobProfileLabel" styleClass="job-description-text" text=" " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="panel" />
+                        <String fx:value="job-description-icon" />
+                     </styleClass>
+                  </GridPane>
+                  <VBox fx:id="jobVBox" styleClass="job-progress-panel">
+                     <children>
+                          <HBox fx:id="jobStatusHBox" alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" VBox.vgrow="SOMETIMES">
+                             <children>
+                              <Pane fx:id="jobStatusIcon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="22.0" styleClass="job-status-icon">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                                 </HBox.margin>
+                              </Pane>
+                                <Label fx:id="jobStatusLabel" maxWidth="1.7976931348623157E308" styleClass="job-status-text" text=" " HBox.hgrow="SOMETIMES">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin></Label>
+                                <Label fx:id="jobEtcLabel" maxWidth="-Infinity" styleClass="job-remaining-text" text=" " HBox.hgrow="SOMETIMES" />
+                              <Pane fx:id="jobRemainingIcon" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="22.0" styleClass="job-remaining-icon">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Pane>
+                             </children>
+                             <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                             </VBox.margin>
+                          </HBox>
+                          <ProgressBar fx:id="jobProgressBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" progress="0.0" styleClass="job-panel" VBox.vgrow="SOMETIMES">
+                             <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                             </VBox.margin>
+                             <padding>
+                                <Insets left="5.0" right="5.0" />
+                             </padding>
+                          </ProgressBar>
+                          <HBox fx:id="jobControlHBox" maxHeight="1.7976931348623157E308" VBox.vgrow="SOMETIMES">
+                             <children>
+                                <Button fx:id="tweakButton" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#tweakButtonAction" prefHeight="65.0" HBox.hgrow="SOMETIMES">
+                                 <styleClass>
+                                    <String fx:value="centered-background-image" />
+                                    <String fx:value="job-tweak" />
+                                    <String fx:value="job-panel" />
+                                 </styleClass>
+                              </Button>
+                                <Button fx:id="pauseButton" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#pauseButtonAction" prefHeight="65.0" HBox.hgrow="SOMETIMES">
+                                 <styleClass>
+                                    <String fx:value="centered-background-image" />
+                                    <String fx:value="job-pause" />
+                                    <String fx:value="job-panel" />
+                                 </styleClass>
+                              </Button>
+                                <Button fx:id="cancelButton" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" mnemonicParsing="false" onAction="#cancelButtonAction" prefHeight="65.0" HBox.hgrow="SOMETIMES">
+                                 <styleClass>
+                                    <String fx:value="centered-background-image" />
+                                    <String fx:value="job-cancel" />
+                                    <String fx:value="job-panel" />
+                                 </styleClass>
+                              </Button>
+                             </children>
+                             <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                             </VBox.margin>
+                          </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="-5.0" right="-5.0" top="5.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <GridPane styleClass="bottom-bar">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="leftButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#leftButtonAction" prefHeight="63.0" text="Left">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-back" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="middleButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#middleButtonAction" prefHeight="63.0" text="Middle" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-main-menu" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="rightButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rightButtonAction" prefHeight="63.0" text="Right" GridPane.columnIndex="2">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-unlock" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane id="WirelessPane" fx:id="wirelessPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800" prefWidth="480.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celuk.groot.controllers.WirelessController">
+   <children>
+      <VBox fx:id="wirelessVBox" alignment="TOP_CENTER">
+         <children>
+            <Label fx:id="wirelessTitle" alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="page-title" text="wireless.title" />
+            <HBox fx:id="radioHBox" alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="panel">
+               <children>
+                  <RadioButton fx:id="wirelessOff" mnemonicParsing="false" onAction="#wirelessToggleAction" styleClass="radio-label" text="wireless.offLabel" HBox.hgrow="SOMETIMES">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="wirelessActive" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="wirelessOn" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#wirelessToggleAction" styleClass="radio-label" text="wireless.onLabel" toggleGroup="$wirelessActive" HBox.hgrow="SOMETIMES">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox fx:id="credentialsVBox" styleClass="panel" VBox.vgrow="NEVER">
+               <children>
+                  <Label fx:id="ssidLabel" styleClass="medium-text" text="wireless.ssidLabel">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox maxWidth="1.7976931348623157E308">
+                     <children>
+                        <TextField fx:id="ssidField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="medium-text" HBox.hgrow="SOMETIMES" />
+                        <Button fx:id="ssidClear" mnemonicParsing="false" onAction="#clearAction" styleClass="text-clear" text="X" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="passwordLabel" layoutX="15.0" layoutY="15.0" styleClass="medium-text" text="wireless.passwordLabel" />
+                  <HBox layoutX="15.0" layoutY="42.0" maxWidth="1.7976931348623157E308">
+                     <children>
+                        <TextField fx:id="passwordField" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="medium-text" HBox.hgrow="SOMETIMES" />
+                        <Button fx:id="passwordClear" mnemonicParsing="false" onAction="#clearAction" styleClass="text-clear" text="X" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="savePrompt" text="wireless.savePrompt">
+                     <styleClass>
+                        <String fx:value="medium-text" />
+                        <String fx:value="italic-text" />
+                     </styleClass>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <GridPane fx:id="bottomBarGrid" styleClass="bottom-bar">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="leftButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#leftButtonAction" prefHeight="63.0">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-back" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="middleButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#middleButtonAction" prefHeight="63.0" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-home" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="rightButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rightButtonAction" prefHeight="63.0" GridPane.columnIndex="2">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-save" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <String fx:value="styles/Styles.css" />
+      <String fx:value="styles/Wireless.css" />
+   </stylesheets>
+</StackPane>

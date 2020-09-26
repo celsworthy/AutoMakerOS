@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+     <Ellipse centerX="145.563" centerY="162.232" fill="#009EE3" radiusX="9.323" radiusY="5.875" />
+     <Group>
+        <children>
+          <SVGPath content="M775.602,336.166    c-2.575,0.58-5.124,0.937-7.756,1.134" stroke="#FFFFFF" />
+          <SVGPath content="M779.747,334.284    c-3.82,0.843-7.548,1.247-11.457,1.355" stroke="#FFFFFF" />
+          <Line endX="780.083" endY="333.791" startX="777.393" startY="334.384" stroke="#FFFFFF" />
+          <SVGPath content="M65.154,335.756    c-0.298-0.182-0.599-0.358-0.892-0.549" stroke="#FFFFFF" />
+          <Line endX="64.886" endY="335.596" startX="64.262" startY="335.207" stroke="#FFFFFF" />
+          <Line endX="66.014" endY="336.234" startX="65.265" startY="335.765" stroke="#FFFFFF" />
+          <Line endX="65.265" endY="335.765" startX="64.655" startY="335.381" stroke="#FFFFFF" />
+          <Line endX="56.538" endY="329.85" startX="54.409" startY="328.503" stroke="#FFFFFF" />
+          <Line endX="55.522" endY="329.598" startX="64.262" startY="335.207" stroke="#FFFFFF" />
+          <SVGPath content="M55.527,329.601    c-5.487-3.59-9.388-8.655-10.792-15.104" stroke="#FFFFFF" />
+          <SVGPath content="M79.965,337.327    c0.016,0.023,0.037,0.036,0.063,0.038" stroke="#FFFFFF" />
+          <SVGPath content="M67.198,335.911    c0.308,0.295,0.748,0.376,1.157,0.424" stroke="#FFFFFF" />
+          <SVGPath content="M67.198,335.911    c-0.159-0.169-0.315-0.341-0.47-0.514" stroke="#FFFFFF" />
+          <SVGPath content="M12.074,297.627    c0.058,0.048,0.137,0.078,0.216,0.085" stroke="#FFFFFF" />
+          <Line endX="11.621" endY="295.774" startX="12.074" startY="297.627" stroke="#FFFFFF" />
+          <Line endX="14.967" endY="297.215" startX="15.109" startY="297.853" stroke="#FFFFFF" />
+          <SVGPath content="M11.619,295.777    c-0.026-0.115-0.023-0.234,0.01-0.348" stroke="#FFFFFF" />
+          <SVGPath content="M13.608,289.146    c0.033,1.388,2.638,1.429,3.556,1.409" stroke="#FFFFFF" />
+          <Line endX="13.608" endY="289.146" startX="13.614" startY="289.058" stroke="#FFFFFF" />
+          <SVGPath content="M577.905,339.957    c0.075-0.007,0.142-0.037,0.197-0.089" stroke="#FFFFFF" />
+          <SVGPath content="M773.424,336.713    c0.062-0.014,0.115-0.049,0.152-0.101" stroke="#FFFFFF" />
+          <SVGPath content="M667.84,339.961    c0.089-0.007,0.169-0.038,0.24-0.093" stroke="#FFFFFF" />
+          <SVGPath content="M672.344,339.957    c0.09-0.008,0.173-0.037,0.248-0.089" stroke="#FFFFFF" />
+          <SVGPath content="M679.018,337.579    c-1.363,0.229-2.705,0.597-3.982,1.128" stroke="#FFFFFF" />
+          <SVGPath content="M678.731,337.594    c0.913-0.146,1.823-0.268,2.75-0.267" stroke="#FFFFFF" />
+          <Line endX="64.096" endY="333.532" startX="66.812" startY="334.284" stroke="#FFFFFF" />
+          <Line endX="66.622" endY="333.791" startX="63.893" startY="333.036" stroke="#FFFFFF" />
+          <Line endX="63.236" endY="334.13" startX="63.29" startY="334.147" stroke="#FFFFFF" />
+          <SVGPath content="M65.603,335.016    c4.701,1.532,9.425,2.218,14.362,2.312" stroke="#FFFFFF" />
+          <SVGPath content="M64.096,333.532    c-3.01-1.058-5.838-2.27-8.569-3.932" stroke="#FFFFFF" />
+          <Line endX="64.567" endY="334.642" startX="66.485" startY="335.325" stroke="#FFFFFF" />
+          <Line endX="65.603" endY="335.016" startX="64.015" startY="334.414" stroke="#FFFFFF" />
+          <SVGPath content="M66.014,336.234    c0.356,0.161,0.761,0.017,1.054-0.213" stroke="#FFFFFF" />
+          <Line endX="64.073" endY="334.446" startX="64.567" startY="334.642" stroke="#FFFFFF" />
+          <SVGPath content="M64.015,334.414    c-0.405-0.164-0.884-0.432-1.331-0.417c0.511,0.571,1.33,0.978,1.971,1.384" stroke="#FFFFFF" />
+          <SVGPath content="M64.073,334.444    c-0.259-0.104-0.519-0.207-0.783-0.297" stroke="#FFFFFF" />
+          <Line endX="66.1" endY="336.282" startX="66.421" startY="336.426" stroke="#FFFFFF" />
+          <SVGPath content="M68.625,336.713    c-0.052-0.058-0.081-0.14-0.08-0.224" stroke="#FFFFFF" />
+          <SVGPath content="M12.61,296.71    c-0.405-0.19-0.853-0.485-0.991-0.934" stroke="#FFFFFF" />
+          <SVGPath content="M56.538,329.85    c2.401,1.263,4.796,2.287,7.355,3.187" stroke="#FFFFFF" />
+          <SVGPath content="M64.749,303.395    c-1.18-0.62-2.086-1.444-2.4-2.788" stroke="#FFFFFF" />
+          <Line endX="64.015" endY="334.414" startX="64.073" startY="334.446" stroke="#FFFFFF" />
+          <Line endX="66.097" endY="336.281" startX="66.097" startY="336.281" stroke="#FFFFFF" />
+          <SVGPath content="M66.097,336.281    c-0.318-0.169-0.63-0.349-0.943-0.525" stroke="#FFFFFF" />
+          <Line endX="66.014" endY="336.234" startX="64.886" startY="335.596" stroke="#FFFFFF" />
+          <Line endX="66.014" endY="336.234" startX="66.097" startY="336.281" stroke="#FFFFFF" />
+          <SVGPath content="M67.583,306.847    c0.283,0.444,0.565,0.851,0.898,1.259" stroke="#FFFFFF" />
+          <Line endX="67.583" endY="306.847" startX="67.393" startY="306.448" stroke="#FFFFFF" />
+          <SVGPath content="M46.932,276.526    c-0.188-0.485-0.247-1.208,0.243-1.539" stroke="#FFFFFF" />
+          <SVGPath content="M60.435,304.613    c0.717,2.605,3.329,3.41,5.772,3.502" stroke="#FFFFFF" />
+          <Line endX="69.324" endY="336.38" startX="69.357" startY="336.526" stroke="#FFFFFF" />
+          <SVGPath content="M44.794,314.485    c0.611,2.719,1.542,5.439,3.223,7.702c1.848,2.487,3.927,4.45,6.392,6.316" fill="#f8f7f7" stroke="#FFFFFF" />
+          <Line endX="61.04" endY="305.985" startX="60.496" startY="303.082" stroke="#FFFFFF" />
+          <Line endX="44.794" endY="314.485" startX="42.297" startY="300.659" stroke="#FFFFFF" />
+          <Line endX="45.333" endY="278.98" startX="45.689" startY="280.964" stroke="#FFFFFF" />
+          <SVGPath content="M42.296,300.65    c-0.411-3.213-0.292-6.219,0.507-9.367" stroke="#FFFFFF" />
+          <SVGPath content="M62.349,300.607    c-0.075-0.498-0.023-0.96,0.065-1.452" stroke="#FFFFFF" />
+          <SVGPath content="M60.332,233.316    c-0.008-0.104-0.017-0.21-0.026-0.314" stroke="#FFFFFF" />
+          <Line endX="68.536" endY="336.357" startX="68.545" startY="336.49" stroke="#FFFFFF" />
+          <SVGPath content="M67.669,206.297    c-0.066-1.008-0.087-2.018-0.09-3.027" stroke="#FFFFFF" />
+          <SVGPath content="M779.09,303.948    c-0.465,0.056-0.919,0.091-1.387,0.111" stroke="#FFFFFF" />
+          <SVGPath content="M575.153,337.365    c0.029-0.002,0.055-0.015,0.076-0.038" stroke="#FFFFFF" />
+          <SVGPath content="M680.258,337.419    c-0.415,0.041-0.828,0.092-1.24,0.16" stroke="#FFFFFF" />
+          <SVGPath content="M672.592,339.868    c0.256-0.002,0.506-0.081,0.717-0.225" stroke="#FFFFFF" />
+          <SVGPath content="M681.374,337.365    c0.037-0.006,0.074-0.019,0.107-0.038" stroke="#FFFFFF" />
+          <Line endX="680.258" endY="337.419" startX="680.672" startY="337.388" stroke="#FFFFFF" />
+          <Line endX="773.424" endY="336.713" startX="773.422" startY="336.713" stroke="#FFFFFF" />
+          <SVGPath content="M765.325,337.365    c0.044-0.006,0.088-0.019,0.129-0.038" stroke="#FFFFFF" />
+          <Line endX="672.346" endY="339.957" startX="672.575" startY="339.944" stroke="#FFFFFF" />
+          <Line endX="773.424" endY="336.713" startX="773.542" startY="336.704" stroke="#FFFFFF" />
+          <SVGPath content="M773.422,336.713    c-0.189,0.011-0.379,0.019-0.568,0.022" stroke="#FFFFFF" />
+          <SVGPath content="M774.167,336.677    c-0.208,0.01-0.417,0.019-0.625,0.027" stroke="#FFFFFF" />
+          <Line endX="765.764" endY="337.364" startX="767.846" startY="337.3" stroke="#FFFFFF" />
+          <SVGPath content="M768.571,335.153    c2.981-0.084,5.872-0.324,8.822-0.769" stroke="#FFFFFF" />
+          <SVGPath content="M68.333,336.697    c-0.212-0.009-0.425-0.021-0.637-0.033" stroke="#FFFFFF" />
+          <Line endX="68.333" endY="336.697" startX="68.625" startY="336.713" stroke="#FFFFFF" />
+          <Line endX="68.625" endY="336.713" startX="68.797" startY="336.722" stroke="#FFFFFF" />
+          <Line endX="68.625" endY="336.713" startX="68.625" startY="336.713" stroke="#FFFFFF" />
+          <SVGPath content="M67.696,336.663    c-0.434-0.029-0.864-0.092-1.275-0.237" stroke="#FFFFFF" />
+          <Line endX="68.536" endY="336.357" startX="68.355" startY="336.335" stroke="#FFFFFF" />
+          <SVGPath content="M69.501,336.741    c-0.079-0.045-0.128-0.122-0.144-0.216" stroke="#FFFFFF" />
+          <SVGPath content="M66.622,333.791    c3.953,0.825,7.819,1.248,11.854,1.361" stroke="#FFFFFF" />
+          <SVGPath content="M81.542,208.271    c-0.201-0.34-0.433-0.662-0.7-0.953" stroke="#FFFFFF" />
+          <SVGPath content="M79.69,231.128    c-0.279-1.586-2.187-2.093-3.555-2.136" stroke="#FFFFFF" />
+          <Line endX="66.194" endY="240.417" startX="64.81" startY="233.316" stroke="#FFFFFF" />
+          <SVGPath content="M62.789,303.062    c0.553,2.589,3.358,3.362,5.659,3.455" stroke="#FFFFFF" />
+          <Line endX="68.416" endY="335.852" startX="68.51" startY="336.355" stroke="#FFFFFF" />
+          <SVGPath content="M78.468,335.204    c0.018,0.153,0.066,0.303,0.142,0.436" stroke="#FFFFFF" />
+          <Line endX="62.788" endY="303.062" startX="62.349" startY="300.605" stroke="#FFFFFF" />
+          <Line endX="68.448" endY="306.517" startX="68.018" startY="304.06" stroke="#FFFFFF" />
+          <SVGPath content="M89.974,320.379    c0.102,0.63,0.274,2.407,1.096,2.534" stroke="#FFFFFF" />
+          <Line endX="77.539" endY="308.106" startX="77.271" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="89.974" endY="320.379" startX="89.166" startY="315.332" stroke="#FFFFFF" />
+          <Line endX="66.83" endY="205.705" startX="67.09" startY="207.472" stroke="#FFFFFF" />
+          <SVGPath content="M97.449,99.639    c-0.007-0.124-0.012-0.249-0.015-0.373" stroke="#FFFFFF" />
+          <Line endX="97.449" endY="99.639" startX="97.435" startY="99.288" stroke="#FFFFFF" />
+          <SVGPath content="M97.435,99.288    c-0.006-0.149-0.012-0.299-0.017-0.448" stroke="#FFFFFF" />
+          <SVGPath content="M102.745,80.353    c-0.035-0.933-0.035-1.865-0.014-2.798" stroke="#FFFFFF" />
+          <SVGPath content="M97.413,98.543    c0.003,0.186,0.008,0.373,0.014,0.559" stroke="#FFFFFF" />
+          <SVGPath content="M102.731,77.555    c-0.026,0.933-0.016,1.865,0.014,2.798" stroke="#FFFFFF" />
+          <SVGPath content="M102.131,79.697    c-0.011,0.543-0.02,1.086-0.013,1.63" stroke="#FFFFFF" />
+          <Line endX="67.579" endY="203.27" startX="67.583" startY="203.16" stroke="#FFFFFF" />
+          <SVGPath content="M102.731,77.555    c0.009-0.577,0.258-1.112,0.644-1.534" stroke="#FFFFFF" />
+          <Line endX="102.731" endY="77.555" startX="102.735" startY="77.454" stroke="#FFFFFF" />
+          <Line endX="67.583" endY="203.162" startX="67.592" startY="203.052" stroke="#FFFFFF" />
+          <Line endX="102.735" endY="77.455" startX="102.745" startY="77.353" stroke="#FFFFFF" />
+          <Line endX="102.745" endY="77.356" startX="102.758" startY="77.253" stroke="#FFFFFF" />
+          <SVGPath content="M79.653,231.917    c0.052-0.258,0.07-0.527,0.037-0.789" stroke="#FFFFFF" />
+          <SVGPath content="M66.855,205.323    c-0.028,0.126-0.036,0.254-0.025,0.383" stroke="#FFFFFF" />
+          <SVGPath content="M60.496,303.087    c-0.098,0.528-0.122,0.991-0.061,1.525" stroke="#FFFFFF" />
+          <SVGPath content="M102.01,79.675    c-0.027,0.116-0.037,0.234-0.03,0.354" stroke="#FFFFFF" />
+          <SVGPath content="M61.545,298.254    c-0.324,1.616-0.673,3.224-1.049,4.828" stroke="#FFFFFF" />
+          <SVGPath content="M49.654,300.131    c-0.787,3.818,0.467,7.25,3.654,9.57c3.044,2.216,6.814,2.844,10.487,2.968" stroke="#FFFFFF" />
+          <SVGPath content="M82.681,212.352    c0.318-1.333,0.098-2.616-0.701-3.74" stroke="#FFFFFF" />
+          <SVGPath content="M81.917,211.255    c0.263-1.026,0.145-2.059-0.375-2.984" stroke="#FFFFFF" />
+          <Line endX="44.245" endY="290.452" startX="43.782" startY="292.535" stroke="#FFFFFF" />
+          <Line endX="100.81" endY="111.877" startX="102.33" startY="106.232" stroke="#FFFFFF" />
+          <Line endX="64.068" endY="248.308" startX="66.194" startY="240.417" stroke="#FFFFFF" />
+          <Line endX="54.506" endY="282.147" startX="49.654" startY="300.131" stroke="#FFFFFF" />
+          <Line endX="94.976" endY="122.865" startX="101.32" startY="99.639" stroke="#FFFFFF" />
+          <Line endX="55.89" endY="265.976" startX="64.81" startY="233.316" stroke="#FFFFFF" />
+          <Line endX="64.54" endY="232.083" startX="64.202" startY="233.316" stroke="#FFFFFF" />
+          <Line endX="101.049" endY="98.75" startX="100.805" startY="99.639" stroke="#FFFFFF" />
+          <Line endX="103.147" endY="78.94" startX="112.743" startY="44.487" stroke="#FFFFFF" />
+          <Line endX="68.173" endY="204.526" startX="97.383" startY="99.639" stroke="#FFFFFF" />
+          <Line endX="44.245" endY="290.452" startX="60.157" startY="233.316" stroke="#FFFFFF" />
+          <Line endX="67.125" endY="207.348" startX="59.906" startY="233.247" stroke="#FFFFFF" />
+          <Line endX="102.26" endY="81.325" startX="97.169" startY="99.58" stroke="#FFFFFF" />
+          <Line endX="66.852" endY="205.331" startX="96.213" startY="100.386" stroke="#FFFFFF" />
+          <Line endX="42.803" endY="291.281" startX="58.797" startY="234.121" stroke="#FFFFFF" />
+          <Line endX="102.006" endY="79.683" startX="111.654" startY="45.206" stroke="#FFFFFF" />
+          <SVGPath content="M58.798,234.126    c0.171-0.582,0.811-0.794,1.359-0.811" stroke="#FFFFFF" />
+          <SVGPath content="M96.219,100.378    c0.15-0.499,0.679-0.729,1.164-0.739" stroke="#FFFFFF" />
+          <SVGPath content="M42.803,291.281    c0.195-0.599,0.867-0.821,1.442-0.828" stroke="#FFFFFF" />
+          <Line endX="11.624" endY="295.429" startX="13.613" startY="289.059" stroke="#FFFFFF" />
+          <Line endX="111.85" endY="44.582" startX="111.654" startY="45.206" stroke="#FFFFFF" />
+          <Line endX="113.139" endY="43.371" startX="112.743" startY="44.487" stroke="#FFFFFF" />
+          <SVGPath content="M13.616,289.062    c0.149-0.445,0.525-0.774,0.92-1.008" stroke="#FFFFFF" />
+          <SVGPath content="M111.85,44.582    c0.364-0.86,0.756-1.643,1.219-2.455" stroke="#FFFFFF" />
+          <SVGPath content="M113.139,43.371    c1.937-3.916,5.378-6.486,9.197-8.443c3.707-1.899,7.845-3.213,11.949-3.913c2.701-0.461,5.383-0.754,8.118-0.908" stroke="#FFFFFF" />
+          <SVGPath content="M113.069,42.127    c5.06-6.974,14.042-10.146,22.264-11.46c2.71-0.433,5.416-0.649,8.157-0.761" fill="#f8f7f7" stroke="#FFFFFF" />
+          <SVGPath content="M749.178,229.09    c-0.813,0.207-1.677,0.544-1.975,1.41" stroke="#FFFFFF" />
+          <Line endX="397.788" endY="321.788" startX="398.269" startY="321.724" stroke="#FFFFFF" />
+          <SVGPath content="M588.165,313.231    c0.961-0.095,1.904-0.155,2.869-0.188" stroke="#FFFFFF" />
+          <SVGPath content="M444.825,304.06    c-0.917,0.052-1.843,0.16-2.654,0.629" stroke="#FFFFFF" />
+          <SVGPath content="M198.232,315.288    c0.427-0.009,0.847-0.085,1.246-0.24" stroke="#FFFFFF" />
+          <SVGPath content="M776.829,306.517    c1.702-0.069,3.969-0.451,4.623-2.31" stroke="#FFFFFF" />
+          <SVGPath content="M784.157,312.669    c3.264-0.11,7.307-0.533,9.75-3c1.192-1.203,2.213-2.67,2.301-4.429c0.094-1.866-0.376-3.432-1.156-5.109" fill="#fcf8f8" stroke="#FFFFFF" />
+          <SVGPath content="M452.53,335.671    c2.656-0.021,5.867-1.259,6.295-4.224" stroke="#FFFFFF" />
+          <SVGPath content="M765.454,337.327    c5.271-0.101,10.3-0.855,15.186-2.896" stroke="#FFFFFF" />
+          <SVGPath content="M681.374,337.365    c-0.233,0-0.468,0.008-0.701,0.022" stroke="#FFFFFF" />
+          <Line endX="765.325" endY="337.365" startX="765.764" startY="337.364" stroke="#FFFFFF" />
+          <Line endX="401.833" endY="343.199" startX="451.659" startY="343.199" stroke="#FFFFFF" />
+          <Line endX="667.84" endY="339.957" startX="672.354" startY="339.957" stroke="#FFFFFF" />
+          <Line endX="577.895" endY="339.957" startX="582.409" startY="339.957" stroke="#FFFFFF" />
+          <Line endX="582.612" endY="339.868" startX="578.102" startY="339.868" stroke="#FFFFFF" />
+          <Line endX="672.592" endY="339.868" startX="668.081" startY="339.868" stroke="#FFFFFF" />
+          <Line endX="458.112" endY="337.365" startX="575.153" startY="337.365" stroke="#FFFFFF" />
+          <Line endX="80.028" endY="337.365" startX="394.252" startY="337.365" stroke="#FFFFFF" />
+          <Line endX="765.325" endY="337.365" startX="681.374" startY="337.365" stroke="#FFFFFF" />
+          <Line endX="394.252" endY="337.327" startX="79.965" startY="337.327" stroke="#FFFFFF" />
+          <Line endX="575.229" endY="337.327" startX="458.118" startY="337.327" stroke="#FFFFFF" />
+          <Line endX="765.454" endY="337.327" startX="681.481" startY="337.327" stroke="#FFFFFF" />
+          <Line endX="70.437" endY="336.38" startX="69.324" startY="336.38" stroke="#FFFFFF" />
+          <Line endX="452.53" endY="335.671" startX="402.414" startY="335.671" stroke="#FFFFFF" />
+          <Line endX="673.473" endY="335.64" startX="768.29" startY="335.64" stroke="#FFFFFF" />
+          <Line endX="458.321" endY="335.64" startX="587.235" startY="335.64" stroke="#FFFFFF" />
+          <Line endX="78.61" endY="335.64" startX="393.956" startY="335.64" stroke="#FFFFFF" />
+          <Line endX="393.897" endY="335.16" startX="78.479" startY="335.16" stroke="#FFFFFF" />
+          <Line endX="587.358" endY="335.16" startX="458.377" startY="335.16" stroke="#FFFFFF" />
+          <Line endX="768.569" endY="335.16" startX="673.741" startY="335.16" stroke="#FFFFFF" />
+          <Line endX="402.335" endY="330.578" startX="452.413" startY="330.578" stroke="#FFFFFF" />
+          <Line endX="196.927" endY="322.913" startX="91.07" startY="322.913" stroke="#FFFFFF" />
+          <Line endX="454.747" endY="321.791" startX="397.774" startY="321.791" stroke="#FFFFFF" />
+          <Line endX="398.269" endY="321.724" startX="453.68" startY="321.724" stroke="#FFFFFF" />
+          <Line endX="678.051" endY="321.161" startX="773.467" startY="321.161" stroke="#FFFFFF" />
+          <Line endX="197.46" endY="321.161" startX="589.952" startY="321.161" stroke="#FFFFFF" />
+          <Line endX="76.139" endY="321.161" startX="90.122" startY="321.161" stroke="#FFFFFF" />
+          <Line endX="89.698" endY="318.662" startX="76.231" startY="318.662" stroke="#FFFFFF" />
+          <Line endX="589.809" endY="318.662" startX="197.75" startY="318.662" stroke="#FFFFFF" />
+          <Line endX="773.274" endY="318.662" startX="677.926" startY="318.662" stroke="#FFFFFF" />
+          <Line endX="89.166" endY="315.332" startX="195.982" startY="315.332" stroke="#FFFFFF" />
+          <Line endX="351.43" endY="315.062" startX="448.668" startY="315.062" stroke="#FFFFFF" />
+          <Line endX="198.744" endY="313.775" startX="198.278" startY="313.775" stroke="#FFFFFF" />
+          <Line endX="447.569" endY="313.156" startX="446.75" startY="313.156" stroke="#FFFFFF" />
+          <Line endX="640.461" endY="313.043" startX="591.034" startY="313.043" stroke="#FFFFFF" />
+          <Line endX="196.269" endY="312.748" startX="89.744" startY="312.748" stroke="#FFFFFF" />
+          <Line endX="351.783" endY="312.72" startX="381.771" startY="312.72" stroke="#FFFFFF" />
+          <Line endX="698.684" endY="312.669" startX="784.157" startY="312.669" stroke="#FFFFFF" />
+          <Line endX="200.942" endY="312.669" startX="235.574" startY="312.669" stroke="#FFFFFF" />
+          <Line endX="89.744" endY="312.669" startX="63.795" startY="312.669" stroke="#FFFFFF" />
+          <Line endX="398.554" endY="311.75" startX="398.944" startY="311.75" stroke="#FFFFFF" />
+          <Line endX="401.318" endY="310.43" startX="401.184" startY="310.43" stroke="#FFFFFF" />
+          <Line endX="401.309" endY="310.351" startX="401.19" startY="310.351" stroke="#FFFFFF" />
+          <Line endX="198.4" endY="309.517" startX="94.032" startY="309.517" stroke="#FFFFFF" />
+          <Line endX="720.407" endY="308.106" startX="779.262" startY="308.106" stroke="#FFFFFF" />
+          <Line endX="199.237" endY="308.106" startX="210.494" startY="308.106" stroke="#FFFFFF" />
+          <Line endX="66.206" endY="308.106" startX="93.872" startY="308.106" stroke="#FFFFFF" />
+          <Line endX="401.361" endY="308.349" startX="398.946" startY="308.349" stroke="#FFFFFF" />
+          <Line endX="446.708" endY="308.365" startX="445.799" startY="308.365" stroke="#FFFFFF" />
+          <Line endX="69.501" endY="336.741" startX="72.354" startY="336.741" stroke="#FFFFFF" />
+          <SVGPath content="M69.324,336.38    c-0.272,0-0.543-0.007-0.814-0.025" stroke="#FFFFFF" />
+          <SVGPath content="M69.501,336.741    c-0.235-0.002-0.47-0.007-0.704-0.02" stroke="#FFFFFF" />
+          <Line endX="79.283" endY="337.36" startX="80.028" startY="337.365" stroke="#FFFFFF" />
+          <Line endX="681.374" endY="337.365" startX="681.372" startY="337.365" stroke="#FFFFFF" />
+          <SVGPath content="M575.229,337.327    c0.86,0.001,2.252,0,2.93,0.626" stroke="#FFFFFF" />
+          <SVGPath content="M199.605,311.332    c0.105-0.003,0.211,0.002,0.315,0.017" stroke="#FFFFFF" />
+          <SVGPath content="M401.833,343.199    c-3.07,0-7.155-1.686-7.581-5.14" stroke="#FFFFFF" />
+          <Line endX="199.605" endY="311.332" startX="199.483" startY="311.328" stroke="#FFFFFF" />
+          <SVGPath content="M577.903,339.957    c-0.324-0.004-0.645-0.102-0.922-0.269" stroke="#FFFFFF" />
+          <SVGPath content="M76.139,321.161    c-8.434-0.234-17.59-1.641-24.538-6.845c-2.417-1.81-4.405-3.779-6.217-6.194c-1.625-2.165-2.5-4.86-3.087-7.463" fill="#f8f5f5" stroke="#FFFFFF" />
+          <SVGPath content="M78.61,335.64    c-4.018-0.11-7.863-0.533-11.798-1.355" stroke="#FFFFFF" />
+          <SVGPath content="M199.269,309.393    c0.513,0.004,1.867,0.098,1.795,0.879" stroke="#FFFFFF" />
+          <SVGPath content="M76.231,318.662    c-8.885-0.257-17.459-2.027-24.708-7.437c-2.928-2.186-5.078-5.142-6.604-8.425c-1.501-3.228-1.547-6.809-1.137-10.266" fill="#f8f3f3" stroke="#FFFFFF" />
+          <SVGPath content="M402.335,330.578    c-1.566-0.028-3.582-0.857-3.814-2.621" stroke="#FFFFFF" />
+          <SVGPath content="M13.692,297.827    c0.39,0.014,0.779,0.023,1.169,0.023" stroke="#FFFFFF" />
+          <SVGPath content="M79.283,337.36    c-4.396-0.168-8.576-0.785-12.798-2.034" stroke="#FFFFFF" />
+          <SVGPath content="M68.018,304.06    c-1.154-0.05-2.195-0.229-3.269-0.665" stroke="#FFFFFF" />
+          <Line endX="14.611" endY="297.198" startX="14.967" startY="297.215" stroke="#FFFFFF" />
+          <Line endX="454.731" endY="321.788" startX="453.68" startY="321.724" stroke="#FFFFFF" />
+          <SVGPath content="M578.102,339.868    c-0.479-0.007-0.929-0.251-1.217-0.631" stroke="#FFFFFF" />
+          <Line endX="14.27" endY="297.167" startX="14.611" startY="297.198" stroke="#FFFFFF" />
+          <SVGPath content="M14.27,297.167    c-0.574-0.073-1.13-0.227-1.66-0.457" stroke="#FFFFFF" />
+          <SVGPath content="M198.531,312.763    c0.197,0.259,0.185,0.691,0.213,1.012" stroke="#FFFFFF" />
+          <SVGPath content="M12.29,297.712    c0.463,0.075,0.934,0.098,1.402,0.115" stroke="#FFFFFF" />
+          <SVGPath content="M72.691,230.793    c0.989,0.399,1.985,0.539,3.045,0.581" stroke="#FFFFFF" />
+          <SVGPath content="M80.842,207.318    c-1.263-1.38-3.021-2.187-4.782-2.719" stroke="#FFFFFF" />
+          <Line endX="81.608" endY="208.156" startX="80.842" startY="207.318" stroke="#FFFFFF" />
+          <SVGPath content="M81.98,208.612    c-0.118-0.156-0.241-0.31-0.372-0.456" stroke="#FFFFFF" />
+          <Line endX="200.627" endY="312.207" startX="200.942" startY="312.669" stroke="#FFFFFF" />
+          <Line endX="102.33" endY="106.232" startX="101.32" startY="99.639" stroke="#FFFFFF" />
+          <Line endX="92.67" endY="297.535" startX="94.032" startY="309.517" stroke="#FFFFFF" />
+          <Line endX="101.98" endY="80.029" startX="102.167" startY="81.661" stroke="#FFFFFF" />
+          <Line endX="133.142" endY="36.777" startX="133.214" startY="37.472" stroke="#FFFFFF" />
+          <SVGPath content="M113.825,98.637    c0.029-0.147,0.038-0.296,0.025-0.445" stroke="#FFFFFF" />
+          <SVGPath content="M115.752,84.541    c0.215-0.869,0.036-1.703-0.492-2.422" stroke="#FFFFFF" />
+          <SVGPath content="M115.125,83.525    c0.099-0.402,0.124-0.822,0.023-1.227" stroke="#FFFFFF" />
+          <Line endX="96.581" endY="312.748" startX="96.886" startY="311.334" stroke="#FFFFFF" />
+          <Line endX="89.166" endY="315.332" startX="89.744" startY="312.748" stroke="#FFFFFF" />
+          <Line endX="92.67" endY="297.535" startX="93.229" startY="295.042" stroke="#FFFFFF" />
+          <SVGPath content="M64.597,282.147    c-1.261,5.324-2.061,10.73-3.052,16.107" stroke="#FFFFFF" />
+          <Line endX="63.22" endY="304.176" startX="62.448" startY="307.209" stroke="#FFFFFF" />
+          <Line endX="63.257" endY="304.235" startX="62.494" startY="307.234" stroke="#FFFFFF" />
+          <Line endX="79.653" endY="231.917" startX="62.414" startY="299.155" stroke="#FFFFFF" />
+          <Line endX="113.825" endY="98.637" startX="86.338" startY="205.838" stroke="#FFFFFF" />
+          <Line endX="128.891" endY="39.877" startX="118.632" startY="79.888" stroke="#FFFFFF" />
+          <Line endX="85.432" endY="201.546" startX="105.794" startY="122.865" stroke="#FFFFFF" />
+          <Line endX="64.573" endY="282.147" startX="68.757" startY="265.976" stroke="#FFFFFF" />
+          <Line endX="117.728" endY="76.774" startX="127.399" startY="39.406" stroke="#FFFFFF" />
+          <Line endX="82.681" endY="212.352" startX="79.507" startY="224.614" stroke="#FFFFFF" />
+          <Line endX="115.752" endY="84.541" startX="113.471" startY="93.354" stroke="#FFFFFF" />
+          <Line endX="112.834" endY="92.333" startX="115.125" startY="83.525" stroke="#FFFFFF" />
+          <Line endX="78.731" endY="223.509" startX="81.917" startY="211.255" stroke="#FFFFFF" />
+          <SVGPath content="M78.731,223.509    c-0.869,3.241-4.343,5.099-7.26,6.163" stroke="#FFFFFF" />
+          <SVGPath content="M79.507,224.614    c-0.687,2.49-2.781,4.15-4.953,5.346" stroke="#FFFFFF" />
+          <SVGPath content="M112.834,92.333    c-0.662,2.488-3.726,3.725-5.931,4.41" stroke="#FFFFFF" />
+          <SVGPath content="M113.471,93.354    c-0.863,3.285-5.433,4.658-8.358,5.064" fill="#f5efef" stroke="#FFFFFF" />
+          <SVGPath content="M128.891,39.877    c0.612-2.064,3.789-2.482,5.559-2.534" stroke="#FFFFFF" />
+          <Line endX="127.399" endY="39.406" startX="127.511" startY="39.109" stroke="#FFFFFF" />
+          <SVGPath content="M85.432,201.546    c-0.741,2.182-3.327,2.881-5.383,2.979" fill="#f2efef" stroke="#FFFFFF" />
+          <SVGPath content="M117.728,76.774    c-0.07,0.21-0.175,0.412-0.306,0.59" stroke="#FFFFFF" />
+          <Line endX="74.035" endY="253.825" startX="68.782" startY="265.976" stroke="#FFFFFF" />
+          <Line endX="55.89" endY="265.976" startX="64.068" startY="248.308" stroke="#FFFFFF" />
+          <Line endX="109.546" endY="115.32" startX="105.815" startY="122.865" stroke="#FFFFFF" />
+          <SVGPath content="M59.94,233.333    c0.209-0.439,0.56-0.805,0.945-1.096" stroke="#FFFFFF" />
+          <Line endX="94.976" endY="122.865" startX="100.81" startY="111.877" stroke="#FFFFFF" />
+          <SVGPath content="M97.269,99.65    c0.277-0.457,0.704-0.807,1.151-1.091" stroke="#FFFFFF" />
+          <SVGPath content="M117.422,77.364    c-0.944,1.228-2.736,1.516-4.178,1.576" stroke="#FFFFFF" />
+          <SVGPath content="M144.608,29.896    c-0.049,0.041-0.079,0.102-0.087,0.168" stroke="#FFFFFF" />
+          <SVGPath content="M223.275,306.62    c4.276-0.715,8.483-1.293,12.821-1.45" stroke="#FFFFFF" />
+          <Line endX="748.95" endY="231.405" startX="748.422" startY="231.48" stroke="#FFFFFF" />
+          <SVGPath content="M750.825,231.348    c0.945-0.105,1.843-0.287,2.66-0.797" stroke="#FFFFFF" />
+          <SVGPath content="M210.494,308.106    c4.327-0.154,8.518-0.761,12.781-1.485" stroke="#FFFFFF" />
+          <Line endX="19.698" endY="290.472" startX="17.164" startY="290.555" stroke="#FFFFFF" />
+          <Line endX="93.69" endY="306.517" startX="68.448" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="223.888" endY="306.517" startX="199.114" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="351.341" endY="306.517" startX="350.981" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="400.715" endY="306.517" startX="387.418" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="446.958" endY="306.517" startX="444.815" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="672.178" endY="306.517" startX="586.129" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="776.829" endY="306.517" startX="707.409" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="351.396" endY="305.442" startX="381.152" startY="305.442" stroke="#FFFFFF" />
+          <Line endX="695.542" endY="305.187" startX="672.598" startY="305.187" stroke="#FFFFFF" />
+          <Line endX="447.133" endY="305.17" startX="585.729" startY="305.17" stroke="#FFFFFF" />
+          <Line endX="236.096" endY="305.17" startX="350.91" startY="305.17" stroke="#FFFFFF" />
+          <Line endX="444.825" endY="304.06" startX="777.704" startY="304.06" stroke="#FFFFFF" />
+          <Line endX="198.908" endY="304.06" startX="400.899" startY="304.06" stroke="#FFFFFF" />
+          <Line endX="68.018" endY="304.06" startX="93.412" startY="304.06" stroke="#FFFFFF" />
+          <Line endX="438.709" endY="304.058" startX="407.733" startY="304.058" stroke="#FFFFFF" />
+          <Line endX="42.022" endY="297.853" startX="15.109" startY="297.853" stroke="#FFFFFF" />
+          <Line endX="197.723" endY="297.535" startX="92.67" startY="297.535" stroke="#FFFFFF" />
+          <Line endX="14.967" endY="297.215" startX="35.37" startY="297.215" stroke="#FFFFFF" />
+          <Line endX="93.229" endY="295.042" startX="198.002" startY="295.042" stroke="#FFFFFF" />
+          <Line endX="64.573" endY="282.147" startX="54.506" startY="282.147" stroke="#FFFFFF" />
+          <Line endX="785.54" endY="282.147" startX="775.473" startY="282.147" stroke="#FFFFFF" />
+          <Line endX="15.109" endY="297.853" startX="14.861" startY="297.851" stroke="#FFFFFF" />
+          <SVGPath content="M640.461,313.043    c8.037,0.266,17.706,3.894,21.179,11.779c0.081,0.185,0.162,0.369,0.243,0.553" fill="#f8f6f6" stroke="#FFFFFF" />
+          <SVGPath content="M695.536,305.17    c3.499,0.128,6.916,0.485,10.365,1.085" stroke="#FFFFFF" />
+          <SVGPath content="M400.715,306.517    c0.434,0.024,0.851,0.065,1.281,0.127" stroke="#FFFFFF" />
+          <Line endX="381.152" endY="305.442" startX="398.208" startY="308.371" stroke="#FFFFFF" />
+          <Line endX="395.352" endY="315.062" startX="381.77" startY="312.72" stroke="#FFFFFF" />
+          <Line endX="402.237" endY="306.699" startX="401.996" startY="306.644" stroke="#FFFFFF" />
+          <SVGPath content="M77.503,231.48    c0.733,0.175,1.479,0.417,2.01,0.982" stroke="#FFFFFF" />
+          <SVGPath content="M115.148,82.298    c-0.092-0.353-0.262-0.677-0.478-0.969" stroke="#FFFFFF" />
+          <SVGPath content="M113.85,98.192    c-0.021-0.125-0.057-0.247-0.107-0.364" stroke="#FFFFFF" />
+          <Line endX="127.914" endY="43.692" startX="127.417" startY="39.38" stroke="#FFFFFF" />
+          <Line endX="198.908" endY="303.816" startX="198.002" startY="295.042" stroke="#FFFFFF" />
+          <SVGPath content="M196.383,320.379    c0.055,0.627-0.013,2.134,0.544,2.533" stroke="#FFFFFF" />
+          <Line endX="196.383" endY="320.379" startX="195.982" startY="315.332" stroke="#FFFFFF" />
+          <Line endX="196.269" endY="312.748" startX="196.282" startY="312.906" stroke="#FFFFFF" />
+          <Line endX="198.854" endY="315.188" startX="198.744" startY="313.775" stroke="#FFFFFF" />
+          <Line endX="198.908" endY="303.816" startX="199.594" startY="312.781" stroke="#FFFFFF" />
+          <Line endX="198.4" endY="309.517" startX="197.723" startY="297.535" stroke="#FFFFFF" />
+          <SVGPath content="M98.42,98.559    c1.277-0.787,2.744-1.084,4.228-1.113" stroke="#FFFFFF" />
+          <SVGPath content="M130.02,37.279    c-0.972,0.361-2.021,0.858-2.509,1.83" fill="#f5f3f3" stroke="#FFFFFF" />
+          <Line endX="749.534" endY="231.374" startX="748.95" startY="231.405" stroke="#FFFFFF" />
+          <SVGPath content="M750.292,228.984    c-0.377,0.021-0.739,0.054-1.113,0.106" stroke="#FFFFFF" />
+          <Line endX="750.825" endY="231.348" startX="750.165" startY="231.374" stroke="#FFFFFF" />
+          <SVGPath content="M66.587,231.888    c-0.975,0.011-1.934,0.12-2.868,0.408" stroke="#FFFFFF" />
+          <Line endX="68.757" endY="265.976" startX="55.89" startY="265.976" stroke="#FFFFFF" />
+          <Line endX="779.967" endY="265.976" startX="767.102" startY="265.976" stroke="#FFFFFF" />
+          <Line endX="75.449" endY="248.308" startX="64.068" startY="248.308" stroke="#FFFFFF" />
+          <Line endX="764.194" endY="248.308" startX="755.833" startY="248.308" stroke="#FFFFFF" />
+          <Line endX="762.588" endY="233.316" startX="767.243" startY="233.316" stroke="#FFFFFF" />
+          <Line endX="64.81" endY="233.316" startX="60.157" startY="233.316" stroke="#FFFFFF" />
+          <Line endX="76.366" endY="231.374" startX="75.736" startY="231.374" stroke="#FFFFFF" />
+          <Line endX="750.165" endY="231.374" startX="749.534" startY="231.374" stroke="#FFFFFF" />
+          <SVGPath content="M66.396,230.685    c0.922,0.019,1.845-0.145,2.74-0.354" stroke="#FFFFFF" />
+          <SVGPath content="M76.366,231.374    c0.385,0.02,0.755,0.053,1.137,0.105" stroke="#FFFFFF" />
+          <SVGPath content="M797.954,290.452    c0.459,0.004,0.956,0.141,1.209,0.553" stroke="#FFFFFF" />
+          <SVGPath content="M705.901,306.255    c4.84,0.844,9.585,1.674,14.506,1.851" stroke="#FFFFFF" />
+          <SVGPath content="M76.06,204.599    c-0.807-0.242-1.627-0.365-2.469-0.382" stroke="#FFFFFF" />
+          <SVGPath content="M114.67,81.329    c-1.094-1.463-3.033-2.183-4.741-2.618" stroke="#FFFFFF" />
+          <Line endX="115.26" endY="82.119" startX="115.067" startY="81.859" stroke="#FFFFFF" />
+          <Line endX="115.067" endY="81.859" startX="114.67" startY="81.329" stroke="#FFFFFF" />
+          <SVGPath content="M113.743,97.827    c-0.582-1.076-2.032-1.243-3.121-1.287" stroke="#FFFFFF" />
+          <Line endX="113.471" endY="93.354" startX="112.834" startY="92.333" stroke="#FFFFFF" />
+          <Line endX="115.125" endY="83.525" startX="115.752" startY="84.541" stroke="#FFFFFF" />
+          <Line endX="200.942" endY="312.669" startX="200.851" startY="313.523" stroke="#FFFFFF" />
+          <Line endX="199.344" endY="314.658" startX="199.5" startY="313.207" stroke="#FFFFFF" />
+          <Line endX="198.278" endY="313.822" startX="197.584" startY="320.185" stroke="#FFFFFF" />
+          <Line endX="195.982" endY="315.332" startX="196.269" startY="312.748" stroke="#FFFFFF" />
+          <Line endX="197.723" endY="297.535" startX="198.002" startY="295.042" stroke="#FFFFFF" />
+          <SVGPath content="M198.278,313.822    c0.037-0.34,0.045-0.786,0.253-1.059" stroke="#FFFFFF" />
+          <SVGPath content="M97.51,309.517    c-0.338,0.545-0.483,1.2-0.624,1.817" stroke="#FFFFFF" />
+          <Line endX="37.762" endY="296.329" startX="43.098" startY="290.23" stroke="#FFFFFF" />
+          <SVGPath content="M99.944,99.109    c-0.306,0.139-0.596,0.314-0.854,0.53" stroke="#FFFFFF" />
+          <SVGPath content="M69.348,231.677    c-0.915,0.143-1.835,0.21-2.761,0.211" stroke="#FFFFFF" />
+          <SVGPath content="M73.59,204.209    c-2.186,0.063-5.77,0.608-6.465,3.139" fill="#fcf7f7" stroke="#FFFFFF" />
+          <SVGPath content="M746.846,204.217    c-0.809,0.014-1.6,0.134-2.371,0.382" stroke="#FFFFFF" />
+          <Line endX="749.444" endY="204.526" startX="751.768" startY="204.526" stroke="#FFFFFF" />
+          <Line endX="739.891" endY="204.526" startX="744.717" startY="204.526" stroke="#FFFFFF" />
+          <Line endX="70.954" endY="204.526" startX="68.173" startY="204.526" stroke="#FFFFFF" />
+          <Line endX="80.049" endY="204.526" startX="75.798" startY="204.526" stroke="#FFFFFF" />
+          <SVGPath content="M760.934,230.677    c1.963,0.055,4.79,0.406,5.881,2.315" stroke="#FFFFFF" />
+          <SVGPath content="M767.243,233.316    c0.444,0.013,0.896,0.143,1.145,0.537" stroke="#FFFFFF" />
+          <SVGPath content="M577.174,337.677    c-0.62-0.277-1.353-0.309-2.021-0.312" stroke="#FFFFFF" />
+          <SVGPath content="M107.084,98.029    c0.991,0.563,2.161,0.689,3.278,0.722" stroke="#FFFFFF" />
+          <SVGPath content="M404.072,304.875    c-0.964-0.582-2.069-0.755-3.173-0.815" stroke="#FFFFFF" />
+          <Line endX="235.574" endY="312.669" startX="236.096" startY="305.187" stroke="#FFFFFF" />
+          <Line endX="210.53" endY="308.122" startX="209.599" startY="312.669" stroke="#FFFFFF" />
+          <Line endX="200.631" endY="312.214" startX="201.061" startY="310.263" stroke="#FFFFFF" />
+          <Line endX="199.5" endY="313.207" startX="199.912" startY="311.35" stroke="#FFFFFF" />
+          <Line endX="199.344" endY="314.658" startX="199.32" startY="314.763" stroke="#FFFFFF" />
+          <SVGPath content="M37.762,296.329    c-0.598,0.649-1.539,0.879-2.393,0.886" stroke="#FFFFFF" />
+          <SVGPath content="M49.503,266.572    c-0.448,0.332-0.364,0.989-0.191,1.447" stroke="#FFFFFF" />
+          <SVGPath content="M60.885,232.238    c1.587-1.166,3.585-1.511,5.509-1.561" stroke="#FFFFFF" />
+          <SVGPath content="M400.137,35.933    c0.456-0.159,0.898-0.349,1.324-0.576" stroke="#FFFFFF" />
+          <SVGPath content="M679.448,98.913    c0.284-0.066,0.569-0.11,0.859-0.14" stroke="#FFFFFF" />
+          <SVGPath content="M680.399,96.615    c-0.718,0.124-1.605,0.425-1.834,1.2" stroke="#FFFFFF" />
+          <SVGPath content="M82.479,208.511    c1.525-0.312,3.362-1.032,3.859-2.673" stroke="#FFFFFF" />
+          <Line endX="82.479" endY="208.511" startX="81.954" startY="208.579" stroke="#FFFFFF" />
+          <SVGPath content="M739.891,204.526    c-2.349-0.111-4.827-0.913-6.152-2.979" stroke="#FFFFFF" />
+          <SVGPath content="M757.723,231.677    c0.935,0.141,1.874,0.21,2.818,0.211" stroke="#FFFFFF" />
+          <SVGPath content="M575.083,337.894    c-0.307-0.196-0.61-0.371-0.934-0.538" stroke="#FFFFFF" />
+          <Line endX="457.979" endY="324.286" startX="454.747" startY="321.791" stroke="#FFFFFF" />
+          <SVGPath content="M200.713,313.989    c0.066-0.149,0.112-0.305,0.138-0.466" stroke="#FFFFFF" />
+          <SVGPath content="M404.475,29.896    c-0.062,0.124-0.096,0.271-0.098,0.415" stroke="#FFFFFF" />
+          <SVGPath content="M375.251,36.656    c0.221-0.161,0.408-0.36,0.523-0.609" stroke="#FFFFFF" />
+          <SVGPath content="M370.317,35.823    c-0.835,0.776-2.064,0.905-3.149,0.947" stroke="#FFFFFF" />
+          <SVGPath content="M33.167,285.613    c0.438-0.302,0.893-0.581,1.343-0.866" stroke="#FFFFFF" />
+          <Line endX="35.345" endY="278.43" startX="17.164" startY="290.555" stroke="#FFFFFF" />
+          <SVGPath content="M35.345,278.43    c0.188-0.124,0.375-0.247,0.563-0.371" stroke="#FFFFFF" />
+          <SVGPath content="M35.907,278.059    c0.635-0.416,1.273-0.827,1.918-1.229" stroke="#FFFFFF" />
+          <Line endX="49.763" endY="266.405" startX="49.503" startY="266.572" stroke="#FFFFFF" />
+          <SVGPath content="M47.21,267.93    c0.127-0.08,0.255-0.159,0.383-0.239" stroke="#FFFFFF" />
+          <Line endX="47.213" endY="267.933" startX="37.202" startY="274.349" stroke="#FFFFFF" />
+          <Line endX="47.213" endY="267.933" startX="47.214" startY="267.931" stroke="#FFFFFF" />
+          <Line endX="33.167" endY="285.613" startX="14.967" startY="297.215" stroke="#FFFFFF" />
+          <Line endX="37.202" endY="274.349" startX="36.835" startY="274.583" stroke="#FFFFFF" />
+          <SVGPath content="M47.924,270.647    c0.266-0.163,0.529-0.332,0.792-0.501" stroke="#FFFFFF" />
+          <SVGPath content="M34.51,284.746    c0.32-0.201,0.648-0.392,0.964-0.6" stroke="#FFFFFF" />
+          <Line endX="47.175" endY="274.987" startX="47.402" startY="274.846" stroke="#FFFFFF" />
+          <SVGPath content="M48.032,267.42    c0.335-0.208,0.67-0.417,1.009-0.62" stroke="#FFFFFF" />
+          <SVGPath content="M47.593,267.691    c0.146-0.09,0.293-0.181,0.439-0.271" stroke="#FFFFFF" />
+          <Line endX="47.924" endY="270.647" startX="37.825" startY="276.83" stroke="#FFFFFF" />
+          <SVGPath content="M35.317,275.518    c0.507-0.31,1.013-0.622,1.518-0.935" stroke="#FFFFFF" />
+          <Line endX="49.239" endY="266.679" startX="49.041" startY="266.8" stroke="#FFFFFF" />
+          <SVGPath content="M49.239,266.679    c0.086-0.051,0.172-0.103,0.257-0.155" stroke="#FFFFFF" />
+          <Line endX="34.752" endY="275.861" startX="14.542" startY="288.049" stroke="#FFFFFF" />
+          <Line endX="34.752" endY="275.861" startX="35.317" startY="275.518" stroke="#FFFFFF" />
+          <SVGPath content="M401.461,35.357    c0.838-0.454,1.67-1.102,1.993-2.033" stroke="#FFFFFF" />
+          <SVGPath content="M74.554,229.959    c-1.656,0.838-3.377,1.401-5.206,1.718" stroke="#FFFFFF" />
+          <SVGPath content="M681.899,98.734    c0.949-0.09,2.023-0.241,2.775-0.887" stroke="#FFFFFF" />
+          <Line endX="680.803" endY="98.75" startX="680.307" startY="98.774" stroke="#FFFFFF" />
+          <SVGPath content="M681.346,96.54    c-0.318,0.013-0.631,0.03-0.947,0.074" stroke="#FFFFFF" />
+          <Line endX="681.899" endY="98.734" startX="681.338" startY="98.75" stroke="#FFFFFF" />
+          <Line endX="105.794" endY="122.865" startX="94.976" startY="122.865" stroke="#FFFFFF" />
+          <Line endX="703.815" endY="122.865" startX="692.995" startY="122.865" stroke="#FFFFFF" />
+          <Line endX="110.43" endY="111.877" startX="100.81" startY="111.877" stroke="#FFFFFF" />
+          <Line endX="685.512" endY="111.877" startX="692.581" startY="111.877" stroke="#FFFFFF" />
+          <SVGPath content="M111.398,98.774    c0.773,0.076,1.587,0.247,2.198,0.758" stroke="#FFFFFF" />
+          <SVGPath content="M758.081,230.331    c0.933,0.202,1.892,0.373,2.85,0.354" stroke="#FFFFFF" />
+          <SVGPath content="M109.929,78.711    c-0.688-0.183-1.398-0.273-2.11-0.28" stroke="#FFFFFF" />
+          <SVGPath content="M763.004,232.192    c-0.805-0.22-1.631-0.294-2.463-0.304" stroke="#FFFFFF" />
+          <SVGPath content="M576.981,339.689    c-0.354-0.227-0.638-0.534-0.902-0.856" stroke="#FFFFFF" />
+          <SVGPath content="M574.872,337.365    c0.26,0.17,0.485,0.366,0.719,0.57" stroke="#FFFFFF" />
+          <Line endX="351.783" endY="312.72" startX="351.396" startY="305.442" stroke="#FFFFFF" />
+          <Line endX="350.91" endY="305.187" startX="351.43" startY="315.062" stroke="#FFFFFF" />
+          <Line endX="200.713" endY="313.989" startX="200.591" startY="314.203" stroke="#FFFFFF" />
+          <Line endX="196.282" endY="312.906" startX="198.4" startY="309.517" stroke="#FFFFFF" />
+          <Line endX="192.832" endY="312.748" startX="194.921" startY="309.517" stroke="#FFFFFF" />
+          <Line endX="199.918" endY="311.35" startX="199.92" startY="311.349" stroke="#FFFFFF" />
+          <Line endX="200.591" endY="314.203" startX="200.429" startY="314.406" stroke="#FFFFFF" />
+          <Line endX="67.198" endY="335.911" startX="67.068" startY="336.021" stroke="#FFFFFF" />
+          <Line endX="97.51" endY="309.517" startX="93.293" startY="312.748" stroke="#FFFFFF" />
+          <Line endX="94.032" endY="309.517" startX="89.744" startY="312.748" stroke="#FFFFFF" />
+          <SVGPath content="M12.424,294.656    c-0.322,0.189-0.632,0.431-0.798,0.773" stroke="#FFFFFF" />
+          <Line endX="47.17" endY="274.936" startX="47.15" startY="274.948" stroke="#FFFFFF" />
+          <SVGPath content="M12.431,294.653    c7.577-4.358,15.092-8.845,22.748-13.063" stroke="#FFFFFF" />
+          <Line endX="47.15" endY="274.948" startX="46.676" startY="275.22" stroke="#FFFFFF" />
+          <Line endX="46.676" endY="275.22" startX="46.319" startY="275.423" stroke="#FFFFFF" />
+          <SVGPath content="M45.855,275.687    c0.034-0.019,0.068-0.038,0.102-0.058" stroke="#FFFFFF" />
+          <SVGPath content="M46.169,275.509    c0.05-0.028,0.1-0.058,0.15-0.086" stroke="#FFFFFF" />
+          <Line endX="46.169" endY="275.509" startX="46.097" startY="275.549" stroke="#FFFFFF" />
+          <SVGPath content="M45.957,275.629    c0.046-0.026,0.093-0.054,0.14-0.08" stroke="#FFFFFF" />
+          <Line endX="45.855" endY="275.687" startX="45.603" startY="275.831" stroke="#FFFFFF" />
+          <Line endX="45.603" endY="275.831" startX="45.429" startY="275.927" stroke="#FFFFFF" />
+          <Line endX="45.429" endY="275.927" startX="45.266" startY="276.019" stroke="#FFFFFF" />
+          <Line endX="44.993" endY="276.17" startX="35.179" startY="281.589" stroke="#FFFFFF" />
+          <SVGPath content="M44.99,276.17    c0.092-0.05,0.185-0.1,0.276-0.151" stroke="#FFFFFF" />
+          <Line endX="45.333" endY="278.98" startX="35.474" startY="284.147" stroke="#FFFFFF" />
+          <SVGPath content="M45.333,278.98    c0.358-0.173,0.717-0.344,1.063-0.54" stroke="#FFFFFF" />
+          <SVGPath content="M63.395,232.412    c-0.535,0.206-1.042,0.495-1.449,0.903" stroke="#FFFFFF" />
+          <SVGPath content="M63.719,232.296    c-0.109,0.037-0.216,0.075-0.324,0.116" stroke="#FFFFFF" />
+          <SVGPath content="M71.471,229.672    c-0.771,0.253-1.546,0.47-2.335,0.659" stroke="#FFFFFF" />
+          <SVGPath content="M105.113,98.418    c-0.771,0.104-1.55,0.153-2.328,0.148" stroke="#FFFFFF" />
+          <SVGPath content="M102.571,98.572    c-0.898,0.02-1.803,0.17-2.627,0.537" stroke="#FFFFFF" />
+          <SVGPath content="M107.819,78.423    c-1.991,0.04-4.932,0.672-5.559,2.899" stroke="#FFFFFF" />
+          <SVGPath content="M679.95,78.431    c-0.688,0.007-1.373,0.095-2.037,0.28" stroke="#FFFFFF" />
+          <Line endX="102.571" endY="98.572" startX="102.785" startY="98.567" stroke="#FFFFFF" />
+          <Line endX="691.456" endY="99.639" startX="695.389" startY="99.639" stroke="#FFFFFF" />
+          <Line endX="101.32" endY="99.639" startX="97.383" startY="99.639" stroke="#FFFFFF" />
+          <Line endX="110.895" endY="98.75" startX="110.362" startY="98.75" stroke="#FFFFFF" />
+          <Line endX="681.338" endY="98.75" startX="680.803" startY="98.75" stroke="#FFFFFF" />
+          <Line endX="682.846" endY="78.94" startX="684.264" startY="78.94" stroke="#FFFFFF" />
+          <Line endX="674.168" endY="78.94" startX="677.149" startY="78.94" stroke="#FFFFFF" />
+          <Line endX="104.869" endY="78.94" startX="103.147" startY="78.94" stroke="#FFFFFF" />
+          <Line endX="113.244" endY="78.94" startX="110.744" startY="78.94" stroke="#FFFFFF" />
+          <SVGPath content="M102.648,97.456    c0.777,0.004,1.541-0.111,2.304-0.249" stroke="#FFFFFF" />
+          <Line endX="689.793" endY="98.567" startX="690.004" startY="98.572" stroke="#FFFFFF" />
+          <SVGPath content="M690.075,97.446    c1.724,0.032,4.164,0.46,5.074,2.145" stroke="#FFFFFF" />
+          <Line endX="111.398" endY="98.774" startX="110.895" startY="98.75" stroke="#FFFFFF" />
+          <SVGPath content="M752.274,204.599    c-0.166-0.043-0.334-0.067-0.506-0.073" stroke="#FFFFFF" />
+          <SVGPath content="M755.555,229.672    c0.836,0.25,1.674,0.468,2.525,0.659" stroke="#FFFFFF" />
+          <SVGPath content="M753.834,230.685    c1.276,0.437,2.558,0.771,3.889,0.992" stroke="#FFFFFF" />
+          <Line endX="578.317" endY="338.094" startX="578.159" startY="337.953" stroke="#FFFFFF" />
+          <SVGPath content="M578.317,338.094    c0.148,0.127,0.272,0.284,0.379,0.447" stroke="#FFFFFF" />
+          <Line endX="401.484" endY="314.503" startX="401.543" startY="315.062" stroke="#FFFFFF" />
+          <Line endX="401.24" endY="309.691" startX="401.42" startY="311.406" stroke="#FFFFFF" />
+          <Line endX="401.42" endY="311.406" startX="401.434" startY="311.534" stroke="#FFFFFF" />
+          <Line endX="398.946" endY="308.349" startX="399.641" startY="315.062" stroke="#FFFFFF" />
+          <Line endX="370.716" endY="34.878" startX="370.217" startY="30.064" stroke="#FFFFFF" />
+          <Line endX="398.895" endY="315.062" startX="398.208" startY="308.375" stroke="#FFFFFF" />
+          <Line endX="401.434" endY="311.534" startX="401.44" startY="311.582" stroke="#FFFFFF" />
+          <Line endX="401.434" endY="311.534" startX="401.45" startY="311.693" stroke="#FFFFFF" />
+          <Line endX="401.44" endY="311.582" startX="401.444" startY="311.625" stroke="#FFFFFF" />
+          <Line endX="401.444" endY="311.625" startX="401.448" startY="311.666" stroke="#FFFFFF" />
+          <Line endX="381.152" endY="305.442" startX="381.771" startY="312.72" stroke="#FFFFFF" />
+          <Line endX="401.45" endY="311.693" startX="401.465" startY="311.868" stroke="#FFFFFF" />
+          <Line endX="370.716" endY="35.015" startX="370.716" startY="34.878" stroke="#FFFFFF" />
+          <Line endX="370.72" endY="35.009" startX="370.644" startY="37.343" stroke="#FFFFFF" />
+          <SVGPath content="M371.276,36.677    c0.041-1.007,0.084-2.015,0.128-3.021" stroke="#FFFFFF" />
+          <Line endX="367.264" endY="36.777" startX="367.242" startY="37.343" stroke="#FFFFFF" />
+          <Line endX="371.854" endY="32.255" startX="371.901" startY="31.197" stroke="#FFFFFF" />
+          <Line endX="371.395" endY="33.839" startX="371.423" startY="33.207" stroke="#FFFFFF" />
+          <SVGPath content="M371.189,36.679    c0.04-0.9,0.087-1.799,0.132-2.699" stroke="#FFFFFF" />
+          <SVGPath content="M371.471,32.168    c-0.021,0.496-0.045,0.992-0.067,1.487" stroke="#FFFFFF" />
+          <Line endX="371.436" endY="32.958" startX="371.484" startY="31.922" stroke="#FFFFFF" />
+          <Line endX="371.476" endY="32.089" startX="371.501" startY="31.546" stroke="#FFFFFF" />
+          <Line endX="371.516" endY="31.238" startX="371.492" startY="31.75" stroke="#FFFFFF" />
+          <Line endX="371.526" endY="31.069" startX="371.501" startY="31.546" stroke="#FFFFFF" />
+          <Line endX="371.518" endY="31.205" startX="371.542" startY="30.696" stroke="#FFFFFF" />
+          <Line endX="351.783" endY="312.72" startX="351.665" startY="315.062" stroke="#FFFFFF" />
+          <Line endX="371.552" endY="30.525" startX="371.534" startY="30.898" stroke="#FFFFFF" />
+          <Line endX="351.165" endY="310.02" startX="351.396" startY="305.442" stroke="#FFFFFF" />
+          <Line endX="371.552" endY="30.527" startX="371.568" startY="30.196" stroke="#FFFFFF" />
+          <Line endX="371.357" endY="33.288" startX="371.321" startY="33.98" stroke="#FFFFFF" />
+          <Line endX="371.394" endY="32.6" startX="371.357" startY="33.288" stroke="#FFFFFF" />
+          <Line endX="371.432" endY="31.921" startX="371.394" startY="32.6" stroke="#FFFFFF" />
+          <SVGPath content="M371.491,32.668    c-0.075,1.337-0.146,2.673-0.208,4.011" stroke="#FFFFFF" />
+          <SVGPath content="M371.432,31.921    c0.009-0.158,0.018-0.316,0.029-0.475" stroke="#FFFFFF" />
+          <SVGPath content="M371.461,31.447    c0.028-0.379-0.005-0.919,0.213-1.235" stroke="#FFFFFF" />
+          <SVGPath content="M370.716,35.015    c-0.018,0.313-0.18,0.591-0.399,0.808" stroke="#FFFFFF" />
+          <SVGPath content="M371.575,31.721    c-0.047,0.313-0.071,0.631-0.084,0.947" stroke="#FFFFFF" />
+          <Line endX="372.216" endY="33.323" startX="372.45" startY="32.258" stroke="#FFFFFF" />
+          <Line endX="375.837" endY="35.82" startX="375.774" startY="36.046" stroke="#FFFFFF" />
+          <SVGPath content="M403.454,33.323    c0.071-0.209,0.108-0.428,0.115-0.648" stroke="#FFFFFF" />
+          <SVGPath content="M403.326,32.258    c0.154-0.243,0.275-0.516,0.297-0.805" stroke="#FFFFFF" />
+          <Line endX="199.912" endY="311.352" startX="201.061" startY="310.263" stroke="#FFFFFF" />
+          <Line endX="200.631" endY="312.214" startX="199.5" startY="313.207" stroke="#FFFFFF" />
+          <SVGPath content="M399.339,36.172    c0.268-0.073,0.535-0.151,0.798-0.239" stroke="#FFFFFF" />
+          <SVGPath content="M106.903,96.743    c-0.503,0.139-1.008,0.264-1.518,0.375" stroke="#FFFFFF" />
+          <Line endX="104.952" endY="97.207" startX="105.385" startY="97.118" stroke="#FFFFFF" />
+          <SVGPath content="M115.067,81.859    c1.253-0.099,3.135-0.61,3.565-1.971" stroke="#FFFFFF" />
+          <SVGPath content="M103.147,78.94    c-0.484,0.008-0.984,0.248-1.137,0.735" fill="#f2efef" stroke="#FFFFFF" />
+          <SVGPath content="M371.672,31.415    c-0.058,0.082-0.094,0.197-0.097,0.306" stroke="#FFFFFF" />
+          <SVGPath content="M372.605,37.343    c0.911-0.017,1.88-0.157,2.646-0.688" stroke="#FFFFFF" />
+          <SVGPath content="M133.148,36.77    c-1.079,0.042-2.096,0.182-3.128,0.509" stroke="#FFFFFF" />
+          <SVGPath content="M395.648,36.615    c1.248-0.017,2.479-0.13,3.691-0.442" stroke="#FFFFFF" />
+          <SVGPath content="M395.672,35.397    c2.701-0.029,6.119-0.632,7.654-3.139" stroke="#FFFFFF" />
+          <Line endX="372.605" endY="37.343" startX="134.45" startY="37.343" stroke="#FFFFFF" />
+          <Line endX="642.186" endY="37.343" startX="404.032" startY="37.343" stroke="#FFFFFF" />
+          <Line endX="409.32" endY="36.77" startX="643.295" startY="36.77" stroke="#FFFFFF" />
+          <Line endX="133.148" endY="36.77" startX="367.168" startY="36.77" stroke="#FFFFFF" />
+          <Line endX="401.588" endY="36.679" startX="406.471" startY="36.679" stroke="#FFFFFF" />
+          <Line endX="370.667" endY="36.679" startX="375.215" startY="36.679" stroke="#FFFFFF" />
+          <Line endX="395.648" endY="36.615" startX="380.877" startY="36.615" stroke="#FFFFFF" />
+          <Line endX="380.897" endY="35.397" startX="395.672" startY="35.397" stroke="#FFFFFF" />
+          <Line endX="371.491" endY="32.668" startX="371.932" startY="32.668" stroke="#FFFFFF" />
+          <SVGPath content="M380.897,35.397    c-1.266-0.014-2.506-0.15-3.735-0.458" stroke="#FFFFFF" />
+          <SVGPath content="M380.877,36.615    c-1.286-0.017-2.553-0.14-3.805-0.442" stroke="#FFFFFF" />
+          <SVGPath content="M674.168,78.94    c-1.595-0.066-3.403-0.413-4.588-1.576" stroke="#FFFFFF" />
+          <SVGPath content="M409.32,36.77    c-1.299-0.05-3.676-0.308-4.037-1.892" stroke="#FFFFFF" />
+          <SVGPath content="M695.389,99.639    c0.394,0.007,0.78,0.152,0.992,0.498" stroke="#FFFFFF" />
+          <Line endX="684.264" endY="78.94" startX="684.495" startY="78.96" stroke="#FFFFFF" />
+          <SVGPath content="M687.426,98.418    c0.784,0.102,1.576,0.153,2.367,0.148" stroke="#FFFFFF" />
+          <Line endX="753.834" endY="230.685" startX="753.209" startY="230.448" stroke="#FFFFFF" />
+          <SVGPath content="M753.6,228.956    c0.646,0.261,1.295,0.497,1.955,0.716" stroke="#FFFFFF" />
+          <SVGPath content="M775.573,336.174    c0.197,0.118,0.433,0.168,0.65,0.087" stroke="#FFFFFF" />
+          <SVGPath content="M660.334,306.517    c2.066,1.666,3.636,3.761,4.709,6.176" stroke="#FFFFFF" />
+          <Line endX="575.92" endY="338.299" startX="575.59" startY="337.936" stroke="#FFFFFF" />
+          <SVGPath content="M577.245,337.705    c0.041,0.053-0.051-0.017-0.07-0.028" stroke="#FFFFFF" />
+          <SVGPath content="M576.004,338.743    c-0.268-0.329-0.589-0.59-0.922-0.85" stroke="#FFFFFF" />
+          <Line endX="575.92" endY="338.299" startX="576.022" startY="338.419" stroke="#FFFFFF" />
+          <Line endX="576.004" endY="338.743" startX="576.079" startY="338.832" stroke="#FFFFFF" />
+          <Line endX="576.004" endY="338.743" startX="576.004" startY="338.743" stroke="#FFFFFF" />
+          <Line endX="446.286" endY="309.977" startX="446.358" startY="310.175" stroke="#FFFFFF" />
+          <SVGPath content="M446.286,309.977    c-0.047-0.121-0.092-0.242-0.133-0.365" stroke="#FFFFFF" />
+          <SVGPath content="M446.153,309.612    c-0.041-0.12-0.08-0.24-0.117-0.361" stroke="#FFFFFF" />
+          <SVGPath content="M445.799,308.346    c-0.88-2.96-4.229-4.336-7.09-4.289" stroke="#FFFFFF" />
+          <SVGPath content="M446.401,310.304    c-0.014-0.043-0.028-0.086-0.043-0.129" stroke="#FFFFFF" />
+          <Line endX="446.059" endY="309.25" startX="446.02" startY="309.111" stroke="#FFFFFF" />
+          <SVGPath content="M401.386,311.616    c0.005,0.034,0.012,0.069,0.02,0.104" stroke="#FFFFFF" />
+          <SVGPath content="M401.405,311.72    c0.002,0.011,0.004,0.022,0.006,0.033" stroke="#FFFFFF" />
+          <SVGPath content="M394.793,330.456    c0.443,3.502,4.501,5.19,7.621,5.215" stroke="#FFFFFF" />
+          <SVGPath content="M401.411,311.753    c0.014,0.093,0.025,0.187,0.035,0.28" stroke="#FFFFFF" />
+          <SVGPath content="M401.267,310.896    c0.035,0.241,0.075,0.481,0.119,0.721" stroke="#FFFFFF" />
+          <SVGPath content="M401.19,310.351    c0.023,0.182,0.049,0.363,0.077,0.545" stroke="#FFFFFF" />
+          <SVGPath content="M371.899,31.205    c0.045,0.405,0.288,0.754,0.551,1.053" stroke="#FFFFFF" />
+          <Line endX="393.521" endY="332.079" startX="394.252" startY="338.06" stroke="#FFFFFF" />
+          <Line endX="397.774" endY="321.791" startX="398.521" startY="327.957" stroke="#FFFFFF" />
+          <Line endX="394.793" endY="330.456" startX="394.07" startY="324.286" stroke="#FFFFFF" />
+          <SVGPath content="M371.854,32.255    c-0.032-0.28-0.045-0.595-0.179-0.841" stroke="#FFFFFF" />
+          <Line endX="401.465" endY="311.868" startX="401.477" startY="312.056" stroke="#FFFFFF" />
+          <SVGPath content="M401.24,309.691    c-0.064-0.61,0.034-1.226,0.27-1.792" stroke="#FFFFFF" />
+          <SVGPath content="M401.24,309.691    c-0.052-0.558,0.031-1.126,0.218-1.653" stroke="#FFFFFF" />
+          <SVGPath content="M401.168,310.109    c0.004,0.081,0.012,0.162,0.022,0.242" stroke="#FFFFFF" />
+          <SVGPath content="M401.727,312.026    c-0.002-0.574-0.006-1.147-0.023-1.722" stroke="#FFFFFF" />
+          <Line endX="398.943" endY="315.062" startX="398.946" startY="308.349" stroke="#FFFFFF" />
+          <SVGPath content="M401.78,308.497    c-0.005-0.265,0.019-0.531,0.061-0.793" stroke="#FFFFFF" />
+          <SVGPath content="M401.698,314.027    c0.023-0.666,0.028-1.334,0.029-2.001" stroke="#FFFFFF" />
+          <SVGPath content="M403.623,31.453    c0.003-0.084-0.001-0.168-0.013-0.252" stroke="#FFFFFF" />
+          <SVGPath content="M401.704,310.304    c0.001-0.038,0.003-0.075,0.007-0.113" stroke="#FFFFFF" />
+          <Line endX="401.499" endY="314.254" startX="401.501" startY="314.212" stroke="#FFFFFF" />
+          <SVGPath content="M403.61,31.706    c-0.016,0.323-0.028,0.646-0.041,0.969" stroke="#FFFFFF" />
+          <SVGPath content="M401.658,315.062    c0.018-0.345,0.029-0.69,0.04-1.035" stroke="#FFFFFF" />
+          <Line endX="401.497" endY="314.298" startX="401.499" startY="314.254" stroke="#FFFFFF" />
+          <Line endX="403.61" endY="31.706" startX="403.623" startY="31.453" stroke="#FFFFFF" />
+          <Line endX="401.495" endY="314.345" startX="401.497" startY="314.298" stroke="#FFFFFF" />
+          <SVGPath content="M401.484,314.496    c0.065-0.939,0.041-1.892-0.036-2.83" stroke="#FFFFFF" />
+          <Line endX="401.491" endY="314.398" startX="401.495" startY="314.345" stroke="#FFFFFF" />
+          <SVGPath content="M401.484,314.503    c0.057-0.812,0.047-1.636-0.007-2.447" stroke="#FFFFFF" />
+          <Line endX="409.187" endY="37.343" startX="409.225" startY="36.777" stroke="#FFFFFF" />
+          <Line endX="401.488" endY="314.452" startX="401.491" startY="314.398" stroke="#FFFFFF" />
+          <Line endX="394.07" endY="324.286" startX="393.521" startY="332.079" stroke="#FFFFFF" />
+          <Line endX="394.793" endY="330.456" startX="394.252" startY="338.06" stroke="#FFFFFF" />
+          <Line endX="401.488" endY="314.452" startX="401.483" startY="314.524" stroke="#FFFFFF" />
+          <Line endX="400.899" endY="304.06" startX="400.715" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="404.362" endY="30.488" startX="404.263" startY="31.8" stroke="#FFFFFF" />
+          <Line endX="401.484" endY="314.503" startX="401.442" startY="315.062" stroke="#FFFFFF" />
+          <Line endX="403.967" endY="35.724" startX="403.895" startY="36.679" stroke="#FFFFFF" />
+          <Line endX="404.263" endY="31.8" startX="403.967" startY="35.724" stroke="#FFFFFF" />
+          <Line endX="404.362" endY="30.488" startX="404.377" startY="30.311" stroke="#FFFFFF" />
+          <SVGPath content="M401.711,310.191    c0.06-0.565,0.094-1.125,0.069-1.693" stroke="#FFFFFF" />
+          <Line endX="200.851" endY="313.523" startX="199.344" startY="314.658" stroke="#FFFFFF" />
+          <SVGPath content="M112.743,44.487    c-0.468,0-0.95,0.249-1.089,0.72" stroke="#FFFFFF" />
+          <Line endX="144.521" endY="30.064" startX="142.404" startY="30.107" stroke="#FFFFFF" />
+          <Line endX="144.608" endY="29.896" startX="143.489" startY="29.906" stroke="#FFFFFF" />
+          <Line endX="403.284" endY="30.211" startX="371.674" startY="30.211" stroke="#FFFFFF" />
+          <Line endX="404.534" endY="30.064" startX="630.231" startY="30.064" stroke="#FFFFFF" />
+          <Line endX="144.521" endY="30.064" startX="370.217" startY="30.064" stroke="#FFFFFF" />
+          <Line endX="404.475" endY="29.896" startX="630.045" startY="29.896" stroke="#FFFFFF" />
+          <Line endX="144.608" endY="29.896" startX="370.179" startY="29.896" stroke="#FFFFFF" />
+          <Line endX="631.159" endY="29.906" startX="630.045" startY="29.896" stroke="#FFFFFF" />
+          <Line endX="632.36" endY="30.107" startX="630.231" startY="30.064" stroke="#FFFFFF" />
+          <SVGPath content="M642.186,37.343    c2.053,0.061,5.1,0.544,6.217,2.534" stroke="#FFFFFF" />
+          <SVGPath content="M631.159,29.906    c8.616,0.338,17.266,2.023,24.99,5.988c3.079,1.581,5.816,3.52,8.266,5.964" stroke="#FFFFFF" />
+          <SVGPath content="M632.36,30.107    c8.356,0.464,17.054,2.167,24.407,6.351c2.806,1.596,5.298,3.42,7.468,5.82" fill="#fcf8f8" stroke="#FFFFFF" />
+          <SVGPath content="M644.45,36.833    c-0.386-0.03-0.768-0.051-1.154-0.063" stroke="#FFFFFF" />
+          <SVGPath content="M687.692,97.207    c0.791,0.131,1.579,0.254,2.383,0.249" stroke="#FFFFFF" />
+          <SVGPath content="M686.167,96.887    c0.507,0.116,1.015,0.223,1.525,0.32" stroke="#FFFFFF" />
+          <SVGPath content="M377.072,36.172    c-0.289-0.073-0.575-0.153-0.86-0.239" stroke="#FFFFFF" />
+          <SVGPath content="M684.752,97.871    c0.883,0.234,1.769,0.426,2.674,0.547" stroke="#FFFFFF" />
+          <SVGPath content="M371.674,30.211    c0.184,0.263,0.192,0.665,0.227,0.985" stroke="#FFFFFF" />
+          <SVGPath content="M377.162,34.939    c-0.523-0.138-1.034-0.305-1.537-0.505" stroke="#FFFFFF" />
+          <SVGPath content="M376.212,35.933    c-0.502-0.163-0.995-0.351-1.473-0.576" stroke="#FFFFFF" />
+          <SVGPath content="M375.625,34.434    c-0.234-0.095-0.465-0.199-0.692-0.311" stroke="#FFFFFF" />
+          <SVGPath content="M763.956,232.55    c-0.305-0.151-0.625-0.263-0.951-0.358" stroke="#FFFFFF" />
+          <SVGPath content="M374.739,35.357    c-0.98-0.468-1.94-1.094-2.523-2.033" stroke="#FFFFFF" />
+          <SVGPath content="M374.933,34.123    c-0.939-0.46-1.8-1.067-2.483-1.865" stroke="#FFFFFF" />
+          <SVGPath content="M576.004,338.743    c-0.087-0.133-0.116-0.287-0.084-0.444" stroke="#FFFFFF" />
+          <SVGPath content="M370.179,29.896    c0.024,0.051,0.037,0.11,0.038,0.168" stroke="#FFFFFF" />
+          <SVGPath content="M576.885,339.238    c-0.096-0.135-0.172-0.28-0.227-0.437" stroke="#FFFFFF" />
+          <SVGPath content="M372.216,33.323    c-0.193-0.324-0.326-0.692-0.362-1.068" stroke="#FFFFFF" />
+          <SVGPath content="M446.036,309.25    c-0.047-0.151-0.089-0.304-0.127-0.457" stroke="#FFFFFF" />
+          <Line endX="446.02" endY="309.111" startX="445.977" startY="308.964" stroke="#FFFFFF" />
+          <Line endX="445.799" endY="308.346" startX="445.838" startY="308.497" stroke="#FFFFFF" />
+          <SVGPath content="M445.909,308.793    c-0.025-0.099-0.049-0.197-0.07-0.296" stroke="#FFFFFF" />
+          <SVGPath content="M446.131,309.553    c-0.019-0.103-0.041-0.204-0.066-0.305" stroke="#FFFFFF" />
+          <SVGPath content="M404.534,30.064    c-0.008-0.05-0.021-0.1-0.037-0.147" stroke="#FFFFFF" />
+          <SVGPath content="M403.61,31.194    c-0.045-0.309-0.074-0.775-0.326-0.982" stroke="#FFFFFF" />
+          <Line endX="447.489" endY="313.223" startX="446.708" startY="308.365" stroke="#FFFFFF" />
+          <Line endX="405.283" endY="34.878" startX="404.534" startY="30.064" stroke="#FFFFFF" />
+          <Line endX="447.137" endY="305.187" startX="448.668" startY="315.062" stroke="#FFFFFF" />
+          <Line endX="448.458" endY="315.094" startX="447.788" startY="310.763" stroke="#FFFFFF" />
+          <Line endX="404.219" endY="37.315" startX="404.122" startY="36.679" stroke="#FFFFFF" />
+          <Line endX="403.454" endY="33.323" startX="403.326" startY="32.258" stroke="#FFFFFF" />
+          <SVGPath content="M455.563,327.957    c0.237,1.765-1.697,2.595-3.15,2.621" stroke="#FFFFFF" />
+          <SVGPath content="M446.76,315.062    c0.087-1.569-0.012-3.223-0.359-4.758" stroke="#FFFFFF" />
+          <Line endX="447.397" endY="315.062" startX="447.569" startY="313.156" stroke="#FFFFFF" />
+          <Line endX="444.586" endY="306.266" startX="444.825" startY="304.06" stroke="#FFFFFF" />
+          <SVGPath content="M401.223,309.403    c-0.044,0.232-0.063,0.47-0.055,0.706" stroke="#FFFFFF" />
+          <Line endX="401.434" endY="311.534" startX="401.704" startY="310.304" stroke="#FFFFFF" />
+          <Line endX="401.42" endY="311.406" startX="401.713" startY="310.175" stroke="#FFFFFF" />
+          <SVGPath content="M401.841,307.704    c0.085-0.415,0.229-0.814,0.439-1.183" stroke="#FFFFFF" />
+          <SVGPath content="M678.928,99.103    c0.168-0.077,0.342-0.141,0.52-0.189" stroke="#FFFFFF" />
+          <SVGPath content="M199.478,315.048    c0.358-0.147,0.684-0.359,0.951-0.642" stroke="#FFFFFF" />
+          <Line endX="684.752" endY="97.871" startX="684.206" startY="97.708" stroke="#FFFFFF" />
+          <SVGPath content="M684.002,96.237    c0.714,0.25,1.432,0.463,2.164,0.65" stroke="#FFFFFF" />
+          <Line endX="404.475" endY="29.896" startX="404.497" startY="29.916" stroke="#FFFFFF" />
+          <SVGPath content="M400.413,35.833    c0.583,1.23,2.417,1.488,3.619,1.51" stroke="#FFFFFF" />
+          <Line endX="457.979" endY="324.286" startX="458.815" startY="330.456" stroke="#FFFFFF" />
+          <Line endX="455.563" endY="327.957" startX="454.747" startY="321.791" stroke="#FFFFFF" />
+          <SVGPath content="M458.825,331.448    c0.035-0.33,0.028-0.662-0.01-0.991" stroke="#FFFFFF" />
+          <Line endX="457.913" endY="339.038" startX="458.825" startY="331.448" stroke="#FFFFFF" />
+          <Line endX="447.137" endY="305.187" startX="446.708" startY="308.365" stroke="#FFFFFF" />
+          <SVGPath content="M457.913,339.038    c-0.431,2.922-3.627,4.162-6.254,4.161" stroke="#FFFFFF" />
+          <SVGPath content="M401.458,308.037    c0.076-0.208,0.169-0.411,0.281-0.603" stroke="#FFFFFF" />
+          <SVGPath content="M401.51,307.899    c0.015-0.033,0.03-0.066,0.045-0.1" stroke="#FFFFFF" />
+          <Line endX="401.24" endY="309.691" startX="401.78" startY="308.497" stroke="#FFFFFF" />
+          <Line endX="402.277" endY="306.52" startX="402.067" startY="306.879" stroke="#FFFFFF" />
+          <SVGPath content="M401.739,307.435    c0.108-0.186,0.218-0.37,0.328-0.556" stroke="#FFFFFF" />
+          <SVGPath content="M402.28,306.522    c1.069-1.844,3.457-2.5,5.453-2.464" stroke="#FFFFFF" />
+          <SVGPath content="M196.927,322.912    c0.604-0.392,0.586-2.07,0.657-2.728" stroke="#FFFFFF" />
+          <SVGPath content="M647.053,37.434    c-0.855-0.293-1.707-0.488-2.604-0.601" stroke="#FFFFFF" />
+          <SVGPath content="M684.877,79.086    c-0.121-0.062-0.249-0.104-0.383-0.126" stroke="#FFFFFF" />
+          <Line endX="394.059" endY="324.299" startX="397.788" startY="321.788" stroke="#FFFFFF" />
+          <SVGPath content="M692.825,99.244    c-0.85-0.486-1.854-0.65-2.82-0.673" stroke="#FFFFFF" />
+          <Line endX="589.809" endY="318.662" startX="585.729" startY="305.187" stroke="#FFFFFF" />
+          <SVGPath content="M578.696,338.541    c0.043,0.155,0.024,0.314-0.051,0.459" stroke="#FFFFFF" />
+          <Line endX="576.604" endY="338.571" startX="576.659" startY="338.801" stroke="#FFFFFF" />
+          <Line endX="674.223" endY="80.715" startX="674.057" startY="80.926" stroke="#FFFFFF" />
+          <Line endX="674.36" endY="80.564" startX="674.223" startY="80.715" stroke="#FFFFFF" />
+          <Line endX="674.36" endY="80.564" startX="673.565" startY="81.398" stroke="#FFFFFF" />
+          <SVGPath content="M674.36,80.564    c0.947-0.979,2.26-1.505,3.553-1.853" stroke="#FFFFFF" />
+          <SVGPath content="M693.358,99.639    c-0.161-0.151-0.342-0.283-0.533-0.395" stroke="#FFFFFF" />
+          <Line endX="692.581" endY="111.877" startX="703.815" startY="122.865" stroke="#FFFFFF" />
+          <Line endX="692.975" endY="122.865" startX="689.208" startY="119.045" stroke="#FFFFFF" />
+          <Line endX="764.194" endY="248.308" startX="779.967" startY="265.976" stroke="#FFFFFF" />
+          <Line endX="767.079" endY="265.976" startX="761.762" startY="259.812" stroke="#FFFFFF" />
+          <SVGPath content="M666.956,338.865    c0.154,0.413,0.398,1.012,0.885,1.097" stroke="#FFFFFF" />
+          <Line endX="672.598" endY="305.187" startX="677.926" startY="318.662" stroke="#FFFFFF" />
+          <Line endX="671.702" endY="308.12" startX="671.071" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="666.956" endY="338.865" startX="661.883" startY="325.375" stroke="#FFFFFF" />
+          <SVGPath content="M589.952,321.161    c0.131-0.821,0.075-1.698-0.148-2.499" stroke="#FFFFFF" />
+          <Line endX="643.217" endY="37.399" startX="643.348" startY="36.777" stroke="#FFFFFF" />
+          <SVGPath content="M673.077,82.083    c0.13-0.25,0.295-0.48,0.488-0.686" stroke="#FFFFFF" />
+          <SVGPath content="M582.405,339.977    c0.079-0.017,0.148-0.053,0.207-0.108" stroke="#FFFFFF" />
+          <SVGPath content="M669.581,77.364    c-0.176-0.175-0.332-0.375-0.457-0.59" stroke="#FFFFFF" />
+          <SVGPath content="M649.567,39.087    c-0.626-0.824-1.58-1.273-2.514-1.653" stroke="#FFFFFF" />
+          <SVGPath content="M764.956,233.316    c-0.27-0.325-0.623-0.577-1-0.766" stroke="#FFFFFF" />
+          <SVGPath content="M733.944,205.838    c1.038,1.778,3.213,2.507,5.143,2.746" stroke="#FFFFFF" />
+          <Line endX="695.542" endY="305.187" startX="698.684" startY="312.669" stroke="#FFFFFF" />
+          <SVGPath content="M677.926,318.662    c0.289,0.783,0.333,1.69,0.125,2.499" stroke="#FFFFFF" />
+          <Line endX="589.952" endY="321.161" startX="587.305" startY="335.186" stroke="#FFFFFF" />
+          <Line endX="649.747" endY="39.38" startX="649.262" startY="41.546" stroke="#FFFFFF" />
+          <SVGPath content="M577.047,337.623    c-0.081,0.258-0.188,0.508-0.324,0.742" stroke="#FFFFFF" />
+          <SVGPath content="M673.708,81.606    c0.086-0.242,0.205-0.467,0.35-0.68" stroke="#FFFFFF" />
+          <SVGPath content="M578.645,339    c-0.161,0.302-0.349,0.588-0.543,0.868" stroke="#FFFFFF" />
+          <Line endX="576.604" endY="338.571" startX="576.723" startY="338.365" stroke="#FFFFFF" />
+          <SVGPath content="M576.604,338.571    c-0.194,0.223-0.432,0.058-0.582-0.151" stroke="#FFFFFF" />
+          <SVGPath content="M587.235,335.64    c0.103-0.123,0.17-0.273,0.195-0.433" stroke="#FFFFFF" />
+          <Line endX="587.235" endY="335.64" startX="582.612" startY="339.868" stroke="#FFFFFF" />
+          <SVGPath content="M740.411,207.045    c0.288-0.25,0.574-0.503,0.859-0.756" stroke="#FFFFFF" />
+          <Line endX="740.411" endY="207.045" startX="740.19" startY="207.237" stroke="#FFFFFF" />
+          <SVGPath content="M741.27,206.289    c0.924-0.808,2.046-1.316,3.205-1.69" stroke="#FFFFFF" />
+          <SVGPath content="M747.362,231.863    c0.332-0.195,0.69-0.289,1.061-0.383" stroke="#FFFFFF" />
+          <SVGPath content="M674.399,338.855    c0.457-0.235,0.957-0.393,1.447-0.543" stroke="#FFFFFF" />
+          <SVGPath content="M675.036,338.707    c-0.596,0.254-1.193,0.541-1.715,0.929" stroke="#FFFFFF" />
+          <SVGPath content="M675.846,338.312    c0.954-0.293,1.899-0.558,2.885-0.718" stroke="#FFFFFF" />
+          <Line endX="779.747" endY="334.284" startX="782.274" startY="333.532" stroke="#FFFFFF" />
+          <Line endX="782.62" endY="333.036" startX="780.083" startY="333.791" stroke="#FFFFFF" />
+          <SVGPath content="M664.415,41.859    c0.674,0.798,1.283,1.588,1.877,2.447" stroke="#FFFFFF" />
+          <SVGPath content="M664.235,42.278    c0.545,0.723,1.036,1.438,1.51,2.209" stroke="#FFFFFF" />
+          <SVGPath content="M752.883,205.064    c-0.139-0.225-0.355-0.39-0.609-0.465" stroke="#FFFFFF" />
+          <SVGPath content="M685.235,79.437    c-0.087-0.146-0.209-0.267-0.357-0.351" stroke="#FFFFFF" />
+          <SVGPath content="M669.026,79.888    c0.793,1.386,2.717,1.826,4.174,1.982" stroke="#FFFFFF" />
+          <Line endX="649.567" endY="39.087" startX="649.76" startY="39.383" stroke="#FFFFFF" />
+          <SVGPath content="M666.672,44.966    c-0.191-0.326-0.559-0.48-0.928-0.479" stroke="#FFFFFF" />
+          <SVGPath content="M630.231,30.064    c-0.035-0.085-0.1-0.145-0.186-0.168" stroke="#FFFFFF" />
+          <SVGPath content="M752.581,206.496    c-1.026-1.876-3.836-2.236-5.73-2.287" stroke="#FFFFFF" />
+          <SVGPath content="M684.913,80.537    c-0.885-1.655-3.271-2.083-4.959-2.114" stroke="#FFFFFF" />
+          <Line endX="666.672" endY="44.967" startX="666.292" startY="44.306" stroke="#FFFFFF" />
+          <SVGPath content="M677.758,93.354    c1.222,2.347,4.071,3.565,6.447,4.354" stroke="#FFFFFF" />
+          <SVGPath content="M678.518,92.333    c1.063,2.024,3.448,3.13,5.484,3.903" stroke="#FFFFFF" />
+          <SVGPath content="M745.735,224.614    c1.617,2.869,4.508,4.606,7.475,5.834" stroke="#FFFFFF" />
+          <SVGPath content="M746.686,223.509    c1.441,2.661,4.227,4.275,6.914,5.447" stroke="#FFFFFF" />
+          <Line endX="768.387" endY="233.852" startX="799.163" startY="291.005" stroke="#FFFFFF" />
+          <Line endX="696.381" endY="100.137" startX="752.881" startY="205.061" stroke="#FFFFFF" />
+          <Line endX="666.672" endY="44.966" startX="685.235" startY="79.434" stroke="#FFFFFF" />
+          <Line endX="767.243" endY="233.316" startX="797.954" startY="290.452" stroke="#FFFFFF" />
+          <Line endX="695.389" endY="99.639" startX="751.768" startY="204.526" stroke="#FFFFFF" />
+          <Line endX="665.745" endY="44.487" startX="684.264" startY="78.94" stroke="#FFFFFF" />
+          <Line endX="695.149" endY="99.59" startX="684.913" startY="80.537" stroke="#FFFFFF" />
+          <Line endX="766.813" endY="232.994" startX="752.581" startY="206.496" stroke="#FFFFFF" />
+          <Line endX="764.194" endY="232.679" startX="764.534" startY="233.316" stroke="#FFFFFF" />
+          <Line endX="692.917" endY="99.301" startX="693.098" startY="99.639" stroke="#FFFFFF" />
+          <Line endX="762.588" endY="233.316" startX="779.967" startY="265.976" stroke="#FFFFFF" />
+          <Line endX="691.456" endY="99.639" startX="703.815" startY="122.865" stroke="#FFFFFF" />
+          <Line endX="690.764" endY="102.11" startX="688.879" startY="98.547" stroke="#FFFFFF" />
+          <Line endX="761.635" endY="235.979" startX="759.456" startY="231.859" stroke="#FFFFFF" />
+          <Line endX="795.051" endY="300.131" startX="785.54" startY="282.147" stroke="#FFFFFF" />
+          <Line endX="692.581" endY="111.877" startX="689.616" startY="106.232" stroke="#FFFFFF" />
+          <Line endX="764.194" endY="248.308" startX="760.049" startY="240.417" stroke="#FFFFFF" />
+          <Line endX="740.319" endY="211.255" startX="746.686" startY="223.509" stroke="#FFFFFF" />
+          <Line endX="673.942" endY="83.525" startX="678.518" startY="92.333" stroke="#FFFFFF" />
+          <SVGPath content="M799.165,291.005    c2.695,5.196,3.759,10.734,1.973,16.4" stroke="#FFFFFF" />
+          <Line endX="677.758" endY="93.354" startX="673.194" startY="84.541" stroke="#FFFFFF" />
+          <Line endX="745.735" endY="224.614" startX="739.385" startY="212.352" stroke="#FFFFFF" />
+          <Line endX="649.76" endY="39.383" startX="669.124" startY="76.774" stroke="#FFFFFF" />
+          <Line endX="767.102" endY="265.976" startX="775.473" startY="282.147" stroke="#FFFFFF" />
+          <Line endX="692.995" endY="122.865" startX="733.739" startY="201.546" stroke="#FFFFFF" />
+          <Line endX="669.026" endY="79.888" startX="648.403" startY="39.877" stroke="#FFFFFF" />
+          <Line endX="733.944" endY="205.838" startX="678.688" startY="98.637" stroke="#FFFFFF" />
+          <Line endX="782.04" endY="299.155" startX="747.383" startY="231.917" stroke="#FFFFFF" />
+          <Line endX="780.243" endY="308.055" startX="779.264" startY="306.133" stroke="#FFFFFF" />
+          <Line endX="780.34" endY="308.043" startX="779.354" startY="306.105" stroke="#FFFFFF" />
+          <SVGPath content="M740.319,211.255    c-0.223-0.44-0.399-0.897-0.496-1.382" stroke="#FFFFFF" />
+          <SVGPath content="M739.385,212.352    c-0.424-0.85-0.686-1.749-0.574-2.707" stroke="#FFFFFF" />
+          <SVGPath content="M673.942,83.525    c-0.085-0.165-0.158-0.336-0.219-0.512" stroke="#FFFFFF" />
+          <Line endX="782.967" endY="301.572" startX="783.678" startY="303.082" stroke="#FFFFFF" />
+          <SVGPath content="M673.194,84.541    c-0.4-0.781-0.518-1.652-0.117-2.458" stroke="#FFFFFF" />
+          <SVGPath content="M678.565,97.815    c-0.05,0.284-0.001,0.563,0.123,0.822" stroke="#FFFFFF" />
+          <SVGPath content="M685.305,80.029    c0.04-0.2,0.021-0.409-0.07-0.592" stroke="#FFFFFF" />
+          <Line endX="695.004" endY="99.599" startX="695.042" startY="99.387" stroke="#FFFFFF" />
+          <Line endX="695.01" endY="99.567" startX="694.999" startY="99.639" stroke="#FFFFFF" />
+          <Line endX="685.106" endY="80.897" startX="685.305" startY="80.029" stroke="#FFFFFF" />
+          <Line endX="680.803" endY="98.75" startX="681.346" startY="96.54" stroke="#FFFFFF" />
+          <Line endX="691.456" endY="99.639" startX="689.616" startY="106.232" stroke="#FFFFFF" />
+          <Line endX="740.19" endY="207.237" startX="739.938" startY="207.471" stroke="#FFFFFF" />
+          <SVGPath content="M673.309,339.644    c-0.223,0.154-0.468,0.254-0.734,0.3" stroke="#FFFFFF" />
+          <Line endX="673.293" endY="339.457" startX="672.592" startY="339.868" stroke="#FFFFFF" />
+          <SVGPath content="M673.293,339.457    c0.367-0.205,0.734-0.406,1.105-0.603" stroke="#FFFFFF" />
+          <Line endX="780.639" endY="334.431" startX="780.639" startY="334.431" stroke="#FFFFFF" />
+          <Line endX="785.02" endY="332.452" startX="780.639" startY="334.431" stroke="#FFFFFF" />
+          <SVGPath content="M785.012,332.456    c-0.89,0.408-1.825,0.725-2.738,1.076" stroke="#FFFFFF" />
+          <SVGPath content="M776.229,336.259    c-0.641,0.306-1.361,0.385-2.063,0.418" stroke="#FFFFFF" />
+          <SVGPath content="M780.639,334.431    c-1.657,0.686-3.311,1.249-5.037,1.735" stroke="#FFFFFF" />
+          <SVGPath content="M782.62,333.036    c5.89-2.271,11.135-5.645,13.523-11.762" stroke="#FFFFFF" />
+          <Line endX="798.956" endY="292.535" startX="797.954" startY="290.452" stroke="#FFFFFF" />
+          <SVGPath content="M766.815,232.992    c0.054,0.104,0.1,0.212,0.137,0.323" stroke="#FFFFFF" />
+          <SVGPath content="M783.676,303.084    c0.385,0.877,0.613,1.752,0.295,2.693" stroke="#FFFFFF" />
+          <Line endX="782.44" endY="300.368" startX="782.967" startY="301.572" stroke="#FFFFFF" />
+          <SVGPath content="M782.04,299.155    c0.371,0.853,0.585,1.682,0.293,2.596" stroke="#FFFFFF" />
+          <SVGPath content="M781.571,298.254    c-1.99-5.399-3.647-10.897-6.119-16.107" stroke="#FFFFFF" />
+          <SVGPath content="M673.723,83.013    c-0.146-0.464-0.166-0.941-0.016-1.407" stroke="#FFFFFF" />
+          <SVGPath content="M673.698,335.207    c-0.031,0.164-0.109,0.315-0.225,0.433" stroke="#FFFFFF" />
+          <Line endX="665.161" endY="312.694" startX="667" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="671.694" endY="308.103" startX="672.59" startY="305.17" stroke="#FFFFFF" />
+          <Line endX="678.051" endY="321.161" startX="673.741" startY="335.16" stroke="#FFFFFF" />
+          <SVGPath content="M739.118,208.612    c0.206-0.425,0.484-0.809,0.82-1.141" stroke="#FFFFFF" />
+          <Line endX="740.34" endY="207.352" startX="740.168" startY="207.645" stroke="#FFFFFF" />
+          <SVGPath content="M740.34,207.352    c0.26-0.396,0.577-0.748,0.93-1.063" stroke="#FFFFFF" />
+          <Line endX="668.081" endY="339.868" startX="673.473" startY="335.64" stroke="#FFFFFF" />
+          <Line endX="673.321" endY="339.636" startX="673.309" startY="339.644" stroke="#FFFFFF" />
+          <SVGPath content="M777.704,335.554    c-0.494,0.228-0.986,0.463-1.475,0.705" stroke="#FFFFFF" />
+          <SVGPath content="M798.956,292.535    c0.808,2.134,1.561,4.294,1.663,6.598c0.111,2.491-0.269,4.668-1.077,7.02" fill="#f8f4f4" stroke="#FFFFFF" />
+          <SVGPath content="M739.823,209.873    c-0.053-0.318-0.072-0.642-0.039-0.963" stroke="#FFFFFF" />
+          <SVGPath content="M739.784,208.91    c0.045-0.442,0.186-0.869,0.385-1.266" stroke="#FFFFFF" />
+          <SVGPath content="M752.936,205.705    c0.058-0.213,0.047-0.444-0.053-0.642" stroke="#FFFFFF" />
+          <SVGPath content="M752.754,204.822    c-0.091,0.493-0.183,0.987-0.295,1.476" stroke="#FFFFFF" />
+          <SVGPath content="M738.811,209.645    c0.054-0.357,0.16-0.704,0.307-1.033" stroke="#FFFFFF" />
+          <SVGPath content="M752.459,206.297    c0.104-0.468,0.195-0.938,0.283-1.41" stroke="#FFFFFF" />
+          <SVGPath content="M747.204,230.5    c-0.146,0.479-0.026,0.975,0.18,1.417" stroke="#FFFFFF" />
+          <Line endX="752.659" endY="206.644" startX="752.936" startY="205.705" stroke="#FFFFFF" />
+          <Line endX="762.588" endY="233.316" startX="760.049" startY="240.417" stroke="#FFFFFF" />
+          <SVGPath content="M768.29,335.64    c0.146-0.106,0.246-0.262,0.299-0.436" stroke="#FFFFFF" />
+          <Line endX="766.645" endY="233.001" startX="766.698" startY="232.773" stroke="#FFFFFF" />
+          <Line endX="766.596" endY="233.202" startX="766.645" startY="233.001" stroke="#FFFFFF" />
+          <SVGPath content="M766.569,233.316    c0.029-0.12,0.059-0.24,0.086-0.36" stroke="#FFFFFF" />
+          <Line endX="767.358" endY="306.517" startX="766.801" startY="308.106" stroke="#FFFFFF" />
+          <Line endX="774.764" endY="307.1" startX="774.971" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="777.704" endY="304.06" startX="776.829" startY="306.517" stroke="#FFFFFF" />
+          <Line endX="781.452" endY="304.207" startX="782.334" startY="301.75" stroke="#FFFFFF" />
+          <Line endX="783.678" endY="303.082" startX="782.008" startY="307.622" stroke="#FFFFFF" />
+          <SVGPath content="M782.333,301.75    c-0.499,1.375-1.932,1.918-3.242,2.198" stroke="#FFFFFF" />
+          <SVGPath content="M783.971,305.778    c-0.696,1.875-2.969,2.271-4.711,2.337" stroke="#FFFFFF" />
+          <SVGPath content="M774.272,308.106    c0.187-0.334,0.348-0.652,0.492-1.006" stroke="#FFFFFF" />
+          <Line endX="801.145" endY="307.383" startX="796.143" startY="321.275" stroke="#FFFFFF" />
+          <SVGPath content="M796.206,321.297    c-1.993,5.222-6.225,8.838-11.193,11.159" fill="#eeecec" stroke="#FFFFFF" />
+          <SVGPath content="M801.137,307.406    c-3.344,8.606-12.497,12.053-20.959,13.314c-2.223,0.332-4.469,0.379-6.711,0.441" fill="#f8f7f7" stroke="#FFFFFF" />
+          <Line endX="798.7" endY="307.852" startX="799.542" startY="306.153" stroke="#FFFFFF" />
+          <SVGPath content="M798.7,307.852    c-2.383,3.572-5.667,6.441-9.732,7.984c-4.064,1.544-8.358,2.612-12.729,2.74c-0.987,0.028-1.976,0.057-2.964,0.086" fill="#fcf9f9" stroke="#FFFFFF" />
+        </children>
+     </Group>
+     <SVGPath content="M700.644,262.875c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1  s-0.804-1-1.606-1c-0.805,0-0.805,1-1.608,1s-0.804-1-1.607-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.608,1  c-0.803,0-0.803-1-1.607-1c-0.804,0-0.804,1-1.606,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.607,1s-0.803-1-1.607-1  c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.607,1c-0.802,0-0.802-1-1.605-1s-0.804,1-1.607,1  c-0.805,0-0.805-1-1.607-1s-0.803,1-1.607,1c-0.804,0-0.804-1-1.606-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.606-1s-0.803,1-1.607,1  c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1s-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.607-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1s-0.803,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1  c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.606-1s-0.803,1-1.605,1c-0.805,0-0.805-1-1.607-1c-0.804,0-0.804,1-1.606,1  c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.605,1s-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1  c-0.804,0-0.804-1-1.606-1c-0.806,0-0.806,1-1.61,1s-0.805-1-1.609-1s-0.805,1-1.609,1s-0.805-1-1.609-1c-0.804,0-0.804,1-1.609,1  c-0.803,0-0.803-1-1.607-1s-0.805,1-1.609,1c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.608-1  s-0.804,1-1.608,1s-0.805-1-1.607-1c-0.805,0-0.805,1-1.609,1s-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1s-0.805-1-1.608-1  s-0.804,1-1.606,1c-0.806,0-0.806-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.606,1  c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1  c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1c-0.805,0-0.805,1-1.609,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1  c-0.803,0-0.803-1-1.605-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.608-1  c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.607,1  c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.608,1s-0.804-1-1.607-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.607-1  c-0.805,0-0.805,1-1.608,1s-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.804,0-0.804,1-1.608,1  c-0.804,0-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1s-0.803,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1  c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.607,1  s-0.803-1-1.607-1c-0.803,0-0.803,1-1.605,1c-0.804,0-0.804-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1  s-0.804,1-1.606,1c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.607-1  s-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1s-0.804-1-1.606-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.605,1s-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.606,1s-0.803-1-1.606-1  c-0.806,0-0.806,1-1.61,1c-0.806,0-0.806-1-1.61-1c-0.804,0-0.804,1-1.607,1c-0.806,0-0.806-1-1.609-1c-0.806,0-0.806,1-1.609,1  s-0.804-1-1.609-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.608,1s-0.804-1-1.608-1s-0.805,1-1.608,1s-0.804-1-1.609-1c-0.803,0-0.803,1-1.607,1s-0.805-1-1.608-1  s-0.804,1-1.607,1c-0.805,0-0.805-1-1.608-1s-0.804,1-1.607,1s-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.804,0-0.804,1-1.607,1s-0.803-1-1.606-1c-0.804,0-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.608,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1s-0.803-1-1.607-1c-0.804,0-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1  c-0.802,0-0.802-1-1.606-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1s-0.803,1-1.607,1c-0.804,0-0.804-1-1.606-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.606-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.607,1  c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1s-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.606,1  c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.606-1  s-0.803,1-1.606,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1  c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.606-1c-0.806,0-0.806,1-1.61,1  c-0.805,0-0.805-1-1.61-1c-0.804,0-0.804,1-1.609,1c-0.804,0-0.804-1-1.609-1c-0.804,0-0.804,1-1.609,1c-0.803,0-0.803-1-1.608-1  c-0.804,0-0.804,1-1.608,1s-0.804-1-1.608-1c-0.804,0-0.804,1-1.608,1s-0.804-1-1.608-1s-0.804,1-1.608,1s-0.804-1-1.608-1  c-0.805,0-0.805,1-1.609,1c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.608,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1  c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.803,0-0.803,1-1.608,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.607,1s-0.803-1-1.607-1  c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1  c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.608-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.608,1s-0.804-1-1.607-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.607,1  c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1s-0.804-1-1.607-1  s-0.804,1-1.607,1s-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.608-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-0.803-1-1.606-1s-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  s-0.803,1-1.606,1c-0.804,0-0.804-1-1.606-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-0.803-1-1.606-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1s-0.803-1-1.605-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.803,0-0.803,1-1.606,1s-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-2.018-1-2.821-1" stroke="#009EE3" />
+     <SVGPath content="M679.749,211.852c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.802,0-0.802-1-1.605-1s-0.804,1-1.607,1c-0.805,0-0.805-1-1.607-1s-0.803,1-1.607,1  c-0.804,0-0.804-1-1.606-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.606-1s-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1  s-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1s-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.606-1s-0.803,1-1.605,1  c-0.805,0-0.805-1-1.607-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.605-1  s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1s-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.605,1c-0.804,0-0.804-1-1.606-1c-0.806,0-0.806,1-1.61,1s-0.805-1-1.609-1s-0.805,1-1.609,1s-0.805-1-1.609-1  c-0.804,0-0.804,1-1.609,1c-0.803,0-0.803-1-1.607-1s-0.805,1-1.609,1c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1  c-0.805,0-0.805-1-1.608-1s-0.804,1-1.608,1s-0.805-1-1.607-1c-0.805,0-0.805,1-1.609,1s-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1  s-0.805-1-1.608-1s-0.804,1-1.606,1c-0.806,0-0.806-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.608-1  c-0.804,0-0.804,1-1.606,1c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.607,1  c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1c-0.805,0-0.805,1-1.609,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.605,1  c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1  c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.608,1s-0.804-1-1.607-1s-0.804,1-1.606,1  c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.608,1s-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1  c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1  c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1  s-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1  c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.607,1  s-0.803-1-1.607-1c-0.803,0-0.803,1-1.605,1c-0.804,0-0.804-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1  s-0.804,1-1.606,1c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.607-1  s-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1s-0.804-1-1.606-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.605,1s-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.606,1s-0.803-1-1.606-1  c-0.806,0-0.806,1-1.61,1c-0.806,0-0.806-1-1.61-1c-0.804,0-0.804,1-1.607,1c-0.806,0-0.806-1-1.609-1c-0.806,0-0.806,1-1.609,1  s-0.804-1-1.609-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.608,1s-0.804-1-1.608-1s-0.805,1-1.608,1s-0.804-1-1.609-1c-0.803,0-0.803,1-1.607,1s-0.805-1-1.608-1  s-0.804,1-1.607,1c-0.805,0-0.805-1-1.608-1s-0.804,1-1.607,1s-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.804,0-0.804,1-1.607,1s-0.803-1-1.606-1c-0.804,0-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.608,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1s-0.803-1-1.607-1c-0.804,0-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1  c-0.802,0-0.802-1-1.606-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1s-0.803,1-1.607,1c-0.804,0-0.804-1-1.606-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.606-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.607,1  c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1s-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.606,1  c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.606-1  s-0.803,1-1.606,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1  c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.606-1c-0.806,0-0.806,1-1.61,1  c-0.805,0-0.805-1-1.61-1c-0.804,0-0.804,1-1.609,1c-0.804,0-0.804-1-1.609-1c-0.804,0-0.804,1-1.609,1c-0.803,0-0.803-1-1.608-1  c-0.804,0-0.804,1-1.608,1s-0.804-1-1.608-1c-0.804,0-0.804,1-1.608,1s-0.804-1-1.608-1s-0.804,1-1.608,1s-0.804-1-1.608-1  c-0.805,0-0.805,1-1.609,1c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.608,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1  c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.803,0-0.803,1-1.608,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.607,1s-0.803-1-1.607-1  c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1  c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.608-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.608,1s-0.804-1-1.607-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.607,1  c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1s-0.804-1-1.607-1  s-0.804,1-1.607,1s-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.608-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-0.803-1-1.606-1s-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  s-0.803,1-1.606,1c-0.804,0-0.804-1-1.606-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-0.803-1-1.606-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1s-0.803-1-1.605-1  c-0.803,0-0.803,1-1.606,1" stroke="#009EE3" />
+     <SVGPath content="M657.25,161.732c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.607-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1s-0.803,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1  c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.606-1s-0.803,1-1.605,1c-0.805,0-0.805-1-1.607-1c-0.804,0-0.804,1-1.606,1  c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.605,1s-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1  c-0.804,0-0.804-1-1.606-1c-0.806,0-0.806,1-1.61,1s-0.805-1-1.609-1s-0.805,1-1.609,1s-0.805-1-1.609-1c-0.804,0-0.804,1-1.609,1  c-0.803,0-0.803-1-1.607-1s-0.805,1-1.609,1c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.608-1  s-0.804,1-1.608,1s-0.805-1-1.607-1c-0.805,0-0.805,1-1.609,1s-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1s-0.805-1-1.608-1  s-0.804,1-1.606,1c-0.806,0-0.806-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.606,1  c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1  c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1c-0.805,0-0.805,1-1.609,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1  c-0.803,0-0.803-1-1.605-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.608-1  c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.607,1  c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.608,1s-0.804-1-1.607-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.607-1  c-0.805,0-0.805,1-1.608,1s-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.804,0-0.804,1-1.608,1  c-0.804,0-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1s-0.803,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1  c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.607,1  s-0.803-1-1.607-1c-0.803,0-0.803,1-1.605,1c-0.804,0-0.804-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1  s-0.804,1-1.606,1c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.607-1  s-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1s-0.804-1-1.606-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.605,1s-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.606,1s-0.803-1-1.606-1  c-0.806,0-0.806,1-1.61,1c-0.806,0-0.806-1-1.61-1c-0.804,0-0.804,1-1.607,1c-0.806,0-0.806-1-1.609-1c-0.806,0-0.806,1-1.609,1  s-0.804-1-1.609-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.608,1s-0.804-1-1.608-1s-0.805,1-1.608,1s-0.804-1-1.609-1c-0.803,0-0.803,1-1.607,1s-0.805-1-1.608-1  s-0.804,1-1.607,1c-0.805,0-0.805-1-1.608-1s-0.804,1-1.607,1s-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.804,0-0.804,1-1.607,1s-0.803-1-1.606-1c-0.804,0-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.608,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1s-0.803-1-1.607-1c-0.804,0-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1  c-0.802,0-0.802-1-1.606-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1s-0.803,1-1.607,1c-0.804,0-0.804-1-1.606-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.606-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.607,1  c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1s-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.606,1  c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.606-1  s-0.803,1-1.606,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1  c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.606-1c-0.806,0-0.806,1-1.61,1  c-0.805,0-0.805-1-1.61-1c-0.804,0-0.804,1-1.609,1c-0.804,0-0.804-1-1.609-1c-0.804,0-0.804,1-1.609,1c-0.803,0-0.803-1-1.608-1  c-0.804,0-0.804,1-1.608,1s-0.804-1-1.608-1c-0.804,0-0.804,1-1.608,1s-0.804-1-1.608-1s-0.804,1-1.608,1s-0.804-1-1.608-1  c-0.805,0-0.805,1-1.609,1c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.608,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1  c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.803,0-0.803,1-1.608,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.607,1s-0.803-1-1.607-1  c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1  c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.608-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.608,1s-0.804-1-1.607-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.607,1  c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1s-0.804-1-1.607-1  s-0.804,1-1.607,1s-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.608-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-0.803-1-1.606-1s-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  s-0.803,1-1.606,1c-0.804,0-0.804-1-1.606-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1" stroke="#009EE3" />
+     <SVGPath content="M634.756,111.66c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.607-1  c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.605-1s-0.803,1-1.606,1  c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1s-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.605,1c-0.804,0-0.804-1-1.606-1c-0.806,0-0.806,1-1.61,1s-0.805-1-1.609-1s-0.805,1-1.609,1s-0.805-1-1.609-1  c-0.804,0-0.804,1-1.609,1c-0.803,0-0.803-1-1.607-1s-0.805,1-1.609,1c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1  c-0.805,0-0.805-1-1.608-1s-0.804,1-1.608,1s-0.805-1-1.607-1c-0.805,0-0.805,1-1.609,1s-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1  s-0.805-1-1.608-1s-0.804,1-1.606,1c-0.806,0-0.806-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.608-1  c-0.804,0-0.804,1-1.606,1c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.607,1  c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1c-0.805,0-0.805,1-1.609,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.605,1  c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1  c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.608,1s-0.804-1-1.607-1s-0.804,1-1.606,1  c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.608,1s-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1  c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1  c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1  s-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1  c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.607,1  s-0.803-1-1.607-1c-0.803,0-0.803,1-1.605,1c-0.804,0-0.804-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1  s-0.804,1-1.606,1c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.607-1  s-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1s-0.804-1-1.606-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.605,1s-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.606,1s-0.803-1-1.606-1  c-0.806,0-0.806,1-1.61,1c-0.806,0-0.806-1-1.61-1c-0.804,0-0.804,1-1.607,1c-0.806,0-0.806-1-1.609-1c-0.806,0-0.806,1-1.609,1  s-0.804-1-1.609-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.608,1s-0.804-1-1.608-1s-0.805,1-1.608,1s-0.804-1-1.609-1c-0.803,0-0.803,1-1.607,1s-0.805-1-1.608-1  s-0.804,1-1.607,1c-0.805,0-0.805-1-1.608-1s-0.804,1-1.607,1s-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.804,0-0.804,1-1.607,1s-0.803-1-1.606-1c-0.804,0-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.608,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1s-0.803-1-1.607-1c-0.804,0-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1  c-0.802,0-0.802-1-1.606-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1s-0.803,1-1.607,1c-0.804,0-0.804-1-1.606-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.606-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.607,1  c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1s-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.606,1  c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.606-1  s-0.803,1-1.606,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1  c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.606-1c-0.806,0-0.806,1-1.61,1  c-0.805,0-0.805-1-1.61-1c-0.804,0-0.804,1-1.609,1c-0.804,0-0.804-1-1.609-1c-0.804,0-0.804,1-1.609,1c-0.803,0-0.803-1-1.608-1  c-0.804,0-0.804,1-1.608,1s-0.804-1-1.608-1c-0.804,0-0.804,1-1.608,1s-0.804-1-1.608-1s-0.804,1-1.608,1s-0.804-1-1.608-1  c-0.805,0-0.805,1-1.609,1c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.608,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1  c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.803,0-0.803,1-1.608,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.607,1s-0.803-1-1.607-1  c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1  c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.608-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.608,1s-0.804-1-1.607-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.607,1  c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1s-0.804-1-1.607-1  s-0.804,1-1.607,1s-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.608-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-0.803-1-1.606-1s-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1" stroke="#009EE3" />
+     <SVGPath content="M613.874,62.588c-0.804,0-0.804-1-1.606-1c-0.806,0-0.806,1-1.61,1  s-0.805-1-1.609-1s-0.805,1-1.609,1s-0.805-1-1.609-1c-0.804,0-0.804,1-1.609,1c-0.803,0-0.803-1-1.607-1s-0.805,1-1.609,1  c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.608-1s-0.804,1-1.608,1s-0.805-1-1.607-1  c-0.805,0-0.805,1-1.609,1s-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1s-0.805-1-1.608-1s-0.804,1-1.606,1c-0.806,0-0.806-1-1.609-1  c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.606,1c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1  c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1s-0.804-1-1.606-1  c-0.805,0-0.805,1-1.609,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1c-0.805,0-0.805,1-1.607,1  c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.605,1c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1  c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.608,1  s-0.804-1-1.607-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.607-1c-0.805,0-0.805,1-1.608,1s-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1  c-0.805,0-0.805-1-1.607-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.606-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.607-1  c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1  s-0.804-1-1.606-1s-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1  s-0.804-1-1.606-1c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.607-1  c-0.805,0-0.805,1-1.607,1s-0.803-1-1.607-1c-0.803,0-0.803,1-1.605,1c-0.804,0-0.804-1-1.606-1c-0.804,0-0.804,1-1.607,1  c-0.803,0-0.803-1-1.606-1s-0.804,1-1.606,1c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.605-1  c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1  c-0.805,0-0.805-1-1.607-1s-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1s-0.804-1-1.606-1s-0.803,1-1.606,1  c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.605,1s-0.803-1-1.605-1s-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1  c-0.804,0-0.804,1-1.606,1s-0.803-1-1.606-1c-0.806,0-0.806,1-1.61,1c-0.806,0-0.806-1-1.61-1c-0.804,0-0.804,1-1.607,1  c-0.806,0-0.806-1-1.609-1c-0.806,0-0.806,1-1.609,1s-0.804-1-1.609-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1  s-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.608,1s-0.804-1-1.608-1s-0.805,1-1.608,1s-0.804-1-1.609-1  c-0.803,0-0.803,1-1.607,1s-0.805-1-1.608-1s-0.804,1-1.607,1c-0.805,0-0.805-1-1.608-1s-0.804,1-1.607,1s-0.804-1-1.608-1  c-0.804,0-0.804,1-1.607,1s-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1  c-0.803,0-0.803,1-1.606,1s-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1c-0.805,0-0.805-1-1.607-1c-0.804,0-0.804,1-1.607,1  s-0.803-1-1.606-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1c-0.804,0-0.804-1-1.608-1  c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.608,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1  s-0.803-1-1.607-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1s-0.804,1-1.608,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1  c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.607-1c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.608,1  c-0.803,0-0.803-1-1.606-1s-0.804,1-1.607,1c-0.802,0-0.802-1-1.606-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1  s-0.803,1-1.607,1c-0.804,0-0.804-1-1.606-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.606-1c-0.803,0-0.803,1-1.607,1  c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1  c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1s-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1  c-0.804,0-0.804-1-1.608-1s-0.804,1-1.606,1c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.605-1  c-0.804,0-0.804,1-1.606,1c-0.804,0-0.804-1-1.606-1s-0.803,1-1.606,1c-0.804,0-0.804-1-1.607-1c-0.804,0-0.804,1-1.606,1  c-0.804,0-0.804-1-1.608-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.803,0-0.803,1-1.606,1  c-0.804,0-0.804-1-1.606-1c-0.806,0-0.806,1-1.61,1c-0.805,0-0.805-1-1.61-1c-0.804,0-0.804,1-1.609,1c-0.804,0-0.804-1-1.609-1  c-0.804,0-0.804,1-1.609,1c-0.803,0-0.803-1-1.608-1c-0.804,0-0.804,1-1.608,1s-0.804-1-1.608-1c-0.804,0-0.804,1-1.608,1  s-0.804-1-1.608-1s-0.804,1-1.608,1s-0.804-1-1.608-1c-0.805,0-0.805,1-1.609,1c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.608,1  c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1c-0.805,0-0.805-1-1.609-1c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.609-1  c-0.803,0-0.803,1-1.607,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.803,0-0.803,1-1.608,1  c-0.803,0-0.803-1-1.607-1s-0.804,1-1.607,1s-0.803-1-1.607-1c-0.804,0-0.804,1-1.608,1c-0.803,0-0.803-1-1.607-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.805,0-0.805-1-1.608-1c-0.803,0-0.803,1-1.605,1  c-0.805,0-0.805-1-1.608-1c-0.804,0-0.804,1-1.608,1c-0.804,0-0.804-1-1.608-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1  c-0.805,0-0.805,1-1.607,1c-0.804,0-0.804-1-1.608-1s-0.804,1-1.608,1c-0.804,0-0.804-1-1.607-1c-0.803,0-0.803,1-1.607,1  s-0.804-1-1.607-1c-0.804,0-0.804,1-1.608,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.607,1s-0.804-1-1.607-1c-0.804,0-0.804,1-1.608,1  c-0.803,0-0.803-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.804,0-0.804-1-1.608-1  c-0.803,0-0.803,1-1.607,1s-0.804-1-1.607-1s-0.804,1-1.607,1s-0.803-1-1.607-1c-0.803,0-0.803,1-1.606,1c-0.804,0-0.804-1-1.608-1  s-0.804,1-1.607,1c-0.803,0-0.803-1-1.607-1c-0.803,0-0.803,1-1.607,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.606,1  c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.804,0-0.804-1-1.607-1s-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1  c-0.803,0-0.803,1-1.606,1c-0.803,0-0.803-1-1.606-1c-0.804,0-0.804,1-1.607,1c-0.803,0-0.803-1-1.606-1s-0.804,1-1.606,1  c-0.805,0-0.805-1-1.608-1" stroke="#009EE3" />
+     <Line endX="690.764" endY="237.339" startX="135.793" startY="237.339" stroke="#009EE3" />
+     <Line endX="668.113" endY="187.268" startX="143.006" startY="187.268" stroke="#009EE3" />
+     <Line endX="624.173" endY="87.124" startX="163.208" startY="87.124" stroke="#009EE3" />
+     <Line endX="645.667" endY="137.196" startX="152.048" startY="137.196" stroke="#009EE3" />
+     <Ellipse centerX="165.088" centerY="62.088" fill="#009EE3" radiusX="8.238" radiusY="5.5" />
+     <Ellipse centerX="160.337" centerY="87.124" fill="#009EE3" radiusX="8.365" radiusY="5.625" />
+     <Ellipse centerX="150.373" centerY="137.196" fill="#009EE3" radiusX="9.105" radiusY="5.75" />
+     <Ellipse centerX="155.353" centerY="112.16" fill="#009EE3" radiusX="8.8" radiusY="5.75" />
+     <Ellipse centerX="135.793" centerY="212.304" fill="#009EE3" radiusX="10.014" radiusY="6" />
+     <Ellipse centerX="140.623" centerY="187.268" fill="#009EE3" radiusX="9.72" radiusY="6" />
+     <SVGPath content="M141.19,237.339c0,3.383-4.547,6.125-10.162,6.125c-5.612,0-10.16-2.742-10.16-6.125  s4.548-6.125,10.16-6.125C136.643,231.214,141.19,233.956,141.19,237.339z" fill="#009EE3" />
+     <Ellipse centerX="125.9" centerY="262.375" fill="#009EE3" radiusX="10.605" radiusY="6.225" />
+     <Ellipse centerX="619.382" centerY="62.088" fill="#009EE3" radiusX="7.984" radiusY="5.5" />
+     <SVGPath content="M638.953,87.124c0,3.107-3.753,5.625-8.39,5.625c-4.633,0-8.39-2.518-8.39-5.625s3.757-5.625,8.39-5.625  C635.2,81.499,638.953,84.017,638.953,87.124z" fill="#009EE3" />
+     <SVGPath content="M661.879,137.196c0,3.176-4.052,5.75-9.055,5.75c-4.998,0-9.052-2.574-9.052-5.75s4.054-5.75,9.052-5.75  C657.828,131.446,661.879,134.02,661.879,137.196z" fill="#009EE3" />
+     <Ellipse centerX="641.856" centerY="112.16" fill="#009EE3" radiusX="8.772" radiusY="5.75" />
+     <Ellipse centerX="664.13" centerY="162.232" fill="#009EE3" radiusX="9.369" radiusY="5.875" />
+     <Ellipse centerX="686.705" centerY="212.304" fill="#009EE3" radiusX="9.937" radiusY="6" />
+     <Ellipse centerX="675.43" centerY="187.268" fill="#009EE3" radiusX="9.681" radiusY="6" />
+     <SVGPath content="M708.34,237.339c0,3.383-4.547,6.125-10.162,6.125c-5.611,0-10.159-2.742-10.159-6.125  s4.548-6.125,10.159-6.125C703.793,231.214,708.34,233.956,708.34,237.339z" fill="#009EE3" />
+     <Ellipse centerX="709.476" centerY="262.375" fill="#009EE3" radiusX="10.605" radiusY="6.225" />
+   </children>
+</Pane>

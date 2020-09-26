@@ -1,0 +1,43 @@
+{
+  "version" : 2,
+  "typeCode" : "RBX01-S2",
+  "type" : "SINGLE_MATERIAL_HEAD",
+  "valves" : "FITTED",
+  "zReduction" : 0.0,
+  "nozzleHeaters" : [ {
+    "maximum_temperature_C" : 280,
+    "beta" : 4380.0,
+    "tcal" : 19193.0
+  } ],
+  "nozzles" : [ {
+    "diameter" : 0.3,
+    "defaultXOffset" : 14,
+	"minXOffset" : 13,
+	"maxXOffset" : 16,
+    "defaultYOffset" : 4,
+	"minYOffset" : 3.5,
+	"maxYOffset" : 5.5,
+    "defaultZOffset" : -0.4,
+	"minZOffset" : -3,
+	"maxZOffset" : 3,
+    "defaultBOffset" : 1.1,
+	"minBOffset" : 0.7,
+	"maxBOffset" : 2.0,
+	"associatedExtruder" : "E"
+  }, {
+    "diameter" : 0.8,
+    "defaultXOffset" : 0,
+	"minXOffset" : -1.0,
+	"maxXOffset" : 1.5,
+    "defaultYOffset" : 4,
+	"minYOffset" : 3.5,
+	"maxYOffset" : 5.5,
+    "defaultZOffset" : -0.4,
+	"minZOffset" : -3,
+	"maxZOffset" : 3,
+    "defaultBOffset" : -1.1,
+	"minBOffset" : -2.0,
+	"maxBOffset" : -0.7,
+	"associatedExtruder" : "E"
+  } ]
+}

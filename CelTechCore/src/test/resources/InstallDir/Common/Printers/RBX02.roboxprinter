@@ -1,0 +1,95 @@
+{
+  "version" : 1,
+  "typeCode" : "RBX02",
+  "friendlyName" : "RoboxDual",
+  "editions" : [ {
+    "typeCode" : "BK",
+    "friendlyName" : "RoboxDual (UK)"
+  },
+  {
+    "typeCode" : "BE",
+    "friendlyName" : "RoboxDual (Europe)"
+  },
+  {
+    "typeCode" : "BU",
+    "friendlyName" : "RoboxDual (USA/Canada)"
+  },
+  {
+    "typeCode" : "BA",
+    "friendlyName" : "RoboxDual (SAA)"
+  },
+  {
+    "typeCode" : "BN",
+    "friendlyName" : "RoboxDual (Japan)"
+  },
+  {
+    "typeCode" : "BC",
+    "friendlyName" : "RoboxDual (China)"
+  },
+  {
+    "typeCode" : "BV",
+    "friendlyName" : "RoboxDual (Switzerland)"
+  },
+  {
+    "typeCode" : "BR",
+    "friendlyName" : "RoboxDual (Korea)"
+  },
+  {
+    "typeCode" : "BI",
+    "friendlyName" : "RoboxDual (Israel)"
+  },
+  {
+    "typeCode" : "BW",
+    "friendlyName" : "RoboxDual (Worldwide)"
+  },
+  {
+    "typeCode" : "SK",
+    "friendlyName" : "RoboxDual SE (UK)"
+  },
+  {
+    "typeCode" : "SE",
+    "friendlyName" : "RoboxDual SE (Europe)"
+  },
+  {
+    "typeCode" : "SU",
+    "friendlyName" : "RoboxDual SE (USA/Canada)"
+  },
+  {
+    "typeCode" : "SA",
+    "friendlyName" : "RoboxDual SE (SAA)"
+  },
+  {
+    "typeCode" : "SN",
+    "friendlyName" : "RoboxDual SE (Japan)"
+  },
+  {
+    "typeCode" : "SC",
+    "friendlyName" : "RoboxDual SE (China)"
+  },
+  {
+    "typeCode" : "SV",
+    "friendlyName" : "RoboxDual SE (Switzerland)"
+  },
+  {
+    "typeCode" : "SR",
+    "friendlyName" : "RoboxDual SE (Korea)"
+  },
+  {
+    "typeCode" : "SI",
+    "friendlyName" : "RoboxDual SE (Israel)"
+  },
+  {
+    "typeCode" : "SW",
+    "friendlyName" : "RoboxDual SE (Worldwide)"
+  }
+  ],
+    "compatibleHeads" : [
+	"RBX01-SM",
+	"RBX01-DM",
+	"RBX01-S2",
+	"RBXDV-S1"
+  ],
+  "printVolumeWidth" : 210,
+  "printVolumeDepth" : 150,
+  "printVolumeHeight" : 100
+}

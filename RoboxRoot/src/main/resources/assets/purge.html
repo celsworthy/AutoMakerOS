@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Robox :: Purge</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/OldCss.css">
+    <link rel="stylesheet" href="assets/css/RoboxRoot.css">
+    <link rel="stylesheet" href="assets/css/RootFonts.css">
+</head>
+
+<body id="purge" class="canvas-grey no-touch-action">
+    <div class="container page">
+        <div class="row">
+            <div>
+                <h1 class="localised page-title" data-i18n="purge-title">Purge</h1>
+            </div>
+        </div>
+        <div class="row rbx-panel rbx-white">
+            <div class="col-md-12 rbx-text-medium"><span class="purge-description rbx-text-medium" style="font-weight: 300;">&nbsp;</span></div>
+        </div>
+        <div class="row panel rbx-text vertical-align hidden" id="right-nozzle" style="margin-bottom:1.25vh;margin-top:1.25vh;padding:1.25vh;" nozzle-index="1">
+            <div class="rbx-colour-material">
+                <div class="row vertical-align" style="height: 4vh">
+                    <div class="text-center" style="margin-top: 2vh; width:100%"><img style="height: 3.5vh; margin-bottom: 1.5vh;" src="assets/img/Icon-Tweak-Mat1.svg"><span class="rbx-text-bigbody rbx-text localised" data-i18n="right-nozzle" style="margin-left: 1.25vh;">RightNozzle</span><span class="rbx-text-bigbody localised"
+                            data-i18n="material-one" style="margin-left: 1vh; font-style: italic;">- Material 1</span><input type="checkbox" id="right-nozzle-check" class="float-right rbx-checkbox" style="margin: 0.5vh 1.5vh 0vh;"></div>
+                </div>
+                <div class="row" style="margin: 1.5vh 0vh 0.5vh;">
+                    <div class="no-padding text-center">
+                        <p id="pa-material-1-name" class="rbx-text-bigbody rbx-text no-margins material-description">&nbsp;</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin: 1vh 0vh;">
+                    <div style="width: 29.125vh;">
+                        <p class="no-margins localised rbx-field-title xsmall" data-i18n="last-temperature">Last Temperature</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <p class="no-margins localised rbx-field-text small rbx-text last-temp" style="padding-left: 1vh">&nbsp;</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin: 1vh 0vh;">
+                    <div style="width: 29.125vh;">
+                        <p class="no-margins localised rbx-field-title xsmall" data-i18n="new-temperature">New Temperature</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <p class="no-margins localised rbx-field-text small rbx-text new-temp" style="padding-left: 1vh">&nbsp;</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin:  0vh 0vh 0.5vh;">
+                    <div style="width: 29.125vh;">
+                        <p class="no-margins localised rbx-field-title xsmall" data-i18n="purge-temperature">Purge Temperature</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <form class="form-inline">
+                            <div class="form-group no-margins"><button class="btn btn-default rbx-spinner minus mat1" data-dir="down" type="button"></button><input class="form-control rbx-numeric-input small purge-temp" type="text" id="purge-temp-left" step="5" precision="0" style="width: 11.25vh"
+                                    readonly=""><button class="btn btn-default rbx-spinner add mat1" data-dir="up" type="button"></button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row panel rbx-text vertical-align hidden" id="left-nozzle" style="margin-bottom:1.25vh;margin-top:1.25vh;padding:1.25vh;" nozzle-index="0">
+            <div class="rbx-colour-material">
+                <div class="row vertical-align" style="height: 4vh">
+                    <div class="text-center" style="margin-top: 2vh; width:100%"><img style="height: 3.5vh; margin-bottom: 1.5vh;" src="assets/img/Icon-Tweak-Mat2.svg"><span class="rbx-text-bigbody rbx-text localised" data-i18n="left-nozzle" style="margin-left: 1.25vh;">Left Nozzle</span><span class="rbx-text-bigbody localised"
+                            data-i18n="material-two" style="margin-left: 1vh; font-style: italic;">- Material 2</span><input type="checkbox" id="left-nozzle-check" class="float-right rbx-checkbox" style="margin: 0.5vh 1.5vh 0vh;"></div>
+                </div>
+                <div class="row" style="margin: 1.5vh 0vh 0.5vh;">
+                    <div class="no-padding text-center">
+                        <p id="pa-material-2-name" class="rbx-text-bigbody rbx-text no-margins material-description">&nbsp;</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin: 1vh 0vh;">
+                    <div style="width: 29.125vh;">
+                        <p class="no-margins localised rbx-field-title xsmall" data-i18n="last-temperature">Last Temperature</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <p class="no-margins localised rbx-field-text small rbx-text last-temp" style="padding-left: 1vh">&nbsp;</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin: 1vh 0vh;">
+                    <div style="width: 29.125vh;">
+                        <p class="no-margins localised rbx-field-title xsmall" data-i18n="new-temperature">New Temperature</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <p class="no-margins localised rbx-field-text small rbx-text new-temp" style="padding-left: 1vh">&nbsp;</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin:  0vh 0vh 0.5vh;">
+                    <div style="width: 29.125vh;">
+                        <p class="no-margins localised rbx-field-title xsmall" data-i18n="purge-temperature">Purge Temperature</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <form class="form-inline">
+                            <div class="form-group no-margins"><button class="btn btn-default rbx-spinner minus mat2" data-dir="down" type="button"></button><input class="form-control rbx-numeric-input small purge-temp" type="text" id="purge-temp-right" step="5" precision="0" style="width: 11.25vh"
+                                    readonly=""><button class="btn btn-default rbx-spinner add mat2" data-dir="up" type="button"></button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer">
+        <div class="btn-group btn-group-justified" role="group"><a class="btn btn-default menu-bottom-button" role="button" id="left-button" href="menu-horz.html?id=maintenance"> <img class="menu-bottom-button-icon" src="assets/img/Icon_Menu_Back.svg"></a><a class="btn btn-default menu-bottom-button" role="button" id="middle-button"
+                href="home.html"> <img style="height:6.5vh;" src="assets/img/Icon-Home.svg"></a><a class="btn btn-default menu-bottom-button" role="button" id="right-button" href="#"> <img class="menu-bottom-button-icon" src="assets/img/Button-Make-White.svg"></a></div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/i18next.min.js"></script>
+    <script src="assets/js/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="assets/js/i18nextXHRBackend.min.js"></script>
+    <script src="assets/js/jquery-i18next.min.js"></script>
+    <script src="assets/js/core-vars.js"></script>
+    <script src="assets/js/jquery.base64.js"></script>
+    <script src="assets/js/core-funcs.js"></script>
+    <script src="assets/js/promise-funcs.js"></script>
+    <script src="assets/js/access-pin.js"></script>
+    <script src="assets/js/error-handling.js"></script>
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/console.js"></script>
+    <script src="assets/js/control.js"></script>
+    <script src="assets/js/head-eeprom.js"></script>
+    <script src="assets/js/job-progress.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/menu-horz.js"></script>
+    <script src="assets/js/pin-reset.js"></script>
+    <script src="assets/js/print-adjust.js"></script>
+    <script src="assets/js/printer-colour.js"></script>
+    <script src="assets/js/printer-name.js"></script>
+    <script src="assets/js/server-name.js"></script>
+    <script src="assets/js/printer-select.js"></script>
+    <script src="assets/js/purge-intro.js"></script>
+    <script src="assets/js/purge.js"></script>
+    <script src="assets/js/reprint.js"></script>
+    <script src="assets/js/wireless-settings.js"></script>
+    <script src="assets/js/usb-print.js"></script>
+    <script src="assets/js/page-init.js"></script>
+</body>
+
+</html>

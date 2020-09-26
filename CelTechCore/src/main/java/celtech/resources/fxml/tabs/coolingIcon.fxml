@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Group xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <Polygon fill="#FFFFFF">
+      <points>
+        <Double fx:value="8.283" />
+        <Double fx:value="26.864" />
+        <Double fx:value="10.204" />
+        <Double fx:value="23.537" />
+        <Double fx:value="6.609" />
+        <Double fx:value="23.675" />
+        <Double fx:value="6.253" />
+        <Double fx:value="21.972" />
+        <Double fx:value="11.421" />
+        <Double fx:value="21.428" />
+        <Double fx:value="15.047" />
+        <Double fx:value="15.151" />
+        <Double fx:value="7.675" />
+        <Double fx:value="15.151" />
+        <Double fx:value="4.804" />
+        <Double fx:value="19.174" />
+        <Double fx:value="3.456" />
+        <Double fx:value="18.094" />
+        <Double fx:value="5.607" />
+        <Double fx:value="15.151" />
+        <Double fx:value="1.501" />
+        <Double fx:value="15.151" />
+        <Double fx:value="1.501" />
+        <Double fx:value="12.847" />
+        <Double fx:value="5.346" />
+        <Double fx:value="12.847" />
+        <Double fx:value="3.427" />
+        <Double fx:value="9.838" />
+        <Double fx:value="4.724" />
+        <Double fx:value="8.678" />
+        <Double fx:value="7.779" />
+        <Double fx:value="12.847" />
+        <Double fx:value="15.051" />
+        <Double fx:value="12.847" />
+        <Double fx:value="11.338" />
+        <Double fx:value="6.503" />
+        <Double fx:value="6.421" />
+        <Double fx:value="6.026" />
+        <Double fx:value="6.681" />
+        <Double fx:value="4.319" />
+        <Double fx:value="10.304" />
+        <Double fx:value="4.711" />
+        <Double fx:value="8.25" />
+        <Double fx:value="1.153" />
+        <Double fx:value="10.217" />
+        <Double fx:value="0.018" />
+        <Double fx:value="12.138" />
+        <Double fx:value="3.345" />
+        <Double fx:value="13.815" />
+        <Double fx:value="0.165" />
+        <Double fx:value="15.469" />
+        <Double fx:value="0.709" />
+        <Double fx:value="13.356" />
+        <Double fx:value="5.458" />
+        <Double fx:value="17.026" />
+        <Double fx:value="11.729" />
+        <Double fx:value="20.662" />
+        <Double fx:value="5.348" />
+        <Double fx:value="18.616" />
+        <Double fx:value="0.853" />
+        <Double fx:value="20.225" />
+        <Double fx:value="0.224" />
+        <Double fx:value="21.697" />
+        <Double fx:value="3.559" />
+        <Double fx:value="23.749" />
+        <Double fx:value="0" />
+        <Double fx:value="25.717" />
+        <Double fx:value="1.134" />
+        <Double fx:value="23.796" />
+        <Double fx:value="4.462" />
+        <Double fx:value="27.39" />
+        <Double fx:value="4.324" />
+        <Double fx:value="27.745" />
+        <Double fx:value="6.028" />
+        <Double fx:value="22.577" />
+        <Double fx:value="6.574" />
+        <Double fx:value="18.981" />
+        <Double fx:value="12.847" />
+        <Double fx:value="26.322" />
+        <Double fx:value="12.847" />
+        <Double fx:value="29.194" />
+        <Double fx:value="8.826" />
+        <Double fx:value="30.542" />
+        <Double fx:value="9.904" />
+        <Double fx:value="28.392" />
+        <Double fx:value="12.847" />
+        <Double fx:value="32.499" />
+        <Double fx:value="12.847" />
+        <Double fx:value="32.499" />
+        <Double fx:value="15.151" />
+        <Double fx:value="28.652" />
+        <Double fx:value="15.151" />
+        <Double fx:value="30.572" />
+        <Double fx:value="18.161" />
+        <Double fx:value="29.275" />
+        <Double fx:value="19.321" />
+        <Double fx:value="26.22" />
+        <Double fx:value="15.151" />
+        <Double fx:value="18.976" />
+        <Double fx:value="15.151" />
+        <Double fx:value="22.66" />
+        <Double fx:value="21.496" />
+        <Double fx:value="27.577" />
+        <Double fx:value="21.974" />
+        <Double fx:value="27.317" />
+        <Double fx:value="23.682" />
+        <Double fx:value="23.694" />
+        <Double fx:value="23.289" />
+        <Double fx:value="25.747" />
+        <Double fx:value="26.846" />
+        <Double fx:value="23.782" />
+        <Double fx:value="27.981" />
+        <Double fx:value="21.861" />
+        <Double fx:value="24.654" />
+        <Double fx:value="20.184" />
+        <Double fx:value="27.835" />
+        <Double fx:value="18.53" />
+        <Double fx:value="27.293" />
+        <Double fx:value="20.642" />
+        <Double fx:value="22.545" />
+        <Double fx:value="17.022" />
+        <Double fx:value="16.273" />
+        <Double fx:value="13.336" />
+        <Double fx:value="22.65" />
+        <Double fx:value="15.382" />
+        <Double fx:value="27.148" />
+        <Double fx:value="13.776" />
+        <Double fx:value="27.776" />
+        <Double fx:value="12.303" />
+        <Double fx:value="24.443" />
+        <Double fx:value="10.249" />
+        <Double fx:value="28" />
+      </points>
+    </Polygon>
+</Group>

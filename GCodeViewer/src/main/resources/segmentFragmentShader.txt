@@ -1,0 +1,17 @@
+#version 150
+
+uniform vec3 lightColour;
+
+in vec4 fColour;
+in vec3 fNormal;
+in vec3 lNormal;
+
+out vec4 out_Colour;
+
+void main(void) {
+    float nDot1 = dot(fNormal, lNormal);
+    float brightness = max(nDot1, 0.5);
+    vec3 diffuse = brightness * lightColour;
+    
+    out_Colour = vec4(diffuse, 1.0) * fColour;
+}

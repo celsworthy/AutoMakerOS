@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import celtech.coreUI.components.*?>
+<?import celtech.coreUI.components.buttons.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="container" style="-fx-background-color: black;" stylesheets="@../../css/JMetroDarkTheme.css" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox styleClass="blue-inset-panel" VBox.vgrow="ALWAYS">
+            <children>
+            <VBox maxWidth="-Infinity" minWidth="-Infinity" prefWidth="30.0" style="-fx-background-color: black;" />
+            <HBox alignment="CENTER" minHeight="200.0" minWidth="200.0" styleClass="blue-background">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <children>
+                  <VBox alignment="CENTER" HBox.hgrow="NEVER">
+                     <children>
+                        <Label id="registrationTitle" text="Robox User Account">
+                           <VBox.margin>
+                              <Insets bottom="30.0" top="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <GridPane hgap="30.0" styleClass="registrationGrid">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="330.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="First Name:" />
+                              <Label text="Surname:" GridPane.rowIndex="1" />
+                              <Label text="Company Name:" GridPane.rowIndex="2" />
+                              <TextField GridPane.columnIndex="1" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Address Line 1:" GridPane.rowIndex="3" />
+                              <Label text="Address Line 2:" GridPane.rowIndex="4" />
+                              <Label text="Address Line 3:" GridPane.rowIndex="5" />
+                              <Label text="Town/City:" GridPane.rowIndex="6" />
+                              <Label text="Region/State:" GridPane.rowIndex="7" />
+                              <Label text="Postal Code:" GridPane.rowIndex="8" />
+                              <Label text="Country:" GridPane.rowIndex="9" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <Label text="Robox Serial No.:" GridPane.columnIndex="2" />
+                              <Label text="Head Serial No.:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label text="Date Of Purchase:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label text="Purchased From:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <TextField GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <Label text="User Name:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <Label text="Password:" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                              <TextField GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                              <TextField GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                              <HBox alignment="CENTER" GridPane.columnIndex="3">
+                                 <children>
+                                    <TextField />
+                                    <Label text="-" />
+                                    <TextField prefColumnCount="10" />
+                                    <Label text="-" />
+                                    <TextField />
+                                    <Label text="-" />
+                                    <TextField prefColumnCount="14" />
+                                    <Label text="-" />
+                                    <TextField />
+                                    <Label text="-" />
+                                    <TextField prefColumnCount="10" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <children>
+                                    <TextField />
+                                    <Label text="-" />
+                                    <TextField prefColumnCount="10" />
+                                    <Label text="-" />
+                                    <TextField />
+                                    <Label text="-" />
+                                    <TextField prefColumnCount="14" />
+                                    <Label text="-" />
+                                    <TextField />
+                                    <Label text="-" />
+                                    <TextField prefColumnCount="10" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <children>
+                                    <ComboBox prefWidth="150.0" />
+                                    <ComboBox prefWidth="150.0" />
+                                    <ComboBox prefWidth="150.0" />
+                                 </children>
+                              </HBox>
+                             
+                           </children>
+                           <HBox.margin>
+                              <Insets left="60.0" />
+                           </HBox.margin>
+                           <VBox.margin>
+                              <Insets left="60.0" right="60.0" />
+                           </VBox.margin>
+                        </GridPane>
+                        <HBox alignment="CENTER" spacing="30.0">
+                           <children>
+                              <Button mnemonicParsing="false" text="Register" />
+                              <Button mnemonicParsing="false" text="I Already Have An Account" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="30.0" top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            </children>
+        </HBox>
+        <BorderPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="90.0" styleClass="menubar">
+            <center>
+            </center>
+         <center>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                      <GraphicButton fx:id="backwardButton" fxmlFileName="backwardButton" onAction="#backwardPressed" />
+               </children>
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </center>
+        </BorderPane>
+    </children>
+</VBox>

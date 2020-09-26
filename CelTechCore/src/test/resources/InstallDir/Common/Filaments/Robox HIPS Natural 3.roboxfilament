@@ -1,0 +1,20 @@
+#
+# Robox filament definition file
+#
+name = Robox Natural
+material = HIP
+reelID = RBX-HIP-NT003
+brand = Robox
+category = Classic
+diameter_mm = 1.75
+filament_multiplier = 0.90
+feed_rate_multiplier = 1.0
+ambient_temperature_C = 60
+first_layer_bed_temperature_C = 115
+bed_temperature_C = 90
+first_layer_nozzle_temperature_C = 240
+nozzle_temperature_C = 235
+display_colour = #F0F0DC
+cost_gbp_per_kg = 41.50
+default_length_m = 240
+filled = no

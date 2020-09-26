@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<fx:root type="celtech.coreUI.components.material.FilamentCategory" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fx:id="swatchPatchTitle" styleClass="filament-display-brand" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <VBox fx:id="swatchContainer"/>
+   </children>
+</fx:root>

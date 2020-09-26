@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import celtech.coreUI.components.buttons.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+
+<fx:root stylesheets="@../../css/JMetroDarkTheme.css" type="celtech.coreUI.components.buttons.GraphicButton" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+    <graphic>
+        <Group>
+            <children>
+            <StackPane layoutX="-24.0" layoutY="-24.0">
+               <children>
+                  <Circle fill="#ffffff00" radius="24.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="3.0" />
+                      <SVGPath content="M23.937,32.346l7.765-7.766l-7.765-7.764l3.285-3.299l7.765,7.764l7.777-7.764l3.299,3.283l-7.778,7.779   l7.778,7.777l-3.299,3.287l-7.777-7.766l-7.765,7.766L23.937,32.346z" fill="#FFFFFF" />
+               </children>
+            </StackPane>
+
+            </children>
+        </Group>   
+    </graphic>
+</fx:root>

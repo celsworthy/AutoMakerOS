@@ -1,0 +1,20 @@
+#
+# Robox filament definition file
+#
+name = Robox Water-Soluble Support
+material = PVA
+reelID = RLH-PVA-NT001
+brand = Robox
+category = Classic
+diameter_mm = 1.75
+filament_multiplier = 1.05
+feed_rate_multiplier = 1.2
+ambient_temperature_C = 60
+first_layer_bed_temperature_C = 100
+bed_temperature_C = 95
+first_layer_nozzle_temperature_C = 245
+nozzle_temperature_C = 240
+display_colour = #F3FDB2
+cost_gbp_per_kg = 102.65
+default_length_m = 120
+filled = no

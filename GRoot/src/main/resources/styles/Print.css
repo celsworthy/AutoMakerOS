@@ -1,0 +1,54 @@
+.no-print-icon {
+    -fx-background-image: url("/image/print-none.png");
+}
+
+.navigator-panel {
+    -fx-background-color: -robox-blue;
+}
+
+.navigator-next {
+   -fx-graphic: url("/image/navigator-next-white.png");
+}
+
+.navigator-page-number {
+    -fx-font-size: 18pt;
+    -fx-text-fill: white;
+}
+
+.navigator-previous {
+   -fx-graphic: url("/image/navigator-previous-white.png");
+}
+
+.no-print-jobs-title {
+    -fx-font-size: 24pt;
+    -fx-text-fill: -robox-blue;
+}
+
+.no-print-jobs-details {
+    -fx-font-size: 18pt;
+    -fx-text-fill: white;
+}
+
+.print-job-label {
+    -fx-font-size: 18pt;
+    -fx-text-fill: inherit;
+}
+
+.print-job-field {
+    -fx-font-size: 18pt;
+    -fx-text-fill: white;
+}
+
+.print-job-panel {
+    -fx-background-color: -robox-grey;
+    -fx-text-fill: -robox-blue;
+}
+
+.print-job-panel:active {
+    -fx-background-color: -robox-blue;
+    -fx-text-fill: white;
+}
+
+.print-job-profile-icon {
+    -fx-background-image: url("/image/job-profile-icon.png");
+}

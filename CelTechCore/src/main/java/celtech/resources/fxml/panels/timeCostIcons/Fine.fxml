@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Group>
+  <Rectangle y="39.594" x="0" fill="#A8A8A8" height="0.406" width="40" />
+  <Rectangle y="38.578" height="0.406" width="38.984" fill="#A8A8A8" x="0" />
+  <Rectangle fill="#A8A8A8" x="0" height="0.406" y="37.563" width="37.969" />
+  <Rectangle width="36.953" x="0" height="0.406" y="36.549" fill="#A8A8A8" />
+  <Rectangle x="0" height="0.405" width="35.938" y="35.533" fill="#A8A8A8" />
+  <Rectangle fill="#A8A8A8" y="34.518" width="34.922" x="0" height="0.406" />
+  <Rectangle y="33.503" fill="#A8A8A8" height="0.405" width="33.906" x="0" />
+  <Rectangle fill="#A8A8A8" height="0.406" width="32.893" x="0" y="32.487" />
+  <Rectangle y="31.472" width="31.877" fill="#A8A8A8" height="0.407" x="0" />
+  <Rectangle width="30.863" fill="#A8A8A8" x="0" y="30.457" height="0.406" />
+  <Rectangle height="0.406" width="29.848" fill="#A8A8A8" x="0" y="29.441" />
+  <Rectangle height="0.407" width="28.832" x="0" fill="#A8A8A8" y="28.426" />
+  <Rectangle x="0" y="27.412" height="0.405" width="27.816" fill="#A8A8A8" />
+  <Rectangle width="26.801" x="0" y="26.396" height="0.405" fill="#A8A8A8" />
+  <Rectangle x="0" y="25.381" width="25.787" height="0.406" fill="#A8A8A8" />
+  <Rectangle y="24.365" width="24.771" x="0" height="0.407" fill="#A8A8A8" />
+  <Rectangle x="0" fill="#A8A8A8" width="23.756" y="23.351" height="0.405" />
+  <Rectangle height="0.405" width="22.74" y="22.336" x="0" fill="#A8A8A8" />
+  <Rectangle x="0" fill="#A8A8A8" width="21.725" y="21.32" height="0.406" />
+  <Rectangle height="0.406" width="20.711" fill="#A8A8A8" y="20.305" x="0" />
+  <Rectangle y="19.289" x="0" fill="#A8A8A8" width="19.695" height="0.406" />
+  <Rectangle y="18.274" x="0" width="18.68" fill="#A8A8A8" height="0.406" />
+  <Rectangle width="17.664" x="0" y="17.26" height="0.406" fill="#A8A8A8" />
+  <Rectangle fill="#A8A8A8" x="0" y="16.244" width="16.648" height="0.405" />
+  <Rectangle x="0" fill="#A8A8A8" height="0.406" y="15.229" width="15.635" />
+  <Rectangle width="14.619" x="0" height="0.406" y="14.214" fill="#A8A8A8" />
+  <Rectangle width="13.604" fill="#A8A8A8" height="0.406" x="0" y="13.198" />
+  <Rectangle x="0" width="12.588" y="12.183" fill="#A8A8A8" height="0.407" />
+  <Rectangle fill="#A8A8A8" x="0" width="11.572" height="0.406" y="11.168" />
+  <Rectangle x="0" height="0.405" width="10.557" fill="#A8A8A8" y="10.153" />
+  <Rectangle x="0" y="9.138" width="9.543" fill="#A8A8A8" height="0.406" />
+  <Rectangle x="0" height="0.405" width="8.527" fill="#A8A8A8" y="8.123" />
+  <Rectangle fill="#A8A8A8" x="0" y="7.106" width="7.514" height="0.406" />
+  <Rectangle width="6.498" height="0.406" x="0" fill="#A8A8A8" y="6.092" />
+  <Rectangle y="5.076" x="0" fill="#A8A8A8" width="5.482" height="0.406" />
+  <Rectangle x="0" y="4.062" fill="#A8A8A8" width="4.467" height="0.405" />
+  <Rectangle x="0" width="3.451" fill="#A8A8A8" height="0.405" y="3.047" />
+  <Rectangle y="2.031" fill="#A8A8A8" width="2.436" x="0" height="0.406" />
+  <Rectangle height="0.406" fill="#A8A8A8" x="0" width="1.422" y="1.016" />
+  <Rectangle y="0" width="0.406" x="0" height="0.406" fill="#A8A8A8" />
+</Group>

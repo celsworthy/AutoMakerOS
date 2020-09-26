@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<fx:root type="celtech.coreUI.components.buttons.GraphicButton" stylesheets="@../../css/JMetroDarkTheme.css" text="" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <graphic>
+        <Group>
+		<Group>
+			<SVGPath fill="#FFFFFF" content="M64.001,24.332c0,9.63-6.115,18.57-14.988,22.243c-9.09,3.763-19.592,1.354-26.357-5.723c-6.77-7.081-8.607-17.721-4.436-26.603C22.313,5.531,31.53-0.107,41.173,0.369C53.661,0.981,64.001,11.844,64.001,24.332zM61.794,24.364c0-9.686-6.705-18.365-16.012-20.978c-9.414-2.638-19.639,1.675-24.58,10.036c-4.996,8.454-3.529,19.42,3.439,26.327c6.787,6.728,17.326,8.385,25.734,3.757C57.304,39.694,61.794,32.288,61.794,24.364z"/>
+		</Group>
+		<Group>
+			<Polygon fill="#D0CDCD" points="44.413,12.571,53.097,9.355,53.097,32.659,36.128,41.835,36.128,31.347,44.401,27.613"/>
+			<Polygon fill="#E1E0E0" points="44.413,12.571,35.353,9.707,44.437,6.844,53.097,9.355"/>
+			<Polygon fill="#626363" points="35.353,9.707,35.353,24.023,44.401,27.613,44.413,12.57"/>
+			<Polygon fill="#E1E0E0" points="44.401,27.613,36.128,31.347,26.905,27.166,35.353,24.023"/>
+			<Polygon fill="#626363" points="36.128,41.835,27.071,36.997,26.905,27.166,36.128,31.345"/>
+			<Group>
+				<Circle fill="#009EE3" centerX="53.743" centerY="36.659" radius="8.975"/>
+				<Rectangle x="48.433" y="35.763" fill="#FFFFFF" width="10.625" height="1.792"/>
+			</Group>
+		</Group>
+	</Group>
+    </graphic>
+</fx:root>

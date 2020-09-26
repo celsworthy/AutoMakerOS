@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.*?>
+<?import celtech.coreUI.components.printerstatus.*?>
+<?import celtech.coreUI.components.material.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import jfxtras.styles.jmetro8.*?>
+
+<HBox id="previewInsetRoot" fx:id="previewInsetRoot" alignment="CENTER" maxWidth="360.0" minWidth="-Infinity" prefWidth="360.0" style="-fx-background-color: mid_grey_solid;" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.panels.PreviewInsetPanelController">
+    <children>
+        <VBox alignment="CENTER" fillWidth="true" spacing="10.0">
+            <children>
+                <HBox fx:id="showPreviewHBox" alignment="CENTER" spacing="5.0">
+                    <children>
+                        <Label text="Show GCode Preview" />
+                        <CheckBox fx:id="showPreviewButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" />
+                    </children>
+                </HBox>				
+            </children>
+            <padding>
+                <Insets left="5.0" right="5.0" />
+            </padding>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+    </padding>
+</HBox>

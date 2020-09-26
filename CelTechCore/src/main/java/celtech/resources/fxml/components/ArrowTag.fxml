@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.tips.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<fx:root labelText="" maxHeight="-Infinity" mouseTransparent="true" pickOnBounds="false" spacing="5.0" titleText="" type="celtech.coreUI.components.tips.ArrowTag" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox spacing="5.0">
+            <children>
+                <VBox fx:id="labelContainer" alignment="CENTER_LEFT" pickOnBounds="false" styleClass="arrow-tag" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label id="bodyText" fx:id="label" layoutY="53.0" text="This text grows" textAlignment="LEFT" AnchorPane.leftAnchor="0.0">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+                <SVGPath id="arrow" fx:id="arrow" content="M2.586,43.801c4.943,0.829,9.458,3.341,13.824,5.77c7.406,4.122,14.402,8.014,22.92,3.615 c4.422-2.281,4.93-5.98,5.52-10.264c0.521-3.785,1.059-7.699,4.629-10.325c3.729-2.745,10.313-3.462,20.493-2.204l-7.007-5.895 c-0.635-0.533-0.716-1.479-0.183-2.113c0.534-0.634,1.478-0.716,2.113-0.182L77.91,33.148l-15.955,5.914 c-0.172,0.063-0.348,0.094-0.521,0.094c-0.609,0-1.182-0.375-1.406-0.979c-0.288-0.776,0.108-1.64,0.885-1.929l7.996-2.963 c-8.864-1.033-14.672-0.465-17.652,1.729c-2.548,1.875-2.959,4.86-3.435,8.317c-0.614,4.464-1.31,9.524-7.114,12.521 c-3.174,1.639-6.152,2.299-8.989,2.299c-6.058,0-11.474-3.013-16.767-5.958c-4.144-2.306-8.428-4.689-12.861-5.433L2.586,43.801z" fill="WHITE" stroke="BLACK" strokeWidth="0.5" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <HBox.margin>
+                        <Insets top="9.0" />
+                    </HBox.margin>
+                </SVGPath>
+            </children>
+        </HBox>
+    </children>
+</fx:root>

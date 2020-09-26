@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane id="AboutPane" fx:id="aboutPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800" prefWidth="480.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celuk.groot.controllers.AboutController">
+   <children>
+      <VBox fx:id="purgeVBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="about-panel">
+         <children>
+            <Pane maxWidth="1.7976931348623157E308" prefHeight="100.0" styleClass="about-header" />
+            <Label fx:id="aboutVersion" styleClass="about-version" text="about.version" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="aboutPara1" styleClass="about-para-1" text="Robox® Root was created by the CEL Robox Team. © 2018 C Enterprise (UK) Limited." wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="aboutPara2" styleClass="about-para-2" text="All Rights Reserved." wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="aboutPara3" styleClass="about-para-3" text="CEL, Robox, RoboxDual, RoboxPRO, the Robox logo, AutoMaker, QuickFill, Headlock, SingleX and SmartReel are either registered trademarks or trademarks of C Enterprise (UK) Ltd. in the United Kingdom and/or other countries. Warning: This computer program is protected by copyright law and international treaties. Unauthorised reproduction or distribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law." wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="aboutPara4" styleClass="about-para-4" text="Hardware Engineering:" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="aboutPara5" styleClass="about-para-5" text="Chris Elsworthy and Chris White " wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="aboutPara6" styleClass="about-para-6" text="Software Engineering:" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="aboutPara7" styleClass="about-para-7" text="Ian Hudson, Ben Willcocks, Tony Abdulhaq Lynch, Tony Aldhous and George Salter " wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </Label>
+            <Pane id="about-footer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" VBox.vgrow="ALWAYS" />
+            <GridPane styleClass="bottom-bar">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="leftButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#leftButtonAction" prefHeight="63.0">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-back" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="middleButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#middleButtonAction" prefHeight="63.0" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-main-menu" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="rightButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rightButtonAction" prefHeight="63.0" GridPane.columnIndex="2">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-next" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <String fx:value="styles/Styles.css" />
+      <String fx:value="styles/About.css" />
+   </stylesheets>
+</StackPane>

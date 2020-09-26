@@ -1,0 +1,10 @@
+/hs_err_pid9444.log
+/nologname.log
+/target/
+movetag.sh
+nbactions.xml
+*~
+/src/main/java/celtech/automaker/resources/images/Thumbs.db
+nb-configuration.xml
+
+*.log*

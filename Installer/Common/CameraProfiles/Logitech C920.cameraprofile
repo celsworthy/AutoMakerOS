@@ -1,0 +1,12 @@
+{
+  "profileName" : "Logitech C920",
+  "captureHeight" : 1080,
+  "captureWidth" : 1920,
+  "headLightOff" : true,
+  "ambientLightOff" : true,
+  "moveBeforeCapture" : true,
+  "moveToX" : 50,
+  "moveToY" : 50,
+  "cameraName" : "HD Pro Webcam C920",
+  "controlSettings" : { }
+}

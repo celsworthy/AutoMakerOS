@@ -1,0 +1,11 @@
+# Blender MTL File: 'bedBase.blend'
+# Material Count: 1
+
+newmtl MTL0
+Ns 29.411765
+Ka 0.000000 0.000000 0.000000
+Kd 0.011736 0.011736 0.011736
+Ks 0.001517 0.001325 0.001547
+Ni 1.000000
+d 1.000000
+illum 2

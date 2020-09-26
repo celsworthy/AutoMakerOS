@@ -1,0 +1,192 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package celtech.printerControl;
+
+import celtech.printerControl.comms.commands.GCodeConstants;
+import celtech.printerControl.comms.commands.exceptions.RoboxCommsException;
+import celtech.services.printing.DatafileSendAlreadyInProgress;
+import celtech.services.printing.DatafileSendNotInitialised;
+import libertysystems.stenographer.Stenographer;
+import libertysystems.stenographer.StenographerFactory;
+
+/**
+ *
+ * @author ianhudson
+ */
+public class PrinterUtils
+{
+
+    private boolean sendInProgress = false;
+    private final PrinterInterface printerInterface;
+    private String fileID = null;
+    private final Stenographer steno = StenographerFactory.getStenographer(this.getClass().getName());
+    private int sequenceNumber = 0;
+    private static final int bufferSize = 512;
+    private static final StringBuffer outputBuffer = new StringBuffer(bufferSize);
+    private boolean printInitiated = false;
+
+    public PrinterUtils()
+    {
+        printerInterface = new PrinterInterface();
+    }
+
+    public int getSequenceNumber()
+    {
+        return sequenceNumber;
+    }
+
+    public boolean isPrintInitiated()
+    {
+        return printInitiated;
+    }
+
+    public void initialise(String fileID) throws DatafileSendAlreadyInProgress, RoboxCommsException
+    {
+        initialise(null, fileID);
+    }
+
+    public void initialise(String printerName, String fileID) throws DatafileSendAlreadyInProgress, RoboxCommsException
+    {
+        if (sendInProgress)
+        {
+            throw new DatafileSendAlreadyInProgress();
+        } else
+        {
+            this.fileID = fileID;
+            if (printerName != null)
+            {
+                printerInterface.sendDataFileStart(printerName, fileID);
+            } else
+            {
+                printerInterface.sendDataFileStart(fileID);
+            }
+            sendInProgress = true;
+            outputBuffer.delete(0, outputBuffer.length());
+            sequenceNumber = 0;
+            printInitiated = false;
+        }
+    }
+
+    public void initiatePrint(String hexDigits) throws DatafileSendNotInitialised, RoboxCommsException
+    {
+        initiatePrint(null, hexDigits);
+    }
+
+    public void initiatePrint(String printerName, String hexDigits) throws DatafileSendNotInitialised, RoboxCommsException
+    {
+        if (sendInProgress == false)
+        {
+            throw new DatafileSendNotInitialised();
+        } else
+        {
+            printerInterface.sendInitiatePrint(printerName, fileID);
+            printInitiated = true;
+        }
+    }
+
+    public void sendDataFileChunk(String hexDigits, boolean lastPacket, boolean appendCRLF) throws DatafileSendNotInitialised, RoboxCommsException
+    {
+        sendDataFileChunk(null, hexDigits, lastPacket, appendCRLF);
+    }
+
+    public void sendDataFileChunk(String printerName, String hexDigits, boolean lastPacket, boolean appendCRLF) throws DatafileSendNotInitialised, RoboxCommsException
+    {
+        boolean dataIngested = false;
+
+        if (appendCRLF)
+        {
+            hexDigits += "\r";
+        }
+
+        int remainingCharacters = hexDigits.length();
+
+        if (sendInProgress == false)
+        {
+            throw new DatafileSendNotInitialised();
+        }
+
+        while (remainingCharacters > 0)
+        {
+            /*
+             * Load the entire line if possible
+             */
+            if ((outputBuffer.capacity() - outputBuffer.length()) >= remainingCharacters)
+            {
+                String stringToWrite = hexDigits.substring(hexDigits.length() - remainingCharacters);
+                outputBuffer.append(stringToWrite);
+                dataIngested = true;
+                remainingCharacters -= stringToWrite.length();
+            } else
+            {
+                /*
+                 * put in what we can
+                 */
+                String stringToWrite = hexDigits.substring(hexDigits.length() - remainingCharacters, (hexDigits.length() - remainingCharacters) + (outputBuffer.capacity() - outputBuffer.length()));
+                outputBuffer.append(stringToWrite);
+                remainingCharacters -= stringToWrite.length();
+            }
+
+            /*
+             * Send when full
+             */
+            if ((outputBuffer.capacity() - outputBuffer.length()) == 0)
+            {
+                /*
+                 * If this is the last packet then send as an end...
+                 */
+                if (dataIngested && lastPacket)
+                {
+                    steno.info("Final complete chunk:" + outputBuffer.toString() + " seq:" + sequenceNumber);
+                    if (printerName != null)
+                    {
+                        printerInterface.sendDataFileEnd(printerName, outputBuffer.toString(), sequenceNumber);
+                    } else
+                    {
+                        printerInterface.sendDataFileEnd(outputBuffer.toString(), sequenceNumber);
+                    }
+                    sendInProgress = false;
+                } else
+                {
+                    steno.info("Sending chunk:" + outputBuffer.toString() + " seq:" + sequenceNumber);
+                    if (printerName != null)
+                    {
+                        printerInterface.sendDataFileChunk(printerName, outputBuffer.toString(), sequenceNumber);
+                    } else
+                    {
+                        printerInterface.sendDataFileChunk(outputBuffer.toString(), sequenceNumber);
+                    }
+                    outputBuffer.delete(0, bufferSize);
+                }
+                sequenceNumber++;
+            }
+        }
+    }
+
+    public void sendAbortPrint(Printer printerToUse)
+    {
+        try
+        {
+            printerInterface.sendDirectGCode(printerToUse, GCodeConstants.setBedTemperature + "0");
+            printerInterface.sendDirectGCode(printerToUse, GCodeConstants.setAmbientTemperature + "0");
+            printerInterface.sendDirectGCode(printerToUse, GCodeConstants.setExtruderTemperature + "0");
+            printerInterface.sendDirectGCode(printerToUse, GCodeConstants.switchOffHeadLEDs);
+            printerInterface.sendAbortPrint(printerToUse.getPrinterPort());
+        } catch (RoboxCommsException ex)
+        {
+            steno.error("Robox comms exception when sending abort print command " + ex);
+        }
+    }
+
+    public void switchOnHeadLEDs(Printer printerToUse, boolean on)
+    {
+        try
+        {
+            printerInterface.switchOnHeadLEDs(printerToUse, on);
+        } catch (RoboxCommsException ex)
+        {
+            steno.error("Robox comms exception when changing head LED state " + ex);
+        }
+    }
+}

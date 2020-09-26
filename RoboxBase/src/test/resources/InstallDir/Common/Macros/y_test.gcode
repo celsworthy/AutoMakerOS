@@ -1,0 +1,43 @@
+Macro:Home_all_Axis_in_sequence
+
+; Y Speed Test
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+G0 Y154
+G0 Y-6
+
+Macro:Finish-Abort_Print

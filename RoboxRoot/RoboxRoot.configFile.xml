@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <ApplicationConfiguration>
+        <AppFolderName>CEL Root</AppFolderName>
+        <ApplicationName>CEL Root</ApplicationName>
+        <ApplicationShortName>Root</ApplicationShortName>
+        <ApplicationDataStorageDirectory>$APPDATA_HOME$/#ApplicationConfiguration:AppFolderName#/</ApplicationDataStorageDirectory>
+        <UserDataStorageDirectory>$USER_HOME$/</UserDataStorageDirectory>
+        <requiredFirmwareVersion>780</requiredFirmwareVersion>
+        <DefaultMode>Normal</DefaultMode>
+        <DefaultLocaleLanguageTag>en</DefaultLocaleLanguageTag>
+        <FakeInstallDirectory>C:\Program Files\CEL\Root/</FakeInstallDirectory>
+    </ApplicationConfiguration>
+    <Stenographer>
+        <logfilename>#ApplicationConfiguration:ApplicationDataStorageDirectory#/RoboxRoot.log</logfilename>
+        <logmode>LOCAL</logmode>
+        <logtee>T</logtee>
+    </Stenographer>
+</root>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.*?>
+<?import celtech.coreUI.components.buttons.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-preview-i18n-resource ../i18n/LanguageData.properties?>
+<?scenebuilder-stylesheet ../css/AutoMaker.css?>
+
+<AnchorPane id="AnchorPane" fx:id="container" minHeight="0.0" minWidth="0.0" styleClass="statusPanelBackground" stylesheets="@../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.PrinterStatusPageController">
+    <children>
+        <StackPane fx:id="statusPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+				<StackPane fx:id="rbx01Stack">
+					<children>
+						<ImageView fx:id="reel1Background" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Reel%201%20Background.png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="reel2Background" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Reel%202%20Background.png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="baseNoReels" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Base%20Render%20(No%20Reels).png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="baseReel2" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Base%20Render%20(Reel%202).png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="baseReel1" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Base%20Render%20(Reel%201).png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="baseReelBoth" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Base%20Render%20(Both%20Reels).png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="doorClosed" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Door%20Closed.png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="doorOpen" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Door%20Open.png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="ambientLight" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Ambient%20Light%20(White).png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="singleMaterialHead" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Robox%20QuickFill%20Head.png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="dualMaterialHead" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Robox%20DualMaterial%20Head.png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="singleNozzleHead" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Robox%20SingleEX%20Head.png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="bed" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Bed.png" />
+						   </image>
+						</ImageView>
+						<ImageView fx:id="temperatureWarning" fitHeight="0.0" fitWidth="0.0" mouseTransparent="true" preserveRatio="true" visible="true">
+						   <image>
+							  <Image url="@../images/statusRender/RBX01/Bed%20Hot%20Warning.png" />
+						   </image>
+						</ImageView>
+						<HBox fx:id="xAxisControls" translateX="130.0" translateY="110.0" alignment="CENTER" fillHeight="false" maxHeight="39.0" maxWidth="293.0" spacing="2.0"  StackPane.alignment="CENTER">
+						   <children>
+								  <JogButton axis="X" distance="-100.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -1 -2 -1 -1;" fx:id="x_minus100">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/X%20-100%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton axis="X" distance="-10.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -2 -2 -2 -2;" translateY="-1.0" fx:id="x_minus10">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/X%20-10%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton axis="X" distance="-1.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -2 -2 -2 -2;" translateY="-1.0" fx:id="x_minus1">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/X%20-1%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton axis="X" distance="1.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -2 -2 -2 -2;" translateY="-1.0" fx:id="x_plus1">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/X%20+1%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton axis="X" distance="10.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -2 -2 -2 -2;" translateY="-1.0" fx:id="x_plus10">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/X%20+10%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton axis="X" distance="100.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -1 -1 -1 -2;" translateX="-1.0" translateY="-2.0" fx:id="x_plus100">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/X%20+100%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+						   </children>
+						</HBox>
+						<VBox fx:id="yAxisControls" translateX="-80.0" translateY="185.0" alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" pickOnBounds="false" spacing="2.0">
+						   <children>
+								  <JogButton fx:id="y_minus100" axis="Y" distance="-100.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -2 -2 -2 -2;">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Y%20-100%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton fx:id="y_minus10" axis="Y" distance="-10.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -3 -2 -2 -2;" translateX="-6.0">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Y%20-10%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton fx:id="y_minus1" alignment="CENTER" axis="Y" distance="-1.0" graphicTextGap="0.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -6 -2 -5 -2;" translateX="-8.0">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Y%20-1%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton fx:id="y_plus1" axis="Y" distance="1.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -5 -2 -5 -2;" translateX="-13.0">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Y%20+1%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton fx:id="y_plus10" alignment="CENTER" axis="Y" distance="10.0" graphicTextGap="0.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -2 -2 -3 -2;" translateX="-17.0">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Y%20+10%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton fx:id="y_plus100" axis="Y" distance="100.0" onAction="#jogButton" pickOnBounds="false" style="-fx-padding: -2 -2 -2 -3;" translateX="-24.0">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Y%20+100%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+						   </children>
+						</VBox>
+						<VBox fx:id="zAxisControls" translateX="-70.0" translateY="-20.0" alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity">
+						   <children>
+								  <JogButton fx:id="z_plus10" axis="Z" distance="10.0" onAction="#jogButton">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Z%20+10%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton fx:id="z_plus1" axis="Z" distance="1.0" onAction="#jogButton" translateX="1.0">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Z%20+1%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton fx:id="z_plus0_1" axis="Z" distance="0.1" onAction="#jogButton" translateX="1.0">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Z%20+01%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton fx:id="z_minus0_1" axis="Z" distance="-0.1" onAction="#jogButton" translateX="1.0">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Z%20-01%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton fx:id="z_minus1" axis="Z" distance="-1.0" onAction="#jogButton" translateX="2.0">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Z%20-1%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+								  <JogButton fx:id="z_minus10" axis="Z" distance="-10.0" onAction="#jogButton" translateX="3.0">
+									  <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											  <image>
+												  <Image url="@../images/advancedHomeAndJog/Z%20-10%20-%20Icons.png" />
+											  </image>
+										  </ImageView>
+									  </graphic>
+								  </JogButton>
+						   </children>
+						</VBox>
+						<VBox fx:id="extruder1Controls" translateX="-380.0" translateY="50.0" maxHeight="-Infinity" maxWidth="-Infinity">
+						   <children>
+							  <HBox alignment="CENTER" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity">
+								 <children>
+										<JogButton fx:id="extruder1_minus100" axis="E" distance="-240.0" feedRate="300" onAction="#jogButton" useG1="true">
+											<graphic>
+												<ImageView pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../images/advancedHomeAndJog/Extruder%20-100%20-%20Icons.png" />
+													</image>
+												</ImageView>
+											</graphic>
+										</JogButton>
+										<JogButton fx:id="extruder1_minus20" axis="E" distance="-48.0" feedRate="300" onAction="#jogButton" useG1="true">
+											<graphic>
+												<ImageView pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../images/advancedHomeAndJog/Extruder%20-20%20-%20Icons.png" />
+													</image>
+												</ImageView>
+											</graphic>
+										</JogButton>
+										<JogButton fx:id="extruder1_minus5" axis="E" distance="-12.0" feedRate="300" onAction="#jogButton" useG1="true">
+											<graphic>
+												<ImageView pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../images/advancedHomeAndJog/Extruder%20-5%20-%20Icons.png" />
+													</image>
+												</ImageView>
+											</graphic>
+										</JogButton>
+								 </children>
+							  </HBox>
+							  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity">
+								 <children>
+										<JogButton fx:id="extruder1_plus5" axis="E" distance="12.0" feedRate="300" onAction="#jogButton" useG1="true">
+											<graphic>
+												<ImageView pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../images/advancedHomeAndJog/Extruder%20+5%20-%20Icons.png" />
+													</image>
+												</ImageView>
+											</graphic>
+										</JogButton>
+										<JogButton fx:id="extruder1_plus20" axis="E" distance="48.0" feedRate="300" onAction="#jogButton" useG1="true">
+											<graphic>
+												<ImageView pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../images/advancedHomeAndJog/Extruder%20+20%20-%20Icons.png" />
+													</image>
+												</ImageView>
+											</graphic>
+										</JogButton>
+										<JogButton fx:id="extruder1_plus100" axis="E" distance="240.0" feedRate="300" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#jogButton" useG1="true">
+											<graphic>
+												<ImageView pickOnBounds="true" preserveRatio="true">
+													<image>
+														<Image url="@../images/advancedHomeAndJog/Extruder%20+100%20-%20Icons.png" />
+													</image>
+												</ImageView>
+											</graphic>
+										</JogButton>
+								 </children>
+							  </HBox>
+						   </children>
+						</VBox>
+						<VBox fx:id="extruder2Controls" translateX="-530.0" translateY="50.0" maxHeight="-Infinity" maxWidth="-Infinity">
+						   <children>
+							  <HBox alignment="CENTER" fillHeight="false" maxHeight="-Infinity" maxWidth="-Infinity">
+								 <children>
+									<JogButton fx:id="extruder2_minus100" axis="D" distance="-240.0" feedRate="300" onAction="#jogButton" useG1="true">
+									   <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											 <image>
+												<Image url="@../images/advancedHomeAndJog/Extruder%20-100%20-%20Icons.png" />
+											 </image>
+										  </ImageView>
+									   </graphic>
+									</JogButton>
+									<JogButton fx:id="extruder2_minus20" axis="D" distance="-48.0" feedRate="300" onAction="#jogButton" useG1="true">
+									   <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											 <image>
+												<Image url="@../images/advancedHomeAndJog/Extruder%20-20%20-%20Icons.png" />
+											 </image>
+										  </ImageView>
+									   </graphic>
+									</JogButton>
+									<JogButton fx:id="extruder2_minus5" axis="D" distance="-12.0" feedRate="300" onAction="#jogButton" useG1="true">
+									   <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											 <image>
+												<Image url="@../images/advancedHomeAndJog/Extruder%20-5%20-%20Icons.png" />
+											 </image>
+										  </ImageView>
+									   </graphic>
+									</JogButton>
+								 </children>
+							  </HBox>
+							  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity">
+								 <children>
+									<JogButton fx:id="extruder2_plus5" axis="D" distance="12.0" feedRate="300" onAction="#jogButton" useG1="true">
+									   <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											 <image>
+												<Image url="@../images/advancedHomeAndJog/Extruder%20+5%20-%20Icons.png" />
+											 </image>
+										  </ImageView>
+									   </graphic>
+									</JogButton>
+									<JogButton fx:id="extruder2_plus20" axis="D" distance="48.0" feedRate="300" onAction="#jogButton" useG1="true">
+									   <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											 <image>
+												<Image url="@../images/advancedHomeAndJog/Extruder%20+20%20-%20Icons.png" />
+											 </image>
+										  </ImageView>
+									   </graphic>
+									</JogButton>
+									<JogButton fx:id="extruder2_plus100" axis="D" distance="240.0" feedRate="300" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#jogButton" useG1="true">
+									   <graphic>
+										  <ImageView pickOnBounds="true" preserveRatio="true">
+											 <image>
+												<Image url="@../images/advancedHomeAndJog/Extruder%20+100%20-%20Icons.png" />
+											 </image>
+										  </ImageView>
+									   </graphic>
+									</JogButton>
+								 </children>
+							  </HBox>
+						   </children>
+						</VBox>
+					</children>
+				</StackPane>
+				<VBox fx:id="disconnectedText" alignment="CENTER">
+				   <children>
+					  <Label style="-fx-font-size: 60px;" styleClass="boldText" text="%printerStatus.noPrinterAttachedNoRobox" textAlignment="CENTER" />
+					  <HyperlinkedLabel fx:id="disconnectedLinkedText" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-font-size: 40px;" styleClass="regularText" textAlignment="CENTER" />
+				   </children>
+				</VBox>
+            </children>
+        </StackPane>
+<!--        <HBox AnchorPane.bottomAnchor="200.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#appear" text="Button" />
+                <Button mnemonicParsing="false" onAction="#disappear" text="Button" />
+            </children>
+        </HBox>-->
+<!--        <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+            <children>
+               <TesStatusBar fx:id="jim2" /> 
+               <TesStatusBar fx:id="jim1" /> 
+            </children>
+        </VBox>-->
+    </children>
+</AnchorPane>

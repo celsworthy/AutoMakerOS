@@ -1,0 +1,12 @@
+;Short_Purge#N0(Single Material Head)
+G0 Y-6 X11 Z8
+T0
+G0 Z4
+G1 Y-4 F400
+G36 E1200 F400
+G0 B1
+G1 E2 F200
+G1 E30 X23 F200
+G0 B0
+G0 Z4.5
+G0 Y3

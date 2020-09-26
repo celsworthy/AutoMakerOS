@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import celtech.coreUI.components.buttons.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox styleClass="inset-panel-background-redux" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="inset-panel-redux" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+            <children>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="inset-panel-centre-redux" VBox.vgrow="ALWAYS">
+               <children>
+                        <WebView fx:id="textContainer" prefHeight="100.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </VBox>
+        <HBox fillHeight="false" styleClass="inset-panel-bottom-bar-redux" VBox.vgrow="NEVER">
+            <children>
+                <GraphicButtonWithLabel fxmlFileName="backwardButton" labelText="%buttonText.back" onAction="#backToStatusAction" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

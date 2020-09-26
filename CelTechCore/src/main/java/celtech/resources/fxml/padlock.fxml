@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.transform.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<Group id="Document" xmlns:fx="http://javafx.com/fxml" >
+    <children>
+        <Group id="layer1">
+            <transforms>
+                <Translate x="-32.198659" y="-14.19088"/>
+            </transforms>
+            <children>
+                <Group id="g2061">
+                    <transforms>
+                        <Translate x="10.64087" y="12.19088"/>
+                    </transforms>
+                    <children>
+                        <SVGPath content="M 64.359126,2 C 44.287226,2 28.128259,18.158966 28.128259,38.230867 L 28.128259,78.487385 L 38.192389,78.487385 L 38.192389,38.230867 C 38.192389,23.734494 49.862754,12.06413 64.359126,12.06413 C 78.855498,12.06413 90.525863,23.734494 90.525863,38.230867 L 90.525863,78.487385 L 100.58999,78.487385 L 100.58999,38.230867 C 100.58999,18.158966 84.431026,2 64.359126,2 z" id="rect2723">
+                            <opacity>1</opacity>
+                            <fill>
+                                <Color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                    <opacity>1</opacity>
+                                </Color>
+                            </fill>
+                            <stroke>TRANSPARENT</stroke>
+                            <strokeWidth>0.625</strokeWidth>
+                            <strokeLineCap>ROUND</strokeLineCap>
+                            <strokeLineJoin>ROUND</strokeLineJoin>
+                            <strokeMiterLimit>4</strokeMiterLimit>
+                            <strokeDashOffset>0</strokeDashOffset>
+                        </SVGPath>
+                        <Rectangle x="21.557789" y="57.359127" width="85.602676" height="66.259109" id="rect1941">
+                            <opacity>1</opacity>
+                            <fill>
+                                <Color>
+                                    <red>0</red>
+                                    <green>0</green>
+                                    <blue>0</blue>
+                                    <opacity>1</opacity>
+                                </Color>
+                            </fill>
+                            <stroke>TRANSPARENT</stroke>
+                            <strokeWidth>0.625</strokeWidth>
+                            <strokeLineCap>ROUND</strokeLineCap>
+                            <strokeLineJoin>ROUND</strokeLineJoin>
+                            <strokeMiterLimit>4</strokeMiterLimit>
+                            <strokeDashOffset>0</strokeDashOffset>
+                        </Rectangle>
+                    </children>
+                </Group>
+            </children>
+        </Group>
+    </children>
+</Group>

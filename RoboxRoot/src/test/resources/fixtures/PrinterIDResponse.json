@@ -1,0 +1,1 @@
+{"@class":"celtech.comms.remote.rx.PrinterIDResponse","packetType":"PRINTER_ID_RESPONSE","messagePayload":null,"sequenceNumber":44,"includeSequenceNumber":false,"includeCharsOfDataInOutput":false,"model":null,"edition":null,"weekOfManufacture":null,"yearOfManufacture":null,"poNumber":null,"serialNumber":null,"checkByte":null,"printerFriendlyName":null,"printerColour":null}

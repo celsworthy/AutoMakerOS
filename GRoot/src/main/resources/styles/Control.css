@@ -1,0 +1,138 @@
+.control-button {
+    -fx-text-fill: -robox-blue;
+    -fx-font-size: 18pt;
+    -fx-background-color: -robox-grey;
+}
+
+.jog-button {
+    -fx-background-color: -robox-grey;
+}
+
+.jog-1-eject {
+    -fx-graphic: url("/image/jog-eject-blue.png");
+}
+
+.jog-1-heat {
+    -fx-graphic: url("/image/jog-heat-blue.png");
+}
+
+.jog-1-m20 {
+    -fx-graphic: url("/image/jog-m20-blue.png");
+}
+
+.jog-1-m50 {
+    -fx-graphic: url("/image/jog-m50-blue.png");
+}
+
+.jog-1-p20 {
+    -fx-graphic: url("/image/jog-p20-blue.png");
+}
+
+.jog-1-p50 {
+    -fx-graphic: url("/image/jog-p50-blue.png");
+}
+
+.jog-2-eject {
+    -fx-graphic: url("/image/jog-eject-orange.png");
+}
+
+.jog-2-heat {
+    -fx-graphic: url("/image/jog-heat-orange.png");
+}
+
+.jog-2-m20 {
+    -fx-graphic: url("/image/jog-m20-orange.png");
+}
+
+.jog-2-m50 {
+    -fx-graphic: url("/image/jog-m50-orange.png");
+}
+
+.jog-2-p20 {
+    -fx-graphic: url("/image/jog-p20-orange.png");
+}
+
+.jog-2-p50 {
+    -fx-graphic: url("/image/jog-p50-orange.png");
+}
+
+.move-ambient-light {
+    -fx-graphic: url("/image/move-ambient-light.png");
+}
+
+.move-button {
+    -fx-background-color: transparent;
+}
+
+.move-bed-grid {
+    -fx-background-image: url("/image/move-bed-grid.png");
+}
+
+.move-fan {
+    -fx-graphic:url("/image/move-fan.png");
+}
+
+.move-gap {
+    -fx-background-color: -robox-light-grey;
+}
+
+.move-heat-bed {
+    -fx-graphic: url("/image/move-heat-bed.png");
+}
+
+.move-headlight {
+    -fx-graphic:url("/image/move-headlight.png");
+}
+
+.move-select {
+    -fx-graphic:url("/image/move-select.png");
+}
+
+.move-home-all {
+    -fx-graphic: url("/image/move-home-all.png");
+}
+
+.move-unlock {
+    -fx-graphic: url("/image/move-unlock.png");
+}
+
+.move-valve {
+    -fx-graphic:url("/image/move-valve.png");
+}
+
+.move-x-home {
+    -fx-graphic: url("/image/move-x-home.png");
+}
+
+.move-x-m10 {
+    -fx-graphic: url("/image/move-x-m10.png");
+}
+
+.move-x-p10 {
+    -fx-graphic: url("/image/move-x-p10.png");
+}
+
+.move-y-home {
+    -fx-graphic: url("/image/move-y-home.png");
+}
+
+.move-y-m10 {
+    -fx-graphic: url("/image/move-y-m10.png");
+}
+
+.move-y-p10 {
+    -fx-graphic: url("/image/move-y-p10.png");
+}
+
+.move-z-home {
+    -fx-graphic: url("/image/move-z-home.png");
+}
+
+.move-z-m10 {
+    -fx-graphic: url("/image/move-z-m10.png");
+}
+
+.move-z-p10 {
+    -fx-graphic: url("/image/move-z-p10.png");
+}
+

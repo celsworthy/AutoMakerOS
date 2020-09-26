@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.buttons.GraphicButton?>
+<?import celtech.coreUI.components.buttons.GraphicButtonWithLabel?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox styleClass="inset-panel-background-redux" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <StackPane alignment="TOP_CENTER" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <children>
+                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" styleClass="aboutBody">
+                    <children>
+                        <TextFlow>
+                            <children>
+                                <Text fx:id="amTitleText1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 100;" styleClass="regularText" text="Auto" />
+                                <Text fx:id="amTitleText2" fill="WHITE" layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 100;" styleClass="lightText" text="Maker" />
+                                <Text fx:id="amTitleText3" fill="WHITE" layoutX="31.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 14;" styleClass="regularText" text="TM" translateY="-55.0" />
+                            </children>
+                        </TextFlow>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                            <children>
+                                <Label layoutX="10.0" layoutY="118.0" styleClass="aboutVersionText" text="%aboutPanel.version" wrapText="true">
+                                </Label>
+                                <Label fx:id="version" layoutX="10.0" layoutY="10.0" styleClass="aboutVersionText" text="1.0.1" wrapText="true">
+                                </Label>
+                            </children>
+                        </HBox>
+                        <VBox>
+                            <children>
+                                <Label styleClass="aboutBodyTextRegular" text="%aboutPanel.createdBy" wrapText="true">
+                                </Label>
+                                <Label styleClass="aboutBodyText" text="%aboutPanel.copyright" wrapText="true">
+                                </Label>
+                            </children>
+                        </VBox>
+                        <Label fx:id="infoLabel" styleClass="aboutBodyText" text="%aboutPanel.warning" wrapText="true" VBox.vgrow="ALWAYS">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </Label>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints />
+                            </rowConstraints>
+                            <children>
+                                <Text fx:id="bdLabel" layoutX="10.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%aboutPanel.businessDevelopment" GridPane.rowIndex="2">
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                    <styleClass>
+                                        <String fx:value="blue-inset-panel-text" />
+                                        <String fx:value="aboutBodyTextRegular" />
+                                    </styleClass>
+                                </Text>
+                                <Text fx:id="bdNames" layoutX="10.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chris Elsworthy" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <styleClass>
+                                        <String fx:value="aboutBodyText" />
+                                        <String fx:value="blue-inset-panel-text" />
+                              <String fx:value="regularText" />
+                                    </styleClass>
+                                </Text>
+                                <Text fx:id="hwengNames" layoutX="10.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chris Elsworthy and Chris White" GridPane.columnIndex="1">
+                                    <styleClass>
+                                        <String fx:value="blue-inset-panel-text" />
+                                        <String fx:value="aboutBodyText" />
+                              <String fx:value="regularText" />
+                                    </styleClass>
+                                </Text>
+                                <Text fx:id="hwengLabel" layoutX="10.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%aboutPanel.hardwareEngineering">
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                    <styleClass>
+                                        <String fx:value="aboutBodyTextRegular" />
+                                        <String fx:value="blue-inset-panel-text" />
+                                    </styleClass>
+                                </Text>
+                                <Text fx:id="swengLabel" layoutX="10.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%aboutPanel.softwareEngineering" GridPane.rowIndex="1">
+                                    <VBox.margin>
+                                        <Insets top="20.0" />
+                                    </VBox.margin>
+                                    <styleClass>
+                                        <String fx:value="blue-inset-panel-text" />
+                                        <String fx:value="aboutBodyTextRegular" />
+                                    </styleClass>
+                                </Text>
+                                <Text fx:id="swengNames" layoutX="10.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ian Hudson, Ben Willcocks, Tony Abdulhaq Lynch, Tony Aldhous and George Salter" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <styleClass>
+                                        <String fx:value="aboutBodyText" />
+                                        <String fx:value="blue-inset-panel-text" />
+                              <String fx:value="regularText" />
+                                    </styleClass>
+                                </Text>
+                            </children>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </GridPane>
+                        <HBox alignment="CENTER" style="-fx-background-color: white;">
+                            <children>
+                                <GridPane hgap="5.0" minWidth="-Infinity" prefWidth="720.0" style="-fx-background-color: white;">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="RIGHT" percentWidth="0.0" />
+                                        <ColumnConstraints halignment="LEFT" percentWidth="0.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="35.0" vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                                        <RowConstraints vgrow="NEVER" />
+                              <RowConstraints />
+                                    </rowConstraints>
+                                    <children>
+                                        <VBox alignment="CENTER_LEFT" GridPane.columnIndex="1">
+                                            <children>
+                                                <HBox alignment="CENTER_LEFT" spacing="3.0">
+                                                    <children>
+                                                        <Label fx:id="roboxSerialNumber" style="-fx-text-fill: black;" styleClass="aboutSerialText" text="?" />
+                                                        <Label fx:id="roboxElectronicsVersion" style="-fx-text-fill: black;" styleClass="aboutSerialText" text="?" />
+                                                        <GraphicButton fxmlFileName="copyTextButton" onAction="#copyPrinterSerialNumber" styleClassOverride="mini-button" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                            <children>
+                                                <HBox alignment="CENTER_LEFT" spacing="3.0">
+                                                    <children>
+                                                        <Label fx:id="headSerialNumber" style="-fx-text-fill: black;" styleClass="aboutSerialText" text="?" />
+                                                        <GraphicButton fxmlFileName="copyTextButton" onAction="#copyHeadSerialNumber" styleClassOverride="mini-button" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                        <Label style="-fx-text-fill: black;" styleClass="aboutSerialTextHeader" text="%aboutPanel.roboxSerialNumber" wrapText="true" />
+                                        <Label style="-fx-text-fill: black;" styleClass="aboutSerialTextHeader" text="%aboutPanel.headSerialNumber" wrapText="true" GridPane.rowIndex="2" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </GridPane>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#viewREADME" prefWidth="180" text="%buttonText.viewREADME" textAlignment="CENTER" />
+                            </children>
+                        </HBox>   
+                    </children>
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                </VBox>
+                <AnchorPane mouseTransparent="true">
+                    <children>
+                        <VBox fx:id="logoBox" alignment="CENTER" spacing="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                            <children>
+                                <Group>
+                                    <children>
+                                        <SVGPath content="M49.041,125.263c0,0-18.152-7.146-18.864-7.61c-0.686-0.458-4.476-2.378-5.916-9.618c0,0-0.268-1.544-0.374-2.691c-0.077-1.16-3.203-40.582-3.203-40.582s-0.538-9.582,4.724-18.988c5.285-9.402,10.615-10.83,15.856-12.761c5.259-1.923,45.476-16.685,45.476-16.685s2.169-0.989,4.812-0.513c2.661,0.478,13.256,2.356,13.256,2.356l4.812,0.863c0,0-1.237-0.223-2.621,0.357c-0.773,0.335-48.163,19.855-48.163,19.855s-16.624,5.185-16.789,33.1l2.114,39.844C44.722,122.169,49.041,125.263,49.041,125.263" fill="white" />        
+                                        <SVGPath content="M112.436,19.431l87.643,15.834c0,0-0.747,0.229-1.547,0.809l-6.809,4.653l-90.785-17.281l8.465-3.606C110.586,19.263,112.436,19.431,112.436,19.431" fill="white" />
+                                        <SVGPath content="M47.642,120.302c0,0,1.054,3.44,3.848,5.88l92.416,36.654c0,0-1.57-1.483-2.172-6.078L47.642,120.302z" fill="white" />
+                                        <SVGPath content="M166.522,112.433c-0.017,0.147-0.619,5.832-1.393,13.353l13.078-14.149l-11.299-3.112 C166.609,110.904,166.522,112.354,166.522,112.433" fill="white" />
+                                        <SVGPath content="M145.342,107.805c0.013-0.196,0.11-2.126,0.497-5.104l-44.9-12.39l-33.832,21.649l75.873,26.938L145.342,107.805z" fill="white" />
+                                        <SVGPath content="M218.637,55.655c-2.104,12.519-7.921,50.049-7.988,50.438c0,0-0.677,4.953-1.142,8.811c-0.814,0.603-3.412,2.674-6.164,6.215c-1.889,2.442-35.789,45.764-36.09,46.135c-0.018,0.021-1.564,1.574-3.521,1.511c-1.073-0.025-2.084-0.567-2.986-1.578c-0.49-1.289-0.836-3.088-0.629-5.511c0.726-8.424,5.057-49.389,5.057-49.389s1.437-25.099,14.145-41.858l36.744-30.743l1.063,0.174c0.396,0.265,2.162,1.602,2.114,4.731C219.239,44.647,219.628,49.752,218.637,55.655 M220.592,44.548c0.059-4.276-2.79-5.864-2.909-5.929l-0.664-0.116c0.01-0.013,0.036-0.013,0.055-0.013c-1.979-0.325-13.431-2.571-13.431-2.571s-0.772-0.332-2.06,0.435c-1.278,0.767-10.977,8.014-10.977,8.014l-27.322,20.427c0,0-6.447,4.308-11.987,19.997c-3.999,11.323-4.602,23.088-4.602,23.088l-3.167,41.636c0,0-0.654,12.646,3.254,14.449c5.178,2.388,16.047,6.102,16.047,6.102s-0.042-0.025-0.109-0.077c0.325,0.075,0.635,0.123,0.97,0.129c0.042,0,0.084,0,0.139,0c2.437,0,4.31-1.826,4.438-1.971c0.344-0.435,34.262-43.753,36.149-46.192c3.094-4.006,6.081-6.101,6.104-6.122l0.258-0.171l0.026-0.309c0.467-3.874,1.186-9.065,1.186-9.065c0.055-0.374,5.874-37.895,7.984-50.405C220.979,49.807,220.603,44.705,220.592,44.548" fill="white" />
+                                    </children>
+                                </Group>
+                                <Group>
+                                    <children>
+                                        <SVGPath content="M159.614,30.283h-35.769l-2.785,7.896h35.768L159.614,30.283z      M150.332,7.862h28.199L181.306,0h-31.098C123.431,0,97.681,10.855,93,24.125l-7.123,20.181     c-4.676,13.266,13.406,24.125,40.189,24.125h31.096l2.775-7.861H131.74c-16.131,0-26.715-7.434-23.514-16.518l6.941-19.676     C118.375,15.292,134.197,7.862,150.332,7.862 M191.507,0.188l-15.564,44.119c-4.681,13.27,13.406,24.125,40.186,24.125h31.094     L250,60.57h-28.197c-16.137,0-26.717-7.434-23.512-16.518l15.474-43.865H191.507z M65.187,7.862h28.199L96.16,0H65.064     C38.292,0,12.539,10.855,7.857,24.125L0.738,44.307c-4.68,13.26,13.402,24.125,40.184,24.125h31.094l2.775-7.861H46.595     c-16.127,0-26.715-7.434-23.512-16.518l6.941-19.676C33.23,15.292,49.052,7.862,65.187,7.862" fill="white" layoutY="-12.0" />
+                                    </children>
+                                </Group>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+        <HBox fillHeight="false" styleClass="inset-panel-bottom-bar-redux" VBox.vgrow="NEVER">
+            <children>
+                <GraphicButtonWithLabel accessibleText="%buttonText.back" fxmlFileName="backwardButton" labelText="%buttonText.back" onAction="#okPressed" />
+            </children>
+        </HBox>
+    </children>
+</VBox>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="keyboardPane" hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="panel" vgap="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celuk.groot.controllers.KeyboardController">
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="16.6666" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="16.6666" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="16.6666" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="16.6666" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="16.6666" />
+      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="16.6666" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="14.286" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="14.286" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="14.286" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="14.286" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="14.286" valignment="CENTER" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="14.286" valignment="CENTER" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="14.286" valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="14.286" valignment="CENTER" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button id="zeroKey" fx:id="zeroKey" contentDisplay="TEXT_ONLY" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <Button id="oneKey" fx:id="oneKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Button id="twoKey" fx:id="twoKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="2" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button id="threeKey" fx:id="threeKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="3" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+      <Button id="fourKey" fx:id="fourKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="4" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+      <Button id="backspaceKey" fx:id="backspaceKey" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" text="keyboard.backspace" GridPane.columnIndex="5" GridPane.rowSpan="2">
+         <styleClass>
+            <String fx:value="keyboard-key" />
+            <String fx:value="backspace-key" />
+         </styleClass>
+      </Button>
+      <Button id="fiveKey" fx:id="fiveKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="5" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Button id="sixKey" fx:id="sixKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="6" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <Button id="sevenKey" fx:id="sevenKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="7" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <Button id="eightKey" fx:id="eightKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="8" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+      <Button id="nineKey" fx:id="nineKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="9" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Button id="enterKey" fx:id="enterKey" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" defaultButton="true" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enterAction" text="keyboard.enter" GridPane.columnIndex="5" GridPane.rowIndex="5" GridPane.rowSpan="3">
+         <styleClass>
+            <String fx:value="keyboard-key" />
+            <String fx:value="enter-key" />
+         </styleClass>
+      </Button>
+      <Button id="pointKey" fx:id="pointKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="." GridPane.columnIndex="5" GridPane.rowIndex="4" />
+      <Button id="spaceKey" fx:id="spaceKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="keyboard.space" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+      <Button id="dashKey" fx:id="dashKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="-" GridPane.rowIndex="4" />
+      <Button fx:id="aKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="A" />
+      <Button fx:id="bKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="B" GridPane.columnIndex="1" />
+      <Button fx:id="cKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="C" GridPane.columnIndex="2" />
+      <Button fx:id="dKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="D" GridPane.columnIndex="3" />
+      <Button fx:id="eKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="E" GridPane.columnIndex="4" />
+      <Button fx:id="fKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="F" GridPane.rowIndex="1" />
+      <Button fx:id="gKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="G" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="hKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="H" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="iKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="I" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button fx:id="jKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="J" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <Button fx:id="kKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="K" GridPane.rowIndex="2" />
+      <Button fx:id="lKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="L" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="mKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="M" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="nKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="N" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Button fx:id="oKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="O" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button fx:id="pKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="P" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+      <Button fx:id="qKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="Q" GridPane.rowIndex="3" />
+      <Button fx:id="rKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="R" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="sKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="S" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button fx:id="tKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="T" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Button fx:id="uKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="U" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Button fx:id="vKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="V" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Button fx:id="wKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="W" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="X" GridPane.columnIndex="2" GridPane.rowIndex="4" fx:id="xKey" />
+      <Button fx:id="yKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="Y" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+      <Button fx:id="zKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keyboardAction" styleClass="keyboard-key" text="Z" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+      <Button fx:id="shiftKey" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#shiftAction" text="keyboard.uppercase" GridPane.rowIndex="5" GridPane.rowSpan="3">
+         <styleClass>
+            <String fx:value="keyboard-key" />
+            <String fx:value="uppercase-key" />
+         </styleClass>
+      </Button>
+   </children>
+   <stylesheets>
+      <String fx:value="styles/Keyboard.css" />
+   </stylesheets>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>

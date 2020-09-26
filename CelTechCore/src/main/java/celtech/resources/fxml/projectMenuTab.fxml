@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" styleClass="sidePanel" stylesheets="@../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children><Label text="Label" /><MenuButton mnemonicParsing="false" styleClass="project-menu-button" text="MenuButton">
+  <items>
+    <MenuItem mnemonicParsing="false" text="Action 1" />
+    <MenuItem mnemonicParsing="false" text="Action 2" />
+  </items>
+</MenuButton>
+</children>
+<padding>
+<Insets left="2.0" />
+</padding></HBox>

@@ -1,0 +1,23 @@
+#!/bin/bash
+if mountpoint -q /media/usb1
+then
+   if mountpoint -q /media/usb2
+   then
+      if mountpoint -q /media/usb3
+      then
+         if mointpoint -1 /media/usb4
+         then
+             echo "No mountpoints available!"
+             #You can add more if you need
+         else
+             /usr/bin/pmount --umask 000 --noatime -w --sync $1 usb4
+         fi
+      else
+         /usr/bin/pmount --umask 000 --noatime -w --sync $1 usb3
+      fi
+   else
+      /usr/bin/pmount --umask 000 --noatime -w --sync $1 usb2
+   fi
+else
+   /usr/bin/pmount --umask 000 --noatime -w --sync $1 usb1
+fi

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 141 141"
+   version="1.1"
+   id="svg5292"
+   sodipodi:docname="Icon-Menu-Grid-Print-Inverse.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata5298">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-Menu-Grid-Reprint-Inverse</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5296" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2402"
+     inkscape:window-height="1233"
+     id="namedview5294"
+     showgrid="false"
+     inkscape:zoom="3.3475177"
+     inkscape:cx="113.0963"
+     inkscape:cy="14.370636"
+     inkscape:window-x="322"
+     inkscape:window-y="90"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg5292" />
+  <title
+     id="title5274">Icon-Menu-Grid-Reprint-Inverse</title>
+  <polygon
+     points="100.58,93.81 38.98,127.11 38.98,89.04 69.01,75.49 69.05,20.88 100.58,9.22 "
+     style="fill:#d0cdcd;fill-rule:evenodd"
+     id="polygon5276"
+     transform="translate(18,6)" />
+  <polygon
+     points="69.13,0.1 100.58,9.22 69.05,20.88 36.17,10.5 "
+     style="fill:#e1e0e0;fill-rule:evenodd"
+     id="polygon5278"
+     transform="translate(18,6)" />
+  <polygon
+     points="69.01,75.49 69.05,20.88 36.17,10.5 36.17,62.46 "
+     style="fill:#626363;fill-rule:evenodd"
+     id="polygon5280"
+     transform="translate(18,6)" />
+  <polygon
+     points="5.5,73.87 36.17,62.46 69.01,75.49 38.98,89.04 "
+     style="fill:#e1e0e0;fill-rule:evenodd"
+     id="polygon5282"
+     transform="translate(18,6)" />
+  <polygon
+     points="5.5,73.87 38.98,89.04 38.98,127.11 6.1,109.55 "
+     style="fill:#626363;fill-rule:evenodd"
+     id="polygon5284"
+     transform="translate(18,6)" />
+</svg>

@@ -1,0 +1,19 @@
+.menu-button-1 {
+    -fx-graphic: url("/image/menu-identity-settings-grey.png");
+}
+
+.menu-button-2 {
+    -fx-graphic: url("/image/menu-wireless-settings-grey.png");
+}
+
+.menu-button-3 {
+    -fx-graphic: url("/image/menu-security-settings-grey.png");
+}
+
+.menu-button-4 {
+    -fx-graphic: url("/image/menu-trash-grey.png");
+}
+
+.menu-button-5 {
+    -fx-graphic: url("/image/menu-about-grey.png");
+}

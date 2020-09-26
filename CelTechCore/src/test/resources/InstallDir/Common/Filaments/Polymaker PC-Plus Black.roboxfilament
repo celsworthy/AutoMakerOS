@@ -1,0 +1,20 @@
+#
+# Robox filament definition file
+#
+name =Polymaker PC-Plus\u2122 Black
+material = PCP
+reelID = RBX-PCP-BK001
+brand = Polymaker
+category = PC-Plus
+diameter_mm = 1.750
+filament_multiplier = 1.000
+feed_rate_multiplier = 1.200
+ambient_temperature_C = 60
+first_layer_bed_temperature_C = 120
+bed_temperature_C = 115
+first_layer_nozzle_temperature_C = 250
+nozzle_temperature_C = 250
+display_colour = #000000
+cost_gbp_per_kg = 50.58
+default_length_m = 240
+filled = no

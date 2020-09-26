@@ -1,0 +1,14 @@
+########################################################################
+# Uncomment these lines to enable the desktop
+#@lxpanel --profile LXDE-pi
+#@pcmanfm --desktop --profile LXDE-pi
+#@xscreensaver -no-splash
+#@point-rpi
+########################################################################
+@xset s off
+@xset -dpms
+@xset s noblank
+@unclutter -idle 0.01 -root
+@/home/pi/ARM-32bit/Root/swapTSAxes.sh
+@/home/pi/ARM-32bit/Root/startBrowser.sh
+

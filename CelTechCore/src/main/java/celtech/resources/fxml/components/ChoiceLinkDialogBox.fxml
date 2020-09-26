@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import celtech.coreUI.components.*?>
+
+<fx:root type="celtech.coreUI.components.ChoiceLinkDialogBox" styleClass="transparent" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <Pane id="dropShadowPane" styleClass="dialog_drop_shadow"></Pane>
+    <VBox id="choiceLink" fx:id="rootVBox" minHeight="100.0" minWidth="100.0" prefWidth="500" styleClass="error-dialog">
+        <children>
+            <HyperlinkedLabel id="errorDialogTitle" fx:id="title" text="" />
+            <HyperlinkedLabel id="errorDialogMessage" fx:id="message" text="" />
+            <VBox id="errorDialogButtonContainer" fx:id="buttonContainer" />
+        </children>
+    </VBox>
+</fx:root>

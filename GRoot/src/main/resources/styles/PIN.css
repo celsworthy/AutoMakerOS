@@ -1,0 +1,23 @@
+.backspace-key {
+	-fx-graphic:url("/image/keyboard-backspace.png");
+}
+
+.keypad-key {
+    -fx-background-color: -robox-grey;
+    -fx-font-size: 24pt;
+    -fx-font-weight: 300;
+    -fx-text-fill: white;
+}
+
+.pin-clear {
+    -fx-background-color: -robox-grey;
+    -fx-font-size: 18pt;
+}
+
+.pin-field {
+    -fx-font-size: 24pt;
+}
+
+.pin-label {
+    -fx-font-size: 24pt;
+}

@@ -1,0 +1,20 @@
+#
+# Robox filament definition file
+#
+name =Formfutura\u00AE TitanX\u2122 White
+material = ABS
+reelID = RBX-ABS-FFWH1
+brand = Formfutura
+category = TitanX
+diameter_mm = 1.750
+filament_multiplier = 0.89
+feed_rate_multiplier = 1.000
+ambient_temperature_C = 60
+first_layer_bed_temperature_C = 85
+bed_temperature_C = 80
+first_layer_nozzle_temperature_C = 238
+nozzle_temperature_C = 230
+display_colour = #FFFFFF
+cost_gbp_per_kg = 44.29
+default_length_m = 240
+filled = no

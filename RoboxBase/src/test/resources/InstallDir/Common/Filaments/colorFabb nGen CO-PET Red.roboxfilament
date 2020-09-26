@@ -1,0 +1,20 @@
+#
+# Robox filament definition file
+#
+name = colorFabb nGen\u2122 Red
+material = CPE
+reelID = RBX-PET-NGRD1
+brand = colorFabb
+category = nGen
+diameter_mm = 1.75
+filament_multiplier = 0.97
+feed_rate_multiplier = 1.00
+ambient_temperature_C = 35
+first_layer_bed_temperature_C = 85
+bed_temperature_C = 80
+first_layer_nozzle_temperature_C = 235
+nozzle_temperature_C = 230
+display_colour = #D30000
+cost_gbp_per_kg = 43.33
+default_length_m = 240
+filled = no

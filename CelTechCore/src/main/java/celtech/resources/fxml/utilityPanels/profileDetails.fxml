@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import celtech.coreUI.components.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="printProfileInnerPanel" fx:id="container" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="600.0" spacing="5.0" styleClass="inset-panel" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <Label fx:id="slicerInUseLabel" text="" />
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <children>
+                <ComboBox fx:id="cmbHeadType" prefWidth="100.0" styleClass="cmbCleanCombo" />
+                <RestrictedComboBox fx:id="cmbPrintProfile" directorySafeName="true" maxLength="24" restrict=" -_0-9a-zA-Z\p{L}\p{M}*+" prefWidth="150.0">
+                   <styleClass>
+                      <String fx:value="cmbPrintProfile" />
+                      <String fx:value="cmbCleanCombo" />
+                   </styleClass>
+                </RestrictedComboBox>
+                <HBox id="headerSettings" alignment="CENTER_LEFT" spacing="10.0"></HBox>
+            </children>
+            <padding>
+                <Insets bottom="5.0" top="5.0" />
+            </padding>
+        </HBox>
+        <TabPane id="printProfileTabPane" fx:id="customTabPane" minHeight="-Infinity" opacity="1.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>

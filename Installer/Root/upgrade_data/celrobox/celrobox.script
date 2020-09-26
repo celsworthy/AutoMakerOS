@@ -1,0 +1,18 @@
+screen_width = Window.GetWidth();
+screen_height = Window.GetHeight();
+
+theme_image = Image("splash.png");
+
+resized_image = theme_image.Scale(screen_width, screen_height);
+
+if (Plymouth.GetMode() != "shutdown")
+{
+	sprite = Sprite (resized_image);
+	sprite.SetZ (-100);
+}
+
+fun message_callback (text) {
+	sprite.SetImage (resized_image);
+}
+
+Plymouth.SetUpdateStatusFunction(message_callback);

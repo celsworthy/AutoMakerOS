@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import celtech.coreUI.components.buttons.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxWidth="-Infinity" minHeight="48.0" minWidth="48.0" stylesheets="@../../css/JMetroDarkTheme.css" text="" textAlignment="CENTER" type="celtech.coreUI.components.buttons.GraphicButton" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <graphic>
+      <StackPane>
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 40; -fx-font-style: italic;" text="i" textAlignment="CENTER" translateX="-1.0" />
+            <StackPane fx:id="newsCounterContainer" translateX="13.0" translateY="12.0">
+               <children>
+                  <Circle fill="#cd3838" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fx:id="newsCounter" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 10;" text="99" />
+               </children>
+            </StackPane>
+         </children>
+      </StackPane>
+   </graphic>
+</fx:root>

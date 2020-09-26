@@ -1,0 +1,8 @@
+.name-field {
+    -fx-font-size: 18pt;
+}
+
+.name-clear {
+    -fx-background-color: -robox-grey;
+    -fx-font-size: 18pt;
+}

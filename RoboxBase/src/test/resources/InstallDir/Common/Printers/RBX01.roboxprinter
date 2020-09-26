@@ -1,0 +1,16 @@
+{
+  "version" : 1,
+  "typeCode" : "RBX01",
+  "printVolumeWidth" : 210,
+  "printVolumeDepth" : 150,
+  "printVolumeHeight" : 100,
+  "compatibleHeads" : [
+	"RBX01-SM",
+	"RBX01-DM",
+	"RBX01-S2",
+	"RBX01-DL",
+	"RBX01-SL",
+	"RBX01-DF",
+	"RBX01-SF"
+  ]
+}

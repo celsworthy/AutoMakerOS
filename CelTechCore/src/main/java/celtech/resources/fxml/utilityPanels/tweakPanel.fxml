@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.textfield.*?>
+
+<VBox fx:id="container" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" styleClass="hovering-panel" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.utilityPanels.TweakPanelController">
+    <children>
+      <VBox fx:id="material1VBox" style="-fx-border-color: robox_blue; -fx-border-insets: 4  4 0 4;">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <Label style="-fx-text-fill: robox_blue;" text="%modelEdit.Material1" textFill="#792f2f">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Label>
+      <VBox fx:id="printSpeed1Box">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <VBox.margin>
+                  <Insets left="26.0" />
+               </VBox.margin>
+               <children>
+                            <Label styleClass="regularText" text="%printAdjustments.printSpeed" textAlignment="RIGHT" />
+                        <Label fx:id="printSpeed1Display" layoutX="10.0" layoutY="10.0" styleClass="regularText" textAlignment="RIGHT" />
+               </children>
+            </HBox>
+                      <Slider id="material1Slider" fx:id="speedMultiplier1Slider" blockIncrement="5.0" majorTickUnit="45.0" max="220.0" min="10.0" minorTickCount="9" showTickLabels="true" snapToTicks="true" value="100.0">
+                    <padding>
+                        <Insets left="20.0" right="20.0" />
+                    </padding>
+                </Slider>
+         </children>
+      </VBox>
+            <VBox fx:id="extrusionMultiplier1Box">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <VBox.margin>
+                  <Insets left="26.0" />
+               </VBox.margin>
+               <children>
+                        <Label fx:id="extrusionMultiplier1Text" styleClass="regularText" text="%printAdjustments.extrusionMultiplier1" textAlignment="RIGHT" />
+                        <Label fx:id="extrusionMultiplier1Display" layoutX="10.0" layoutY="10.0" styleClass="regularText" textAlignment="RIGHT" />
+               </children>
+            </HBox>
+                  <Slider id="material1Slider" fx:id="extrusionMultiplier1Slider" blockIncrement="5.0" max="150.0" min="50.0" minorTickCount="9" showTickLabels="true" snapToTicks="true" value="100.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Slider>
+         </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+      </VBox>
+            <VBox fx:id="material1TemperatureBox">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <VBox.margin>
+                  <Insets left="26.0" />
+               </VBox.margin>
+               <children>
+                        <Label fx:id="material1Text" styleClass="regularText" text="%printAdjustments.nozzleTemperature" textAlignment="RIGHT" />
+                        <Label fx:id="material1Display" layoutX="10.0" layoutY="10.0" styleClass="regularText" textAlignment="RIGHT" />
+               </children>
+            </HBox>
+                  <Slider id="material1Slider" fx:id="material1TemperatureSlider" blockIncrement="5.0" majorTickUnit="5.0" max="250.0" min="220.0" minorTickCount="1" showTickLabels="true" snapToTicks="true" value="230.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Slider>
+         </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox fx:id="material2VBox" style="-fx-border-color: highlight_colour_orange; -fx-border-insets: 0 4 0 4;">
+         <children>
+            <Label style="-fx-text-fill: highlight_colour_orange;" text="%modelEdit.Material2">
+         <VBox.margin>
+                  <Insets left="5.0" />
+         </VBox.margin>
+            </Label>
+            <VBox fx:id="printSpeed2Box">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <VBox.margin>
+                  <Insets left="26.0" />
+               </VBox.margin>
+               <children>
+                        <Label styleClass="regularText" text="%printAdjustments.printSpeed" textAlignment="RIGHT" />
+                        <Label fx:id="printSpeed2Display" layoutX="10.0" layoutY="10.0" styleClass="regularText" textAlignment="RIGHT" />
+               </children>
+            </HBox>
+                  <Slider id="material2Slider" fx:id="speedMultiplier2Slider" blockIncrement="5.0" majorTickUnit="45.0" max="220.0" min="10.0" minorTickCount="9" showTickLabels="true" snapToTicks="true" value="100.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Slider>
+         </children>
+      </VBox>
+            <VBox fx:id="extrusionMultiplier2Box">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <VBox.margin>
+                  <Insets left="26.0" />
+               </VBox.margin>
+               <children>
+                        <Label styleClass="regularText" text="%printAdjustments.extrusionMultiplier2" textAlignment="RIGHT" />
+                        <Label fx:id="extrusionMultiplier2Display" layoutX="10.0" layoutY="10.0" styleClass="regularText" textAlignment="RIGHT" />
+               </children>
+            </HBox>
+                  <Slider id="material2Slider" fx:id="extrusionMultiplier2Slider" blockIncrement="5.0" max="150.0" min="50.0" minorTickCount="9" showTickLabels="true" snapToTicks="true" value="100.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Slider>
+         </children>
+      </VBox>
+            <VBox fx:id="material2TemperatureBox">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <VBox.margin>
+                  <Insets left="26.0" />
+               </VBox.margin>
+               <children>
+                        <Label styleClass="regularText" text="%printAdjustments.nozzleTemperature" textAlignment="RIGHT" />
+                        <Label fx:id="material2Display" layoutX="10.0" layoutY="10.0" styleClass="regularText" textAlignment="RIGHT" />
+               </children>
+            </HBox>
+                  <Slider id="material2Slider" fx:id="material2TemperatureSlider" blockIncrement="5.0" majorTickUnit="5.0" max="250.0" min="220.0" minorTickCount="1" showTickLabels="true" snapToTicks="true" value="230.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Slider>
+         </children>
+      </VBox>
+         </children>
+      </VBox>
+      <VBox style="-fx-border-color: graph_line_yellow; -fx-border-insets: 0 4 4 4;">
+         <children>
+            <Label style="-fx-text-fill: graph_line_yellow;" text="%printerStatus.temperatureGraphBedLabel">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin></Label>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <VBox.margin>
+                  <Insets left="26.0" />
+               </VBox.margin>
+               <children>
+                  <Label styleClass="regularText" text="%printAdjustments.nozzleTemperature" textAlignment="RIGHT" />
+                  <Label fx:id="bedDisplay" layoutX="10.0" layoutY="10.0" styleClass="regularText" textAlignment="RIGHT" />
+               </children>
+            </HBox>
+            <Slider id="bedSlider" fx:id="bedTemperatureSlider" blockIncrement="5.0" majorTickUnit="15.0" max="170.0" min="60.0" minorTickCount="5" showTickLabels="true" snapToTicks="true" value="80.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Slider>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </VBox>       
+    </children>
+</VBox>

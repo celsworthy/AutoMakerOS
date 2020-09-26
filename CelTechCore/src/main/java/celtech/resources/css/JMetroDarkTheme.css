@@ -1,0 +1,3053 @@
+@font-face {
+    src: url('../fonts/SourceSansPro-Regular.ttf') format(ttf);
+}
+
+@font-face {
+    font-weight: 300;
+    src: url('../fonts/SourceSansPro-Light.ttf') format(ttf);
+}
+
+@font-face {
+    font-weight: 200;
+    src: url('../fonts/SourceSansPro-ExtraLight.ttf') format(ttf);
+}
+
+@font-face {
+    src: url('../fonts/SourceSansPro-Semibold.ttf') format(ttf);
+}
+
+@font-face {
+    src: url('../fonts/SourceSansPro-Bold.ttf') format(ttf);
+}
+
+@font-face {
+    src: url('../fonts/SourceCodePro-Regular.ttf') format(ttf);
+}
+
+*{
+    black: rgb(0,0,0);
+    dark_grey: rgb(48,48,48);
+    mid_grey_solid: rgb(64,64,64, 1.0);
+    mid_grey_50: rgb(64,64,64, 0.5);
+    mid_grey_30: rgb(64,64,64, 0.3);
+    white_60: rgb(255,255,255, 0.6);
+    light_grey: rgb(99,99,99);
+    light_grey_30: rgb(99,99,99, 0.3);
+    superlight_grey_30: rgb(200,200,200, 0.3);
+    superlight_grey: rgb(200,200,200);
+    robox_blue: #0096e1;
+    robox_blue_darker: #0087d2;
+    robox_blue_lighter: #0fa5f0;
+    highlight_colour: rgb(0, 157, 226);
+    highlight_colour_orange: #ff661b;
+    highlight_colour_orange_darker: #f0570c;
+    highlight_colour_orange_lighter: #ff752a;
+    robox_blue_faint: #75b7d8;
+    robox_orange_faint: #ffa072;
+    background_colour: rgb(0,0,0);
+    unselected_colour: #1d1d1d;
+    selected_colour: #ffffff;
+    pressed_colour: #ffffff;
+    hover_colour: #5a5a5a;
+    outline_colour: #e2e2e2;
+    unselected_text_colour: #ffffff;
+    selected_text_colour: #000000;
+    gizmoXHandle: #47cc6f;
+    gizmoZHandle: #e06039;
+    gizmoXZHandle: #5d53e4;
+    gizmoRotationHandle: #88c8d3;
+    gizmoXHandle_pressed: #379a55;
+    gizmoZHandle_pressed: #a74c30;
+    gizmoXZHandle_pressed: #554dc9;
+    gizmoRotationHandle_pressed: #53919d;
+    graph_line_orange: #FF661B;
+    graph_line_green: #1eb43c;
+    graph_line_yellow: #ffc800;
+    graph_line_blue: #009EE3;
+    graph_setpoint_red: #8c0000;
+    graph_setpoint_green: #145019;
+    graph_setpoint_yellow: #a07800;
+}
+
+.text {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-smoothing-type: lcd;
+}
+
+.boldText
+{
+    -fx-font-family: 'Source Sans Pro Bold';
+    -fx-font-smoothing-type: lcd;
+}
+
+.regularText
+{
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-smoothing-type: lcd;
+    -fx-font-size: 10pt;
+}
+
+.lightText
+{
+    -fx-font-family: "Source Sans Pro Light";
+    -fx-font-smoothing-type: lcd;
+    -fx-font-size: 10pt;
+}
+
+.blackBorder {
+    -fx-background_color: black;
+}
+
+.blue-background {
+    -fx-background_color: robox_blue;
+}
+
+.standardPanel{
+    -fx-background-color: mid_grey_solid;
+}
+
+.project-view-background{
+    -fx-background-color:#a0a0a0;
+}
+
+.label{
+    -fx-text-fill: white;
+    -fx-font-smoothing-type: lcd;
+}
+
+.header{
+    -fx-font-size: 42pt;
+    -fx-text-fill: white;
+}
+
+.item-title{
+    -fx-font-size: 11pt;
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}   
+
+.SlideOutPanel .circle {
+    -fx-fill-color: grey;
+}
+
+.text { -fx-font-smoothing-type: lcd; }
+
+.text-field {
+    -fx-font-size: 10pt;
+    -fx-background-radius: 0px;
+    /*-fx-padding: 0 0 0 0;*/
+}
+
+
+/*******************************************************************************
+ *                                                                             *
+ * Push Button                                                                 *
+ *                                                                             *
+ ******************************************************************************/
+
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: outline_colour;
+    -fx-border-width: 2;
+
+    -fx-background-radius: 0;
+
+    -fx-background-color: #1d1d1d;
+
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+}
+
+.button:hover{
+    -fx-background-color: hover_colour;
+}
+
+.button:pressed, .button:default:hover:pressed
+{
+    -fx-background-color: pressed_colour;
+    -fx-text-fill: background_colour;
+}
+
+.button:focused
+{
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled
+{
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default
+{
+    -fx-background-color: #008287;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover{
+    -fx-background-color: #219297;
+}
+
+.toggle-button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: outline_colour;
+    -fx-border-width: 2;
+
+    -fx-background-radius: 0;
+
+    -fx-background-color: #1d1d1d;
+
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+}
+
+.toggle-button:hover{
+    -fx-background-color: hover_colour;
+}
+
+.toggle-button:pressed, .button:default:hover:pressed
+{
+    -fx-background-color: pressed_colour;
+    -fx-text-fill: background_colour;
+}
+
+.toggle-button:focused
+{
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.toggle-button:disabled, .button:default:disabled
+{
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.toggle-button:default
+{
+    -fx-background-color: #008287;
+    -fx-text-fill: #ffffff;
+}
+/*
+.toggle-button:selected {
+    -fx-background-color: light_grey;
+    -fx-background-insets: 2,2 2 2 2, 2 2 2 2, 2 2 2 2;
+}*/
+/*
+ * Model edit button
+ */
+.model-material1-button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: outline_colour;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: robox_blue;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+}
+
+.model-material1-button:pressed, .model-material1-button:default:hover:pressed, .model-material1-button:selected:hover, .model-material1-button:selected:focused, .model-material1-button:selected
+{
+    -fx-background-color: robox_blue_darker;
+    -fx-text-fill: background_colour;
+}
+
+.model-material1-button:hover{
+    -fx-background-color: robox_blue_lighter;
+}
+
+.model-material2-button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: outline_colour;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: highlight_colour_orange;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+}
+
+.model-material2-button:pressed, .model-material2-button:default:hover:pressed, .model-material2-button:selected:hover, .model-material2-button:selected:focused, .model-material2-button:selected
+{
+    -fx-background-color: highlight_colour_orange_darker;
+    -fx-text-fill: background_colour;
+}
+
+.model-material2-button:hover{
+    -fx-background-color: highlight_colour_orange_lighter;
+}
+
+/*
+ * Borderless button (typically round)
+ */
+.borderlessGraphicButton {
+    -fx-padding: 0 0 0 0;
+    -fx-background-insets: 0,0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-background-radius: 50;
+    -fx-content-display: graphic-only;
+    -fx-border-color: transparent;
+}
+
+.borderlessGraphicButton:focused {
+    -fx-border-color: transparent;
+}
+
+.borderlessGraphicButton:pressed .graphic {
+    -fx-fill: black;   
+}
+
+.arrow-tag
+{
+    -fx-background-color: transparent;    
+}
+
+.arrow-tag:disabled #title
+{
+    -fx-opacity: 1;
+}
+
+.arrow-tag:disabled #bodyText
+{
+    -fx-opacity: 1;
+}
+
+.arrow-tag #bodyText
+{
+    -fx-font-size: 12pt;
+}
+
+.arrow-tag #title
+{
+    -fx-font-size: 14pt;
+}
+
+.arrow-tag #arrow
+{
+    -fx-fill: white;
+}
+
+/*
+ * Borderless button (typically round)
+ */
+.graphic-button-label
+{
+    -fx-font-size: 10pt;
+}
+
+.graphic-button {
+    -fx-background-color: transparent;
+    -fx-padding: -0 -0 -0 -0;
+    -fx-background-insets: 2,2 2 2 2, 2 2 2 2, 2 2 2 2;
+    -fx-background-radius: 30;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-border-color: transparent;
+    -fx-content-display: graphic-only;
+    -fx-opacity: 1.0;
+}
+
+.graphic-button:disabled {
+    -fx-background-color: transparent;
+    -fx-padding: -0 -0 -0 -0;
+    -fx-background-insets: 2,2 2 2 2, 2 2 2 2, 2 2 2 2;
+    -fx-background-radius: 30;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-border-color: transparent;
+    -fx-opacity: 0.4;
+}
+
+.graphic-button:hover {
+    -fx-background-color: dark_grey;
+    -fx-padding: -0 -0 -0 -0;
+    -fx-background-insets: 2,2 2 2 2, 2 2 2 2, 2 2 2 2;
+    -fx-background-radius: 30;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-opacity: 1.0;
+}
+
+.graphic-button:pressed {
+    -fx-background-color: light_grey;
+    -fx-padding: -0 -0 -0 -0;
+    -fx-background-radius: 30;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-background-insets: 2,2 2 2 2, 2 2 2 2, 2 2 2 2;
+}
+.graphic-button:focused {
+    -fx-background-insets: 2,2 2 2 2, 2 2 2 2, 2 2 2 2;
+    -fx-border-color: transparent;
+}
+
+/*
+ * Jog Button
+ */
+
+.jog-button {
+    -fx-background-color: transparent;
+    -fx-padding: -0 -0 -0 -0;
+    -fx-background-insets: 0,0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-border-color: transparent;
+    -fx-content-display: graphic-only;
+    -fx-opacity: 0.4;
+}
+
+.jog-button:disabled {
+    -fx-background-color: transparent;
+    -fx-padding: -0 -0 -0 -0;
+    -fx-background-insets: 0,0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-border-color: transparent;
+    -fx-content-display: graphic-only;
+    -fx-opacity: 0.1;
+}
+
+.jog-button:hover {
+    -fx-background-color: transparent;
+    -fx-padding: -0 -0 -0 -0;
+    -fx-background-insets: 0,0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);
+    -fx-border-width: 0;
+    -fx-opacity: 1.0;
+}
+
+.jog-button:pressed {
+    -fx-background-color: transparent;
+    -fx-padding: -0 -0 -0 -0;
+    -fx-background-insets: 0,0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-border-width: 0;
+    -fx-effect: dropshadow(three-pass-box, #ffffff, 10, 0, 0, 0);
+}
+.jog-button:focused {
+    -fx-border-width: 0;
+}
+
+/*
+ * Mini button with no text
+ */
+.mini-button {
+    -fx-background-color: transparent;
+    -fx-padding: -0 -0 -0 -0;
+    /*-fx-background-insets: 2,2 2 2 2, 2 2 2 2, 2 2 2 2;*/
+    /*-fx-background-radius: 30;*/
+    -fx-border-color: transparent;
+    -fx-content-display: graphic-only;
+    -fx-opacity: 1.0;
+}
+
+.mini-button:disabled {
+    -fx-background-color: transparent;
+    -fx-padding: -0 -0 -0 -0;
+    /*-fx-background-insets: 2,2 2 2 2, 2 2 2 2, 2 2 2 2;*/
+    /*-fx-background-radius: 30;*/
+    -fx-border-color: transparent;
+    -fx-opacity: 0.4;
+}
+
+.mini-button:hover {
+    -fx-background-color: #eaeaea;
+    -fx-padding: -0 -0 -0 -0;
+    /*-fx-background-insets: 2,2 2 2 2, 2 2 2 2, 2 2 2 2;*/
+    /*-fx-background-radius: 30;*/
+    -fx-opacity: 1.0;
+}
+
+.mini-button:pressed {
+    -fx-background-color: #d1d1d1;
+    -fx-padding: -0 -0 -0 -0;
+    /*-fx-background-radius: 0;*/
+    /*-fx-background-insets: 2,2 2 2 2, 2 2 2 2, 2 2 2 2;*/
+}
+.mini-button:focused {
+    /*-fx-background-insets: 2,2 2 2 2, 2 2 2 2, 2 2 2 2;*/
+    -fx-border-color: transparent;
+}
+
+.gizmoControlButton, .gizmoControlButton:hover, .gizmoControlButton:focused {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    /*    -fx-background-insets: 0,0 0 0 0, 0 0 0 0, 0 0 0 0;
+        -fx-background-radius: 0;
+        -fx-font-weight: bold;
+        -fx-font-size: 1.1em;*/
+    -fx-border-color: transparent; 
+    -fx-content-display: graphic-only;
+}
+
+.gizmoControlButton:pressed {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-color: transparent; 
+    -fx-content-display: graphic-only;
+}
+
+.gizmoControlButton #zHandle {
+    -fx-fill: gizmoZHandle;
+}
+
+.gizmoControlButton #xHandle {
+    -fx-fill: gizmoXHandle;
+}
+
+.gizmoControlButton #xzHandle {
+    -fx-fill: gizmoXZHandle;
+}
+
+.gizmoControlButton #rotationHandle {
+    -fx-fill: gizmoRotationHandle;
+}
+
+.gizmoControlButton:pressed #zHandle {
+    -fx-fill: gizmoZHandle_pressed;
+}
+
+.gizmoControlButton:pressed #xHandle {
+    -fx-fill: gizmoXHandle_pressed;
+}
+
+.gizmoControlButton:pressed #xzHandle {
+    -fx-fill: gizmoXZHandle_pressed;
+}
+
+.gizmoControlButton:pressed #rotationHandle {
+    -fx-fill: gizmoRotationHandle_pressed;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Check Box                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.check-box {
+    -fx-text-fill: white;
+}
+
+.check-box .box {
+    -fx-background-color: #d1d1d1;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: #d1d1d1;
+    -fx-border-width: 2px;
+    -fx-borders-style: solid;
+    -fx-padding: 1;
+}
+
+.check-box .mark {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+
+    -fx-padding:7px;
+    -fx-shape: "M1,10L3,8L7,12L14,5L16,7L7,16Z"
+}
+
+.check-box:focused .box{
+    -fx-background-color: #d1d1d1;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-color: white, #d1d1d1;
+    -fx-border-width: 1, 2;
+    -fx-border-style: segments(1, 1), solid;
+    -fx-border-insets: -3, 0;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #202020;
+}
+
+.check-box:indeterminate .mark {
+    -fx-background-color: black; 
+    -fx-background-insets: 2.8; 
+    -fx-padding:7px;
+    -fx-shape: null;
+}
+
+.check-box:disabled
+{
+    -fx-opacity: 0.4;
+}
+
+.check-box:disabled .box
+{
+    -fx-border-color: white;
+    -fx-background-color: white;
+}
+
+.check-box:armed .box
+{
+    -fx-background-color: transparent, white;
+    -fx-background-insets: -1, 2;
+    -fx-background-radius: 0, 0;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Radio Button                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+.radio-button {
+    -fx-text-fill: white;
+}
+
+.radio-button .radio  {
+    -fx-background-color: #cfcfcf;
+    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+    -fx-background-insets: 0;
+
+    -fx-border-radius: 1.0em;
+    -fx-border-color: #cfcfcf;
+
+    -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */
+}
+
+.radio-button:hover .radio {
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #e0e0e0;
+}
+
+
+.radio-button .dot {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+    -fx-padding: 6px; /* 3 -- radius of the inner black dot when selected */
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #212121;
+}
+
+.radio-button:disabled
+{
+    -fx-opacity: 0.5;
+}
+
+.radio-button:disabled .radio
+{
+    -fx-background-color: #e6e6e6;
+    -fx-border-color: #d9d9d9;
+}
+
+.radio-button:focused .radio
+{
+    -fx-background-color: #cfcfcf;
+    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+    -fx-background-insets: 0;
+
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 1.0em, 0;
+    -fx-border-color: #cfcfcf, white;
+    -fx-border-insets: 0px, -2px;
+    -fx-border-width: 1px, 1px;
+
+    -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */   
+}
+
+.radio-button:armed .radio {
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.radio-button:pressed:selected .radio
+{
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.radio-button:pressed:selected .dot
+{
+    -fx-background-color: black;
+}
+
+.radio-button:armed .dot
+{
+    -fx-background-color: white;
+}
+
+.radio-button:focused:armed .radio
+{
+    -fx-background-color: white;
+    -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
+    -fx-background-insets: 0;
+
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 1.0em, 0;
+    -fx-border-color: white, white;
+    -fx-border-insets: 0px, -2px;
+    -fx-border-width: 1px, 1px;
+
+    -fx-padding: 4px; /* 4 -- padding from outside edge to the inner black dot */   
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Tooltip                                                                     *
+ *                                                                             *
+ ******************************************************************************/
+
+.hideableTooltip {
+    -fx-background-color: mid_grey_solid;
+    -fx-text-fill: white;
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 12pt;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * PopupMenu                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.context-menu {
+    -fx-background-color: white;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-padding: 0.333333em 0em 0.333333em 0em; /* 4 1 4 1 */
+
+    /* TODO: the border color below is not being respected - it appears as gray instead of black. After this gets fixed remove the comments so that
+       the border will become black.
+    */
+    /*    -fx-border-color: #212121;
+        -fx-border-style: solid;*/
+}
+
+.context-menu .separator .line{
+    -fx-padding: 0.0em 0.333333em 0.0em 0.333333em;  /*0 4 0 4 */
+    -fx-border-style: solid;
+    -fx-background-color: #c2c2c2;
+    -fx-border-width: 0.5px;
+}
+
+/* TODO: try to scope the menu-item style to the contextmenu */
+.menu-item {
+    -fx-background-color: transparent;
+    -fx-padding: 0.666666em 0.999999em 0.4999995em 0.999999em;   /*6 12 6 12 */
+}
+
+.menu-item .label {
+    -fx-padding: 0em 0.5em 0em 0em;
+    -fx-text-fill: #212121;
+    -fx-font-size: 11pt;
+}
+
+
+.menu-item:focused {
+    -fx-background: -fx-accent;
+    -fx-background-color: #dedede;
+}
+
+.menu-item:pressed
+{
+    -fx-background-color: #212121;
+    -fx-text-fill: white;
+}
+
+.menu-item:pressed .label
+{
+    -fx-text-fill: white;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ScrollBar                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-bar .thumb{
+    -fx-background-color: #b8b8b8;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-color: #cacaca;
+}
+
+/* The following is not working. Maybe related to RT-10521*/
+.scroll-bar .thumb:pressed {
+    -fx-color: #1e1e1e;
+}
+
+.scroll-bar .track {
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+.scroll-bar .track-background {
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0;
+}
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+
+    -fx-padding: 0.25em; /* 3 */
+}
+
+.scroll-bar .increment-button:hover, .scroll-bar .decrement-button:hover  {
+    -fx-background-color: #cacaca;
+}
+
+.scroll-bar .increment-button:pressed, .scroll-bar .decrement-button:pressed {
+    -fx-background-color: #1e1e1e;
+}
+
+.scroll-bar:horizontal .increment-arrow {
+    -fx-background-color: #1e1e1e, #1e1e1e;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.5em 0.333333em 0.0em 0.0em; /* 6 4 0 0 */
+    -fx-shape: "M7.626,12.876L4.251,8.751H7.14L11,12.876L7.14,17H4.251L7.626,12.876z";
+}
+
+.scroll-bar:vertical .increment-arrow {
+    -fx-background-color: #1e1e1e, #1e1e1e;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.333333em 0.5em 0.0em 0.0em;  /*4 6 0 0 */
+    -fx-shape: "M8.124,13.625l4.125-3.375v2.889l-4.125,3.86L4,13.139V10.25L8.124,13.625z";
+}
+
+.scroll-bar .increment-button:pressed .increment-arrow {
+    -fx-background-color: white, white;
+}
+
+.scroll-bar:horizontal .decrement-arrow {
+    -fx-background-color: #1e1e1e, #1e1e1e;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.5em 0.333333em 0.0em 0.0em; /* 6 4 0 0 */
+    -fx-shape: "M11,17H8.111l-3.86-4.124l3.86-4.125H11l-3.375,4.125L11,17z";
+}
+
+.scroll-bar:vertical .decrement-arrow {
+    -fx-background-color: #1e1e1e, #1e1e1e;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.333333em 0.5em 0.0em 0.0em; /* 4 6 0 0 */
+    -fx-shape: "M4,17v-2.889l4.124-3.86l4.125,3.86V17l-4.125-3.375L4,17z";
+}
+
+.scroll-bar .decrement-button:pressed .decrement-arrow {
+    -fx-background-color: white, white;
+}
+
+.scroll-bar:disabled {
+    -fx-opacity: 0.4;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ScrollPane                                                                  *
+ *                                                                             *
+ ******************************************************************************/
+
+.scroll-pane {
+    -fx-background-color: transparent,-fx-background;
+}
+
+.scroll-pane .corner {
+    -fx-background-color: black, #4a4a4a;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ComboBox                                                                    *
+ *                                                                             *
+ ******************************************************************************/
+
+.combo-box-base  {
+    -fx-background-color: transparent, #e2e2e2, transparent, #4a4a4a;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em; /* 2 */
+}
+
+.combo-box-base  .list-cell{
+    -fx-text-fill: white;
+}
+
+.combo-box-base:hover {
+    -fx-background-color: transparent, white, transparent, #4a4a4a;
+}
+
+/*.combo-box-base:focused{
+    -fx-border-color:white;
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-padding: 0.166667em;  2 
+}*/
+
+.combo-box-base:disabled {
+    -fx-opacity: .4;
+}
+
+/* ------- OPEN BUTTON ------- */
+.combo-box-base .arrow-button {
+    -fx-background-color: transparent, transparent, #4a4a4a;
+}
+
+/* ------- ARROW* ------- */
+.combo-box-base .arrow {
+    -fx-padding: 0.333333em 0.333333em 0.333333em 0.333333em; /* 4 4 4 4 */
+    -fx-shape: "M8.124,13.625l4.125-3.375v2.889l-4.125,3.86L4,13.139V10.25L8.124,13.625z";
+    -fx-background-color: transparent, #1d1d1d;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #4a4a4a, -fx-control-inner-background;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0) , 8, 0.0 , 0 , 0 );
+}
+
+.combo-box-popup .list-view .list-cell{
+    -fx-background-color: #4a4a4a;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view .list-cell:hover{
+    -fx-background-color: #dedede;
+    -fx-text-fill: #1d1d1d;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected{
+    -fx-background-color: highlight_colour;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #6dcdff;
+}
+
+/*.combo-box-popup .list-view .list-cell:filled:pressed, .combo-box-popup .list-view .list-cell:filled:selected:pressed
+{
+    -fx-background-color: #d3d3d3;
+    -fx-text-fill: #1d1d1d;
+}*/
+
+/*******************************************************************************
+ *                                                                             *
+ * ListSpinner (Jfxtras)                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
+.list-spinner { 
+    -fx-skin: "jfxtras.labs.internal.scene.control.skin.ListSpinnerCaspianSkin";
+    -fx-background-color: #4a4a4a;
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0em 0em 0em 0em;
+
+    -fx-border-color: white;
+    -fx-border-width: 3pt;
+    -fx-border-style: solid;
+
+    -fx-text-fill: white;
+}
+
+/*.list-spinner:hover {
+    -fx-background-color: #727272;
+}*/
+
+/*.ListSpinner:focused { 
+    -fx-color: -fx-focused-base;
+    -fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: -1.4, 0, 1, 2;
+    -fx-background-radius: 6.4, 5, 4, 3;	
+}*/
+
+.list-spinner .value-pane { 
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+}
+
+.list-spinner .decrement-button, .list-spinner .increment-button
+{
+    -fx-background-color: transparent;
+    -fx-padding: 1.2500em 0.2500em 1.2500em 0.2500em; /* 15 3 15 3*/
+}
+
+.list-spinner .left-arrow { 
+    -fx-shape: "M301,415.5l-4.5,4.5l4.5,4.5h-3l-4.5-4.5l4.5-4.5H301z";
+    -fx-scale-shape: false;
+}
+
+.list-spinner .decrement-button:hover {
+    -fx-background-color: #cacaca;
+}
+
+.list-spinner .decrement-button:pressed {
+    -fx-background-color: #1e1e1e;
+
+}
+.list-spinner .decrement-button:pressed .left-arrow{ 
+    -fx-background-color: white;
+}
+
+.list-spinner .right-arrow { 
+    -fx-shape: "M296.5,415.5l4.5,4.5l-4.5,4.5h-3l4.5-4.5l-4.5-4.5H296.5z";
+    -fx-scale-shape: false;
+}
+
+.list-spinner .increment-button:hover {
+    -fx-background-color: #cacaca;
+}
+
+.list-spinner .increment-button:pressed {
+    -fx-background-color: #1e1e1e;
+
+}
+.list-spinner .increment-button:pressed .right-arrow {
+    -fx-background-color: white;
+}
+
+.list-spinner .down-arrow { 
+    -fx-shape: "M292.5,416.25l4.5,4.5l4.5-4.5v3l-4.5,4.5l-4.5-4.5V416.25z";
+    -fx-scale-shape: false;
+}
+.list-spinner .up-arrow { 
+    -fx-shape: "M292.5,420.75l4.5-4.5l4.5,4.5v3l-4.5-4.5l-4.5,4.5V420.75z";
+    -fx-scale-shape: false;
+}
+
+.list-spinner .label
+{
+    -fx-text-fill: white;    
+}
+
+.list-spinner:disabled {
+    -fx-opacity: .4;
+
+}
+
+/**
+* Purge
+*/
+
+.purgeBody {
+    -fx-background_color: light_grey;
+}
+
+.purgeInstructions {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 18px;
+}
+
+.purgeTitle {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 24px;
+}
+
+#purgeTemperature {
+    -fx-font-size: 18px;
+}
+
+.resettingPrinter {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 24px;
+    -fx-fill: white;
+}
+
+#purgeFilamentCombo {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 15px;
+}
+
+#purgeTextCurrentFilament {
+    -fx-fill: white;
+}
+
+.purgeToggle {
+    -fx-font-family: "Source Sans Pro Light";
+    -fx-color: white;
+    -fx-text-fill: black;
+    -fx-background-color: dark_grey;
+}
+
+.purgeToggle:selected {
+    -fx-color: dark_grey;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+/**
+* Reel and Material
+*/
+
+.reelLabel {
+    -fx-font-family: "Source Sans Pro Semibold";
+    -fx-font-size: 32;
+    -fx-text-alignment: CENTER;
+}
+
+.reelMaterialNameBold {
+    -fx-font-family: "Source Sans Pro Semibold";
+    -fx-font-size: 18;
+    -fx-text-alignment: CENTER;
+}
+
+.reelMaterialName {
+    -fx-font-size: 18;
+    -fx-text-alignment: CENTER;
+}
+
+.reelMaterialRemaining {
+    -fx-font-size: 18;
+    -fx-font-smoothing-type: lcd;
+}
+
+/*
+ * Temperature graph
+ */
+
+/*.default-color3.chart-series-line { -fx-stroke: graph_line_green; -fx-stroke-width: 3;}
+.default-color4.chart-series-line { -fx-stroke: graph_line_yellow; -fx-stroke-width: 3;}
+.default-color5.chart-series-line { -fx-stroke: graph_line_red; -fx-stroke-width: 3;}
+*/
+
+/*.default-color3.chart-line-symbol {visibility: hidden;}
+.default-color4.chart-line-symbol {visibility: hidden;}
+.default-color5.chart-line-symbol {visibility: hidden;}*/
+
+/*
+.default-color0.chart-line-symbol {  solid triangle 
+    -fx-background-color: graph_setpoint_green;
+    -fx-background-radius: 0;
+    -fx-padding: 7px 5px 7px 5px;
+    -fx-shape: "M0,6 L12,0 L12,12 L0,6 Z";
+    -fx-scale-x: 2;
+    -fx-scale-y: 2;
+}
+.default-color1.chart-line-symbol {  solid triangle 
+    -fx-background-color: graph_setpoint_yellow;
+    -fx-background-radius: 0;
+    -fx-padding: 7px 5px 7px 5px;
+    -fx-shape: "M0,6 L12,0 L12,12 L0,6 Z";
+    -fx-scale-x: 2;
+    -fx-scale-y: 2;
+}
+.default-color2.chart-line-symbol {  solid triangle 
+    -fx-background-color: graph_setpoint_red;
+    -fx-background-radius: 0;
+    -fx-padding: 7px 5px 7px 5px;
+    -fx-shape: "M0,6 L12,0 L12,12 L0,6 Z";
+    -fx-scale-x: 2;
+    -fx-scale-y: 2;
+}*/
+
+.temperatureXLabel {
+    -fx-font-size: 9pt;
+}
+
+#temperatureChart .axis:top {
+    -fx-border-color: transparent transparent transparent transparent;
+    -fx-border-width: 0;
+}
+#temperatureChart .axis:right {
+    -fx-border-color: transparent transparent transparent #000000;
+    -fx-border-width: 2;
+}
+#temperatureChart .axis:bottom {
+    -fx-border-color: #000000 transparent transparent transparent;
+    -fx-border-width: 2;
+}
+#temperatureChart .axis:left {
+    -fx-border-color: blue blue blue blue;
+    -fx-border-width: 5;
+}
+
+#temperatureChart .axis .text {
+    -fx-font-size: 10pt;
+}
+
+#temperatureChart .axis-tick-mark {
+    -fx-stroke: black;
+    -fx-stroke-width: 2;
+}
+
+#temperatureChart .axis-minor-tick-mark {
+    -fx-stroke: black;
+    -fx-stroke-width: 2;
+}
+
+.graph-orange {
+    -fx-fill: graph_line_orange;
+    -fx-font-size: 9;
+    -fx-text-fill: graph_line_orange;
+    -fx-stroke-width: 2px;
+    -fx-stroke-dash-array: 5 5;
+}
+.graph-blue {
+    -fx-fill: graph_line_blue;
+    -fx-font-size: 9;
+    -fx-text-fill: graph_line_blue;
+    -fx-stroke-width: 2px;
+    -fx-stroke-dash-array: 5 5;
+    -fx-stroke-dash-offset: 5; 
+}
+.graph-green {
+    -fx-fill: graph_line_green;
+    -fx-font-size: 9;
+    -fx-text-fill: graph_line_green;
+    -fx-stroke-width: 2px;
+}
+.graph-yellow {
+    -fx-fill: graph_line_yellow;
+    -fx-font-size: 9;
+    -fx-text-fill: graph_line_yellow;
+    -fx-stroke-width: 2px;
+}
+
+.temperatureChartLegend {
+    -fx-font-size: 13px;
+    -fx-font-family: "Source Sans Pro Semibold";
+}
+
+#temperatureGraphTempAxis {
+    -fx-tick-label-fill: white;
+}
+
+#temperatureChart {
+    -fx-font-family: "Source Sans Pro";
+    -fx-background-color: dark_grey;
+}
+
+#temperatureChart .chart-content .chart-plot-background {
+    -fx-background-color: dark_grey;
+}
+
+#temperatureChartXLabels {
+    -fx-font-family: "Source Sans Pro";
+    -fx-background-color: dark_grey;
+}
+
+.invisible-graph-node{
+    -fx-fill: blue;
+}
+/*
+ * Tab pane settings
+ */
+.tab-header-area{
+    -fx-padding: 0px;
+}
+
+.tab-pane, .tab-header-background{
+    -fx-background-color: dark_grey;
+}
+
+
+.tab:hover, .tab:hover .tab-label{
+    -fx-background-color: dark_grey;
+}
+
+.tab:selected, .tab:selected .tab-label{
+    -fx-background-color: highlight_colour;
+    -fx-border-color: highlight_colour;
+}
+
+.tab .tab-label{
+    -fx-background-color: mid_grey_solid;
+    -fx-text-fill: white;
+}
+
+.tab:top {
+    -fx-border-width: 0.3;
+    -fx-border-color: black;
+}
+
+.tab{
+    -fx-background-color: mid_grey_solid;
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0px;
+    -fx-border-color: black;
+}
+
+.fattab:top{
+    -fx-background-color: blue;
+}
+
+.main-project-tabPane .tab-header-background{
+    -fx-background-color: black;
+}
+
+.main-project-tabPane {
+    -fx-font-family: "Source Sans Pro";
+}
+
+/*
+ * List view
+ */
+
+.list-view {
+    -fx-background-color: #4a4a4a;
+    -fx-border-color: white;
+}
+/*.list-view {
+    -fx-background-color: #4a4a4a, -fx-control-inner-background;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0) , 8, 0.0 , 0 , 0 );
+}*/
+
+.list-view .list-cell{
+    -fx-background-color: #4a4a4a;
+    -fx-text-fill: white;
+}
+
+.list-view .list-cell:hover{
+    -fx-background-color: #dedede;
+    -fx-text-fill: #1d1d1d;
+}
+
+.list-view .list-cell:filled:selected{
+    -fx-background-color: #55c4fe;
+}
+
+.list-view .list-cell:filled:selected:hover {
+    -fx-background-color: #6dcdff;
+}
+
+.list-view .list-cell:filled:pressed, .list-view .list-cell:filled:selected:pressed
+{
+    -fx-background-color: #d3d3d3;
+    -fx-text-fill: #1d1d1d;
+}
+
+/*
+ * Table view
+ */
+table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color:
+        transparent
+        transparent
+        derive(-fx-base, 80%)
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+    -fx-text-fill: black;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 20pt;
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+
+/*
+.tab .tab-label, .tab .nonEditableProjectTab {
+    -fx-background-color: mid_grey_solid;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.tab:selected, .tab:selected .tab-label, .tab:selected .nonEditableProjectTab{
+    -fx-background-color: purple;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.tab:hover, .tab:hover .tab-label, .tab:hover .nonEditableProjectTab{
+    -fx-background-color: light_grey;
+    -fx-text-fill: black;
+    -fx-border-color: transparent;
+}
+
+.editableProjectTab{
+    -fx-background-color: selected_colour;
+}*/
+
+/*
+ * 3D gizmo
+ */
+
+/*
+ * Panels
+ */
+
+
+
+.menubar{
+    -fx-background-color: black;
+}
+
+.regularFont {
+    -fx-font-family: "Source Sans Pro";
+}
+
+.statusPanelBackground{
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #a0a0a0, #c8c8c8);
+}
+
+.statusPanel{
+    -fx-background-color: mid_grey_solid;
+}
+
+.statusPanelChild{
+    -fx-background-color: dark_grey;
+}
+
+.sidePanel{
+    -fx-background-color: mid_grey_solid;
+}
+
+.sidePanel BorderPane{
+    -fx-padding: 0;
+}
+
+.sidePanelDivider{
+    -fx-background-color: dark_grey;
+    -fx-max-width: 100000;
+}
+
+.sidePanelTitle{
+    -fx-font-family: "Source Sans Pro";
+    -fx-text-fill: highlight_colour;
+    -fx-pref-height: 60;
+    -fx-font-size: 36px;
+    /*    -fx-scale-x: 1.7;
+        -fx-scale-y: 1.7;*/
+}
+
+.slideOutPanel, .slideOutPanel .tab-pane{
+    -fx-background-color: dark_grey;
+    -fx-border-width: 0;
+}
+
+.slideOutPanel GridPane{
+    -fx-vgap: 5;
+    -fx-hgap: 5;
+    -fx-background-color: dark_grey;
+    -fx-padding: 5;
+    -fx-border-width: 0;
+}
+
+.slideOutPanel HBox{
+    -fx-border-width: 0;
+}
+
+.slideOutPanel AnchorPane{
+    -fx-vgap: 5;
+    -fx-hgap: 5;
+    -fx-background-color: dark_grey;
+    -fx-padding: 5;
+}
+
+.slideOutPanel GridPane HBox{
+    -fx-spacing: 5;
+    -fx-background-color: dark_grey;
+}
+
+.slideOutPanel GridPane Label{
+    -fx-wrap-text: true;
+    -fx-text-alignment: right;
+}
+
+.slideOutPanel HBox TextField{
+    -fx-pref-width: 60;
+}
+
+/*.slideOutPanel TextField{
+    -fx-pref-width: 60;
+}*/
+
+.slideout-and-project-holder{
+    -fx-background-color: dark_grey;
+}
+
+.slideout-control-button{
+    -fx-min-height:10;
+    -fx-max-height: 5000;
+    -fx-min-width: 30;
+    -fx-max-width: 30;
+    -fx-content-display: graphic-only;
+    -fx-border-width: 0px;
+    -fx-background-color: black;
+    -fx-padding: 0 0 0 0;
+    -fx-content-display: graphic-only;
+    -fx-cursor: E_RESIZE;
+}
+
+.slideout-control-button:hover{
+    -fx-background-color: black;
+    -fx-border-width: 0px;
+}
+
+.slideout-control-button:pressed, .slideout-control-button:default:hover:pressed
+{
+    -fx-background-color: black;
+    -fx-border-width: 0px;
+}
+
+.slideout-control-button:focused
+{
+    -fx-background-color: black;
+    -fx-border-width: 0px;
+}
+
+.slideout-control-button:disabled, .slideout-control-button:default:disabled
+{
+    -fx-background-color: black;
+    -fx-border-width: 0px;
+}
+
+.slideout-control-button:hover .slideout-control-button-graphic{
+    -fx-fill: white;
+}
+
+.slideout-control-button:pressed .slideout-control-button-graphic, .slideout-control-button:default:hover:pressed .slideout-control-button-graphic{
+    -fx-fill: white;
+}
+
+.slideout-control-button .slideout-control-button-graphic{
+    -fx-fill: white;
+}
+
+/*
+ * Standard dialogues
+ */
+
+modal-dialogue{
+    -fx-background-color: mid_grey_solid;
+}
+
+.RestrictedTextField{
+    -fx-font-size: 10pt;
+    -fx-padding: 2 2 2 2;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.RestrictedNumberField{
+    -fx-font-size: 10pt;
+    -fx-padding: 2 2 2 2;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.custom-text-field{
+    -fx-font-size: 10pt;
+    -fx-padding: 2 2 2 2;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.material-choice-list-cell-grid .label {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.profile-choice-list-cell-grid .label {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+/*
+ * Project menu button
+ */
+
+.project-menu-button{
+    -fx-content-display: graphic-only;
+    -fx-pref-width: 10px;
+}
+
+.printer-colour-button{
+    -fx-padding: 0 0 0 0;
+    -fx-background-insets: 0,0 0 0 0, 0 0 0 0, 0 0 0 0;
+    /*-fx-background-radius: 50;*/
+    -fx-content-display: graphic-only;
+    -fx-border-color: transparent;
+}
+
+.printer-colour-button:hover{
+    -fx-background-color: hover_colour;
+}
+
+.printer-colour-button:selected{
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.borderFrame {
+    -fx-border-color: grey;
+    -fx-border-width: 2;
+    -fx-border-style: solid;
+    -fx-border-radius: 2;
+}    
+
+.blue-inset-panel{
+    -fx-background-color: black;
+}
+
+.blue-inset-panel-text{
+    -fx-fill: white;
+}
+
+.inset-panel{
+    -fx-background-color: light_grey;
+}
+
+.inset-panel-with-menu{
+    -fx-background-color: light_grey;
+}
+
+.inset-panel-text{
+    -fx-fill: white;
+}
+
+.inset-panel-menu{
+    -fx-background-color: light_grey;
+}
+
+.inset-panel-menu-title{
+    -fx-fill: white;
+    -fx-font-size:28pt;
+}
+
+.inset-panel-menu-item #statusStud{
+    -fx-fill: green;
+}
+
+.inset-panel-menu-item, .inset-panel-menu-item:focused {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: transparent;
+
+    -fx-background-radius: 0;
+
+    -fx-background-color: transparent;
+
+    -fx-font-size: 11pt;
+    -fx-text-fill: white;
+}
+
+.inset-panel-menu-item:hover {
+    -fx-text-fill: #d8d8d8;
+    -fx-background-color: #3a3a3a;
+}
+
+.inset-panel-menu-item:selected {
+    -fx-background-color: white;
+    -fx-text-fill: #1d1d1d;
+}
+
+.inset-panel-menu-item:selected:hover {
+    -fx-background-color: #eee;
+    -fx-text-fill: #1d1d1d;
+    -fx-border-color: #eee;
+}
+.inset-panel-menu-item:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+/*******************************************************************************
+* *
+* Slider *
+* *
+******************************************************************************/
+.slider {
+    -fx-skin: "jfxtras.styles.jmetro8.FilledSliderSkin";
+}
+
+.slider .axis {
+    -fx-tick-label-font: 10pt "Source Sans Pro";
+    -fx-max-height: 15px;
+}
+
+.slider .axis:bottom {
+    -fx-tick-label-fill: white;
+}
+
+.slider {
+    -fx-font-size: 10pt;
+}
+
+.slider .thumb {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0em;
+    -fx-padding: 0.333333em; /* 4 */
+    -fx-effect: null;
+}
+.slider:focused .thumb {
+    -fx-background-radius: 0em;
+}
+
+#material1Slider .fill {
+    -fx-background-color: robox_blue;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.333333em; /* This value must be equal to ".slider .thumb" padding */
+}
+
+#material2Slider .fill {
+    -fx-background-color: highlight_colour_orange;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.333333em; /* This value must be equal to ".slider .thumb" padding */
+}
+
+#bedSlider .fill {
+    -fx-background-color: graph_line_yellow;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.333333em; /* This value must be equal to ".slider .thumb" padding */
+}
+
+.slider .track {
+    -fx-background-color: #6c6c6c;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.333333em; /* This value must be equal to ".slider .thumb" padding */
+}
+
+.slider .fill {
+    -fx-background-color: robox_blue;
+    -fx-padding: 0.333333em; /* This value must be equal to ".slider .thumb" padding */
+}
+.slider .fill:hover {
+    -fx-background-color: robox_blue;
+}
+.slider .fill:pressed {
+    -fx-background-color: #25bbc4;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * ToggleSwitch                                                                *
+ *                                                                             *
+ ******************************************************************************/
+.toggle-switch .text{
+    -fx-fill: white;
+    -fx-font-size: 1em;
+}
+
+.toggle-switch .thumb {
+    -fx-background-color: white;
+    -fx-padding: 0.583333em 0.333333em 0.583333em 0.333333em;  /* 7 4 7 4*/
+}
+
+.toggle-switch:selected .thumb-area{
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-color: #777777, black, #219297;  /* The last one is the accent color */
+}
+
+.toggle-switch .thumb-area{
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-color: #777777, black, #777777;
+}
+
+.toggle-switch:selected:pressed .thumb-area{
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-color: #777777, black, #25bbc4; /* The last one is the accent color */
+}
+
+.toggle-switch .thumb-area
+{
+    -fx-padding: 0.583333em 1.333333em 0.583333em 1.333333em; /* 7 16 7 16 */
+
+}
+
+.toggle-switch:disabled
+{
+    -fx-opacity: 0.4;
+}
+
+/**
+* Calibration
+*/
+#calibrationMenuSeparator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-fill: dark_grey;
+    -fx-background-color: dark_grey;
+    -fx-border-color: dark_grey dark_grey dark_grey dark_grey;
+}
+
+#calibrationTopMenu {
+    -fx-background-color: black;
+}
+
+#stepNumber {
+    -fx-fill: white;
+}
+
+#calibrationStatus {
+    -fx-font-size: 18px;
+}
+
+#calibrateBottomMenu {
+    -fx-background-color: black;
+}
+
+#calibrationLeftBorder {
+    -fx-background-color: black;
+}
+
+#calibrationBottomArea {
+    -fx-background-color: black;
+}
+
+.calibrationBody {
+    -fx-background-color: light_grey;
+}
+
+.calibrationInfoField {
+    -fx-background-color: white;
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 22px;
+}
+
+.calibrationButtonsAB {
+    -fx-background-color: light_grey;
+    -fx-border-color: white;
+    -fx-border-width: 3px;
+}
+
+.calibrationAltABButton {
+    -fx-background-color: light_grey;
+    -fx-border-color: light_grey;
+    -fx-border-width: 0px;
+}
+
+/**
+* About Panel
+*/
+
+.aboutBody {
+    -fx-background-color: robox_blue;
+}
+
+.aboutVersionText {
+    -fx-font-size: 32px;
+}
+
+.aboutBodyTextRegular {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 21px;
+}
+
+.aboutBodyText {
+    -fx-font-size: 21px;
+}
+
+.aboutSerialTextHeader {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 24px;
+}
+
+.aboutSerialText {
+    -fx-font-family: 'Source Code Pro';
+    -fx-font-size: 24px;
+}
+
+/**
+* Spinner
+*/
+
+.spinner
+{
+    -fx-background-color: transparent;
+}
+
+.spinnerOuter {
+    -fx-fill: white;
+}
+
+.spinnerInner {
+    -fx-fill: transparent;
+}
+
+/**
+* Vertical Menu
+*/
+
+#verticalMenuTitle {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size:50px;
+    -fx-fill: white;
+}
+
+.verticalMenuSquare {
+    -fx-fill: blue_colour;
+    -fx-border-width: 0;
+}
+
+.verticalMenuOption {
+    -fx-font-family: "Source Sans Pro Light";
+    -fx-font-size: 30px;
+}
+
+.verticalMenuOption:selected {
+    -fx-fill: white;
+}
+
+.verticalMenuOption:disabled {
+    -fx-fill: dark_grey;
+}
+
+.verticalMenuSquare {
+    -fx-fill: robox_blue;
+}
+
+#verticalMenuGrid {
+    -fx-background-color: light_grey;
+}
+
+.statusBar #progBar {
+    -fx-pref-height: 30px;
+    -fx-max-height: 30px;
+    -fx-min-height: 30px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.statusBar #progBar .bar {
+    -fx-background-color: white;
+    -fx-pref-height: 30px;
+    -fx-max-height: 30px;
+    -fx-min-height: 30px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.statusBar #progBar .track {
+    -fx-background-color: white_60;
+    -fx-border-width: 0;
+    -fx-pref-height: 30px;
+    -fx-max-height: 30px;
+    -fx-min-height: 30px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.statusBar {
+    -fx-font-family: "Source Sans Pro Light";
+    -fx-background-color: robox_blue;
+    -fx-max-height: 60px;
+}
+
+.statusBar #mainLabel {
+    -fx-font-size: 28px;
+}
+
+.statusBar .smallerText {
+    -fx-font-family: "Source Sans Pro Light";
+    -fx-font-size: 16px;
+}
+
+.statusBar .largerText {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 18px;
+}
+
+.secondaryStatusBar #progBar {
+    -fx-pref-height: 30px;
+    -fx-max-height: 30px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.secondaryStatusBar #progBar .bar {
+    -fx-background-color: mid_grey_solid;
+    -fx-pref-height: 30px;
+    -fx-max-height: 30px;
+    -fx-min-height: 30px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.secondaryStatusBar #progBar .track {
+    -fx-background-color: mid_grey_30;
+    -fx-border-width: 0;
+    -fx-pref-height: 30px;
+    -fx-max-height: 30px;
+    -fx-min-height: 30px;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.secondaryStatusBar {
+    -fx-font-family: "Source Sans Pro Light";
+    -fx-background-color: white_60;
+    -fx-max-height: 60px;
+}
+
+.secondaryStatusBar #mainLabel {
+    -fx-font-size: 28px;
+    -fx-text-fill: black;
+}
+
+.secondaryStatusBar .smallerText {
+    -fx-font-family: "Source Sans Pro Light";
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+}
+
+.secondaryStatusBar .largerText {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+}
+
+/**
+*
+*/
+.printerstatus-label
+{
+    -fx-text-fill: black;
+    -fx-font-size: 12pt;
+    -fx-alignment: CENTER;
+    -fx-font-family: "Source Sans Pro";
+}
+
+#printerStatusTitle {
+    -fx-font-size: 36px;
+}
+
+.table-view .column-header .label { 
+    -fx-font-size: 12px; 
+}
+
+.lightGreyBackground {
+    -fx-background-color: light_grey;
+}
+
+.midGreyBackground {
+    -fx-background-color: mid_grey_solid;
+}
+
+.darkGreyBackground {
+    -fx-background-color: dark_grey;
+}
+
+.darkGreyFill {
+    -fx-fill: dark_grey;
+}
+
+
+/**
+* Calibration diagram text
+*/
+.mediumCalibrationText {
+    -fx-background-color: mid_grey_solid;
+    -fx-font-size:20px;
+    -fx-text-fill: white;
+}
+
+.smallCalibrationText {
+    -fx-background-color: mid_grey_solid;
+    -fx-font-size:14px;
+    -fx-text-fill: white;
+}
+
+.smallLightGreyCalibrationText {
+    -fx-background-color: light_grey;
+    -fx-font-size:14px;
+    -fx-text-fill: white;
+}
+
+.calibrationOffsetCombo {
+    /*-fx-background-color: white;*/
+    -fx-font-size:16px;
+    /*-fx-text-fill: black;*/
+}
+
+.combo-box .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+/**
+* Calibration diagram dashed lines
+*/
+
+.strokeDashArray2_9878-2_9878 {
+    -fx-stroke-dash-array: 2.98 2.98;
+}
+.strokeDashArray17_0768-8_5384-2_5615-8_5384{
+    -fx-stroke-dash-array: 2.98 2.98;
+}
+.strokeDashArray23_3157-11_6578-3_4973-11_6578{
+    -fx-stroke-dash-array: 23.3157 11.6578 3.4973 11.6578;
+}
+.strokeDashArray17_0766-8_5383-2_5615-8_5383{
+    -fx-stroke-dash-array: 17.0766 8.5383 2.5615 8.5383;
+}
+.strokeDashArray3_4974-11_6579{
+    -fx-stroke-dash-array: 3.4974 11.6579;
+}
+.strokeDashArray3_4973-11_6578{
+    -fx-stroke-dash-array: 3.4973 11.6578;
+}
+.strokeDashArray2_5615-8_5384{
+    -fx-stroke-dash-array: 2.98 2.98;
+}
+.strokeDashArray2_5615-8_5383{
+    -fx-stroke-dash-array: 2.98 2.98;
+}
+.strokeDashArray23_3158-11_6579-3_4974-11_6579{
+    -fx-stroke-dash-array: 2.98 2.98;
+}
+
+/**
+* MaterialComponent choice combo
+*/
+
+#MaterialComponentAnchorPane:selected {
+    -fx-border-color: white;
+    -fx-border-width: 3;
+}
+
+#materialColour {
+    -fx-font-family: "Source Sans Pro Light";
+}
+
+#materialRemaining {
+    -fx-font-family: "Source Sans Pro Light";
+}
+
+.filamentSwatchPadding {
+    -fx-padding: 0 10 0 10;
+}
+
+#materialComponentComboLabel {
+    -fx-text-fill: black;
+}
+
+/* ===== Copied from caspian.css for detailed combo box styling ===== */
+/* -------------- CODE FOR THE NON-EDITABLE COMBO-BOX -------------- */
+
+/* ------- MAIN BUTTON ------- */
+.cmbCleanCombo {
+    /*-fx-skin: "com.sun.javafx.scene.control.skin.ComboBoxBaseSkin";*/
+    -fx-font-family: "Source Sans Pro";
+    -fx-background-color: white;
+    /*-fx-background-radius: 5, 5, 4, 3;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;*/
+    -fx-padding: 0;
+}
+
+.cmbCleanCombo .combo-box-popup .list-view .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.cmbCleanCombo:hover {
+    -fx-color: -fx-hover-base;
+}
+
+/*------- THIS SPECIFIES THE BUTTON COLOR WHEN THE POPUP MENU IS SHOWING -------*/
+.cmbCleanCombo:showing {
+    -fx-color: -fx-pressed-base;
+}
+
+.cmbCleanCombo:focused {
+    /*-fx-background-color: -fx-focus-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-radius: 6.4, 4, 5, 3;
+    -fx-background-insets: -1.4, 0, 1, 2;*/
+}
+
+.cmbCleanCombo:disabled {
+    -fx-opacity: .4;
+}
+
+/* ------- OPEN BUTTON ------- */
+.cmbCleanCombo .arrow-button {
+    -fx-background-color: white;
+    /*-fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 5 5 0, 0 4 4 0, 0 3 3 0;*/
+    -fx-padding: 0.5em 0.416667em 0.5em 0.416667em; /* 6 5 6 5 */
+}
+
+/* ------- ARROW* ------- */
+.cmbCleanCombo .arrow {
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-background-color: -fx-mark-highlight-color, -fx-mark-color;
+    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em; /* 2 4 2 4 */
+    -fx-shape: "M 0 0 h 7 l -3.5 4 z";
+}
+/* ===================== End Copy =========================== */
+
+/**
+* Preferences
+*/
+
+.preferencesGridPane {
+    -fx-alignment:  center;
+    -fx-hgap: 60;
+    -fx-vgap: 60;
+}
+
+.preferenceLabel {
+    -fx-font-family: "Source Sans Pro Light";
+    -fx-font-size: 13pt;
+}
+
+.preferenceControl {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 13pt;
+}
+
+/**
+* Registration
+*/
+
+.registrationGrid {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 13px;
+}
+
+.registrationGrid .text-field {
+    -fx-font-size: 13px;
+}
+
+.registrationGrid .combo-box-base {
+    -fx-font-size: 13px;
+}
+
+#registrationTitle {
+    -fx-font-size: 32px;
+}
+
+/**
+* The notification bar that appears at the bottom right,
+* see notificationpopup.css from NotificationBar.java jar
+*/ 
+
+.notification-bar {
+    -fx-background-color: robox_blue;
+}
+
+.notification-bar-text {
+    -fx-font-size: 18px;
+    -fx-font-family: "Source Sans Pro";
+    -fx-text-fill: white;
+}
+
+.notification-bar-step-text {
+    -fx-font-size: 14px;
+    -fx-font-family: "Source Sans Pro";
+    -fx-text-fill: white;
+}
+
+.notification-bar .hyperlink {
+    -fx-text-fill: white;
+}
+
+.hyperlink-plaintext
+{
+    -fx-fill: white;
+}
+
+.hyperlink {
+    -fx-padding: 0.166667em 0.25em 0.166667em 0.25em; /* 2 3 2 3 */
+    -fx-cursor: hand;
+    -fx-content-display: LEFT;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+}
+
+.hyperlink,
+.hyperlink:hover,
+.hyperlink:hover:visited {
+    -fx-text-fill: robox_blue;
+}
+
+.hyperlink:visited {
+    -fx-text-fill: robox_blue_darker;
+}
+
+.hyperlink:armed,
+.hyperlink:hover:armed {
+    -fx-text-fill: white;
+}
+
+.hyperlink:hover,
+.hyperlink:visited,
+.hyperlink:hover:visited {
+    -fx-underline: true;
+}
+
+.hyperlink:visited:armed {
+    -fx-underline: false;
+}
+
+.hyperlink:focused {
+    -fx-border-color: white;
+    -fx-border-style: segments(0.166667em, 0.166667em);
+    -fx-border-width: 1px;
+}
+
+.hyperlink:show-mnemonics > .mnemonic-underline {
+    -fx-stroke: -fx-text-fill;
+}
+
+/**
+ * The error dialog configuration
+ */
+.error-dialog{
+    -fx-background-color: mid_grey_solid;
+    -fx-font-family: "Source Sans Pro";
+    -fx-spacing: 5;
+    -fx-padding: 30;
+    -fx-max-width: 500;
+    -fx-min-width: 100;
+    -fx-background-insets: 12;
+}
+
+.textflow .text
+{
+    -fx-fill: purple;
+}
+/*.error-dialog .text{
+    -fx-fill: purple;
+}*/
+
+
+.error-dialog #errorDialogButtonContainer{
+    -fx-spacing: 5;
+}
+
+.error-dialog #errorDialogTitle{
+    -fx-font-size: 16pt;
+    -fx-padding: 5 20 5 20;
+    -fx-max-height: 1000;
+    -fx-wrap-text: true;
+}
+
+.error-dialog #errorDialogMessage{
+    -fx-font-size: 14pt;
+    -fx-padding: 5 20 5 20;
+    -fx-max-height: 1000;
+    -fx-wrap-text: true;
+}
+
+.error-dialog-choice-button
+{
+    -fx-background-color: light_grey;
+    -fx-font-family: "Source Sans Pro";
+    -fx-max-width: 1000;
+    -fx-wrap-text: true;
+    -fx-max-height:1000;
+}
+
+.error-dialog-choice-button #errorDialogButtonTitle
+{
+    -fx-font-size: 14pt;
+    -fx-wrap-text: true;
+    -fx-pref-height: -1;
+    -fx-max-height: 1000;
+}
+
+.error-dialog-choice-button #errorDialogButtonMessage
+{
+    -fx-font-size: 10pt;
+    -fx-max-height: 1000;
+}
+
+.error-dialog-choice-button #errorDialogButtonLabelGroup
+{
+    -fx-max-height: -1;
+}
+
+#dialogMessageLarge
+{
+    -fx-font-size: 16pt;
+    -fx-padding: 5 20 5 20;
+    -fx-max-height: 1000;
+    -fx-wrap-text: true;
+}
+
+/*
+ * Splash screen settings
+ */
+
+.splashCopyright
+{
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 11pt;
+    -fx-fill: white;
+    -fx-text-alignment: left;
+}
+
+.splashVersion
+{
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 11pt;
+    -fx-fill: white;
+    -fx-text-alignment: right;
+}
+
+.inset-panel-body-redux
+{
+}
+
+.inset-panel-redux
+{
+    -fx-background-color: light_grey;
+    -fx-min-width: 10px;
+    -fx-min-height: 10px;
+    -fx-background-insets: 12;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+}
+
+.inset-panel-centre-redux
+{
+    -fx-padding: 20 20 20 20;
+    -fx-min-width: 10px;
+    -fx-min-height: 10px;
+    -fx-spacing: 10;
+}
+
+.inset-panel-background-redux
+{
+    -fx-background-color: black;
+    -fx-padding: 60 0 0 0;
+    -fx-min-width: 10px;
+    -fx-min-height: 10px;
+}
+
+.inset-panel-bottom-bar-redux
+{
+    -fx-background-color: black;
+    -fx-pref-height: 90px;
+    -fx-min-height: 90px;
+    -fx-max-height: 90px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 0 0 0;
+}
+
+.copyable-label, .copyable-label:focused {
+    -fx-background-color: transparent ;
+    -fx-background-insets: 0px ;
+}
+/**
+* Extras inner panels
+*/
+
+.innerPanel {
+    -fx-background-color: light_grey;
+}
+
+/**
+* Filament Library
+*/
+
+.materialNumbers {
+    -fx-alignment: CENTER;
+}
+
+#materialsGridPane {
+    -fx-background-color: light_grey;
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 10pt;    
+}
+
+#materialsGridPane .RestrictedNumberField {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 10pt;
+}
+
+#materialsGridPane .text-field {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 10pt;
+}
+
+#materialsGridPane .label {
+    /*-fx-padding: 0 0 0 7;*/
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 10pt;
+}
+
+.filamentLibUpper {
+    -fx-pref-width: 190;
+}
+
+.filamentLibUpper:error {
+    -fx-text-box-border: red ;
+    -fx-focus-color: red ;
+}
+
+.filamentLibLower {
+    -fx-pref-width: 70;
+}
+
+.filamentLibTitle {
+    -fx-text-fill: robox_blue;
+}
+
+#helpText {
+    -fx-text-fill: white;
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 9pt;  
+    -fx-pref-height: 80;
+    -fx-pref-width: 120;
+    -fx-background-radius: 0px;
+    -fx-background-color: dark_grey;
+    -fx-background-insets: 0px;
+}
+
+#helpText .scroll-pane {
+    -fx-background-color: mid_grey_solid;
+}
+
+#helpText .content {
+    -fx-background-color: mid_grey_solid;
+}
+
+#cmbFilamentReelIndexLabel {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 7px;
+    -fx-text-fill: black;
+    -fx-padding: 0 0 0 8;
+}
+
+#cmbFilamentTextField {
+    -fx-text-fill: black;
+}
+.color-picker {
+    -fx-text-fill: black;
+}
+
+color-picker-label .text-field {
+    -fx-text-fill: red;
+}
+
+/**
+* Print Profiles
+*/
+
+.cmbPrintProfile {
+    -fx-pref-width: 280;
+}
+
+.cmbPrintProfile:error {
+    
+}
+
+.cmbPrintProfile .combo-box .list-cell {
+    -fx-pref-width: 290;
+}
+
+#printProfileInnerPanel {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 10pt; 
+}
+
+#printProfileInnerPanel .tab-pane, .tab-header-background {
+    -fx-background-color: light_grey;
+    -fx-border-color: light_grey;
+}
+
+#printProfileInnerPanel .tab:hover, #printProfileInnerPanel .tab:hover .tab-label{
+    -fx-background-color: light_grey;
+}
+
+#printProfileInnerPanel .tab:selected, #printProfileInnerPanel .tab:selected .tab-label{
+    -fx-background-color: highlight_colour;
+    -fx-border-color: highlight_colour;
+}
+
+#printProfileInnerPanel .tab .tab-label{
+    -fx-background-color: mid_grey_solid;
+    -fx-text-fill: white;
+}   
+
+#printProfileInnerPanel  .tab:top {
+    -fx-border-width: 0.3;
+    -fx-border-color: light_grey;
+}
+
+#printProfileInnerPanel .tab{
+    -fx-background-color: mid_grey_solid;
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0px;
+    -fx-border-color: black;
+    -fx-min-width: 80;
+}
+
+#headerSettings HBox {
+    -fx-alignment: CENTER;
+}
+
+.printProfileGrid {
+    -fx-background-color: light_grey;
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 10pt;    
+}
+
+.printProfileGrid .RestrictedNumberField {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 10pt;
+}
+
+.printProfileGrid .text-field {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 10pt;
+}
+
+.printProfileGrid .label {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 10pt;
+}
+
+.printProfileGrid {
+    -fx-vgap: 8;
+}
+
+.blackTabUnderline {
+    -fx-pref-height: 30;
+    -fx-min-height: 30;
+    -fx-background-color: light_grey;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: robox_blue;
+}
+
+.printProfileTabVBox {
+    -fx-spacing: 10;
+}
+
+.printProfileDivider {
+    -fx-text-fill: robox_blue;
+}
+
+#printProfileTabPane {
+    -fx-tab-min-height: 40px;
+    -fx-tab-max-height: 40px;
+    -fx-tab-min-width: 50px;
+}
+
+.tabTitle {
+    -fx-font-size: 14px;
+}
+
+/**
+* PrinterGrid
+*/
+.printerGrid {
+    -fx-pref-width: 260;
+    -fx-max_width: 260;
+    -fx-min-width: 260;
+    -fx-pref-height: 260;
+    -fx-max_height: 260;
+    -fx-min-height: 260;    
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+    -fx-background-color: mid_grey_solid;
+}
+
+/**
+* Settings Inset Panel
+*/
+#settingsInsetRoot {
+    -fx-background-color: mid_grey_50;
+    -fx-font-family: "Source Sans Pro";
+}
+
+/**
+* Timelapse Inset Panel
+*/
+#timelapseInsetRoot {
+    -fx-background-color: mid_grey_50;
+    -fx-font-family: "Source Sans Pro";
+}
+
+#pleaseCreateProfile {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 18px;
+}
+
+
+/**
+* Layout
+*/
+
+/*#preserveAspectRatio {
+    -fx-background-color: light_grey;
+    -fx-background-insets: 0 0 0 0;
+}
+
+#preserveAspectRatio:selected {
+    -fx-background-color: light_grey;
+    -fx-background-insets: 0 0 0 0;
+}
+
+#preserveAspectRatio:selected:focused {
+    -fx-background-color: light_grey;
+    -fx-background-insets: 0 0 0 0;
+}*/
+
+#modelTable {
+    -fx-pref-width: 260;
+    -fx-max_width: 260;
+    -fx-min-width: 260;
+    -fx-pref-height: 260;
+    -fx-max_height: 260;
+    -fx-min-height: 260;    
+    -fx-background-color: light_grey;
+}
+
+.dimension-label
+{
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 12pt;
+    -fx-text-alignment: center;
+    -fx-border-width: 0px;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-pref-width: 50px;
+    -fx-max-width: 50px;
+}  
+
+.bed-axis-label
+{
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 18pt;
+    -fx-text-alignment: center;
+}  
+
+.rotationField {
+    -fx-pref-width: 40;
+    -fx-min-width: 40;
+}
+
+/**
+* TimeCostInsetPanel
+*/
+
+#timeCostInsetRoot {
+    -fx-background-color: mid_grey_50;
+    -fx-font-family: "Source Sans Pro";
+}
+
+.timeCostIcons {
+    -fx-fill: robox_blue;
+}
+
+.timeCostIcons Rectangle  {
+    -fx-fill: robox_blue;
+}
+
+.timeCostIcons Circle {
+    -fx-fill: robox_blue;
+}
+
+.timeCostIcons SVGPath {
+    -fx-fill: robox_blue;
+}
+
+/**
+* Menu Item
+*/
+.menu-item {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 14px;
+}
+
+/**
+* Head
+*/
+
+.head_panel, .head_panel .label {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 14px;
+}
+
+/** 
+* Status inner panel
+*/
+
+.status_inner {
+    -fx-background-color: mid_grey_50; 
+    -fx-font-family: "Source Sans Pro Light";
+    -fx-font-size: 18px;
+}
+
+.status_inner .title {
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-size: 20px;
+}
+
+.status_inner .subtitle {
+    -fx-font-size: 18px;
+}
+
+.cross_button:hover {
+    -fx-scale-x: 1.4;
+    -fx-scale-y: 1.4;
+}
+
+.cross_button:pressed {
+    -fx-scale-x: 0.7;
+    -fx-scale-y: 0.7;
+}
+
+/**
+* Diagnostics
+*/
+
+.diagnostics .radio-button:disabled {
+    -fx-opacity: 1.0;
+}
+
+.diagnostics .radio-button:selected .dot {
+    -fx-background-color: robox_blue;
+}
+
+.hovering-panel, .hovering-panel .tab-pane, .hovering-panel .grid-pane{
+    -fx-background-color: mid_grey_30;
+    -fx-border-width: 0px;
+}
+
+.fake-tab-button {
+    -fx-font-family: "Source Sans Pro Light";
+    -fx-font-size: 18px;
+    -fx-padding: 0px;  
+    -fx-graphic-text-gap: 2px;
+    -fx-content-display: LEFT;
+
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+
+    -fx-background-color: #1d1d1d;
+    -fx-border-color: #1d1d1d;
+
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+}
+
+.fake-tab-button:default
+{
+    -fx-background-color: #1d1d1d;
+    -fx-border-colour: #1d1d1d;
+}
+
+.fake-tab-button:hover{
+    -fx-background-color: hover_colour;
+    -fx-border-color: hover_colour;
+}
+
+.fake-tab-button:pressed, .fake-tab-button:default:hover:pressed
+{
+    -fx-background-color: pressed_colour;
+    -fx-border-color: pressed_colour;
+    -fx-text-fill: background_colour;
+    -fx-fill-color: background_colour;
+}
+
+.fake-tab-button:selected
+{
+    -fx-background-color: robox_blue;
+    -fx-border-color: robox_blue;
+}
+
+.fake-tab-button:disabled, .fake-tab-button:default:disabled
+{
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+/*.fake-tab-button:default
+{
+    -fx-background-color: #008287;
+    -fx-text-fill: #ffffff;
+}*/
+
+.fake-tab-button:default:hover{
+    -fx-background-color: #219297;
+}
+
+#model-edit-panel
+{
+    -fx-spacing: 5px;
+}
+
+#model-edit-panel .label
+{
+    -fx-font-family: "Source Sans Pro Light";
+    -fx-font-size: 18px;    
+}
+
+.gcode-transcript
+{
+    -fx-background-color: white;
+    -fx-text-fill: black
+}
+
+.gcode-transcript .list-cell:filled:selected:focused, gcode-transcript .list-cell:filled:selected,
+.gcode-transcript .list-cell:even:filled:hover:selected,
+.gcode-transcript .list-cell:odd:filled:hover:selected,
+.gcode-transcript .list-cell:odd:filled:pressed,
+.gcode-transcript .list-cell:odd:filled:pressed:selected
+{
+    -fx-background-color: light_grey_30;
+    -fx-text-fill: black
+}
+
+.gcode-transcript .list-cell:even, .gcode-transcript .list-cell:even:filled:hover {
+    -fx-text-fill: black;
+    -fx-background-color: superlight_grey_30;
+}
+
+.gcode-transcript .list-cell:odd, .gcode-transcript .list-cell:odd:filled:hover {
+    -fx-text-fill: black;
+    -fx-background-color: white;
+}
+
+.load-a-model-text
+{
+    -fx-font-family: "Source Sans Pro";
+    -fx-font-smoothing-type: lcd;
+    -fx-font-size: 60px;
+    -fx-text-fill: white;
+}
+
+.filament-menu-button
+{
+    -fx-background-color: white;
+    -fx-content-display: graphic-only;
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+/*.filament-menu-button .context-menu .menu-item
+{
+    -fx-background-color: white;
+}*/
+
+.filament-menu-button .context-menu {
+    -fx-background-color: white;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+    /*-fx-padding: 0.333333em 0em 0.333333em 0em;  4 1 4 1 */
+
+    /* TODO: the border color below is not being respected - it appears as gray instead of black. After this gets fixed remove the comments so that
+       the border will become black.
+    */
+    /*    -fx-border-color: #212121;
+        -fx-border-style: solid;*/
+}
+
+/*.context-menu .separator .line{
+    -fx-padding: 0.0em 0.333333em 0.0em 0.333333em;  0 4 0 4 
+    -fx-border-style: solid;
+    -fx-background-color: #c2c2c2;
+    -fx-border-width: 0.5px;
+}*/
+
+/* TODO: try to scope the menu-item style to the contextmenu */
+.filament-menu-button .menu-item {
+    -fx-background-color: transparent;
+    /*-fx-padding: 0.666666em 0.999999em 0.4999995em 0.999999em;   6 12 6 12 */
+}
+
+.filament-menu-button .menu-item .label {
+    /*-fx-padding: 0em 0.5em 0em 0em;*/
+    -fx-text-fill: #212121;
+    -fx-font-size: 11pt;
+}
+
+
+.filament-menu-button .menu-item:focused {
+    /*-fx-background: -fx-accent;*/
+    -fx-background-color: white;
+}
+
+.filament-menu-button .menu-item:pressed
+{
+    -fx-background-color: white;
+}
+
+.filament-menu-button .menu-item:pressed .label
+{
+    -fx-text-fill: black;
+}
+
+.custom-filament-category .menu-item
+{
+    -fx-text-fill: yellow;
+    -fx-background-color: green;
+}
+
+.filament-display-brand
+{
+    -fx-font-size: 18px;
+    -fx-font-family: 'Source Sans Pro Bold';
+    -fx-font-smoothing-type: lcd;
+}
+
+.filament-display-category
+{
+    -fx-font-size: 16px;
+}
+
+.filament-display-material
+{
+    -fx-font-size: 16px;
+}
+
+.reprint-title
+{
+    -fx-font-size: 28px;
+}
+
+.reprint-subtitle
+{
+    -fx-font-size: 18px;
+}
+
+.rootScannerTable .table-row-cell
+{
+    -fx-cell-size: 40px;
+}
+
+/*
+* SelectLicense dialog
+*/
+
+#licenseSelection TextArea
+{
+    -fx-control-inner-background: dark_grey;
+    -fx-text-fill: white;
+}
+
+.dialog_drop_shadow
+{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6), 10, 0, 6, 6);
+    -fx-background-insets: 12; 
+    -fx-background-color: black;
+}
+
+.transparent
+{
+    -fx-background-color: transparent;
+}

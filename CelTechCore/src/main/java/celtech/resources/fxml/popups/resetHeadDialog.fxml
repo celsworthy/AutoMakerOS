@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="5.0" style="-fx-border-color: black; -fx-border-width: 3;" styleClass="inset-panel-redux" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.popups.ResetHeadController">
+   <children>
+      <Label alignment="CENTER" style="-fx-font-size: 28;" styleClass="regularText" text="%headReset.instruction" />
+      <ScrollPane fx:id="scroller" fitToHeight="true" fitToWidth="true" maxHeight="355.0" pannable="true" VBox.vgrow="NEVER">
+         <content>
+            <FlowPane fx:id="headHolder" hgap="5.0" prefWrapLength="720.0" style="-fx-background-color: #636363;" vgap="5.0" />
+         </content>
+      </ScrollPane>
+      <Button mnemonicParsing="false" onAction="#cancel" text="%buttonText.cancel" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

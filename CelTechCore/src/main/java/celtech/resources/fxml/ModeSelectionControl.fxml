@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?scenebuilder-stylesheet ../css/AutoMaker.css?>
+
+<AnchorPane id="AnchorPane" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="celtech.coreUI.controllers.ModeSelectionControlController">
+  <children>
+    <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#bfbfbf" height="95.0" strokeType="OUTSIDE" strokeWidth="3.9" width="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <stroke>
+        <Color blue="0.376" green="0.376" red="0.376" fx:id="x2" />
+      </stroke>
+    </Rectangle>
+    <Rectangle fx:id="progressArrowPart1" arcHeight="5.0" arcWidth="5.0" fill="$x2" height="8.76519775390625" layoutX="84.0" layoutY="82.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="92.22216796875" />
+    <ToggleButton fx:id="layoutModeButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onMousePressed="#gotoLayoutMode" styleClass="rectangularGraphicButton" text="ToggleButton" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="12.0">
+      <graphic>
+        <StackPane prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <Rectangle fx:id="layoutOutline" arcHeight="31.0" arcWidth="31.0" fill="WHITE" height="75.0" stroke="$x2" strokeType="CENTERED" strokeWidth="4.6" width="95.0" />
+            <ImageView fitHeight="70.0" fitWidth="0.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" visible="true">
+              <image>
+                <Image url="@../images/LayoutButton.png" />
+              </image>
+            </ImageView>
+          </children>
+        </StackPane>
+      </graphic>
+    </ToggleButton>
+    <ToggleButton fx:id="printModeButton" alignment="TOP_CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="rectangularGraphicButton" text="ToggleButton" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="12.0">
+      <graphic>
+        <ImageView fitHeight="80.0" fitWidth="0.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../images/PrintButton.png" />
+          </image>
+        </ImageView>
+      </graphic>
+    </ToggleButton>
+    <ImageView fx:id="progressArrowPart2" fitHeight="0.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="170.0">
+      <image>
+        <Image url="@../images/Progress%20Arrow%202.png" />
+      </image>
+    </ImageView>
+    <ToggleButton id="setupButton" fx:id="settingsModeButton" contentDisplay="GRAPHIC_ONLY" layoutX="136.0" mnemonicParsing="false" onMousePressed="#gotoSettingsMode" styleClass="rectangularGraphicButton" text="ToggleButton" AnchorPane.topAnchor="12.0">
+      <graphic>
+        <StackPane prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <Rectangle id="settings" fx:id="settingsOutline" arcHeight="31.0" arcWidth="31.0" fill="WHITE" height="75.0" strokeType="CENTERED" strokeWidth="4.6" styleClass="rectangularGraphicButton" width="95.0">
+              <stroke>
+                <Color blue="0.376" green="0.376" red="0.376" fx:id="x1" />
+              </stroke>
+              <StackPane.margin>
+                <Insets />
+              </StackPane.margin>
+            </Rectangle>
+            <ImageView fitHeight="70.0" fitWidth="0.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../images/SettingsButton.png" />
+              </image>
+            </ImageView>
+          </children>
+        </StackPane>
+      </graphic>
+    </ToggleButton>
+  </children>
+</AnchorPane>

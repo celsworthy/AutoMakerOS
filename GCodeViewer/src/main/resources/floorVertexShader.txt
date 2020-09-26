@@ -1,0 +1,25 @@
+#version 150
+
+uniform mat4 transformationMatrix;
+uniform mat4 viewMatrix;
+uniform mat4 projectionMatrix;
+
+uniform vec3 lightPosition;
+
+in vec3 position;
+in vec3 normal;
+
+out vec3 surfaceNormal;
+out vec3 toLightNormal;
+
+void main(void) {
+    
+    vec4 worldPosition = transformationMatrix * vec4(position, 1.0);
+
+    gl_Position = projectionMatrix * viewMatrix * worldPosition;
+    
+	// transformationMatrix is just a translation, which should not be applied to a normal.
+	// surfaceNormal = (transformationMatrix * vec4(normal, 0.0)).xyz;
+    surfaceNormal = normal;
+    toLightNormal = lightPosition - worldPosition.xyz;
+}

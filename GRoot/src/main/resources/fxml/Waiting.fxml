@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane id="WaitingPane" fx:id="waitingPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800" prefWidth="480.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celuk.groot.controllers.WaitingController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="480.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/waiting.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="statusLabel" styleClass="waiting-label" text="waiting.connecting" />
+   </children>
+   <stylesheets>
+      <String fx:value="styles/Styles.css" />
+      <String fx:value="styles/Waiting.css" />
+   </stylesheets>
+</StackPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+  <dict>
+    <key>CFBundleName</key>
+    <string>NetBeans 7.4</string>
+    
+    <key>CFBundleVersion</key>
+    <string>7.4</string>
+    
+    <key>CFBundleExecutable</key>
+    <string>netbeans</string>
+    
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    
+    <key>CFBundleShortVersionString</key>
+    <string>7.4</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>org.netbeans.ide.baseide.201310111528</string>
+    
+    <key>CFBundleSignature</key>
+    <string>NETB</string>
+    
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    
+    <key>CFBundleIconFile</key>
+    <string>netbeans.icns</string>
+    
+    <key>CFBundleDocumentTypes</key>
+    <array>
+	<dict>
+		<key>CFBundleTypeName</key>
+		<string>public.shell-script</string>
+		<key>CFBundleTypeRole</key>
+		<string>Editor</string>
+		<key>LSItemContentTypes</key>
+		<array>
+			<string>public.shell-script</string>
+		</array>
+	</dict>
+    </array>
+    
+    <key>NSHighResolutionCapable</key>
+    <true/>
+  </dict>
+</plist>

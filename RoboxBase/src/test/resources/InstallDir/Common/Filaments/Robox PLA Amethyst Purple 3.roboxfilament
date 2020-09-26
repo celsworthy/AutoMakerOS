@@ -1,0 +1,20 @@
+#
+# Robox filament definition file
+#
+name = Robox Amethyst Purple
+material = PLA
+reelID = RBX-PLA-PP002
+brand = Robox
+category = Classic
+diameter_mm = 1.75
+filament_multiplier = 1.0
+feed_rate_multiplier = 1.0
+ambient_temperature_C = 30
+first_layer_bed_temperature_C = 70
+bed_temperature_C = 65
+first_layer_nozzle_temperature_C = 205
+nozzle_temperature_C = 195
+display_colour = #874BA0
+cost_gbp_per_kg = 37.89
+default_length_m = 240
+filled = no

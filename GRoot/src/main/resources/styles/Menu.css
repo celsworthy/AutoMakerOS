@@ -1,0 +1,13 @@
+.menu-button {
+    -fx-text-fill: -robox-blue;
+    -fx-font-size: 18pt;
+    -fx-background-color: -robox-grey;
+}
+
+.menu-model {
+}
+
+.menu-title {
+    -fx-text-fill: -robox-blue;
+    -fx-font-size: 24pt;
+}

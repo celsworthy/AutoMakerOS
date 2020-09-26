@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-preview-i18n-resource ../i18n/LanguageData.properties?>
+<?scenebuilder-stylesheet ../css/AutoMaker.css?>
+
+<VBox fx:id="container" alignment="TOP_CENTER" fillWidth="false" layoutX="0.0" prefHeight="-1.0" prefWidth="-1.0" spacing="5.0" styleClass="sidePanel" stylesheets="@../css/JMetroDarkTheme.css" AnchorPane.bottomAnchor="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.PrinterIDDialogController">
+    <children>
+        <Label fx:id="dialogTitle" alignment="CENTER" style="-fx-font-size: 24;" text="%printerIDDialog.title" />
+        <Label id="dialogMessage" alignment="CENTER" prefHeight="17.0" prefWidth="349.0" styleClass="labelText" text="%printerIDDialog.NameMessage" textAlignment="CENTER" wrapText="true" />
+        <RestrictedTextField fx:id="roboxNameField" forceUpperCase="false" maxLength="24" prefWidth="-1.0" restrict="-_' 0-9\p{L}\p{M}*+" VBox.vgrow="NEVER" />
+        <Label id="dialogMessage" alignment="CENTER" prefHeight="17.0" prefWidth="349.0" styleClass="labelText" text="%printerIDDialog.ColourMessage" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Label>
+        <FlowPane alignment="CENTER_LEFT" columnHalignment="CENTER" hgap="5.0" prefWrapLength="230.0" vgap="5.0">
+            <children>
+                <ColourChooserButton displayColour="#7F0000">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="colourButtonGroup" />
+                    </toggleGroup>
+                </ColourChooserButton>
+                <ColourChooserButton displayColour="#ff0000" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#FF7F7F" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#FF00FF" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#FF7F00" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#FFFF00" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#007F00" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#00FF00" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#7FFF7F" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#7FFF00" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#00FF96" toggleGroup="$colourButtonGroup" />                
+                <ColourChooserButton displayColour="#7F7F7F" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#00007F" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#0000FF" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#00FFFF" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#7F7FFF" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#7F00FF" toggleGroup="$colourButtonGroup" />
+                <ColourChooserButton displayColour="#A3A3A3" toggleGroup="$colourButtonGroup" />
+            </children>
+        </FlowPane>
+        <HBox alignment="CENTER" spacing="10.0">
+            <children>
+                <Button fx:id="okButton" mnemonicParsing="false" onMousePressed="#okButtonPressed" text="%printerIDDialog.OK">
+                </Button>
+                <Button fx:id="cancelButton" mnemonicParsing="false" onMousePressed="#cancelButtonPressed" text="%dialogs.Cancel">
+                </Button>
+            </children>
+<VBox.margin>
+<Insets top="10.0" />
+</VBox.margin>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+</VBox>

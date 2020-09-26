@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-preview-i18n-resource ../i18n/LanguageData.properties?>
+<?scenebuilder-stylesheet ../css/AutoMaker.css?>
+
+<AnchorPane id="AnchorPane" prefHeight="-1.0" prefWidth="-1.0" styleClass="sidePanel" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="celtech.coreUI.controllers.ProjectLoaderController">
+  <children>
+    <VBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label styleClass="titleText" text="%projectLoader.title" />
+        <HBox prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+          <children>
+            <ListView fx:id="projectTitleList" prefHeight="300.0" prefWidth="287.0" />
+            <Pane prefHeight="-1.0" prefWidth="-1.0">
+              <children>
+                <VBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0">
+                  <children>
+                    <ImageView fitHeight="180.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                    <Label fx:id="selectedProjectTitleLabel" style="-fx-font-size:18px&#10;" text="Label" />
+                  </children>
+                </VBox>
+              </children>
+            </Pane>
+          </children>
+          <padding>
+            <Insets fx:id="x2" />
+          </padding>
+        </HBox>
+        <HBox padding="$x2" prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <Button fx:id="newButton" mnemonicParsing="false" onMousePressed="#newButton" styleClass="sidePanelSectionTitle" text="%projectLoader.newButtonLabel" />
+            <Button fx:id="openButton" mnemonicParsing="false" onMousePressed="#openButton" styleClass="sidePanelSectionTitle" text="%projectLoader.openButtonLabel">
+              <HBox.margin>
+                <Insets left="20.0" fx:id="x1" />
+              </HBox.margin>
+            </Button>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onMousePressed="#cancelButton" styleClass="sidePanelSectionTitle" text="%projectLoader.cancelButtonLabel" HBox.margin="$x1" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

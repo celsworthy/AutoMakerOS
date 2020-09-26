@@ -1,0 +1,28 @@
+{
+  "version" : 2,
+  "typeCode" : "RBXDV-S3",
+  "type" : "SINGLE_MATERIAL_HEAD",
+  "valves" : "NOT_FITTED",
+  "zReduction" : 4.0,
+  "nozzleHeaters" : [ {
+    "maximum_temperature_C" : 280,
+    "beta" : 4380.0,
+    "tcal" : 19193.0
+  }],
+  "nozzles" : [ {
+    "diameter" : 0.4,
+    "defaultXOffset" : 1.5,
+	"minXOffset" : 0,
+	"maxXOffset" : 3,
+    "defaultYOffset" : 4,
+	"minYOffset" : 3.5,
+	"maxYOffset" : 5.5,
+    "defaultZOffset" : -0.4,
+	"minZOffset" : -2,
+	"maxZOffset" : 1,
+    "defaultBOffset" : 0,
+	"minBOffset" : 0,
+	"maxBOffset" : 0,
+	"associatedExtruder" : "E"
+  }]
+}

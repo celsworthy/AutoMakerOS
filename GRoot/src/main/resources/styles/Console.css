@@ -1,0 +1,27 @@
+.backspace-key {
+	-fx-graphic:url("/image/keyboard-backspace.png");
+}
+
+.enter-key {
+	-fx-graphic:url("/image/keyboard-enter.png");
+}
+
+.keypad-key {
+    -fx-background-color: -robox-light-grey;
+    -fx-font-size: 20pt;
+    -fx-font-weight: normal;
+    -fx-text-fill: white;
+}
+
+.gcode-history {
+    -fx-font-size: 18pt;
+}
+
+.gcode-field {
+    -fx-font-size: 18pt;
+}
+
+.gcode-clear {
+    -fx-background-color: -robox-grey;
+    -fx-font-size: 18pt;
+}

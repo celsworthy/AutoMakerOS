@@ -1,0 +1,79 @@
+.field-data {
+    -fx-font-size: 16pt;
+    -fx-font-weight: normal;
+}
+
+.field-label {
+    -fx-font-size: 16pt;
+    -fx-font-weight: normal;
+}
+
+
+.field-suffix {
+    -fx-font-size: 16pt;
+    -fx-font-weight: normal;
+}
+
+.field-value {
+    -fx-font-size: 16pt;
+    -fx-font-weight: normal;
+    -fx-padding: 0 0 0 0;
+}
+
+.m1-decrement {
+    -fx-graphic:url("/image/dec-blue.png");
+    -fx-background-color: transparent;
+}
+
+.m1-icon {
+    -fx-image:url("/image/nozzle-blue.png");
+}
+
+.m1-increment {
+    -fx-graphic:url("/image/inc-blue.png");
+    -fx-background-color: transparent;
+}
+
+.m2-decrement {
+    -fx-graphic:url("/image/dec-orange.png");
+    -fx-background-color: transparent;
+}
+
+.m2-icon {
+    -fx-image:url("/image/nozzle-orange.png");
+}
+
+.m2-increment {
+    -fx-graphic:url("/image/inc-orange.png");
+    -fx-background-color: transparent;
+}
+
+.page-description {
+    -fx-font-size: 14pt;
+}
+
+.panel-description {
+    -fx-font-size: 18pt;
+	-fx-font-style: italic;
+    -fx-font-weight: normal;
+}
+
+.panel-material {
+    -fx-font-size: 18pt;
+	-fx-font-weight: normal;
+}
+
+.panel-title {
+	-fx-text-fill: white;
+    -fx-font-size: 18pt;
+    -fx-font-weight: normal;
+}
+
+.purge-check-box > .box > .mark {
+   -fx-padding: 15px;
+}
+
+.purge-icon {
+    -fx-background-image: url("/image/purge.png");
+}
+

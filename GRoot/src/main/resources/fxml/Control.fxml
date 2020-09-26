@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane id="ControlPane" fx:id="controlPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800" prefWidth="480.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celuk.groot.controllers.ControlController">
+   <children>
+      <VBox fx:id="controlVBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <GridPane fx:id="extruderGridPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="panel" vgap="5.0" VBox.vgrow="SOMETIMES">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="1.7976931348623157E308" vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button id="e1m50" fx:id="e1m50Button" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="80.0" prefWidth="64.0">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-1-m50" />
+                     </styleClass>
+                  </Button>
+                  <Button id="e1m20" fx:id="e1m20Button" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-1-m20" />
+                     </styleClass>
+                  </Button>
+                  <Button id="e1Eject" fx:id="e1EjectButton" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="2">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-1-eject" />
+                     </styleClass>
+                  </Button>
+                  <Button id="e1p20" fx:id="e1p20Button" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="3">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-1-p20" />
+                     </styleClass>
+                  </Button>
+                  <Button id="e1p50" fx:id="e1p50Button" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="80.0" prefWidth="64.0" GridPane.columnIndex="4">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-1-p50" />
+                     </styleClass>
+                  </Button>
+                  <Button id="e1Heat" fx:id="e1HeatButton" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="6">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-1-heat" />
+                     </styleClass>
+                  </Button>
+                  <Button id="e2m50" fx:id="e2m50Button" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="80.0" prefWidth="64.0" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-2-m50" />
+                     </styleClass>
+                  </Button>
+                  <Button id="e2m20" fx:id="e2m20Button" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-2-m20" />
+                     </styleClass>
+                  </Button>
+                  <Button id="e2Eject" fx:id="e2EjectButton" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-2-eject" />
+                     </styleClass>
+                  </Button>
+                  <Button id="e2p20" fx:id="e2p20Button" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-2-p20" />
+                     </styleClass>
+                  </Button>
+                  <Button id="e2p50" fx:id="e2p50Button" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="80.0" prefWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-2-p50" />
+                     </styleClass>
+                  </Button>
+                  <Button id="e2Heat" fx:id="e2HeatButton" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="jog-button" />
+                        <String fx:value="jog-2-heat" />
+                     </styleClass>
+                  </Button>
+                  <Label fx:id="retractLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="control.retract" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <Label fx:id="ejectLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="control.eject" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="extrudeLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="control.extrude" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <Label fx:id="heatLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="extruder-label" text="control.heat" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+            <GridPane hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="panel" vgap="5.0" VBox.vgrow="SOMETIMES">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button id="ambientLight" fx:id="ambientLightButton" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="5">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="move-button" />
+                        <String fx:value="move-ambient-light" />
+                     </styleClass>
+                  </Button>
+                  <Button id="xp10" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="64.0" prefWidth="89.0" GridPane.columnIndex="3" fx:id="xp10Buttton">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="move-button" />
+                        <String fx:value="move-x-p10" />
+                     </styleClass>
+                  </Button>
+                  <Button id="xHome" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="2" fx:id="xHomeButton">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="move-button" />
+                        <String fx:value="move-x-home" />
+                     </styleClass>
+                  </Button>
+                  <Button id="xm10" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="64.0" prefWidth="89.0" GridPane.columnIndex="1" fx:id="xm10Button">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="move-button" />
+                        <String fx:value="move-x-m10" />
+                     </styleClass>
+                  </Button>
+                  <Button id="homeAll" fx:id="homeAllButton" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="88.0" prefWidth="64.0">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="move-button" />
+                        <String fx:value="move-home-all" />
+                     </styleClass>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button id="zp10" fx:id="zp10Button" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="99.0" prefWidth="64.0" GridPane.rowIndex="1">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="move-button" />
+                        <String fx:value="move-z-p10" />
+                     </styleClass>
+                  </Button>
+                  <Button id="zHome" fx:id="zHomeButton" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="move-button" />
+                        <String fx:value="move-z-home" />
+                     </styleClass>
+                  </Button>
+                  <Button id="zm10" fx:id="zm10Button" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="99.0" prefWidth="64.0" GridPane.rowIndex="3">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="move-button" />
+                        <String fx:value="move-z-m10" />
+                     </styleClass>
+                  </Button>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="move-gap" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.rowSpan="3" GridPane.vgrow="SOMETIMES">
+                     <children>
+                        <GridPane fx:id="bedGridPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="237.0" prefWidth="316.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="10.0" />
+                              <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="10.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button id="ym10" fx:id="ym10Button" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#controlAction" prefHeight="80.0" prefWidth="64.0" GridPane.rowSpan="2">
+                                 <styleClass>
+                                    <String fx:value="centered-background-image" />
+                                    <String fx:value="move-button" />
+                                    <String fx:value="move-y-m10" />
+                                 </styleClass>
+                                 <GridPane.margin>
+                                    <Insets left="55.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button id="yHome" fx:id="yHomeButton" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.rowIndex="2">
+                                 <styleClass>
+                                    <String fx:value="centered-background-image" />
+                                    <String fx:value="move-button" />
+                                    <String fx:value="move-y-home" />
+                                 </styleClass>
+                                 <GridPane.margin>
+                                    <Insets left="35.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button id="yp10" fx:id="yp10Button" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#controlAction" prefHeight="99.0" prefWidth="67.0" GridPane.rowIndex="3" GridPane.rowSpan="2">
+                                 <styleClass>
+                                    <String fx:value="centered-background-image" />
+                                    <String fx:value="move-button" />
+                                    <String fx:value="move-y-p10" />
+                                 </styleClass>
+                                 <GridPane.margin>
+                                    <Insets left="15.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button id="heatBed" fx:id="heatBedButton" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <styleClass>
+                                    <String fx:value="centered-background-image" />
+                                    <String fx:value="move-button" />
+                                    <String fx:value="move-heat-bed" />
+                                 </styleClass>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button id="unlock" fx:id="unlockButton" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <styleClass>
+                                    <String fx:value="centered-background-image" />
+                                    <String fx:value="move-button" />
+                                    <String fx:value="move-unlock" />
+                                 </styleClass>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </GridPane.margin>
+                              </Button>
+                           </children>
+                           <styleClass>
+                              <String fx:value="panel" />
+                              <String fx:value="centered-background-image" />
+                              <String fx:value="move-bed-grid" />
+                           </styleClass>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="1.0" minWidth="1.0" prefWidth="5.0" styleClass="move-gap" GridPane.columnIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="-10.0" />
+                     </GridPane.margin>
+                  </Pane>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </GridPane>
+            <GridPane hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="panel" vgap="5.0" VBox.vgrow="SOMETIMES">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button id="fan" fx:id="fanButton" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="80.0" prefWidth="80.0" text="control.fan" GridPane.columnIndex="4">
+                     <styleClass>
+                        <String fx:value="move-button" />
+                        <String fx:value="move-fan" />
+                     </styleClass>
+                  </Button>
+                  <Button id="headlight" fx:id="headlightButton" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="80.0" prefWidth="80.0" text="control.headlight" GridPane.columnIndex="3">
+                     <styleClass>
+                        <String fx:value="move-button" />
+                        <String fx:value="move-headlight" />
+                     </styleClass>
+                  </Button>
+                  <Button id="valve" fx:id="valveButton" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="80.0" prefWidth="80.0" text="control.valve" GridPane.columnIndex="2">
+                     <styleClass>
+                        <String fx:value="move-button" />
+                        <String fx:value="move-valve" />
+                     </styleClass>
+                  </Button>
+                  <Button id="select" fx:id="selectButton" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#controlAction" prefHeight="80.0" prefWidth="80.0" text="control.select" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="move-button" />
+                        <String fx:value="move-select" />
+                     </styleClass>
+                  </Button>
+                  <ImageView fx:id="headImageView" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </GridPane>
+            <GridPane styleClass="bottom-bar">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="leftButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#leftButtonAction" prefHeight="63.0">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-back" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="middleButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#middleButtonAction" prefHeight="63.0" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-home" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="rightButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rightButtonAction" prefHeight="63.0" GridPane.columnIndex="2">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-console" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <String fx:value="styles/Styles.css" />
+      <String fx:value="styles/Control.css" />
+   </stylesheets>
+</StackPane>

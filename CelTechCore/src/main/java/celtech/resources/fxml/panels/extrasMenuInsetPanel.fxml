@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.*?>
+<?import celtech.coreUI.components.buttons.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import org.controlsfx.control.textfield.*?>
+
+<VBox styleClass="inset-panel-background-redux" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox VBox.vgrow="ALWAYS">
+            <children>
+                <HBox minHeight="0.0" style="-fx-background-color: light_grey;" BorderPane.alignment="CENTER" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VerticalMenu fx:id="panelMenu" />
+                        <Separator id="calibrationMenuSeparator" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="5.0">
+                            <HBox.margin>
+                                <Insets bottom="30.0" top="95.0" />
+                            </HBox.margin>
+                        </Separator>
+                        <VBox fillWidth="true" HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox prefHeight="95" minHeight="0">
+                                    <children>
+                                    </children>
+                                </VBox>
+                                <VBox fx:id="insetNodeContainer" minHeight="-Infinity" maxHeight="100000000000" VBox.vgrow="ALWAYS">
+                                    <children>
+                                    </children>
+                                </VBox>
+                            </children>
+                            <HBox.margin>
+                                <Insets left="20.0" bottom="20.0" right="20.0"/>
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+                <StackPane minHeight="90.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" pickOnBounds="false" prefHeight="90.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+                            <children>
+                                <GraphicButtonWithLabel fxmlFileName="backwardButton" labelText="%buttonText.back" onAction="#okPressed" prefWidth="80.0" />
+                            </children>
+                            <StackPane.margin>
+                                <Insets left="10.0" />
+                            </StackPane.margin>
+                        </HBox>
+                        <HBox fx:id="buttonBoxContainer" alignment="CENTER" pickOnBounds="false" prefHeight="90.0" BorderPane.alignment="CENTER">
+                            <children>
+                            </children>
+                            <StackPane.margin>
+                                <Insets />
+                            </StackPane.margin>
+                        </HBox>
+                    </children>
+                </StackPane>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </VBox>
+    </children>
+    <VBox.margin>
+        <Insets top="60.0" />
+    </VBox.margin>
+</VBox>

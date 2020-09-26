@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootPane" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" styleClass="status_inner" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.utilityPanels.OuterPanelController">
+   <children>
+      <StackPane>
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="20.0">
+               <children>
+                  <StackPane id="cross_button" fx:id="crossButton" styleClass="cross_button">
+                     <children>
+                        <Line endX="10.0" endY="10.0" mouseTransparent="true" stroke="#fffdfd" strokeWidth="2.0" />
+                        <Line endY="10.0" mouseTransparent="true" startX="10.0" stroke="#f5f3f3" strokeWidth="2.0" />
+                     </children>
+                  </StackPane>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" maxWidth="350.0" minWidth="350.0" mouseTransparent="true" prefWidth="350.0">
+               <children>
+                  <Label fx:id="title" styleClass="title" text="Title" />
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

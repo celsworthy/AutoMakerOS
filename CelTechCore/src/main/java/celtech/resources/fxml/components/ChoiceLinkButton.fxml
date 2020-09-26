@@ -1,0 +1,15 @@
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import celtech.coreUI.components.*?>
+
+<fx:root type="celtech.coreUI.components.ChoiceLinkButton" styleClass="error-dialog-choice-button" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <graphic>
+        <VBox id="errorDialogButtonLabelGroup" fx:id="labelGroup">
+            <children>
+                <HyperlinkedLabel id="errorDialogButtonTitle" fx:id="title" text="" />
+                <HyperlinkedLabel id="errorDialogButtonMessage" fx:id="message" text="" />
+            </children>
+        </VBox>
+    </graphic>
+</fx:root>

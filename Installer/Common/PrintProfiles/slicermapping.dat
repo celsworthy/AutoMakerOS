@@ -1,0 +1,382 @@
+{
+  "mappings" : {
+    "Slic3r" : {
+	  /*
+	   * Defaults for all profiles
+	   */
+      "defaults" : [
+      		"solid_fill_pattern:rectilinear",
+			"avoid_crossing_perimeters:0",
+			"dont_support_bridges:1",
+			"external_perimeters_first:0",
+			"infill_only_where_needed:0",
+			"complete_objects:0",
+			"default_acceleration:0",
+			"bridge_flow_ratio:1",
+			"solid_infill_below_area:5",
+			"extra_perimeters:0",
+			"gcode_flavor:reprap",
+			"use_relative_e_distances:1",
+			"thin_walls:0",
+			"only_retract_when_crossing_perimeters:1",
+			"infill_first:0",
+			"skirts:0",
+			"threads:4",
+			"travel_speed:200",
+			"gcode_comments:1",
+			"end_gcode:",
+			"start_gcode:",
+			"extrusion_multiplier:1",
+			"extrusion_width:0.3",
+			"infill_extruder:1",
+			"interface_shells:0",
+			"nozzle_diameter:0.3",
+			"ooze_prevention:0",
+			"overhangs:1",
+			"perimeter_acceleration:0",
+			"perimeter_extruder:1",
+			"resolution:0",
+			"retract_before_travel:1",
+			"retract_layer_change:0",
+			"retract_length:0.05",
+			"retract_length_toolchange:0.05",
+			"retract_lift:0",
+			"retract_restart_extra:0.25",
+			"retract_restart_extra_toolchange:0",
+			"retract_speed:20",
+			"seam_position:aligned",
+			"skirt_distance:6",
+			"skirt_height:1",
+			"support_material_enforce_layers:0",
+			"support_material_interface_extruder:1",
+			"support_material_interface_spacing:0",
+			"use_firmware_retraction:0",
+			"vibration_limit:0",
+			"wipe:0"
+ ],
+			
+      "mappingData" : {
+
+	     /*
+		  * Extrusion
+		  */
+		  "layer_height":"layerHeight_mm",
+		  "first_layer_height":"firstLayerHeight_mm",
+		  "fill_density":"fillDensity_normalised",
+		  "fill_pattern":"fillPattern",
+		  "infill_every_layers":"fillEveryNLayers",
+		  "top_solid_layers":"solidLayersAtTop",
+		  "bottom_solid_layers":"solidLayersAtBottom",
+		  "perimeters":"numberOfPerimeters",
+		  "brim_width":"brimWidth_mm",
+		  "spiral_vase":"spiralPrint",
+		
+		/*
+		 * Nozzle data
+		 */
+		  "first_layer_extrusion_width":"firstLayerExtrusionWidth_mm",
+		  "perimeter_extrusion_width":"perimeterExtrusionWidth_mm", 
+		  "infill_extrusion_width":"fillExtrusionWidth_mm",
+		  "solid_infill_extrusion_width":"solidFillExtrusionWidth_mm",
+		  "top_infill_extrusion_width":"topSolidFillExtrusionWidth_mm",
+		  "support_material_extrusion_width":"supportExtrusionWidth_mm", 
+		
+		/*
+		 * Support
+		 */
+		  "support_material":"generateSupportMaterial",
+		  "support_material_threshold":"supportOverhangThreshold_degrees",
+		  "support_material_pattern":"supportPattern", 
+		  "support_material_spacing":"supportPatternSpacing_mm",
+		  "support_material_angle":"supportPatternAngle_degrees",
+		  "support_material_enforce_layers":"forcedSupportForFirstNLayers",
+		  
+		/*
+		 * Speed settings
+		 */
+		  "first_layer_speed":"firstLayerSpeed_mm_per_s",
+		  "perimeter_speed":"perimeterSpeed_mm_per_s",
+		  "small_perimeter_speed":"smallPerimeterSpeed_mm_per_s",
+		  "external_perimeter_speed":"externalPerimeterSpeed_mm_per_s",
+		  "infill_speed":"fillSpeed_mm_per_s",
+		  "solid_infill_speed":"solidFillSpeed_mm_per_s",
+		  "top_solid_infill_speed":"topSolidFillSpeed_mm_per_s",
+		  "support_material_speed":"supportSpeed_mm_per_s",
+		  "bridge_speed":"bridgeSpeed_mm_per_s",
+		  "gap_fill_speed":"gapFillSpeed_mm_per_s",
+		  "support_material_interface_speed":"interfaceSpeed_mm_per_s",
+
+		/*
+		 * Cooling
+		 */
+		  "cooling":"enableCooling",
+		  "min_fan_speed":"minFanSpeed_percent",
+		  "max_fan_speed":"maxFanSpeed_percent",
+		  "bridge_fan_speed":"bridgeFanSpeed_percent",
+		  "disable_fan_first_layers":"disableFanFirstNLayers",
+		  "fan_below_layer_time":"coolIfLayerTimeLessThan_secs",
+		  "slowdown_below_layer_time":"slowDownIfLayerTimeLessThan_secs",
+		  "min_print_speed":"minPrintSpeed_mm_per_s",
+
+		/*
+		* Raft
+		*/
+		 "support_material_contact_distance":"raftAirGapLayer0_mm",
+		 "support_material_interface_layers":"interfaceLayers",
+		 "raft_layers":"raftInterfaceLayers:+1:?printRaft=false->0"
+		}		 
+    },
+    "Cura" : {
+        /*
+		 * Defaults for all profiles
+		 */	 
+		"defaults" : [ 
+			"initialSpeedupLayers:2",
+			"retractionZHop:0",
+			"retractionSpeed:30",
+			"filamentFlow:100",
+			"infillOverlap:10",
+			"coolHeadLift:0",
+			"enableCombing:1",
+			"minimalExtrusionBeforeRetraction:0",
+			"retractionMinimalDistance:500",
+			"retractionAmount:500",
+			"objectSink:0",
+			"fixHorrible:1",
+			"moveSpeed:200",
+			"autoCenter:0",
+			"posx:0",
+			"posy:0",
+			"multiVolumeOverlap:150",
+			"skirtDistance:0",
+            "perimeterBeforeInfill:1"
+			],
+		
+		"mappingData" : {
+			 /*
+			  * Extrusion
+			  */
+			"layerThickness":"layerHeight_mm:*1000", 
+			"initialLayerThickness":"firstLayerHeight_mm:*1000",
+			"insetCount":"numberOfPerimeters", 
+			"upSkinCount":"solidLayersAtTop", 
+			"downSkinCount":"solidLayersAtBottom",
+			"sparseInfillLineDistance":"fillDensity_normalised:?0->-1:[fillExtrusionWidth_mm:*1000",
+			"skirtLineCount":"brimWidth_mm",
+			"spiralizeMode":"spiralPrint",
+			"supportZDistance":"supportZDistance_mm:*1000:?supportGapEnabled=false->0",
+			"supportXYDistance":"supportXYDistance_mm:*1000",
+			
+			/*
+			 * Nozzle data
+			 */
+			"layer0extrusionWidth":"firstLayerExtrusionWidth_mm:*1000",
+			"extrusionWidth":"perimeterExtrusionWidth_mm:*1000",
+			"fillExtrusionWidth":"fillExtrusionWidth_mm:*1000",
+			"supportExtrusionWidth":"supportExtrusionWidth_mm:*1000",
+			
+			/*
+			 * Support
+			 */
+			"supportEverywhere":"generateSupportMaterial",
+			"supportAngle":"supportOverhangThreshold_degrees:?generateSupportMaterial=false->-1",
+			"supportType":"supportPattern",
+			"supportLineDistance":"supportPatternSpacing_mm:*1000",
+
+			/*
+			 * Speed settings
+			 */
+			"initialLayerSpeed":"firstLayerSpeed_mm_per_s:?printRaft=true->28",
+			"insetXSpeed":"perimeterSpeed_mm_per_s",
+			"infillSpeed":"fillSpeed_mm_per_s",
+			"skinSpeed":"fillSpeed_mm_per_s",
+			"inset0Speed":"externalPerimeterSpeed_mm_per_s",
+			"printSpeed":"supportSpeed_mm_per_s", 
+			"raftSurfaceSpeed":"interfaceSpeed_mm_per_s",
+
+			/*
+			 * Cooling
+			 */
+			"fanSpeedMin":"minFanSpeed_percent:?enableCooling=false->0",
+			"fanSpeedMax":"maxFanSpeed_percent:?enableCooling=false->0",
+			"minimalLayerTime":"slowDownIfLayerTimeLessThan_secs:?enableCooling=false->0", 
+			"minimalFeedrate":"minPrintSpeed_mm_per_s",
+
+			/*
+			 * Raft
+			 */
+			"raftBaseLinewidth":"raftBaseLinewidth_mm:*1000:?printRaft=false->|",
+			"raftAirGap":"raftAirGapLayer0_mm:*1000:?printRaft=false->|",
+			"raftAirGapLayer0":"raftAirGapLayer0_mm:*1000:?printRaft=false->|",
+			"raftSurfaceLayers":"raftInterfaceLayers:?printRaft=false->|",
+			"raftBaseThickness":"raftBaseThickness_mm:*1000:?printRaft=false->|",
+			"raftLineSpacing":"2000:?printRaft=false->|",
+			"raftMargin":"3000:?printRaft=false->|",
+			"raftSurfaceLineSpacing":"300:?printRaft=false->|",
+			"raftInterfaceLineSpacing":"800:?printRaft=false->|",
+			"raftSurfaceSpeed":"15:?printRaft=false->|", 
+			"raftFanSpeed":"100:?printRaft=false->|", 
+			"raftSurfaceThickness":"270:?printRaft=false->|", 
+			"raftBaseSpeed":"15:?printRaft=false->|",
+			"raftSurfaceLinewidth":"300:?printRaft=false->|",
+			"raftInterfaceLinewidth":"400:?printRaft=false->|",
+			"raftInterfaceThickness":"280:?printRaft=false->|"
+		}
+	},
+	"Cura4" : {
+		/*
+		 * Defaults for all profiles
+		 */	 
+		"defaults" : [
+		],
+		"mappingData" : {
+			/*
+			 * Extrusion
+			 */
+			"layer_height":"layerHeight_mm",
+			"layer_height_0":"firstLayerHeight_mm",
+			"wall_line_count":"numberOfPerimeters",
+			"top_layers":"solidLayersAtTop", 
+			"bottom_layers":"solidLayersAtBottom",
+			"top_bottom_pattern":"top_bottom_pattern",
+			"top_bottom_pattern_0":"top_bottom_pattern",
+			"infill_sparse_density":"fillDensity_normalised",
+			"infill_line_distance":"fillDensity_normalised:?0->-1:[fillExtrusionWidth_mm:*100",
+			"brim_line_count":"brimWidth_mm",
+			"magic_spiralize":"spiralPrint",
+			"infill_pattern":"fillPattern",
+			"infill_angles":"fillDirection",
+			"gradual_infill_steps":"gradualInfillSteps",
+			"gradual_infill_step_height":"gradual_infill_step_height",
+			"retraction_hop_enabled":"retraction_hop_enabled",
+			"retraction_hop":"retraction_hop",
+			"travel_retract_before_outer_wall":"travel_retract_before_outer_wall",
+			"coasting_enable":"coastingEnable",
+			"coasting_volume":"coastingVolume",
+			"coasting_min_volume":"coastingMinVolume",
+			"coasting_speed":"coastingSpeed",
+			"infill_sparse_thickness":"infillLayerThickness:*layerHeight_mm",
+			"optimize_wall_printing_order":"optimize_wall_printing_order",
+			"infill_before_walls":"infill_before_walls",
+			"skin_angles":"skin_angles",
+			"roofing_pattern":"roofing_pattern",
+			"roofing_angles":"roofing_angles",
+			"roofing_layer_count":"roofing_layer_count",
+			
+			/*
+			 * Nozzle data
+			 */
+			"initial_layer_line_width_factor":"initial_layer_line_width_factor",
+			"wall_line_width":"perimeterExtrusionWidth_mm",
+			"wall_line_width_0":"perimeterExtrusionWidth_mm",
+			"wall_line_width_x":"perimeterExtrusionWidth_mm",
+			"skin_line_width":"skinExtrusionWidth_mm",
+			"infill_line_width":"fillExtrusionWidth_mm",
+			"support_line_width":"supportExtrusionWidth_mm",
+			"wall_extruder_nr":"perimeterNozzle",
+			"wall_0_extruder_nr":"perimeterNozzle",
+			"wall_x_extruder_nr":"perimeterNozzle",
+			"top_bottom_extruder_nr":"skinNozzle",
+			"roofing_extruder_nr":"perimeterNozzle",
+			"infill_extruder_nr":"fillNozzle",
+			"support_extruder_nr":"supportNozzle",
+			"support_infill_extruder_nr":"supportNozzle",
+			"support_extruder_nr_layer_0":"supportNozzle",
+			"support_interface_extruder_nr":"supportInterfaceNozzle",
+			"support_roof_extruder_nr":"supportInterfaceNozzle",
+			"support_bottom_extruder_nr":"supportInterfaceNozzle",
+			"adhesion_extruder_nr":"raftBrimNozzle",
+			
+			/*
+			 * Support
+			 */
+			"support_enable":"generateSupportMaterial",
+			"support_angle":"supportOverhangThreshold_degrees:?generateSupportMaterial=false->-1",
+			"support_pattern":"supportPattern",
+			"support_line_distance":"supportPatternSpacing_mm",
+			"support_infill_sparse_thickness":"supportInfillLayerThickness:*layerHeight_mm",
+			"support_xy_distance":"supportXYDistance_mm",			
+			"support_z_distance":"support_top_distance:?supportGapEnabled=false->0:*layerHeight_mm",
+			"support_top_distance":"support_top_distance:?supportGapEnabled=false->0:*layerHeight_mm",
+			"support_bottom_distance":"support_bottom_distance:?supportGapEnabled=false->0:*layerHeight_mm",
+			"support_infill_angle":"support_infill_angle",
+			"support_wall_count":"support_wall_count",
+			"support_interface_enable":"enableSupportInterface",
+			"support_roof_enable":"enableSupportInterface",
+			"support_bottom_enable":"enableSupportInterface",
+			"support_interface_height":"support_interface_height:*layerHeight_mm",
+			"support_roof_height":"support_interface_height:*layerHeight_mm",
+			"support_bottom_height":"support_interface_height:*layerHeight_mm",
+			"support_interface_pattern":"support_interface_pattern",
+			"support_roof_pattern":"support_interface_pattern",
+			"support_bottom_pattern":"support_interface_pattern",
+			
+			/*
+			 * Support Advanced
+			 */
+			"support_type":"support_type",
+			"support_brim_enable":"support_brim_enable",
+			"support_brim_line_count":"support_brim_line_count",
+			"gradual_support_infill_steps":"gradual_support_infill_steps",
+			"gradual_support_infill_step_height":"gradual_support_infill_step_height",
+			"limit_support_retractions":"limit_support_retractions",
+			"support_offset":"support_offset",
+			"support_join_distance":"support_join_distance",
+			"support_use_towers":"support_use_towers",
+			"support_tower_diameter":"support_tower_diameter",
+			"support_minimal_diameter":"support_minimal_diameter",
+			"support_tower_roof_angle":"support_tower_roof_angle",
+
+			/*
+			 * Raft
+			 */
+			"adhesion_type":"adhesionType",
+			"raft_base_line_width":"raftBaseLinewidth_mm:?adhesionType=none->|",
+			"raft_airgap":"raftAirGapLayer0_mm:?adhesionType=none->|",
+			"raft_surface_layers":"raftInterfaceLayers:?adhesionType=none->|",
+			"raft_base_thickness":"raftBaseThickness_mm:?adhesionType=none->|",
+			"raft_base_line_spacing":"2:?adhesionType=none->|",
+			"raft_margin":"3:?adhesionType=none->|",
+			"raft_surface_line_width":"0.3:?adhesionType=none->|",
+			"raft_surface_line_spacing":"0.3:?adhesionType=none->|",
+			"raft_surface_thickness":"0.27:?adhesionType=none->|",
+			"raft_interface_line_width":"0.4:?adhesionType=none->|",
+			"raft_interface_line_spacing":"0.8:?adhesionType=none->|",
+			"raft_interface_thickness":"0.28:?adhesionType=none->|",
+			"raft_fan_speed":"100:?adhesionType=none->|",  
+			"raft_base_speed":"15:?adhesionType=none->|",
+			"layer_0_z_overlap":"raftAirGapLayer0_mm:/2",
+
+			/*
+			 * Speed settings
+			 */
+			"retraction_combing":"retraction_combing",
+			"speed_layer_0":"firstLayerSpeed_mm_per_s",
+			"speed_slowdown_layers":"speed_slowdown_layers",
+			"speed_print_layer_0":"firstLayerSpeed_mm_per_s",
+			"skirt_brim_speed":"firstLayerSpeed_mm_per_s",
+			"speed_wall":"perimeterSpeed_mm_per_s",
+			"speed_wall_x":"perimeterSpeed_mm_per_s",
+			"speed_infill":"fillSpeed_mm_per_s",
+			"speed_print":"fillSpeed_mm_per_s",
+			"speed_topbottom":"speed_topbottom",
+			"speed_wall_0":"externalPerimeterSpeed_mm_per_s",
+			"speed_support":"supportSpeed_mm_per_s", 
+			"speed_support_infill":"supportSpeed_mm_per_s",
+			"speed_support_interface":"interfaceSpeed_mm_per_s",
+			"speed_support_roof":"interfaceSpeed_mm_per_s",
+			"speed_support_bottom":"interfaceSpeed_mm_per_s",
+
+			/*
+			 * Cooling
+			 */
+			"cool_fan_enabled":"enableCooling",
+			"cool_fan_speed_min":"minFanSpeed_percent",
+			"cool_fan_speed_max":"maxFanSpeed_percent",
+			"cool_min_layer_time":"slowDownIfLayerTimeLessThan_secs",
+			"cool_min_speed":"minPrintSpeed_mm_per_s"
+
+		}
+	}
+	}
+}

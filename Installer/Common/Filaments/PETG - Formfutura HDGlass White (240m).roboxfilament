@@ -1,0 +1,21 @@
+############################################################################
+#                   Robox Filament Definition File v1.0                    #
+############################################################################
+
+name = Formfutura\u00AE White
+material = PTG
+reelID = RBX-PTG-FFWH1
+brand = Formfutura\u00AE
+category = HDGlass\u2122
+diameter_mm = 1.75
+filled = no
+filament_multiplier = 0.95
+feed_rate_multiplier = 1.00
+ambient_temperature_C = 60
+first_layer_bed_temperature_C = 85
+bed_temperature_C = 80
+first_layer_nozzle_temperature_C = 230
+nozzle_temperature_C = 225
+display_colour = #F4F8F4
+cost_gbp_per_kg = 43.7
+default_length_m = 240

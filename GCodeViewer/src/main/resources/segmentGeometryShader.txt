@@ -1,0 +1,247 @@
+#version 150
+
+layout(points) in;
+layout(triangle_strip, max_vertices = 48) out;
+
+uniform mat4 compositeMatrix;
+uniform vec3 lightPosition;
+
+in vec4 vColour[]; // Output from vertex shader for each vertex
+in vec4 vNormal[];
+in vec4 vDimensions[]; // x = length, y = width, z = thickness, w = 1.0.
+in vec4 vDirection[];
+in vec4 vAngles[];
+
+out vec4 fColour; // Output to fragment shader
+out vec3 fNormal;
+out vec3 lNormal;
+
+void main()
+{
+	// Expand each point to a square block.
+	fColour = vColour[0]; // Point has only one vertex
+	if (fColour.a > 0.01)
+	{
+		vec3 d = vDirection[0].xyz;
+		vec3 n = vNormal[0].xyz;
+		vec3 b = cross(n, d); // bi-normal.
+		b = normalize(b);
+		
+		// vDimensions has the segment length in x and width in y,
+		// and thickness in z. 
+		vec4 dd = vec4(0.5 * vDimensions[0].x * d, 0.0);
+		vec4 dp; // Direction and length of end pyramids.
+		if (vDimensions[0].x < vDimensions[0].y)
+			dp = vec4(0.5 * vDimensions[0].x * d, 0.0);
+		else
+			dp = vec4(0.5 * vDimensions[0].y * d, 0.0);
+		vec4 nn = vec4(0.5 * vDimensions[0].y * n, 0.0);
+		vec4 bb = vec4(0.5 * vDimensions[0].z * b, 0.0);
+		
+		vec4 p = gl_in[0].gl_Position;
+	
+		// Calculate light normal.
+		lNormal = normalize(lightPosition - p.xyz);
+
+		// Calculate the 8 points of the block.
+		// The cross section is a diamond, with p at the top.
+		vec4 p1 = (p - bb - bb);
+		vec4 p2 = (p + nn - bb);
+		vec4 p3 = p;
+		vec4 p4 = (p - nn - bb);
+		vec4 p5 = compositeMatrix * (p1 + dd);
+		vec4 p6 = compositeMatrix * (p2 + dd);
+		vec4 p7 = compositeMatrix * (p3 + dd);
+		vec4 p8 = compositeMatrix * (p4 + dd);
+		p1 = compositeMatrix * (p1 - dd);
+		p2 = compositeMatrix * (p2 - dd);
+		p3 = compositeMatrix * (p3 - dd);
+		p4 = compositeMatrix * (p4 - dd);
+		
+		// Calculate the centre  points of the end pyramids.
+		vec4 pp1 = compositeMatrix * (p - dd - dp - bb);
+		vec4 pp2 = compositeMatrix * (p + dd + dp - bb);
+
+		// End pyramid
+		fNormal = -d;		
+		gl_Position = pp1;
+		EmitVertex();
+		fNormal = -b;		
+		gl_Position = p1;
+		EmitVertex();
+		fNormal = n;		
+		gl_Position = p2;
+		EmitVertex();
+		EndPrimitive();
+
+		fNormal = -d;		
+		gl_Position = pp1;
+		EmitVertex();
+		fNormal = n;		
+		gl_Position = p2;
+		EmitVertex();
+		fNormal = b;		
+		gl_Position = p3;
+		EmitVertex();
+		EndPrimitive();
+
+		fNormal = -d;		
+		gl_Position = pp1;
+		EmitVertex();
+		fNormal = b;		
+		gl_Position = p3;
+		EmitVertex();
+		fNormal = -n;		
+		gl_Position = p4;
+		EmitVertex();
+		EndPrimitive();
+
+		fNormal = -d;		
+		gl_Position = pp1;
+		EmitVertex();
+		fNormal = -n;		
+		gl_Position = p4;
+		EmitVertex();
+		fNormal = -b;		
+		gl_Position = p1;
+		EmitVertex();
+		EndPrimitive();
+
+		// Side 1 triangles.
+		fNormal = -b;
+		gl_Position = p1;
+		EmitVertex();
+		fNormal = -b;
+		gl_Position = p5;
+		EmitVertex();
+		fNormal = n;
+		gl_Position = p6;
+		EmitVertex();
+		EndPrimitive();
+
+		fNormal = -b;
+		gl_Position = p1;
+		EmitVertex();
+		fNormal = n;
+		gl_Position = p6;
+		EmitVertex();
+		fNormal = n;
+		gl_Position = p2;
+		EmitVertex();
+		EndPrimitive();
+
+		// Side 2 triangles.
+		fNormal = n;
+		gl_Position = p2;
+		EmitVertex();
+		fNormal = n;
+		gl_Position = p6;
+		EmitVertex();
+		fNormal = b;
+		gl_Position = p7;
+		EmitVertex();
+		EndPrimitive();
+
+		fNormal = n;
+		gl_Position = p2;
+		EmitVertex();
+		fNormal = b;
+		gl_Position = p7;
+		EmitVertex();
+		fNormal = b;
+		gl_Position = p3;
+		EmitVertex();
+
+		// Side 3 triangles.
+		fNormal = b;
+		gl_Position = p3;
+		EmitVertex();
+		fNormal = -n;
+		gl_Position = p8;
+		EmitVertex();
+		fNormal = b;
+		gl_Position = p7;
+		EmitVertex();
+		EndPrimitive();
+
+		fNormal = b;
+		gl_Position = p3;
+		EmitVertex();
+		fNormal = -n;
+		gl_Position = p8;
+		EmitVertex();
+		fNormal = -n;
+		gl_Position = p4;
+		EmitVertex();
+		EndPrimitive();
+
+		// Side 4 triangles.
+		fNormal = -n;
+		gl_Position = p4;
+		EmitVertex();
+		fNormal = -n;
+		gl_Position = p8;
+		EmitVertex();
+		fNormal = -b;
+		gl_Position = p5;
+		EmitVertex();
+		EndPrimitive();
+		
+		fColour = vColour[0]; 
+		fNormal = -n;
+		gl_Position = p4;
+		EmitVertex();
+		fNormal = -b;
+		gl_Position = p5;
+		EmitVertex();
+		fNormal = -b;
+		gl_Position = p1;
+		EmitVertex();
+		EndPrimitive();
+		
+		// End pyramid
+		fNormal = d;		
+		gl_Position = pp2;
+		EmitVertex();
+		fNormal = n;		
+		gl_Position = p6;
+		EmitVertex();
+		fNormal = -b;		
+		gl_Position = p5;
+		EmitVertex();
+		EndPrimitive();
+
+		fNormal = d;		
+		gl_Position = pp2;
+		EmitVertex();
+		fNormal = -b;		
+		gl_Position = p5;
+		EmitVertex();
+		fNormal = -n;		
+		gl_Position = p8;
+		EmitVertex();
+		EndPrimitive();
+
+		fNormal = d;		
+		gl_Position = pp2;
+		EmitVertex();
+		fNormal = -n;		
+		gl_Position = p8;
+		EmitVertex();
+		fNormal = b;		
+		gl_Position = p7;
+		EmitVertex();
+		EndPrimitive();
+
+		fNormal = d;		
+		gl_Position = pp2;
+		EmitVertex();
+		fNormal = b;		
+		gl_Position = p7;
+		EmitVertex();
+		fNormal = n;		
+		gl_Position = p6;
+		EmitVertex();
+		EndPrimitive();
+	}
+}

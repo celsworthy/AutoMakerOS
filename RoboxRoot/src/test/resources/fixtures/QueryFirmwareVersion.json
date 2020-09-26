@@ -1,0 +1,8 @@
+{
+    "@class": "celtech.comms.remote.tx.QueryFirmwareVersion",
+    "packetType": "QUERY_FIRMWARE_VERSION",
+    "messagePayload": null,
+    "sequenceNumber": -1,
+    "includeSequenceNumber": false,
+    "includeCharsOfDataInOutput": false
+}

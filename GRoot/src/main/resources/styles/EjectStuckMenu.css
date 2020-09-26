@@ -1,0 +1,7 @@
+.menu-button-1 {
+    -fx-graphic: url("/image/menu-eject-stuck-1-grey.png");
+}
+
+.menu-button-2 {
+    -fx-graphic: url("/image/menu-eject-stuck-2-grey.png");
+}

@@ -1,0 +1,1998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<Pane styleClass="lightGreyBackground" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane>
+            <children>
+                <Pane>
+                    <children>
+                        <Line endX="96.67" endY="273.363" startX="96.67" startY="285.494" stroke="#FFFFFF" />
+                        <Line endX="28.99" endY="284.86" startX="59.734" startY="285.145" stroke="#FFFFFF" />
+                        <Line endX="81.633" endY="285.348" startX="96.67" startY="285.487" stroke="#FFFFFF" />
+                        <Line endX="133.664" endY="285.092" startX="164.371" startY="284.76" stroke="#FFFFFF" />
+                        <Line endX="96.67" endY="285.494" startX="118.211" startY="285.26" stroke="#FFFFFF" />
+                        <Line endX="82.109" endY="281.399" startX="96.67" startY="281.53" stroke="#FFFFFF" />
+                        <Line endX="28.951" endY="280.918" startX="59.48" startY="281.195" stroke="#FFFFFF" />
+                        <Line endX="96.67" endY="281.535" startX="114.77" startY="281.345" stroke="#FFFFFF" />
+                        <Line endX="136.346" endY="281.115" startX="164.408" startY="280.818" stroke="#FFFFFF" />
+                        <Line endX="185.717" endY="0.93" startX="190.959" startY="6.209" stroke="#FFFFFF" />
+                        <Line endX="185.715" endY="0.932" startX="190.959" startY="6.211" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="190.943" />
+                                <Double fx:value="11.756" />
+                                <Double fx:value="190.951" />
+                                <Double fx:value="11.828" />
+                                <Double fx:value="190.955" />
+                                <Double fx:value="11.895" />
+                                <Double fx:value="190.959" />
+                                <Double fx:value="11.955" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="190.926" />
+                                <Double fx:value="11.592" />
+                                <Double fx:value="190.936" />
+                                <Double fx:value="11.677" />
+                                <Double fx:value="190.943" />
+                                <Double fx:value="11.756" />
+                            </points>
+                        </Polyline>
+                        <Line endX="179.469" endY="192.133" startX="179.332" startY="191.695" stroke="#FFFFFF" />
+                        <Line endX="179.668" endY="192.682" startX="179.469" startY="192.133" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="179.668" />
+                                <Double fx:value="192.682" />
+                                <Double fx:value="179.902" />
+                                <Double fx:value="193.25" />
+                                <Double fx:value="180.162" />
+                                <Double fx:value="193.83" />
+                                <Double fx:value="180.439" />
+                                <Double fx:value="194.416" />
+                                <Double fx:value="180.729" />
+                                <Double fx:value="195.004" />
+                                <Double fx:value="181.02" />
+                                <Double fx:value="195.595" />
+                                <Double fx:value="181.309" />
+                                <Double fx:value="196.174" />
+                                <Double fx:value="181.584" />
+                                <Double fx:value="196.742" />
+                                <Double fx:value="181.846" />
+                                <Double fx:value="197.297" />
+                                <Double fx:value="182.082" />
+                                <Double fx:value="197.825" />
+                                <Double fx:value="182.295" />
+                                <Double fx:value="198.326" />
+                                <Double fx:value="182.475" />
+                                <Double fx:value="198.799" />
+                                <Double fx:value="182.625" />
+                                <Double fx:value="199.241" />
+                                <Double fx:value="182.74" />
+                                <Double fx:value="199.65" />
+                                <Double fx:value="182.816" />
+                                <Double fx:value="200.032" />
+                                <Double fx:value="182.865" />
+                                <Double fx:value="200.385" />
+                                <Double fx:value="182.869" />
+                                <Double fx:value="200.715" />
+                                <Double fx:value="182.859" />
+                                <Double fx:value="200.877" />
+                            </points>
+                        </Polyline>
+                        <Line endX="185.48" endY="173.877" startX="184.936" startY="179.963" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="185.48" />
+                                <Double fx:value="173.877" />
+                                <Double fx:value="185.984" />
+                                <Double fx:value="167.973" />
+                                <Double fx:value="186.469" />
+                                <Double fx:value="162.062" />
+                                <Double fx:value="186.924" />
+                                <Double fx:value="156.141" />
+                                <Double fx:value="187.357" />
+                                <Double fx:value="150.213" />
+                                <Double fx:value="187.766" />
+                                <Double fx:value="144.278" />
+                                <Double fx:value="188.15" />
+                                <Double fx:value="138.337" />
+                            </points>
+                        </Polyline>
+                        <Line endX="186.688" endY="159.243" startX="185.555" startY="173.039" stroke="#FFFFFF" />
+                        <Line endX="187.688" endY="145.437" startX="186.688" startY="159.243" stroke="#FFFFFF" />
+                        <Line endX="188.088" endY="139.361" startX="188.021" startY="140.351" stroke="#FFFFFF" />
+                        <Line endX="188.088" endY="139.361" startX="188.15" startY="138.34" stroke="#FFFFFF" />
+                        <Line endX="188.15" endY="138.337" startX="188.135" startY="138.609" stroke="#FFFFFF" />
+                        <Line endX="188.135" endY="138.336" startX="187.688" startY="145.437" stroke="#FFFFFF" />
+                        <Line endX="190.891" endY="11.076" startX="190.896" startY="10.996" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="190.545" />
+                                <Double fx:value="83.057" />
+                                <Double fx:value="190.67" />
+                                <Double fx:value="77.356" />
+                                <Double fx:value="190.775" />
+                                <Double fx:value="71.655" />
+                                <Double fx:value="190.855" />
+                                <Double fx:value="65.953" />
+                                <Double fx:value="190.912" />
+                                <Double fx:value="60.252" />
+                                <Double fx:value="190.945" />
+                                <Double fx:value="54.552" />
+                                <Double fx:value="190.959" />
+                                <Double fx:value="48.852" />
+                            </points>
+                        </Polyline>
+                        <Line endX="190.891" endY="62.459" startX="190.826" startY="66.9" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="190.891" />
+                                <Double fx:value="11.076" />
+                                <Double fx:value="190.891" />
+                                <Double fx:value="11.158" />
+                                <Double fx:value="190.891" />
+                                <Double fx:value="11.242" />
+                                <Double fx:value="190.896" />
+                                <Double fx:value="11.328" />
+                                <Double fx:value="190.904" />
+                                <Double fx:value="11.418" />
+                                <Double fx:value="190.914" />
+                                <Double fx:value="11.506" />
+                                <Double fx:value="190.926" />
+                                <Double fx:value="11.592" />
+                            </points>
+                        </Polyline>
+                        <Line endX="190.848" endY="66.469" startX="190.842" startY="66.901" stroke="#FFFFFF" />
+                        <Line endX="190.842" endY="66.901" startX="190.848" startY="66.51" stroke="#FFFFFF" />
+                        <Line endX="190.857" endY="65.564" startX="190.848" startY="66.469" stroke="#FFFFFF" />
+                        <Line endX="190.848" endY="66.51" startX="190.857" startY="65.564" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="190.857" />
+                                <Double fx:value="65.564" />
+                                <Double fx:value="190.871" />
+                                <Double fx:value="64.619" />
+                                <Double fx:value="190.879" />
+                                <Double fx:value="63.715" />
+                                <Double fx:value="190.889" />
+                                <Double fx:value="62.85" />
+                                <Double fx:value="190.896" />
+                                <Double fx:value="62.02" />
+                                <Double fx:value="190.904" />
+                                <Double fx:value="61.23" />
+                            </points>
+                        </Polyline>
+                        <Line endX="190.912" endY="60.266" startX="190.904" startY="61.23" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="190.912" />
+                                <Double fx:value="60.266" />
+                                <Double fx:value="190.914" />
+                                <Double fx:value="59.807" />
+                                <Double fx:value="190.92" />
+                                <Double fx:value="59.172" />
+                                <Double fx:value="190.926" />
+                                <Double fx:value="58.59" />
+                                <Double fx:value="190.928" />
+                                <Double fx:value="58.054" />
+                                <Double fx:value="190.93" />
+                                <Double fx:value="57.568" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="190.959" />
+                                <Double fx:value="10.504" />
+                                <Double fx:value="190.959" />
+                                <Double fx:value="10.518" />
+                                <Double fx:value="190.959" />
+                                <Double fx:value="10.528" />
+                                <Double fx:value="190.959" />
+                                <Double fx:value="10.539" />
+                                <Double fx:value="190.959" />
+                                <Double fx:value="10.547" />
+                                <Double fx:value="190.955" />
+                                <Double fx:value="10.555" />
+                                <Double fx:value="190.955" />
+                                <Double fx:value="10.562" />
+                                <Double fx:value="190.955" />
+                                <Double fx:value="10.568" />
+                                <Double fx:value="190.955" />
+                                <Double fx:value="10.576" />
+                                <Double fx:value="190.953" />
+                                <Double fx:value="10.584" />
+                            </points>
+                        </Polyline>
+                        <Line endX="190.936" endY="56.766" startX="190.93" startY="57.568" stroke="#FFFFFF" />
+                        <Line endX="190.938" endY="56.191" startX="190.936" startY="56.766" stroke="#FFFFFF" />
+                        <Line endX="190.941" endY="55.774" startX="190.938" startY="56.191" stroke="#FFFFFF" />
+                        <Line endX="190.955" endY="48.854" startX="190.891" startY="62.459" stroke="#FFFFFF" />
+                        <Line endX="192.846" endY="85.031" startX="192.846" startY="138.283" stroke="#FFFFFF" />
+                        <Line endX="190.959" endY="10.515" startX="190.959" startY="6.21" stroke="#FFFFFF" />
+                        <Line endX="190.959" endY="11.534" startX="190.959" startY="10.691" stroke="#FFFFFF" />
+                        <Line endX="190.959" endY="11.957" startX="190.959" startY="48.584" stroke="#FFFFFF" />
+                        <Line endX="190.959" endY="48.854" startX="190.959" startY="48.617" stroke="#FFFFFF" />
+                        <Line endX="185.715" endY="0.932" startX="185.715" startY="19.153" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="179.148" />
+                                <Double fx:value="190.809" />
+                                <Double fx:value="179.18" />
+                                <Double fx:value="191.029" />
+                                <Double fx:value="179.225" />
+                                <Double fx:value="191.252" />
+                                <Double fx:value="179.273" />
+                                <Double fx:value="191.475" />
+                                <Double fx:value="179.332" />
+                                <Double fx:value="191.695" />
+                            </points>
+                        </Polyline>
+                        <Line endX="182.9" endY="200.475" startX="182.859" startY="200.875" stroke="#FFFFFF" />
+                        <Line endX="182.947" endY="200.037" startX="182.9" startY="200.475" stroke="#FFFFFF" />
+                        <Line endX="183.238" endY="197.262" startX="182.865" startY="200.81" stroke="#FFFFFF" />
+                        <Line endX="182.859" endY="200.877" startX="182.859" startY="200.877" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="182.947" />
+                                <Double fx:value="200.037" />
+                                <Double fx:value="183" />
+                                <Double fx:value="199.545" />
+                                <Double fx:value="183.059" />
+                                <Double fx:value="198.998" />
+                                <Double fx:value="183.119" />
+                                <Double fx:value="198.412" />
+                                <Double fx:value="183.184" />
+                                <Double fx:value="197.801" />
+                                <Double fx:value="183.252" />
+                                <Double fx:value="197.162" />
+                                <Double fx:value="183.318" />
+                                <Double fx:value="196.487" />
+                                <Double fx:value="183.395" />
+                                <Double fx:value="195.773" />
+                                <Double fx:value="183.471" />
+                                <Double fx:value="195.033" />
+                                <Double fx:value="183.547" />
+                                <Double fx:value="194.276" />
+                                <Double fx:value="183.625" />
+                                <Double fx:value="193.512" />
+                                <Double fx:value="183.703" />
+                                <Double fx:value="192.744" />
+                                <Double fx:value="183.779" />
+                                <Double fx:value="191.975" />
+                            </points>
+                        </Polyline>
+                        <Line endX="183.813" endY="191.648" startX="183.779" startY="191.975" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="183.779" />
+                                <Double fx:value="191.975" />
+                                <Double fx:value="183.865" />
+                                <Double fx:value="191.139" />
+                                <Double fx:value="183.949" />
+                                <Double fx:value="190.309" />
+                                <Double fx:value="184.027" />
+                                <Double fx:value="189.492" />
+                                <Double fx:value="184.107" />
+                                <Double fx:value="188.693" />
+                                <Double fx:value="184.182" />
+                                <Double fx:value="187.92" />
+                                <Double fx:value="184.254" />
+                                <Double fx:value="187.176" />
+                                <Double fx:value="184.322" />
+                                <Double fx:value="186.467" />
+                                <Double fx:value="184.387" />
+                                <Double fx:value="185.799" />
+                                <Double fx:value="184.447" />
+                                <Double fx:value="185.176" />
+                                <Double fx:value="184.502" />
+                                <Double fx:value="184.604" />
+                                <Double fx:value="184.551" />
+                                <Double fx:value="184.088" />
+                                <Double fx:value="184.596" />
+                                <Double fx:value="183.627" />
+                            </points>
+                        </Polyline>
+                        <Line endX="190.896" endY="10.996" startX="190.902" startY="10.921" stroke="#FFFFFF" />
+                        <Line endX="184.377" endY="185.897" startX="183.813" startY="191.648" stroke="#FFFFFF" />
+                        <Line endX="184.662" endY="182.85" startX="184.377" startY="185.897" stroke="#FFFFFF" />
+                        <Line endX="184.662" endY="182.887" startX="184.596" startY="183.627" stroke="#FFFFFF" />
+                        <Line endX="184.721" endY="182.285" startX="184.662" startY="182.887" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="184.725" />
+                                <Double fx:value="182.23" />
+                                <Double fx:value="184.811" />
+                                <Double fx:value="181.303" />
+                                <Double fx:value="184.896" />
+                                <Double fx:value="180.375" />
+                                <Double fx:value="184.982" />
+                                <Double fx:value="179.447" />
+                                <Double fx:value="185.068" />
+                                <Double fx:value="178.519" />
+                                <Double fx:value="185.152" />
+                                <Double fx:value="177.591" />
+                                <Double fx:value="185.234" />
+                                <Double fx:value="176.662" />
+                                <Double fx:value="185.318" />
+                                <Double fx:value="175.734" />
+                                <Double fx:value="185.4" />
+                                <Double fx:value="174.807" />
+                                <Double fx:value="185.48" />
+                                <Double fx:value="173.877" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="190.959" />
+                                <Double fx:value="23.793" />
+                                <Double fx:value="190.887" />
+                                <Double fx:value="24.746" />
+                                <Double fx:value="190.662" />
+                                <Double fx:value="25.721" />
+                                <Double fx:value="190.289" />
+                                <Double fx:value="26.719" />
+                                <Double fx:value="189.76" />
+                                <Double fx:value="27.747" />
+                                <Double fx:value="189.074" />
+                                <Double fx:value="28.797" />
+                                <Double fx:value="188.24" />
+                                <Double fx:value="29.846" />
+                                <Double fx:value="187.254" />
+                                <Double fx:value="30.896" />
+                                <Double fx:value="186.123" />
+                                <Double fx:value="31.943" />
+                                <Double fx:value="184.875" />
+                                <Double fx:value="32.947" />
+                                <Double fx:value="183.551" />
+                                <Double fx:value="33.89" />
+                                <Double fx:value="182.141" />
+                                <Double fx:value="34.787" />
+                                <Double fx:value="180.609" />
+                                <Double fx:value="35.643" />
+                                <Double fx:value="178.922" />
+                                <Double fx:value="36.47" />
+                                <Double fx:value="177.119" />
+                                <Double fx:value="37.254" />
+                                <Double fx:value="175.289" />
+                                <Double fx:value="37.947" />
+                                <Double fx:value="173.48" />
+                                <Double fx:value="38.532" />
+                                <Double fx:value="171.678" />
+                                <Double fx:value="39.025" />
+                                <Double fx:value="169.896" />
+                                <Double fx:value="39.428" />
+                            </points>
+                        </Polyline>
+                        <Line endX="180.879" endY="133.689" startX="180.912" startY="133.117" stroke="#FFFFFF" />
+                        <Line endX="180.912" endY="133.117" startX="180.947" startY="132.563" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="172.055" />
+                                <Double fx:value="280.813" />
+                                <Double fx:value="171.975" />
+                                <Double fx:value="281.146" />
+                                <Double fx:value="171.844" />
+                                <Double fx:value="281.473" />
+                                <Double fx:value="171.664" />
+                                <Double fx:value="281.797" />
+                                <Double fx:value="171.434" />
+                                <Double fx:value="282.117" />
+                                <Double fx:value="171.152" />
+                                <Double fx:value="282.432" />
+                                <Double fx:value="170.828" />
+                                <Double fx:value="282.734" />
+                                <Double fx:value="170.459" />
+                                <Double fx:value="283.023" />
+                                <Double fx:value="170.043" />
+                                <Double fx:value="283.297" />
+                                <Double fx:value="169.594" />
+                                <Double fx:value="283.554" />
+                                <Double fx:value="169.105" />
+                                <Double fx:value="283.789" />
+                                <Double fx:value="168.582" />
+                                <Double fx:value="284.004" />
+                                <Double fx:value="168.033" />
+                                <Double fx:value="284.193" />
+                                <Double fx:value="167.459" />
+                                <Double fx:value="284.357" />
+                                <Double fx:value="166.865" />
+                                <Double fx:value="284.496" />
+                                <Double fx:value="166.254" />
+                                <Double fx:value="284.605" />
+                                <Double fx:value="165.639" />
+                                <Double fx:value="284.686" />
+                                <Double fx:value="165.01" />
+                                <Double fx:value="284.737" />
+                                <Double fx:value="164.371" />
+                                <Double fx:value="284.76" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="164.408" />
+                                <Double fx:value="280.818" />
+                                <Double fx:value="164.957" />
+                                <Double fx:value="277.447" />
+                                <Double fx:value="165.465" />
+                                <Double fx:value="274.304" />
+                                <Double fx:value="165.93" />
+                                <Double fx:value="271.393" />
+                                <Double fx:value="166.35" />
+                                <Double fx:value="268.715" />
+                                <Double fx:value="166.727" />
+                                <Double fx:value="266.271" />
+                                <Double fx:value="167.066" />
+                                <Double fx:value="264.063" />
+                                <Double fx:value="167.367" />
+                                <Double fx:value="262.093" />
+                                <Double fx:value="167.629" />
+                                <Double fx:value="260.356" />
+                                <Double fx:value="167.854" />
+                                <Double fx:value="258.856" />
+                                <Double fx:value="168.039" />
+                                <Double fx:value="257.59" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="168.039" />
+                                <Double fx:value="257.59" />
+                                <Double fx:value="168.309" />
+                                <Double fx:value="255.758" />
+                                <Double fx:value="168.393" />
+                                <Double fx:value="255.188" />
+                                <Double fx:value="168.443" />
+                                <Double fx:value="254.848" />
+                                <Double fx:value="168.461" />
+                                <Double fx:value="254.734" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="176.193" />
+                                <Double fx:value="253.95" />
+                                <Double fx:value="176.326" />
+                                <Double fx:value="253.045" />
+                                <Double fx:value="177.088" />
+                                <Double fx:value="247.676" />
+                                <Double fx:value="177.854" />
+                                <Double fx:value="242.125" />
+                                <Double fx:value="178.566" />
+                                <Double fx:value="236.821" />
+                                <Double fx:value="179.189" />
+                                <Double fx:value="232.038" />
+                                <Double fx:value="179.764" />
+                                <Double fx:value="227.516" />
+                                <Double fx:value="180.338" />
+                                <Double fx:value="222.884" />
+                                <Double fx:value="180.924" />
+                                <Double fx:value="218.033" />
+                                <Double fx:value="181.506" />
+                                <Double fx:value="213.074" />
+                                <Double fx:value="182.084" />
+                                <Double fx:value="207.961" />
+                                <Double fx:value="182.664" />
+                                <Double fx:value="202.681" />
+                                <Double fx:value="182.766" />
+                                <Double fx:value="201.725" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="176.092" />
+                                <Double fx:value="254.668" />
+                                <Double fx:value="176.943" />
+                                <Double fx:value="248.721" />
+                                <Double fx:value="177.77" />
+                                <Double fx:value="242.764" />
+                                <Double fx:value="178.568" />
+                                <Double fx:value="236.799" />
+                                <Double fx:value="179.346" />
+                                <Double fx:value="230.828" />
+                                <Double fx:value="180.098" />
+                                <Double fx:value="224.85" />
+                                <Double fx:value="180.824" />
+                                <Double fx:value="218.864" />
+                                <Double fx:value="181.529" />
+                                <Double fx:value="212.875" />
+                                <Double fx:value="182.207" />
+                                <Double fx:value="206.879" />
+                                <Double fx:value="182.859" />
+                                <Double fx:value="200.879" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="176.092" />
+                                <Double fx:value="254.668" />
+                                <Double fx:value="176.078" />
+                                <Double fx:value="254.781" />
+                                <Double fx:value="176.025" />
+                                <Double fx:value="255.124" />
+                                <Double fx:value="175.941" />
+                                <Double fx:value="255.695" />
+                                <Double fx:value="175.824" />
+                                <Double fx:value="256.499" />
+                                <Double fx:value="175.674" />
+                                <Double fx:value="257.533" />
+                                <Double fx:value="175.486" />
+                                <Double fx:value="258.803" />
+                                <Double fx:value="175.262" />
+                                <Double fx:value="260.307" />
+                                <Double fx:value="175.002" />
+                                <Double fx:value="262.047" />
+                                <Double fx:value="174.701" />
+                                <Double fx:value="264.024" />
+                                <Double fx:value="174.363" />
+                                <Double fx:value="266.238" />
+                                <Double fx:value="173.986" />
+                                <Double fx:value="268.689" />
+                                <Double fx:value="173.568" />
+                                <Double fx:value="271.374" />
+                                <Double fx:value="173.107" />
+                                <Double fx:value="274.291" />
+                                <Double fx:value="172.6" />
+                                <Double fx:value="277.438" />
+                                <Double fx:value="172.055" />
+                                <Double fx:value="280.813" />
+                            </points>
+                        </Polyline>
+                        <Line endX="184.717" endY="182.285" startX="184.725" startY="182.23" stroke="#FFFFFF" />
+                        <Line endX="190.959" endY="48.584" startX="171.268" startY="213.789" stroke="#FFFFFF" />
+                        <Line endX="146.916" endY="263.786" startX="146.451" startY="254.927" stroke="#FFFFFF" />
+                        <Line endX="141.803" endY="267.939" startX="141.123" startY="254.974" stroke="#FFFFFF" />
+                        <Line endX="140.203" endY="270.763" startX="140.52" startY="273.764" stroke="#009EE3" />
+                        <Line endX="137.346" endY="279.638" startX="136.768" startY="274.156" stroke="#009EE3" />
+                        <Line endX="190.953" endY="10.584" startX="190.953" startY="10.584" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="190.953" />
+                                <Double fx:value="10.584" />
+                                <Double fx:value="190.943" />
+                                <Double fx:value="10.647" />
+                                <Double fx:value="190.934" />
+                                <Double fx:value="10.713" />
+                                <Double fx:value="190.922" />
+                                <Double fx:value="10.78" />
+                                <Double fx:value="190.912" />
+                                <Double fx:value="10.85" />
+                                <Double fx:value="190.902" />
+                                <Double fx:value="10.921" />
+                            </points>
+                        </Polyline>
+                        <Line endX="125.875" endY="278.744" startX="125.516" startY="275.341" stroke="#009EE3" />
+                        <Line endX="114.264" endY="276.523" startX="114.838" startY="282.002" stroke="#009EE3" />
+                        <Polyline stroke="#009EE3">
+                            <points>
+                                <Double fx:value="125.875" />
+                                <Double fx:value="278.744" />
+                                <Double fx:value="126.293" />
+                                <Double fx:value="278.967" />
+                                <Double fx:value="126.703" />
+                                <Double fx:value="279.168" />
+                                <Double fx:value="127.102" />
+                                <Double fx:value="279.354" />
+                                <Double fx:value="127.486" />
+                                <Double fx:value="279.517" />
+                                <Double fx:value="127.859" />
+                                <Double fx:value="279.662" />
+                                <Double fx:value="128.227" />
+                                <Double fx:value="279.791" />
+                                <Double fx:value="128.582" />
+                                <Double fx:value="279.902" />
+                                <Double fx:value="128.934" />
+                                <Double fx:value="279.999" />
+                                <Double fx:value="129.275" />
+                                <Double fx:value="280.081" />
+                                <Double fx:value="129.613" />
+                                <Double fx:value="280.146" />
+                                <Double fx:value="129.945" />
+                                <Double fx:value="280.199" />
+                                <Double fx:value="130.275" />
+                                <Double fx:value="280.235" />
+                                <Double fx:value="130.602" />
+                                <Double fx:value="280.258" />
+                                <Double fx:value="130.924" />
+                                <Double fx:value="280.268" />
+                                <Double fx:value="131.242" />
+                                <Double fx:value="280.262" />
+                                <Double fx:value="131.561" />
+                                <Double fx:value="280.243" />
+                                <Double fx:value="131.877" />
+                                <Double fx:value="280.211" />
+                                <Double fx:value="132.191" />
+                                <Double fx:value="280.162" />
+                                <Double fx:value="132.506" />
+                                <Double fx:value="280.102" />
+                                <Double fx:value="132.82" />
+                                <Double fx:value="280.024" />
+                                <Double fx:value="133.133" />
+                                <Double fx:value="279.936" />
+                                <Double fx:value="133.447" />
+                                <Double fx:value="279.83" />
+                                <Double fx:value="133.762" />
+                                <Double fx:value="279.71" />
+                                <Double fx:value="134.078" />
+                                <Double fx:value="279.575" />
+                                <Double fx:value="134.398" />
+                                <Double fx:value="279.423" />
+                                <Double fx:value="134.717" />
+                                <Double fx:value="279.257" />
+                                <Double fx:value="135.045" />
+                                <Double fx:value="279.072" />
+                                <Double fx:value="135.375" />
+                                <Double fx:value="278.871" />
+                                <Double fx:value="135.711" />
+                                <Double fx:value="278.651" />
+                                <Double fx:value="136.053" />
+                                <Double fx:value="278.411" />
+                                <Double fx:value="136.404" />
+                                <Double fx:value="278.148" />
+                                <Double fx:value="136.76" />
+                                <Double fx:value="277.867" />
+                                <Double fx:value="137.127" />
+                                <Double fx:value="277.563" />
+                            </points>
+                        </Polyline>
+                        <Line endX="128.977" endY="292.041" startX="137.346" startY="279.638" stroke="#009EE3" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="188.188" />
+                                <Double fx:value="139.7" />
+                                <Double fx:value="188.105" />
+                                <Double fx:value="139.908" />
+                                <Double fx:value="188.051" />
+                                <Double fx:value="140.125" />
+                                <Double fx:value="188.021" />
+                                <Double fx:value="140.347" />
+                            </points>
+                        </Polyline>
+                        <Line endX="96.67" endY="0.502" startX="96.67" startY="255.361" stroke="#FFFFFF" />
+                        <Line endX="110.197" endY="273.916" startX="110.512" startY="276.916" stroke="#009EE3" />
+                        <Line endX="125.602" endY="292.396" startX="114.838" startY="282.002" stroke="#009EE3" />
+                        <Polyline stroke="#009EE3">
+                            <points>
+                                <Double fx:value="114.623" />
+                                <Double fx:value="279.929" />
+                                <Double fx:value="115.041" />
+                                <Double fx:value="280.149" />
+                                <Double fx:value="115.451" />
+                                <Double fx:value="280.352" />
+                                <Double fx:value="115.85" />
+                                <Double fx:value="280.535" />
+                                <Double fx:value="116.234" />
+                                <Double fx:value="280.699" />
+                                <Double fx:value="116.607" />
+                                <Double fx:value="280.845" />
+                                <Double fx:value="116.975" />
+                                <Double fx:value="280.973" />
+                                <Double fx:value="117.33" />
+                                <Double fx:value="281.086" />
+                                <Double fx:value="117.682" />
+                                <Double fx:value="281.182" />
+                                <Double fx:value="118.023" />
+                                <Double fx:value="281.264" />
+                                <Double fx:value="118.361" />
+                                <Double fx:value="281.329" />
+                                <Double fx:value="118.693" />
+                                <Double fx:value="281.381" />
+                                <Double fx:value="119.021" />
+                                <Double fx:value="281.418" />
+                                <Double fx:value="119.35" />
+                                <Double fx:value="281.441" />
+                                <Double fx:value="119.672" />
+                                <Double fx:value="281.45" />
+                                <Double fx:value="119.99" />
+                                <Double fx:value="281.445" />
+                                <Double fx:value="120.309" />
+                                <Double fx:value="281.426" />
+                                <Double fx:value="120.625" />
+                                <Double fx:value="281.393" />
+                                <Double fx:value="120.939" />
+                                <Double fx:value="281.346" />
+                                <Double fx:value="121.254" />
+                                <Double fx:value="281.283" />
+                                <Double fx:value="121.566" />
+                                <Double fx:value="281.209" />
+                                <Double fx:value="121.881" />
+                                <Double fx:value="281.117" />
+                                <Double fx:value="122.195" />
+                                <Double fx:value="281.012" />
+                                <Double fx:value="122.51" />
+                                <Double fx:value="280.893" />
+                                <Double fx:value="122.826" />
+                                <Double fx:value="280.758" />
+                                <Double fx:value="123.146" />
+                                <Double fx:value="280.607" />
+                                <Double fx:value="123.465" />
+                                <Double fx:value="280.44" />
+                                <Double fx:value="123.793" />
+                                <Double fx:value="280.256" />
+                                <Double fx:value="124.123" />
+                                <Double fx:value="280.053" />
+                                <Double fx:value="124.459" />
+                                <Double fx:value="279.834" />
+                                <Double fx:value="124.801" />
+                                <Double fx:value="279.594" />
+                                <Double fx:value="125.152" />
+                                <Double fx:value="279.332" />
+                                <Double fx:value="125.508" />
+                                <Double fx:value="279.049" />
+                                <Double fx:value="125.875" />
+                                <Double fx:value="278.744" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="28.99" />
+                                <Double fx:value="284.856" />
+                                <Double fx:value="28.359" />
+                                <Double fx:value="284.838" />
+                                <Double fx:value="27.738" />
+                                <Double fx:value="284.789" />
+                                <Double fx:value="27.127" />
+                                <Double fx:value="284.713" />
+                                <Double fx:value="26.521" />
+                                <Double fx:value="284.604" />
+                                <Double fx:value="25.924" />
+                                <Double fx:value="284.47" />
+                                <Double fx:value="25.352" />
+                                <Double fx:value="284.307" />
+                                <Double fx:value="24.805" />
+                                <Double fx:value="284.12" />
+                                <Double fx:value="24.279" />
+                                <Double fx:value="283.906" />
+                                <Double fx:value="23.791" />
+                                <Double fx:value="283.674" />
+                                <Double fx:value="23.34" />
+                                <Double fx:value="283.42" />
+                                <Double fx:value="22.922" />
+                                <Double fx:value="283.146" />
+                                <Double fx:value="22.549" />
+                                <Double fx:value="282.858" />
+                                <Double fx:value="22.221" />
+                                <Double fx:value="282.555" />
+                                <Double fx:value="21.938" />
+                                <Double fx:value="282.237" />
+                                <Double fx:value="21.703" />
+                                <Double fx:value="281.916" />
+                                <Double fx:value="21.523" />
+                                <Double fx:value="281.59" />
+                                <Double fx:value="21.391" />
+                                <Double fx:value="281.26" />
+                                <Double fx:value="21.309" />
+                                <Double fx:value="280.926" />
+                            </points>
+                        </Polyline>
+                        <Line endX="68.154" endY="295.18" startX="73.436" startY="295.18" stroke="#009EE3" />
+                        <Line endX="125.602" endY="292.396" startX="128.977" startY="292.041" stroke="#009EE3" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="161.584" />
+                                <Double fx:value="254.795" />
+                                <Double fx:value="160.443" />
+                                <Double fx:value="255.74" />
+                                <Double fx:value="159.174" />
+                                <Double fx:value="256.668" />
+                                <Double fx:value="157.834" />
+                                <Double fx:value="257.531" />
+                                <Double fx:value="156.426" />
+                                <Double fx:value="258.326" />
+                                <Double fx:value="154.953" />
+                                <Double fx:value="259.045" />
+                                <Double fx:value="153.42" />
+                                <Double fx:value="259.687" />
+                                <Double fx:value="151.824" />
+                                <Double fx:value="260.245" />
+                                <Double fx:value="150.523" />
+                                <Double fx:value="260.627" />
+                            </points>
+                        </Polyline>
+                        <Line endX="85.881" endY="275.189" startX="85.881" startY="278.209" stroke="#009EE3" />
+                        <Line endX="82.109" endY="278.209" startX="82.109" startY="284.842" stroke="#009EE3" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="13.293" />
+                                <Double fx:value="140.512" />
+                                <Double fx:value="13.207" />
+                                <Double fx:value="140.316" />
+                                <Double fx:value="13.1" />
+                                <Double fx:value="140.131" />
+                                <Double fx:value="12.973" />
+                                <Double fx:value="139.959" />
+                                <Double fx:value="12.824" />
+                                <Double fx:value="139.803" />
+                                <Double fx:value="12.664" />
+                                <Double fx:value="139.662" />
+                                <Double fx:value="12.484" />
+                                <Double fx:value="139.543" />
+                                <Double fx:value="12.295" />
+                                <Double fx:value="139.445" />
+                                <Double fx:value="12.094" />
+                                <Double fx:value="139.368" />
+                                <Double fx:value="11.887" />
+                                <Double fx:value="139.314" />
+                                <Double fx:value="11.686" />
+                                <Double fx:value="139.286" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#009EE3">
+                            <points>
+                                <Double fx:value="70.795" />
+                                <Double fx:value="282.756" />
+                                <Double fx:value="71.225" />
+                                <Double fx:value="283.043" />
+                                <Double fx:value="71.646" />
+                                <Double fx:value="283.307" />
+                                <Double fx:value="72.057" />
+                                <Double fx:value="283.547" />
+                                <Double fx:value="72.457" />
+                                <Double fx:value="283.764" />
+                                <Double fx:value="72.846" />
+                                <Double fx:value="283.956" />
+                                <Double fx:value="73.227" />
+                                <Double fx:value="284.129" />
+                                <Double fx:value="73.602" />
+                                <Double fx:value="284.283" />
+                                <Double fx:value="73.967" />
+                                <Double fx:value="284.415" />
+                                <Double fx:value="74.332" />
+                                <Double fx:value="284.529" />
+                                <Double fx:value="74.689" />
+                                <Double fx:value="284.625" />
+                                <Double fx:value="75.045" />
+                                <Double fx:value="284.703" />
+                                <Double fx:value="75.398" />
+                                <Double fx:value="284.764" />
+                                <Double fx:value="75.75" />
+                                <Double fx:value="284.807" />
+                                <Double fx:value="76.102" />
+                                <Double fx:value="284.834" />
+                                <Double fx:value="76.451" />
+                                <Double fx:value="284.842" />
+                                <Double fx:value="76.799" />
+                                <Double fx:value="284.834" />
+                                <Double fx:value="77.15" />
+                                <Double fx:value="284.807" />
+                                <Double fx:value="77.502" />
+                                <Double fx:value="284.765" />
+                                <Double fx:value="77.855" />
+                                <Double fx:value="284.705" />
+                                <Double fx:value="78.211" />
+                                <Double fx:value="284.627" />
+                                <Double fx:value="78.57" />
+                                <Double fx:value="284.531" />
+                                <Double fx:value="78.93" />
+                                <Double fx:value="284.416" />
+                                <Double fx:value="79.297" />
+                                <Double fx:value="284.285" />
+                                <Double fx:value="79.672" />
+                                <Double fx:value="284.133" />
+                                <Double fx:value="80.053" />
+                                <Double fx:value="283.96" />
+                                <Double fx:value="80.443" />
+                                <Double fx:value="283.768" />
+                                <Double fx:value="80.84" />
+                                <Double fx:value="283.551" />
+                                <Double fx:value="81.254" />
+                                <Double fx:value="283.31" />
+                                <Double fx:value="81.676" />
+                                <Double fx:value="283.044" />
+                                <Double fx:value="82.109" />
+                                <Double fx:value="282.756" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#009EE3">
+                            <points>
+                                <Double fx:value="59.48" />
+                                <Double fx:value="282.756" />
+                                <Double fx:value="59.914" />
+                                <Double fx:value="283.044" />
+                                <Double fx:value="60.338" />
+                                <Double fx:value="283.31" />
+                                <Double fx:value="60.748" />
+                                <Double fx:value="283.551" />
+                                <Double fx:value="61.148" />
+                                <Double fx:value="283.768" />
+                                <Double fx:value="61.537" />
+                                <Double fx:value="283.96" />
+                                <Double fx:value="61.92" />
+                                <Double fx:value="284.133" />
+                                <Double fx:value="62.293" />
+                                <Double fx:value="284.285" />
+                                <Double fx:value="62.66" />
+                                <Double fx:value="284.418" />
+                                <Double fx:value="63.021" />
+                                <Double fx:value="284.531" />
+                                <Double fx:value="63.383" />
+                                <Double fx:value="284.627" />
+                                <Double fx:value="63.736" />
+                                <Double fx:value="284.705" />
+                                <Double fx:value="64.09" />
+                                <Double fx:value="284.765" />
+                                <Double fx:value="64.443" />
+                                <Double fx:value="284.807" />
+                                <Double fx:value="64.791" />
+                                <Double fx:value="284.834" />
+                                <Double fx:value="65.143" />
+                                <Double fx:value="284.842" />
+                                <Double fx:value="65.49" />
+                                <Double fx:value="284.834" />
+                                <Double fx:value="65.842" />
+                                <Double fx:value="284.807" />
+                                <Double fx:value="66.193" />
+                                <Double fx:value="284.764" />
+                                <Double fx:value="66.547" />
+                                <Double fx:value="284.703" />
+                                <Double fx:value="66.902" />
+                                <Double fx:value="284.625" />
+                                <Double fx:value="67.26" />
+                                <Double fx:value="284.529" />
+                                <Double fx:value="67.623" />
+                                <Double fx:value="284.415" />
+                                <Double fx:value="67.99" />
+                                <Double fx:value="284.283" />
+                                <Double fx:value="68.365" />
+                                <Double fx:value="284.129" />
+                                <Double fx:value="68.744" />
+                                <Double fx:value="283.957" />
+                                <Double fx:value="69.135" />
+                                <Double fx:value="283.764" />
+                                <Double fx:value="69.531" />
+                                <Double fx:value="283.549" />
+                                <Double fx:value="69.941" />
+                                <Double fx:value="283.307" />
+                                <Double fx:value="70.363" />
+                                <Double fx:value="283.043" />
+                                <Double fx:value="70.795" />
+                                <Double fx:value="282.756" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="90.031" />
+                                <Double fx:value="272.551" />
+                                <Double fx:value="91.477" />
+                                <Double fx:value="272.911" />
+                                <Double fx:value="93.184" />
+                                <Double fx:value="273.213" />
+                                <Double fx:value="94.914" />
+                                <Double fx:value="273.395" />
+                                <Double fx:value="96.67" />
+                                <Double fx:value="273.459" />
+                            </points>
+                        </Polyline>
+                        <Line endX="95.354" endY="274.863" startX="96.67" startY="275.053" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="95.354" />
+                                <Double fx:value="274.863" />
+                                <Double fx:value="91.266" />
+                                <Double fx:value="274.735" />
+                                <Double fx:value="87.766" />
+                                <Double fx:value="274.488" />
+                            </points>
+                        </Polyline>
+                        <Line endX="96.67" endY="273.459" startX="96.67" startY="273.459" stroke="#FFFFFF" />
+                        <Line endX="55.709" endY="278.209" startX="85.881" startY="278.209" stroke="#009EE3" />
+                        <Line endX="97.934" endY="272.551" startX="53.822" startY="272.551" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="97.328" />
+                                <Double fx:value="272.601" />
+                                <Double fx:value="96.52" />
+                                <Double fx:value="272.608" />
+                                <Double fx:value="95.713" />
+                                <Double fx:value="272.59" />
+                                <Double fx:value="95.02" />
+                                <Double fx:value="272.551" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="96.67" />
+                                <Double fx:value="274.871" />
+                                <Double fx:value="100.936" />
+                                <Double fx:value="274.786" />
+                                <Double fx:value="105.182" />
+                                <Double fx:value="274.53" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="97.125" />
+                                <Double fx:value="272.602" />
+                                <Double fx:value="96.926" />
+                                <Double fx:value="272.607" />
+                                <Double fx:value="96.115" />
+                                <Double fx:value="272.604" />
+                                <Double fx:value="95.307" />
+                                <Double fx:value="272.57" />
+                                <Double fx:value="95.039" />
+                                <Double fx:value="272.551" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="96.67" />
+                                <Double fx:value="273.363" />
+                                <Double fx:value="98.422" />
+                                <Double fx:value="273.299" />
+                                <Double fx:value="100.145" />
+                                <Double fx:value="273.116" />
+                                <Double fx:value="101.846" />
+                                <Double fx:value="272.816" />
+                                <Double fx:value="103.525" />
+                                <Double fx:value="272.395" />
+                                <Double fx:value="105.182" />
+                                <Double fx:value="271.855" />
+                                <Double fx:value="105.408" />
+                                <Double fx:value="271.766" />
+                            </points>
+                        </Polyline>
+                        <Line endX="97.328" endY="272.601" startX="98.137" startY="272.564" stroke="#FFFFFF" />
+                        <Line endX="146.916" endY="263.786" startX="141.6" startY="264.064" stroke="#FFFFFF" />
+                        <Line endX="53.496" endY="267.729" startX="53.57" startY="267.726" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="105.182" />
+                                <Double fx:value="274.53" />
+                                <Double fx:value="109.412" />
+                                <Double fx:value="274.102" />
+                                <Double fx:value="110.205" />
+                                <Double fx:value="273.99" />
+                            </points>
+                        </Polyline>
+                        <Line endX="110.512" endY="276.916" startX="140.52" startY="273.764" stroke="#009EE3" />
+                        <Line endX="97.934" endY="272.551" startX="141.803" startY="267.939" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="100.834" />
+                                <Double fx:value="272.246" />
+                                <Double fx:value="100.148" />
+                                <Double fx:value="272.357" />
+                                <Double fx:value="99.346" />
+                                <Double fx:value="272.46" />
+                                <Double fx:value="98.539" />
+                                <Double fx:value="272.537" />
+                                <Double fx:value="97.938" />
+                                <Double fx:value="272.573" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="100.814" />
+                                <Double fx:value="272.249" />
+                                <Double fx:value="100.549" />
+                                <Double fx:value="272.295" />
+                                <Double fx:value="99.748" />
+                                <Double fx:value="272.412" />
+                                <Double fx:value="98.945" />
+                                <Double fx:value="272.502" />
+                                <Double fx:value="98.137" />
+                                <Double fx:value="272.564" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="150.523" />
+                                <Double fx:value="260.627" />
+                                <Double fx:value="150.449" />
+                                <Double fx:value="260.647" />
+                                <Double fx:value="150.049" />
+                                <Double fx:value="260.771" />
+                                <Double fx:value="149.658" />
+                                <Double fx:value="260.903" />
+                                <Double fx:value="149.279" />
+                                <Double fx:value="261.041" />
+                                <Double fx:value="148.91" />
+                                <Double fx:value="261.175" />
+                                <Double fx:value="148.547" />
+                                <Double fx:value="261.303" />
+                                <Double fx:value="148.188" />
+                                <Double fx:value="261.418" />
+                                <Double fx:value="147.836" />
+                                <Double fx:value="261.518" />
+                                <Double fx:value="147.486" />
+                                <Double fx:value="261.596" />
+                                <Double fx:value="147.143" />
+                                <Double fx:value="261.651" />
+                                <Double fx:value="146.805" />
+                                <Double fx:value="261.682" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="150.277" />
+                                <Double fx:value="255.92" />
+                                <Double fx:value="151.164" />
+                                <Double fx:value="255.66" />
+                                <Double fx:value="152.377" />
+                                <Double fx:value="255.239" />
+                                <Double fx:value="153.273" />
+                                <Double fx:value="254.867" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="183.703" />
+                                <Double fx:value="183.328" />
+                                <Double fx:value="183.652" />
+                                <Double fx:value="183.377" />
+                                <Double fx:value="183.598" />
+                                <Double fx:value="183.426" />
+                                <Double fx:value="183.539" />
+                                <Double fx:value="183.477" />
+                                <Double fx:value="183.48" />
+                                <Double fx:value="183.531" />
+                                <Double fx:value="183.418" />
+                                <Double fx:value="183.586" />
+                                <Double fx:value="183.355" />
+                                <Double fx:value="183.645" />
+                                <Double fx:value="183.293" />
+                                <Double fx:value="183.703" />
+                                <Double fx:value="183.227" />
+                                <Double fx:value="183.765" />
+                                <Double fx:value="183.158" />
+                                <Double fx:value="183.828" />
+                                <Double fx:value="183.088" />
+                                <Double fx:value="183.894" />
+                                <Double fx:value="183.018" />
+                                <Double fx:value="183.961" />
+                                <Double fx:value="182.945" />
+                                <Double fx:value="184.031" />
+                                <Double fx:value="182.873" />
+                                <Double fx:value="184.102" />
+                                <Double fx:value="182.795" />
+                                <Double fx:value="184.177" />
+                                <Double fx:value="182.719" />
+                                <Double fx:value="184.252" />
+                                <Double fx:value="182.641" />
+                                <Double fx:value="184.33" />
+                                <Double fx:value="182.561" />
+                                <Double fx:value="184.408" />
+                                <Double fx:value="182.479" />
+                                <Double fx:value="184.49" />
+                                <Double fx:value="182.396" />
+                                <Double fx:value="184.574" />
+                                <Double fx:value="182.313" />
+                                <Double fx:value="184.66" />
+                                <Double fx:value="182.227" />
+                                <Double fx:value="184.747" />
+                                <Double fx:value="182.143" />
+                                <Double fx:value="184.837" />
+                                <Double fx:value="182.053" />
+                                <Double fx:value="184.929" />
+                                <Double fx:value="181.965" />
+                                <Double fx:value="185.022" />
+                                <Double fx:value="181.877" />
+                                <Double fx:value="185.118" />
+                                <Double fx:value="181.787" />
+                                <Double fx:value="185.215" />
+                                <Double fx:value="181.695" />
+                                <Double fx:value="185.314" />
+                                <Double fx:value="181.604" />
+                                <Double fx:value="185.418" />
+                                <Double fx:value="181.51" />
+                                <Double fx:value="185.521" />
+                                <Double fx:value="181.418" />
+                                <Double fx:value="185.627" />
+                                <Double fx:value="181.324" />
+                                <Double fx:value="185.734" />
+                                <Double fx:value="181.227" />
+                                <Double fx:value="185.844" />
+                                <Double fx:value="181.133" />
+                                <Double fx:value="185.956" />
+                                <Double fx:value="181.041" />
+                                <Double fx:value="186.07" />
+                                <Double fx:value="180.943" />
+                                <Double fx:value="186.187" />
+                                <Double fx:value="180.848" />
+                                <Double fx:value="186.305" />
+                                <Double fx:value="180.752" />
+                                <Double fx:value="186.426" />
+                                <Double fx:value="180.654" />
+                                <Double fx:value="186.551" />
+                                <Double fx:value="180.563" />
+                                <Double fx:value="186.676" />
+                                <Double fx:value="180.467" />
+                                <Double fx:value="186.805" />
+                                <Double fx:value="180.369" />
+                                <Double fx:value="186.938" />
+                                <Double fx:value="180.275" />
+                                <Double fx:value="187.073" />
+                                <Double fx:value="180.182" />
+                                <Double fx:value="187.211" />
+                                <Double fx:value="180.09" />
+                                <Double fx:value="187.353" />
+                                <Double fx:value="179.998" />
+                                <Double fx:value="187.497" />
+                                <Double fx:value="179.906" />
+                                <Double fx:value="187.646" />
+                                <Double fx:value="179.818" />
+                                <Double fx:value="187.797" />
+                                <Double fx:value="179.732" />
+                                <Double fx:value="187.953" />
+                                <Double fx:value="179.65" />
+                                <Double fx:value="188.113" />
+                                <Double fx:value="179.572" />
+                                <Double fx:value="188.276" />
+                                <Double fx:value="179.496" />
+                                <Double fx:value="188.445" />
+                                <Double fx:value="179.424" />
+                                <Double fx:value="188.617" />
+                                <Double fx:value="179.359" />
+                                <Double fx:value="188.795" />
+                                <Double fx:value="179.297" />
+                                <Double fx:value="188.977" />
+                                <Double fx:value="179.244" />
+                                <Double fx:value="189.163" />
+                                <Double fx:value="179.199" />
+                                <Double fx:value="189.354" />
+                                <Double fx:value="179.162" />
+                                <Double fx:value="189.55" />
+                                <Double fx:value="179.135" />
+                                <Double fx:value="189.75" />
+                                <Double fx:value="179.115" />
+                                <Double fx:value="189.955" />
+                                <Double fx:value="179.107" />
+                                <Double fx:value="190.163" />
+                                <Double fx:value="179.109" />
+                                <Double fx:value="190.375" />
+                                <Double fx:value="179.123" />
+                                <Double fx:value="190.592" />
+                                <Double fx:value="179.148" />
+                                <Double fx:value="190.809" />
+                            </points>
+                        </Polyline>
+                        <Line endX="73.436" endY="295.18" startX="82.109" startY="284.842" stroke="#009EE3" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="188.414" />
+                                <Double fx:value="139.317" />
+                                <Double fx:value="188.287" />
+                                <Double fx:value="139.502" />
+                                <Double fx:value="188.188" />
+                                <Double fx:value="139.7" />
+                            </points>
+                        </Polyline>
+                        <Line endX="70.795" endY="282.756" startX="70.795" startY="278.209" stroke="#009EE3" />
+                        <Line endX="59.48" endY="278.209" startX="59.48" startY="284.842" stroke="#009EE3" />
+                        <Line endX="55.709" endY="275.189" startX="55.709" startY="278.209" stroke="#009EE3" />
+                        <Line endX="52.906" endY="255.05" startX="53.822" startY="272.551" stroke="#FFFFFF" />
+                        <Line endX="52.703" endY="267.016" startX="52.691" startY="266.836" stroke="#FFFFFF" />
+                        <Line endX="68.154" endY="295.18" startX="59.48" startY="284.842" stroke="#009EE3" />
+                        <Line endX="17.273" endY="254.801" startX="96.67" startY="255.355" stroke="#FFFFFF" />
+                        <Line endX="96.67" endY="255.043" startX="134.414" startY="255.031" stroke="#FFFFFF" />
+                        <Line endX="67.678" endY="255.152" startX="96.67" startY="255.033" stroke="#FFFFFF" />
+                        <Line endX="96.67" endY="255.361" startX="176.092" startY="254.668" stroke="#FFFFFF" />
+                        <Line endX="53.521" endY="266.793" startX="51.643" startY="266.891" stroke="#FFFFFF" />
+                        <Line endX="141.445" endY="261.098" startX="146.76" startY="260.818" stroke="#FFFFFF" />
+                        <Line endX="101.148" endY="259.922" startX="141.273" startY="257.818" stroke="#FFFFFF" />
+                        <Line endX="53.293" endY="262.43" startX="93.418" startY="260.326" stroke="#FFFFFF" />
+                        <Line endX="49.898" endY="260.364" startX="51.295" startY="260.291" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="146.557" />
+                                <Double fx:value="256.975" />
+                                <Double fx:value="146.896" />
+                                <Double fx:value="256.943" />
+                                <Double fx:value="147.24" />
+                                <Double fx:value="256.889" />
+                                <Double fx:value="147.588" />
+                                <Double fx:value="256.809" />
+                                <Double fx:value="147.941" />
+                                <Double fx:value="256.71" />
+                                <Double fx:value="148.301" />
+                                <Double fx:value="256.594" />
+                                <Double fx:value="148.664" />
+                                <Double fx:value="256.467" />
+                                <Double fx:value="149.033" />
+                                <Double fx:value="256.332" />
+                                <Double fx:value="149.412" />
+                                <Double fx:value="256.195" />
+                                <Double fx:value="149.803" />
+                                <Double fx:value="256.063" />
+                                <Double fx:value="150.203" />
+                                <Double fx:value="255.939" />
+                                <Double fx:value="150.277" />
+                                <Double fx:value="255.92" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="184.322" />
+                                <Double fx:value="182.818" />
+                                <Double fx:value="184.314" />
+                                <Double fx:value="182.824" />
+                                <Double fx:value="184.305" />
+                                <Double fx:value="182.831" />
+                                <Double fx:value="184.291" />
+                                <Double fx:value="182.84" />
+                                <Double fx:value="184.275" />
+                                <Double fx:value="182.853" />
+                                <Double fx:value="184.258" />
+                                <Double fx:value="182.867" />
+                                <Double fx:value="184.234" />
+                                <Double fx:value="182.883" />
+                                <Double fx:value="184.211" />
+                                <Double fx:value="182.901" />
+                                <Double fx:value="184.186" />
+                                <Double fx:value="182.922" />
+                                <Double fx:value="184.156" />
+                                <Double fx:value="182.944" />
+                                <Double fx:value="184.127" />
+                                <Double fx:value="182.969" />
+                                <Double fx:value="184.094" />
+                                <Double fx:value="182.995" />
+                                <Double fx:value="184.059" />
+                                <Double fx:value="183.023" />
+                                <Double fx:value="184.023" />
+                                <Double fx:value="183.055" />
+                                <Double fx:value="183.984" />
+                                <Double fx:value="183.088" />
+                                <Double fx:value="183.943" />
+                                <Double fx:value="183.123" />
+                                <Double fx:value="183.898" />
+                                <Double fx:value="183.16" />
+                                <Double fx:value="183.852" />
+                                <Double fx:value="183.199" />
+                                <Double fx:value="183.805" />
+                                <Double fx:value="183.24" />
+                                <Double fx:value="183.756" />
+                                <Double fx:value="183.283" />
+                                <Double fx:value="183.703" />
+                                <Double fx:value="183.328" />
+                            </points>
+                        </Polyline>
+                        <Line endX="188.414" endY="139.317" startX="188.561" startY="139.148" stroke="#FFFFFF" />
+                        <Line endX="51.02" endY="255.036" startX="51.643" startY="266.89" stroke="#FFFFFF" />
+                        <Line endX="49.619" endY="255.027" startX="49.898" startY="260.364" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="13.393" />
+                                <Double fx:value="140.928" />
+                                <Double fx:value="13.355" />
+                                <Double fx:value="140.717" />
+                                <Double fx:value="13.293" />
+                                <Double fx:value="140.512" />
+                            </points>
+                        </Polyline>
+                        <Line endX="188.561" endY="139.148" startX="188.727" startY="139" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="7.631" />
+                                <Double fx:value="19.15" />
+                                <Double fx:value="7.641" />
+                                <Double fx:value="19.641" />
+                                <Double fx:value="7.688" />
+                                <Double fx:value="20.145" />
+                                <Double fx:value="7.77" />
+                                <Double fx:value="20.663" />
+                                <Double fx:value="7.891" />
+                                <Double fx:value="21.197" />
+                                <Double fx:value="8.043" />
+                                <Double fx:value="21.747" />
+                                <Double fx:value="8.232" />
+                                <Double fx:value="22.303" />
+                                <Double fx:value="8.459" />
+                                <Double fx:value="22.865" />
+                                <Double fx:value="8.719" />
+                                <Double fx:value="23.436" />
+                                <Double fx:value="9.01" />
+                                <Double fx:value="24.005" />
+                                <Double fx:value="9.338" />
+                                <Double fx:value="24.574" />
+                                <Double fx:value="9.695" />
+                                <Double fx:value="25.145" />
+                                <Double fx:value="10.086" />
+                                <Double fx:value="25.709" />
+                                <Double fx:value="10.504" />
+                                <Double fx:value="26.268" />
+                                <Double fx:value="10.953" />
+                                <Double fx:value="26.822" />
+                                <Double fx:value="11.43" />
+                                <Double fx:value="27.369" />
+                                <Double fx:value="11.93" />
+                                <Double fx:value="27.907" />
+                                <Double fx:value="12.461" />
+                                <Double fx:value="28.438" />
+                                <Double fx:value="13.012" />
+                                <Double fx:value="28.955" />
+                                <Double fx:value="13.586" />
+                                <Double fx:value="29.463" />
+                                <Double fx:value="14.184" />
+                                <Double fx:value="29.959" />
+                                <Double fx:value="14.797" />
+                                <Double fx:value="30.438" />
+                                <Double fx:value="15.426" />
+                                <Double fx:value="30.898" />
+                                <Double fx:value="16.074" />
+                                <Double fx:value="31.345" />
+                                <Double fx:value="16.729" />
+                                <Double fx:value="31.771" />
+                                <Double fx:value="17.396" />
+                                <Double fx:value="32.18" />
+                                <Double fx:value="18.074" />
+                                <Double fx:value="32.568" />
+                                <Double fx:value="18.76" />
+                                <Double fx:value="32.938" />
+                                <Double fx:value="19.451" />
+                                <Double fx:value="33.285" />
+                                <Double fx:value="20.146" />
+                                <Double fx:value="33.613" />
+                                <Double fx:value="20.85" />
+                                <Double fx:value="33.922" />
+                                <Double fx:value="21.551" />
+                                <Double fx:value="34.211" />
+                                <Double fx:value="22.258" />
+                                <Double fx:value="34.478" />
+                                <Double fx:value="22.967" />
+                                <Double fx:value="34.727" />
+                                <Double fx:value="23.674" />
+                                <Double fx:value="34.955" />
+                                <Double fx:value="24.383" />
+                                <Double fx:value="35.163" />
+                                <Double fx:value="25.092" />
+                                <Double fx:value="35.354" />
+                                <Double fx:value="25.797" />
+                                <Double fx:value="35.523" />
+                                <Double fx:value="26.504" />
+                                <Double fx:value="35.676" />
+                                <Double fx:value="27.209" />
+                                <Double fx:value="35.808" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="5.219" />
+                                <Double fx:value="138.721" />
+                                <Double fx:value="5.592" />
+                                <Double fx:value="144.494" />
+                                <Double fx:value="5.998" />
+                                <Double fx:value="150.385" />
+                                <Double fx:value="6.43" />
+                                <Double fx:value="156.269" />
+                                <Double fx:value="6.885" />
+                                <Double fx:value="162.145" />
+                                <Double fx:value="7.363" />
+                                <Double fx:value="168.016" />
+                                <Double fx:value="7.863" />
+                                <Double fx:value="173.877" />
+                            </points>
+                        </Polyline>
+                        <Line endX="6.242" endY="153.738" startX="5.574" startY="144.232" stroke="#FFFFFF" />
+                        <Line endX="6.982" endY="163.391" startX="6.242" startY="153.738" stroke="#FFFFFF" />
+                        <Line endX="7.791" endY="173.039" startX="6.982" startY="163.391" stroke="#FFFFFF" />
+                        <Line endX="7.863" endY="173.877" startX="7.791" startY="173.039" stroke="#FFFFFF" />
+                        <Line endX="22.084" endY="213.843" startX="2.385" startY="48.584" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="24.904" />
+                                <Double fx:value="254.854" />
+                                <Double fx:value="24.918" />
+                                <Double fx:value="254.967" />
+                                <Double fx:value="24.969" />
+                                <Double fx:value="255.31" />
+                                <Double fx:value="25.055" />
+                                <Double fx:value="255.881" />
+                                <Double fx:value="25.17" />
+                                <Double fx:value="256.684" />
+                                <Double fx:value="25.324" />
+                                <Double fx:value="257.719" />
+                                <Double fx:value="25.512" />
+                                <Double fx:value="258.984" />
+                                <Double fx:value="25.734" />
+                                <Double fx:value="260.481" />
+                                <Double fx:value="25.994" />
+                                <Double fx:value="262.211" />
+                                <Double fx:value="26.293" />
+                                <Double fx:value="264.174" />
+                                <Double fx:value="26.631" />
+                                <Double fx:value="266.368" />
+                                <Double fx:value="27.008" />
+                                <Double fx:value="268.795" />
+                                <Double fx:value="27.426" />
+                                <Double fx:value="271.463" />
+                                <Double fx:value="27.891" />
+                                <Double fx:value="274.373" />
+                                <Double fx:value="28.4" />
+                                <Double fx:value="277.525" />
+                                <Double fx:value="28.951" />
+                                <Double fx:value="280.918" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="17.273" />
+                                <Double fx:value="254.801" />
+                                <Double fx:value="16.021" />
+                                <Double fx:value="245.99" />
+                                <Double fx:value="14.82" />
+                                <Double fx:value="237.127" />
+                                <Double fx:value="13.666" />
+                                <Double fx:value="228.212" />
+                                <Double fx:value="12.564" />
+                                <Double fx:value="219.257" />
+                                <Double fx:value="11.518" />
+                                <Double fx:value="210.264" />
+                                <Double fx:value="10.523" />
+                                <Double fx:value="201.225" />
+                                <Double fx:value="9.582" />
+                                <Double fx:value="192.143" />
+                                <Double fx:value="8.693" />
+                                <Double fx:value="183.025" />
+                                <Double fx:value="7.863" />
+                                <Double fx:value="173.877" />
+                            </points>
+                        </Polyline>
+                        <Line endX="17.273" endY="254.801" startX="16.906" startY="252.23" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="21.309" />
+                                <Double fx:value="280.926" />
+                                <Double fx:value="20.766" />
+                                <Double fx:value="277.572" />
+                                <Double fx:value="20.262" />
+                                <Double fx:value="274.439" />
+                                <Double fx:value="19.801" />
+                                <Double fx:value="271.528" />
+                                <Double fx:value="19.381" />
+                                <Double fx:value="268.848" />
+                                <Double fx:value="19.004" />
+                                <Double fx:value="266.396" />
+                                <Double fx:value="18.664" />
+                                <Double fx:value="264.173" />
+                                <Double fx:value="18.361" />
+                                <Double fx:value="262.179" />
+                                <Double fx:value="18.1" />
+                                <Double fx:value="260.419" />
+                                <Double fx:value="17.873" />
+                                <Double fx:value="258.901" />
+                                <Double fx:value="17.684" />
+                                <Double fx:value="257.625" />
+                                <Double fx:value="17.533" />
+                                <Double fx:value="256.588" />
+                                <Double fx:value="17.416" />
+                                <Double fx:value="255.793" />
+                                <Double fx:value="17.334" />
+                                <Double fx:value="255.237" />
+                                <Double fx:value="17.287" />
+                                <Double fx:value="254.908" />
+                                <Double fx:value="17.273" />
+                                <Double fx:value="254.801" />
+                            </points>
+                        </Polyline>
+                        <Line endX="7.627" endY="0.93" startX="7.627" startY="19.137" stroke="#FFFFFF" />
+                        <Line endX="0.5" endY="137.962" startX="0.5" startY="85.4" stroke="#FFFFFF" />
+                        <Line endX="2.385" endY="6.211" startX="2.385" startY="48.853" stroke="#FFFFFF" />
+                        <Line endX="2.393" endY="52.783" startX="2.385" startY="49.338" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="2.385" />
+                                <Double fx:value="48.853" />
+                                <Double fx:value="2.398" />
+                                <Double fx:value="54.557" />
+                                <Double fx:value="2.434" />
+                                <Double fx:value="60.26" />
+                                <Double fx:value="2.49" />
+                                <Double fx:value="65.965" />
+                                <Double fx:value="2.57" />
+                                <Double fx:value="71.67" />
+                                <Double fx:value="2.674" />
+                                <Double fx:value="77.375" />
+                            </points>
+                        </Polyline>
+                        <Line endX="2.41" endY="56.943" startX="2.393" startY="52.783" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="2.41" />
+                                <Double fx:value="56.943" />
+                                <Double fx:value="2.441" />
+                                <Double fx:value="61.105" />
+                                <Double fx:value="2.482" />
+                                <Double fx:value="65.266" />
+                            </points>
+                        </Polyline>
+                        <Line endX="2.502" endY="66.9" startX="2.482" startY="65.266" stroke="#FFFFFF" />
+                        <Line endX="2.674" endY="77.375" startX="2.799" startY="83.094" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="189.105" />
+                                <Double fx:value="138.764" />
+                                <Double fx:value="188.908" />
+                                <Double fx:value="138.87" />
+                                <Double fx:value="188.727" />
+                                <Double fx:value="139" />
+                            </points>
+                        </Polyline>
+                        <Line endX="189.105" endY="138.764" startX="189.314" startY="138.682" stroke="#FFFFFF" />
+                        <Line endX="0.846" endY="138.338" startX="11.684" startY="139.286" stroke="#FFFFFF" />
+                        <Line endX="192.5" endY="138.352" startX="189.742" startY="138.593" stroke="#FFFFFF" />
+                        <Line endX="189.852" endY="136.849" startX="192.5" startY="136.617" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="189.74" />
+                                <Double fx:value="138.594" />
+                                <Double fx:value="189.529" />
+                                <Double fx:value="138.625" />
+                                <Double fx:value="189.314" />
+                                <Double fx:value="138.682" />
+                            </points>
+                        </Polyline>
+                        <Line endX="180.283" endY="138.129" startX="180.475" startY="138.131" stroke="#FFFFFF" />
+                        <Line endX="191.857" endY="84.945" startX="192.5" startY="85.002" stroke="#FFFFFF" />
+                        <Line endX="1.494" endY="84.968" startX="0.846" startY="85.023" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="26.502" />
+                                <Double fx:value="39.932" />
+                                <Double fx:value="24.789" />
+                                <Double fx:value="39.679" />
+                                <Double fx:value="23.061" />
+                                <Double fx:value="39.347" />
+                                <Double fx:value="21.322" />
+                                <Double fx:value="38.937" />
+                                <Double fx:value="19.563" />
+                                <Double fx:value="38.436" />
+                                <Double fx:value="17.816" />
+                                <Double fx:value="37.855" />
+                                <Double fx:value="16.152" />
+                                <Double fx:value="37.23" />
+                                <Double fx:value="14.617" />
+                                <Double fx:value="36.572" />
+                                <Double fx:value="13.17" />
+                                <Double fx:value="35.867" />
+                                <Double fx:value="11.779" />
+                                <Double fx:value="35.117" />
+                                <Double fx:value="10.449" />
+                                <Double fx:value="34.319" />
+                                <Double fx:value="9.195" />
+                                <Double fx:value="33.475" />
+                                <Double fx:value="8.012" />
+                                <Double fx:value="32.594" />
+                                <Double fx:value="6.908" />
+                                <Double fx:value="31.669" />
+                                <Double fx:value="5.902" />
+                                <Double fx:value="30.707" />
+                                <Double fx:value="5.008" />
+                                <Double fx:value="29.732" />
+                                <Double fx:value="4.236" />
+                                <Double fx:value="28.752" />
+                                <Double fx:value="3.592" />
+                                <Double fx:value="27.758" />
+                                <Double fx:value="3.076" />
+                                <Double fx:value="26.764" />
+                                <Double fx:value="2.697" />
+                                <Double fx:value="25.773" />
+                                <Double fx:value="2.465" />
+                                <Double fx:value="24.783" />
+                                <Double fx:value="2.385" />
+                                <Double fx:value="23.793" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="169.896" />
+                                <Double fx:value="39.428" />
+                                <Double fx:value="169.35" />
+                                <Double fx:value="39.516" />
+                                <Double fx:value="168.797" />
+                                <Double fx:value="39.594" />
+                                <Double fx:value="168.244" />
+                                <Double fx:value="39.66" />
+                                <Double fx:value="167.688" />
+                                <Double fx:value="39.717" />
+                                <Double fx:value="167.131" />
+                                <Double fx:value="39.764" />
+                                <Double fx:value="166.568" />
+                                <Double fx:value="39.799" />
+                                <Double fx:value="166.008" />
+                                <Double fx:value="39.824" />
+                                <Double fx:value="165.443" />
+                                <Double fx:value="39.838" />
+                                <Double fx:value="164.879" />
+                                <Double fx:value="39.842" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="168.342" />
+                                <Double fx:value="35.33" />
+                                <Double fx:value="169.031" />
+                                <Double fx:value="35.145" />
+                                <Double fx:value="169.727" />
+                                <Double fx:value="34.938" />
+                                <Double fx:value="170.422" />
+                                <Double fx:value="34.713" />
+                                <Double fx:value="171.119" />
+                                <Double fx:value="34.467" />
+                                <Double fx:value="171.816" />
+                                <Double fx:value="34.2" />
+                                <Double fx:value="172.514" />
+                                <Double fx:value="33.915" />
+                                <Double fx:value="173.209" />
+                                <Double fx:value="33.608" />
+                                <Double fx:value="173.902" />
+                                <Double fx:value="33.281" />
+                                <Double fx:value="174.588" />
+                                <Double fx:value="32.936" />
+                                <Double fx:value="175.27" />
+                                <Double fx:value="32.569" />
+                                <Double fx:value="175.941" />
+                                <Double fx:value="32.183" />
+                                <Double fx:value="176.607" />
+                                <Double fx:value="31.777" />
+                                <Double fx:value="177.26" />
+                                <Double fx:value="31.354" />
+                                <Double fx:value="177.904" />
+                                <Double fx:value="30.91" />
+                                <Double fx:value="178.529" />
+                                <Double fx:value="30.451" />
+                                <Double fx:value="179.141" />
+                                <Double fx:value="29.974" />
+                                <Double fx:value="179.738" />
+                                <Double fx:value="29.481" />
+                                <Double fx:value="180.313" />
+                                <Double fx:value="28.975" />
+                                <Double fx:value="180.863" />
+                                <Double fx:value="28.456" />
+                                <Double fx:value="181.396" />
+                                <Double fx:value="27.926" />
+                                <Double fx:value="181.902" />
+                                <Double fx:value="27.383" />
+                                <Double fx:value="182.381" />
+                                <Double fx:value="26.834" />
+                                <Double fx:value="182.836" />
+                                <Double fx:value="26.273" />
+                                <Double fx:value="183.26" />
+                                <Double fx:value="25.709" />
+                                <Double fx:value="183.652" />
+                                <Double fx:value="25.139" />
+                                <Double fx:value="184.014" />
+                                <Double fx:value="24.566" />
+                                <Double fx:value="184.344" />
+                                <Double fx:value="23.993" />
+                                <Double fx:value="184.635" />
+                                <Double fx:value="23.422" />
+                                <Double fx:value="184.891" />
+                                <Double fx:value="22.853" />
+                                <Double fx:value="185.115" />
+                                <Double fx:value="22.291" />
+                                <Double fx:value="185.303" />
+                                <Double fx:value="21.736" />
+                                <Double fx:value="185.455" />
+                                <Double fx:value="21.189" />
+                                <Double fx:value="185.572" />
+                                <Double fx:value="20.656" />
+                                <Double fx:value="185.656" />
+                                <Double fx:value="20.141" />
+                                <Double fx:value="185.701" />
+                                <Double fx:value="19.64" />
+                                <Double fx:value="185.715" />
+                                <Double fx:value="19.153" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="27.209" />
+                                <Double fx:value="35.808" />
+                                <Double fx:value="27.293" />
+                                <Double fx:value="35.812" />
+                                <Double fx:value="27.379" />
+                                <Double fx:value="35.814" />
+                                <Double fx:value="27.465" />
+                                <Double fx:value="35.818" />
+                                <Double fx:value="27.551" />
+                                <Double fx:value="35.819" />
+                                <Double fx:value="27.635" />
+                                <Double fx:value="35.822" />
+                                <Double fx:value="27.721" />
+                                <Double fx:value="35.822" />
+                                <Double fx:value="27.807" />
+                                <Double fx:value="35.822" />
+                                <Double fx:value="27.891" />
+                                <Double fx:value="35.823" />
+                                <Double fx:value="27.977" />
+                                <Double fx:value="35.822" />
+                            </points>
+                        </Polyline>
+                        <Line endX="96.67" endY="39.578" startX="164.879" startY="39.842" stroke="#FFFFFF" />
+                        <Line endX="164.883" endY="35.76" startX="96.674" startY="35.5" stroke="#FFFFFF" />
+                        <Line endX="27.988" endY="39.902" startX="96.67" startY="39.578" stroke="#FFFFFF" />
+                        <Line endX="27.977" endY="35.822" startX="96.668" startY="35.5" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="164.883" />
+                                <Double fx:value="35.761" />
+                                <Double fx:value="165.27" />
+                                <Double fx:value="35.757" />
+                                <Double fx:value="165.654" />
+                                <Double fx:value="35.742" />
+                                <Double fx:value="166.039" />
+                                <Double fx:value="35.717" />
+                                <Double fx:value="166.424" />
+                                <Double fx:value="35.68" />
+                                <Double fx:value="166.807" />
+                                <Double fx:value="35.633" />
+                                <Double fx:value="167.191" />
+                                <Double fx:value="35.573" />
+                                <Double fx:value="167.576" />
+                                <Double fx:value="35.504" />
+                                <Double fx:value="167.959" />
+                                <Double fx:value="35.422" />
+                                <Double fx:value="168.342" />
+                                <Double fx:value="35.33" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="27.15" />
+                                <Double fx:value="39.923" />
+                                <Double fx:value="26.986" />
+                                <Double fx:value="39.926" />
+                                <Double fx:value="26.822" />
+                                <Double fx:value="39.928" />
+                                <Double fx:value="26.662" />
+                                <Double fx:value="39.931" />
+                                <Double fx:value="26.502" />
+                                <Double fx:value="39.932" />
+                            </points>
+                        </Polyline>
+                        <Line endX="27.15" endY="39.923" startX="27.988" startY="39.902" stroke="#FFFFFF" />
+                        <Line endX="130.02" endY="0.543" startX="185.715" startY="0.932" stroke="#FFFFFF" />
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="96.67" />
+                                <Double fx:value="0.5" />
+                                <Double fx:value="99.834" />
+                                <Double fx:value="0.521" />
+                                <Double fx:value="103.777" />
+                                <Double fx:value="0.534" />
+                                <Double fx:value="107.715" />
+                                <Double fx:value="0.541" />
+                                <Double fx:value="111.643" />
+                                <Double fx:value="0.539" />
+                                <Double fx:value="115.539" />
+                                <Double fx:value="0.533" />
+                                <Double fx:value="119.404" />
+                                <Double fx:value="0.525" />
+                                <Double fx:value="123.219" />
+                                <Double fx:value="0.522" />
+                                <Double fx:value="126.979" />
+                                <Double fx:value="0.527" />
+                                <Double fx:value="130.02" />
+                                <Double fx:value="0.543" />
+                            </points>
+                        </Polyline>
+                        <Polyline stroke="#FFFFFF">
+                            <points>
+                                <Double fx:value="63.324" />
+                                <Double fx:value="0.543" />
+                                <Double fx:value="66.385" />
+                                <Double fx:value="0.527" />
+                                <Double fx:value="70.137" />
+                                <Double fx:value="0.522" />
+                                <Double fx:value="73.943" />
+                                <Double fx:value="0.525" />
+                                <Double fx:value="77.801" />
+                                <Double fx:value="0.532" />
+                                <Double fx:value="81.693" />
+                                <Double fx:value="0.539" />
+                                <Double fx:value="85.611" />
+                                <Double fx:value="0.541" />
+                                <Double fx:value="89.547" />
+                                <Double fx:value="0.534" />
+                                <Double fx:value="93.484" />
+                                <Double fx:value="0.521" />
+                                <Double fx:value="96.67" />
+                                <Double fx:value="0.5" />
+                            </points>
+                        </Polyline>
+                        <Line endX="7.631" endY="0.932" startX="63.324" startY="0.543" stroke="#FFFFFF" />
+                        <Line endX="2.385" endY="6.211" startX="7.631" startY="0.932" stroke="#FFFFFF" />
+                        <Line endX="7.627" endY="0.93" startX="2.383" startY="6.21" stroke="#FFFFFF" />
+                        <SVGPath content="M102.682,255.309      c0.385,3.101-1.818,5.926-4.918,6.311c-3.102,0.383-5.926-1.818-6.311-4.92c-0.057-0.459-0.057-0.922-0.002-1.381" fill="0x636363" stroke="#FFFFFF" />
+                        <SVGPath content="M180.832,134.475      c0.018-0.316,0.078-0.629,0.174-0.931" stroke="#FFFFFF" />
+                        <SVGPath content="M188.135,138.609      c0.057-0.932,0.787-1.68,1.717-1.761" stroke="#FFFFFF" />
+                        <SVGPath content="M192.266,84.98      c-0.99-0.086-1.742-0.929-1.721-1.924" stroke="#FFFFFF" />
+                        <SVGPath content="M192.846,136.241      c0,0.195-0.15,0.358-0.346,0.376" stroke="#FFFFFF" />
+                        <SVGPath content="M192.846,137.977      c0,0.195-0.15,0.359-0.346,0.375" stroke="#FFFFFF" />
+                        <SVGPath content="M192.563,85.012      c0.166,0.043,0.283,0.193,0.283,0.365" stroke="#FFFFFF" />
+                        <SVGPath content="M53.496,267.729      c-0.416,0.022-0.773-0.298-0.793-0.714" stroke="#FFFFFF" />
+                        <SVGPath content="M2.799,83.08      c0.023,0.994-0.73,1.838-1.719,1.924" stroke="#FFFFFF" />
+                        <SVGPath content="M0.846,138.338      C0.65,138.32,0.5,138.157,0.5,137.961" stroke="#FFFFFF" />
+                        <SVGPath content="M0.5,85.4      c0-0.195,0.15-0.359,0.346-0.377" stroke="#FFFFFF" />
+                        <Line endX="141.803" endY="267.939" startX="142.08" startY="270.565" stroke="#FFFFFF" />
+                        <Line endX="108.045" endY="271.488" startX="108.32" startY="274.113" stroke="#FFFFFF" />
+                        <Line endX="87.766" endY="272.551" startX="87.766" startY="275.189" stroke="#FFFFFF" />
+                        <Line endX="53.822" endY="275.189" startX="87.766" startY="275.189" stroke="#FFFFFF" />
+                        <Line endX="108.32" endY="274.113" startX="142.08" startY="270.565" stroke="#FFFFFF" />
+                        <Line endX="53.822" endY="272.551" startX="53.822" startY="275.189" stroke="#FFFFFF" />
+                    </children>
+                </Pane>
+                <Pane>
+                    <children>
+                        <SVGPath content="M84.783,193.676c0,9.631-6.115,18.57-14.988,22.244c-9.09,3.762-19.592,1.354-26.357-5.723        c-6.77-7.082-8.607-17.721-4.436-26.604c4.094-8.717,13.311-14.355,22.953-13.881        C74.443,170.326,84.783,181.189,84.783,193.676z M82.576,193.709c0-9.686-6.705-18.365-16.012-20.979        c-9.414-2.637-19.639,1.676-24.58,10.035c-4.996,8.455-3.529,19.424,3.439,26.328c6.787,6.729,17.326,8.386,25.734,3.76        C78.086,209.04,82.576,201.633,82.576,193.709z" fill="#FFFFFF" />
+                        <Pane>
+                            <children>
+                                <Polygon fill="#FFFFFF">
+                                    <points>
+                                        <Double fx:value="63.766" />
+                                        <Double fx:value="189.641" />
+                                        <Double fx:value="63.766" />
+                                        <Double fx:value="178.881" />
+                                        <Double fx:value="57.793" />
+                                        <Double fx:value="178.881" />
+                                        <Double fx:value="57.793" />
+                                        <Double fx:value="189.641" />
+                                        <Double fx:value="57.791" />
+                                        <Double fx:value="189.641" />
+                                        <Double fx:value="60.789" />
+                                        <Double fx:value="194.475" />
+                                        <Double fx:value="63.783" />
+                                        <Double fx:value="189.641" />
+                                    </points>
+                                </Polygon>
+                                <Pane layoutY="-10.0">
+                                    <children>
+                                        <Polygon fill="#009EE3">
+                                            <points>
+                                                <Double fx:value="53.391" />
+                                                <Double fx:value="186.881" />
+                                                <Double fx:value="47.496" />
+                                                <Double fx:value="186.881" />
+                                                <Double fx:value="47.496" />
+                                                <Double fx:value="197.391" />
+                                                <Double fx:value="47.494" />
+                                                <Double fx:value="197.391" />
+                                                <Double fx:value="47.496" />
+                                                <Double fx:value="197.391" />
+                                                <Double fx:value="58.848" />
+                                                <Double fx:value="208.402" />
+                                                <Double fx:value="60.314" />
+                                                <Double fx:value="208.402" />
+                                                <Double fx:value="60.314" />
+                                                <Double fx:value="204.938" />
+                                                <Double fx:value="53.391" />
+                                                <Double fx:value="198.422" />
+                                            </points>
+                                        </Polygon>
+                                        <Polygon fill="#009EE3">
+                                            <points>
+                                                <Double fx:value="68.174" />
+                                                <Double fx:value="186.881" />
+                                                <Double fx:value="74.07" />
+                                                <Double fx:value="186.881" />
+                                                <Double fx:value="74.07" />
+                                                <Double fx:value="197.391" />
+                                                <Double fx:value="74.07" />
+                                                <Double fx:value="197.391" />
+                                                <Double fx:value="74.07" />
+                                                <Double fx:value="197.391" />
+                                                <Double fx:value="62.717" />
+                                                <Double fx:value="208.402" />
+                                                <Double fx:value="61.25" />
+                                                <Double fx:value="208.402" />
+                                                <Double fx:value="61.25" />
+                                                <Double fx:value="204.938" />
+                                                <Double fx:value="68.174" />
+                                                <Double fx:value="198.422" />
+                                            </points>
+                                        </Polygon>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </Pane>
+                    </children>
+                </Pane>
+            </children>
+        </Pane><Line id="animatedFilament" endY="40.0" layoutX="71.0" layoutY="296.0" stroke="#009ee3" />
+    </children>
+</Pane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-preview-i18n-resource ../i18n/LanguageData.properties?>
+<?scenebuilder-stylesheet ../css/AutoMaker.css?>
+
+<AnchorPane fx:id="gizmoGroup" cacheShape="false" centerShape="false" layoutX="-175.0" layoutY="-175.0" mouseTransparent="false" opacity="0.46" pickOnBounds="false" scaleShape="false" stylesheets="@../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.GizmoOverlayController">
+    <children>
+        <Button fx:id="rotationRing" cacheShape="false" centerShape="false" contentDisplay="BOTTOM" focusTraversable="false" mnemonicParsing="false" mouseTransparent="false" pickOnBounds="false" scaleShape="false" styleClass="gizmoControlButton" text="Button">
+            <graphic>
+                <SVGPath id="rotationHandle" fx:id="rotationPath" content="M175 175a175 175 0 1 0 1 0m0 30a145 145 0 1 1 -1 0" fill="#53919d" pickOnBounds="false" />
+            </graphic>
+        </Button>
+        <Button fx:id="zHandleButton" cacheShape="false" centerShape="false" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" mnemonicParsing="false" pickOnBounds="false" scaleShape="false" styleClass="gizmoControlButton" text="Button" translateX="140.0" translateY="40.0">
+            <graphic>
+                <Path id="zHandle" fill="#0c9500" strokeType="OUTSIDE" strokeWidth="0.0" pickOnBounds="false">
+                    <elements>
+                        <MoveTo x="-15.0" y="15.0" />
+                        <LineTo x="-15.0" y="-80.0" />
+                        <LineTo x="-35.0" y="-80.0" />
+                        <LineTo x="0.0" y="-135.0" />
+                        <LineTo x="35.0" y="-80.0" />
+                        <LineTo x="15.0" y="-80.0" />
+                        <LineTo x="15.0" y="-15.0" />
+                        <ClosePath />
+                    </elements>
+                </Path>
+            </graphic>
+        </Button>
+        <Button cacheShape="false" centerShape="false" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" mnemonicParsing="false" mouseTransparent="false" pickOnBounds="false" scaleShape="false" styleClass="gizmoControlButton" text="Button" translateX="160.0" translateY="140.0" fx:id="xHandleButton">
+            <graphic>
+                <Path id="xHandle" cacheHint="ROTATE" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" pickOnBounds="false" >
+                    <elements>
+                        <MoveTo x="-15.0" y="15.0" />
+                        <LineTo x="15.0" y="-15.0" />
+                        <LineTo x="80.0" y="-15.0" />
+                        <LineTo x="80.0" y="-35.0" />
+                        <LineTo x="135.0" y="0.0" />
+                        <LineTo x="80.0" y="35.0" />
+                        <LineTo x="80.0" y="15.0" />
+                        <ClosePath />
+                    </elements>
+                </Path>
+            </graphic>
+        </Button>
+    </children>
+</AnchorPane>

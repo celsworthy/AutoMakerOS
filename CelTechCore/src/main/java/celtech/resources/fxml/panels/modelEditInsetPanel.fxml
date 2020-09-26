@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import jfxtras.styles.jmetro8.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import celtech.coreUI.components.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.textfield.*?>
+
+<VBox id="model-edit-panel" fx:id="modelEditInsetRoot" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="260.0" spacing="5.0" styleClass="hovering-panel" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.panels.ModelEditInsetPanelController">
+    <children>
+        <HBox spacing="5.0">
+            <children>
+                <Label minWidth="-Infinity" text="%modelEdit.Model" />
+                <Label fx:id="modelName" layoutX="10.0" layoutY="10.0" textAlignment="RIGHT" HBox.hgrow="NEVER" />
+            </children>
+            <VBox.margin>
+                <Insets bottom="15.0" left="10.0" right="5.0" top="10.0" />
+            </VBox.margin>
+        </HBox>
+        <Label style="-fx-font-family: 'Source Sans Pro Regular'; -fx-font-size: 20px;" text="%modelEdit.TransformsLabel" textAlignment="RIGHT" />
+        <VBox>
+            <children>
+                <HBox alignment="CENTER" prefWidth="86.0" spacing="2.0">
+                    <children>
+                        <ToggleButton fx:id="moveButton" graphicTextGap="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="85.0" style="-fx-font-size: 18;" styleClass="fake-tab-button" text="%modelEdit.MoveLabel">
+                            <graphic>
+                                <Polygon fill="DODGERBLUE" points="16.5,6.8,14.5,6.8,17.1,9.1,10.9,9.1,10.9,2.9,13.2,5.5,13.2,3.5,10,0,6.8,3.5,6.8,5.5,9.1,2.9,9.1,9.1,2.9,9.1,5.5,6.8,3.5,6.8,0,10,3.5,13.2,5.5,13.2,2.9,10.9,9.1,10.9,9.1,17.1,6.8,14.5,6.8,16.5,10,20,13.2,16.5,13.2,14.5,10.9,17.1,10.9,10.9,17.1,10.9,14.5,13.2,16.5,13.2,20,10" stroke="WHITE" strokeType="INSIDE" />
+                            </graphic>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="tabButtons" />
+                            </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton fx:id="scaleButton" graphicTextGap="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="85.0" style="-fx-font-size: 18;" styleClass="fake-tab-button" text="%modelEdit.ScaleLabel" toggleGroup="$tabButtons">
+                            <graphic>
+                                <SVGPath content="M6,0h12v18H0V6h6V0z M0,4V0h4v4H0z M16,16v-4l-1.5,1.5l-5-5L11,7H7v4l1.5-1.5l5,5L12,16H16z" fill="WHITE" />
+                            </graphic>
+                        </ToggleButton>
+                        <ToggleButton fx:id="rotateButton" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="85.0" style="-fx-font-size: 18;" styleClass="fake-tab-button" text="%modelEdit.RotateLabel" toggleGroup="$tabButtons">
+                            <graphic>
+                                <SVGPath content="M18,9.1c0,0.6-0.1,1.2-0.2,1.8c-0.1,0.6-0.3,1.1-0.5,1.7c-0.2,0.5-0.5,1-0.8,1.5c-0.3,0.5-0.7,0.9-1.1,1.3 L18,18h-7.2v-7.2l2.7,2.7c0.6-0.6,1-1.2,1.3-2c0.3-0.7,0.5-1.6,0.5-2.4c0-0.6-0.1-1.1-0.2-1.7c-0.2-0.5-0.4-1-0.6-1.5c-0.3-0.5-0.6-0.9-1-1.3c-0.4-0.4-0.8-0.7-1.3-1c-0.5-0.3-1-0.5-1.5-0.7C10.1,2.8,9.6,2.7,9,2.7c-0.9,0-1.7,0.2-2.5,0.5 c-0.8,0.3-1.4,0.8-2,1.3c-0.6,0.6-1,1.2-1.3,2C2.9,7.2,2.7,8,2.7,8.9c0,0.6,0.1,1.1,0.2,1.6c0.1,0.5,0.3,1,0.6,1.5c0.3,0.5,0.6,0.9,0.9,1.3c0.4,0.4,0.7,0.7,1.2,1l-1.9,1.9c-0.6-0.4-1.1-0.9-1.5-1.4c-0.5-0.5-0.8-1.1-1.2-1.7 c-0.3-0.6-0.6-1.3-0.7-2C0.1,10.3,0,9.6,0,8.8C0,8,0.1,7.2,0.3,6.5C0.5,5.7,0.8,5,1.2,4.3c0.4-0.7,0.8-1.2,1.4-1.8c0.5-0.5,1.1-1,1.8-1.4c0.7-0.4,1.4-0.7,2.1-0.9C7.3,0.1,8.1,0,9,0c0.8,0,1.6,0.1,2.4,0.3c0.8,0.2,1.5,0.5,2.1,0.9 c0.7,0.4,1.3,0.9,1.8,1.4c0.6,0.6,1,1.2,1.4,1.9c0.4,0.7,0.7,1.4,0.9,2.2C17.9,7.5,18,8.3,18,9.1z" fill="WHITE" />
+                            </graphic>
+                        </ToggleButton>
+                    </children>
+                </HBox>
+                <Line endX="257.0" stroke="#0096e1" strokeWidth="3.0" VBox.vgrow="NEVER">
+                    <VBox.margin>
+                        <Insets left="-1.0" />
+                    </VBox.margin>
+                </Line>
+            </children>
+        </VBox>
+        <StackPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="245.0">
+            <children>
+                <VBox fx:id="scalePanel" alignment="CENTER">
+                    <children>
+                        <GridPane alignment="CENTER" hgap="5.0" vgap="0.0">
+                            <children>
+                                <StackPane GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                    <children>
+                                        <Label fx:id="scaleXCaption" styleClass="regularText" text="%modelEdit.ScaleLabelX" StackPane.alignment="CENTER_LEFT" />
+                                        <Label fx:id="widthCaption" layoutX="16.0" layoutY="15.0" styleClass="regularText" text="%modelEdit.WidthLabel" StackPane.alignment="CENTER_LEFT" />
+                                    </children>
+                                </StackPane>
+                                <StackPane GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                    <children>
+                                        <Label fx:id="scaleYCaption" text="%modelEdit.ScaleLabelY" StackPane.alignment="CENTER_LEFT" />
+                                        <Label fx:id="heightCaption" layoutX="16.0" layoutY="15.0" text="%modelEdit.HeightLabel" StackPane.alignment="CENTER_LEFT" />
+                                    </children>
+                                </StackPane>
+                                <StackPane GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                                    <children>
+                                        <Label fx:id="scaleZCaption" text="%modelEdit.ScaleLabelZ" StackPane.alignment="CENTER_LEFT" />
+                                        <Label fx:id="depthCaption" layoutX="15.0" layoutY="15.0" text="%modelEdit.DepthLabel" StackPane.alignment="CENTER_LEFT" />
+                                    </children>
+                                </StackPane>
+                                <ToggleButton id="preserveAspectRatio" fx:id="preserveAspectRatio" contentDisplay="GRAPHIC_ONLY" maxWidth="27.0" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="40.0" GridPane.columnIndex="1" GridPane.rowSpan="3" GridPane.vgrow="ALWAYS">
+                                    <graphic>
+                                        <Group>
+                                            <children>
+                                                <StackPane translateY="27.5">
+                                                    <children>
+                                                          <SVGPath fx:id="linkIcon" content="M8.808,7.995c0,0.443,0.082,0.855,0.244,1.234c0.164,0.379,0.383,0.709,0.66,0.989v2.357c-0.4-0.198-0.766-0.452-1.097-0.759c-0.332-0.308-0.618-0.659-0.858-1.055c-0.24-0.397-0.425-0.83-0.558-1.297C7.066,8.998,7,8.508,7,7.995V5.002c0-0.69,0.119-1.339,0.355-1.947c0.237-0.608,0.561-1.137,0.968-1.589c0.41-0.45,0.885-0.808,1.43-1.07C10.298,0.131,10.879,0,11.5,0c0.62,0,1.206,0.131,1.751,0.396c0.548,0.263,1.022,0.62,1.429,1.07c0.406,0.452,0.727,0.98,0.964,1.589S16,4.312,16,5.002v2.993c0,0.513-0.066,1.003-0.198,1.471c-0.132,0.467-0.316,0.899-0.554,1.297c-0.236,0.396-0.52,0.747-0.852,1.055c-0.333,0.307-0.696,0.561-1.089,0.759v-2.357c0.276-0.28,0.496-0.61,0.657-0.989c0.164-0.379,0.246-0.791,0.246-1.234V5.002c0-0.417-0.07-0.808-0.212-1.174c-0.141-0.364-0.336-0.686-0.58-0.958c-0.246-0.274-0.534-0.488-0.862-0.646c-0.329-0.157-0.682-0.236-1.056-0.236c-0.369,0-0.718,0.079-1.047,0.236C10.125,2.382,9.839,2.596,9.596,2.87C9.354,3.143,9.162,3.464,9.02,3.828C8.879,4.194,8.808,4.585,8.808,5.002V7.995z M11.5,22.004c-0.251,0-0.464-0.096-0.637-0.291S10.606,21.28,10.606,21V6.991c0-0.281,0.085-0.518,0.258-0.707c0.172-0.191,0.385-0.288,0.637-0.288s0.465,0.097,0.641,0.288c0.176,0.189,0.264,0.426,0.264,0.707V21c0,0.28-0.088,0.518-0.264,0.713S11.752,22.004,11.5,22.004z M16,23c0,0.689-0.118,1.338-0.355,1.946c-0.237,0.607-0.558,1.138-0.964,1.589s-0.881,0.809-1.429,1.071C12.706,27.869,12.12,28,11.5,28c-0.621,0-1.203-0.131-1.748-0.394s-1.02-0.62-1.43-1.071c-0.407-0.451-0.731-0.981-0.968-1.589C7.119,24.338,7,23.689,7,23v-3.004c0-0.513,0.066-1.003,0.199-1.471c0.133-0.468,0.318-0.898,0.558-1.291c0.24-0.393,0.526-0.745,0.858-1.056c0.331-0.313,0.697-0.563,1.097-0.753v2.346c-0.277,0.281-0.497,0.611-0.66,0.99c-0.163,0.379-0.244,0.79-0.244,1.234V23c0,0.415,0.071,0.806,0.212,1.166c0.142,0.363,0.333,0.682,0.576,0.953c0.243,0.274,0.529,0.489,0.857,0.646c0.33,0.158,0.678,0.236,1.047,0.236c0.375,0,0.727-0.078,1.056-0.236c0.328-0.157,0.616-0.372,0.862-0.646c0.244-0.271,0.439-0.59,0.58-0.953c0.142-0.36,0.212-0.751,0.212-1.166v-3.004c0-0.444-0.082-0.855-0.246-1.234c-0.161-0.379-0.381-0.709-0.657-0.99v-2.346c0.393,0.19,0.756,0.44,1.089,0.753c0.332,0.311,0.615,0.663,0.852,1.056c0.237,0.393,0.422,0.823,0.554,1.291S16,19.483,16,19.996V23z" fill="#ffffff" />
+                                                          <Group fx:id="unlinkIcon">
+                                                              <children>
+                                                                  <SVGPath content="M6.308,7.993c0,0.445,0.082,0.857,0.243,1.235c0.165,0.38,0.385,0.709,0.662,0.99v2.355c-0.401-0.197-0.767-0.449-1.098-0.758c-0.333-0.308-0.618-0.659-0.858-1.056C5.016,10.364,4.83,9.931,4.698,9.463C4.567,8.996,4.5,8.506,4.5,7.993V5.001c0-0.688,0.12-1.338,0.356-1.947c0.236-0.607,0.56-1.137,0.968-1.588c0.41-0.452,0.886-0.808,1.43-1.071S8.38,0,9,0c0.622,0,1.205,0.132,1.754,0.395c0.544,0.264,1.021,0.619,1.427,1.071c0.405,0.451,0.727,0.98,0.962,1.588C13.382,3.663,13.5,4.313,13.5,5.001v2.992c0,0.513-0.067,1.003-0.199,1.472c-0.133,0.468-0.316,0.901-0.554,1.296c-0.236,0.396-0.52,0.748-0.852,1.056c-0.33,0.309-0.694,0.561-1.089,0.758V10.22c0.277-0.281,0.497-0.61,0.66-0.99c0.162-0.378,0.244-0.79,0.244-1.235V5.001c0-0.416-0.07-0.808-0.213-1.172c-0.141-0.367-0.335-0.686-0.58-0.959s-0.532-0.488-0.863-0.646C9.729,2.067,9.376,1.988,9,1.988c-0.369,0-0.716,0.079-1.047,0.236C7.626,2.382,7.338,2.597,7.096,2.87C6.854,3.143,6.662,3.462,6.521,3.829C6.379,4.193,6.308,4.585,6.308,5.001V7.993zM13.5,22.998c0,0.689-0.118,1.34-0.357,1.945c-0.236,0.608-0.557,1.139-0.962,1.59c-0.406,0.451-0.881,0.809-1.427,1.07C10.205,27.869,9.622,28,9,28c-0.62,0-1.202-0.131-1.746-0.396c-0.544-0.262-1.021-0.619-1.43-1.069c-0.408-0.451-0.731-0.979-0.968-1.589C4.62,24.339,4.5,23.689,4.5,22.999v-3.002c0-0.513,0.067-1.003,0.199-1.472s0.318-0.898,0.559-1.291c0.24-0.395,0.525-0.745,0.858-1.058c0.331-0.311,0.696-0.562,1.098-0.753v2.35c-0.277,0.277-0.497,0.607-0.662,0.986c-0.161,0.379-0.243,0.791-0.243,1.236v3.002c0,0.417,0.071,0.807,0.213,1.168s0.333,0.682,0.576,0.953c0.242,0.273,0.529,0.488,0.856,0.646C8.284,25.922,8.631,26,9,26c0.376,0,0.729-0.078,1.056-0.234c0.331-0.156,0.617-0.371,0.863-0.646c0.244-0.272,0.438-0.593,0.581-0.953c0.141-0.362,0.211-0.751,0.211-1.168v-3.002c0-0.445-0.082-0.856-0.243-1.236c-0.164-0.379-0.384-0.709-0.66-0.987v-2.349c0.394,0.191,0.76,0.442,1.09,0.753c0.331,0.313,0.614,0.663,0.851,1.059c0.238,0.392,0.421,0.82,0.554,1.291c0.131,0.468,0.198,0.957,0.198,1.471V22.998L13.5,22.998z" fill="WHITE" />
+                                                                  <Group>
+                                                                      <children>
+                                                                          <Polygon fill="WHITE" points="0,13.066,4.667,14.001,0,14.934" />
+                                                                          <Polygon fill="WHITE" points="0.642,18.723,4.601,16.083,1.962,20.043" />
+                                                                          <Polygon fill="WHITE" points="1.962,7.957,4.601,11.916,0.642,9.277" />
+                                                                      </children>
+                                                                  </Group>
+                                                                  <Group>
+                                                                      <children>
+                                                                          <Polygon fill="WHITE" points="18,14.934,13.332,14.001,18,13.066" />
+                                                                          <Polygon fill="WHITE" points="17.36,9.277,13.399,11.916,16.041,7.957" />
+                                                                          <Polygon fill="WHITE" points="16.039,20.043,13.399,16.083,17.36,18.723" />
+                                                                      </children>
+                                                                  </Group>
+                                                              </children>
+                                                          </Group>
+                                                    </children>
+                                                </StackPane>
+                                                <SVGPath content="M16,2V0c-5,0-9,4-9,9v31H0v2h7v31c0,5,4,9,9,9v-2c-3.9,0-7-3.1-7-7V42h7v-2H9V9C9,5.1,12.1,2,16,2z" fill="#ffffff" translateX="20.0" />
+                                            </children>
+                                        </Group>
+                                    </graphic>
+                                </ToggleButton>
+                                <Group />
+                                <StackPane GridPane.columnIndex="2">
+                                    <children>
+                                        <RestrictedNumberField fx:id="scaleTextWidthField" allowedDecimalPlaces="2" drivesUndoableOperation="true" maxLength="9" prefColumnCount="4" text="" />
+                                        <RestrictedNumberField fx:id="widthTextField" allowedDecimalPlaces="2" drivesUndoableOperation="true" layoutX="10.0" layoutY="15.0" maxLength="6" prefColumnCount="4" text="" />
+                                    </children>
+                                </StackPane>
+                                <StackPane fx:id="textHeightField" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <children>
+                                        <RestrictedNumberField fx:id="scaleTextHeightField" allowedDecimalPlaces="2" drivesUndoableOperation="true" maxLength="9" prefColumnCount="4" text="" />
+                                        <RestrictedNumberField fx:id="heightTextField" allowedDecimalPlaces="2" drivesUndoableOperation="true" layoutX="10.0" layoutY="15.0" maxLength="6" prefColumnCount="4" text="" />
+                                    </children>
+                                </StackPane>
+                                <StackPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                    <children>
+                                        <RestrictedNumberField fx:id="scaleTextDepthField" allowedDecimalPlaces="2" drivesUndoableOperation="true" maxLength="9" prefColumnCount="4" text="" />
+                                        <RestrictedNumberField fx:id="depthTextField" allowedDecimalPlaces="2" drivesUndoableOperation="true" layoutX="10.0" layoutY="15.0" maxLength="6" prefColumnCount="4" text="" />
+                                    </children>
+                                </StackPane>
+                                <Label text="%modelEdit.UseProportionalScale" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                <HBox alignment="CENTER" fillHeight="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                    <GridPane.margin>
+                                        <Insets />
+                                    </GridPane.margin>
+                                    <children>
+                                        <ToggleSwitch fx:id="useProportionalScaleSwitch" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="0.0" />
+                                    </children>
+                                </HBox>
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="130.0" />
+                                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="35.0" />
+                                <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="50.0" />
+                            </columnConstraints>
+                            <padding>
+                                <Insets />
+                            </padding>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </children>
+                </VBox>
+                <VBox fx:id="movePanel" alignment="CENTER">
+                    <children>
+                        <GridPane alignment="CENTER" hgap="5.0" vgap="0.0">
+                            <children>
+                                <Label text="%modelEdit.XAxisLabel" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label text="%modelEdit.YAxisLabel" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <RestrictedNumberField allowedDecimalPlaces="2" drivesUndoableOperation="true" maxLength="6" prefColumnCount="4" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="xAxisTextField" />
+                                <RestrictedNumberField fx:id="yAxisTextField" allowedDecimalPlaces="2" drivesUndoableOperation="true" maxLength="6" prefColumnCount="4" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="50.0" />
+                                <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" percentWidth="50.0" />
+                            </columnConstraints>
+                            <padding>
+                                <Insets />
+                            </padding>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </children>
+                </VBox>
+                <VBox fx:id="rotatePanel" alignment="CENTER">
+                    <children>
+                        <GridPane alignment="CENTER" hgap="5.0" vgap="0.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label text="%modelEdit.lean" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label text="%modelEdit.twist" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <Label text="%modelEdit.turn" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <RestrictedNumberField fx:id="rotationXTextField" allowNegative="true" allowedDecimalPlaces="2" drivesUndoableOperation="true" maxLength="7" prefColumnCount="4" text="100" GridPane.columnIndex="1" />
+                                <RestrictedNumberField fx:id="rotationYTextField" allowNegative="true" allowedDecimalPlaces="2" drivesUndoableOperation="true" maxLength="7" prefColumnCount="4" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <RestrictedNumberField fx:id="rotationZTextField" allowNegative="true" allowedDecimalPlaces="2" drivesUndoableOperation="true" maxLength="7" prefColumnCount="4" text="100" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="50.0" />
+                                <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" percentWidth="50.0" />
+                            </columnConstraints>
+                            <padding>
+                                <Insets />
+                            </padding>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </children>
+                    <StackPane.margin>
+                        <Insets />
+                    </StackPane.margin>
+                </VBox>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </StackPane>
+        <Label layoutX="125.0" layoutY="60.0" text="%modelEdit.MaterialLabel" textAlignment="RIGHT" />
+        <ToggleButton fx:id="setMaterial0Button" contentDisplay="TEXT_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setMaterial0" styleClass="model-material1-button" text="%modelEdit.Material1">
+            <toggleGroup>
+                <ToggleGroup fx:id="materialButtons" />
+            </toggleGroup>
+        </ToggleButton>
+        <ToggleButton fx:id="setMaterial1Button" contentDisplay="TEXT_ONLY" layoutX="107.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setMaterial1" styleClass="model-material2-button" text="%modelEdit.Material2" toggleGroup="$materialButtons" />
+        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#flipMaterials" text="%modelEdit.flipMaterials" />       
+    </children>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+</VBox>

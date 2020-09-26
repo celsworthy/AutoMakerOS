@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-deploy</actionName>
+            <displayName>deploy</displayName>
+            <goals>
+                <goal>deploy</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Release</actionName>
+            <displayName>Release</displayName>
+            <goals>
+                <goal>release:perform</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-Prepare release</actionName>
+            <displayName>Prepare release</displayName>
+            <goals>
+                <goal>release:prepare</goal>
+            </goals>
+        </action>
+    </actions>

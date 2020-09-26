@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.buttons.*?>
+<?import celtech.coreUI.components.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+
+<HBox maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.panels.LayoutSidePanelController">
+    <children>  
+        <BorderPane id="border" fx:id="layoutBorder" prefHeight="-1.0" HBox.hgrow="ALWAYS">
+            <top>
+                <VBox id="StatusPanel" layoutY="41.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="-1.0" styleClass="sidePanel" AnchorPane.topAnchor="0.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <VBox alignment="TOP_CENTER">
+                            <children>
+                                <Label styleClass="sidePanelTitle" text="%sidePanel_layout.title" translateX="5.0">
+                                    <graphic>
+                                        <Group scaleX="1.5" scaleY="1.5" translateX="-15.0">
+                                            <children>
+                                                <SVGPath content="M283.586,427.611c0,0-3.528-1.389-3.663-1.478c-0.137-0.089-0.872-0.463-1.151-1.868    c0,0-0.053-0.3-0.072-0.523c-0.016-0.225-0.621-7.882-0.621-7.882s-0.106-1.863,0.917-3.69c1.025-1.827,2.06-2.104,3.081-2.478    c1.02-0.374,8.834-3.242,8.834-3.242s0.419-0.192,0.935-0.1c0.518,0.092,2.572,0.458,2.572,0.458l0.935,0.167    c0,0-0.238-0.043-0.507,0.071c-0.15,0.064-9.357,3.856-9.357,3.856s-3.229,1.007-3.261,6.43l0.41,7.739    C282.747,427.012,283.586,427.611,283.586,427.611">
+                                                    <opacity>1</opacity>
+                                                    <fill>
+                                                        <Color>
+                                                            <red>0.01568627450980392</red>
+                                                            <green>0.6509803921568628</green>
+                                                            <blue>0.8549019607843137</blue>
+                                                            <opacity>1</opacity>
+                                                        </Color>
+                                                    </fill>
+                                                </SVGPath>
+                                                <SVGPath content="M295.901,407.053l17.025,3.075c0,0-0.147,0.045-0.303,0.158l-1.32,0.903l-17.637-3.356l1.644-0.702    C295.541,407.021,295.901,407.053,295.901,407.053">
+                                                    <opacity>1</opacity>
+                                                    <fill>
+                                                        <Color>
+                                                            <red>0.01568627450980392</red>
+                                                            <green>0.6509803921568628</green>
+                                                            <blue>0.8549019607843137</blue>
+                                                            <opacity>1</opacity>
+                                                        </Color>
+                                                    </fill>
+                                                </SVGPath>
+                                                <SVGPath content="M283.315,426.648c0,0,0.202,0.668,0.744,1.143l17.953,7.119c0,0-0.304-0.287-0.422-1.18L283.315,426.648z">
+                                                    <opacity>1</opacity>
+                                                    <fill>
+                                                        <Color>
+                                                            <red>0.01568627450980392</red>
+                                                            <green>0.6509803921568628</green>
+                                                            <blue>0.8549019607843137</blue>
+                                                            <opacity>1</opacity>
+                                                        </Color>
+                                                    </fill>
+                                                </SVGPath>
+                                                <SVGPath content="M306.407,425.119c-0.003,0.029-0.12,1.134-0.272,2.596l2.544-2.75l-2.194-0.605    C306.426,424.822,306.408,425.104,306.407,425.119">
+                                                    <opacity>1</opacity>
+                                                    <fill>
+                                                        <Color>
+                                                            <red>0.01568627450980392</red>
+                                                            <green>0.6509803921568628</green>
+                                                            <blue>0.8549019607843137</blue>
+                                                            <opacity>1</opacity>
+                                                        </Color>
+                                                    </fill>
+                                                </SVGPath>
+                                                <SVGPath content="M302.294,424.221c0.001-0.037,0.021-0.414,0.094-0.992l-8.721-2.406l-6.572,4.206l14.739,5.231    L302.294,424.221z">
+                                                    <opacity>1</opacity>
+                                                    <fill>
+                                                        <Color>
+                                                            <red>0.01568627450980392</red>
+                                                            <green>0.6509803921568628</green>
+                                                            <blue>0.8549019607843137</blue>
+                                                            <opacity>1</opacity>
+                                                        </Color>
+                                                    </fill>
+                                                </SVGPath>
+                                                <SVGPath content="M316.53,414.09c-0.407,2.432-1.538,9.722-1.551,9.798c0,0-0.132,0.962-0.223,1.711    c-0.157,0.117-0.662,0.52-1.197,1.208c-0.367,0.475-6.953,8.89-7.011,8.962c-0.003,0.004-0.305,0.305-0.684,0.293    c-0.21-0.006-0.403-0.109-0.579-0.307c-0.098-0.251-0.165-0.6-0.124-1.07c0.142-1.636,0.982-9.594,0.982-9.594    s0.278-4.875,2.748-8.132l7.139-5.972l0.206,0.034c0.078,0.051,0.418,0.311,0.41,0.92    C316.647,411.952,316.723,412.943,316.53,414.09 M316.91,411.933c0.012-0.83-0.541-1.14-0.564-1.152l-0.129-0.022    c0.003-0.001,0.006-0.001,0.011-0.001c-0.386-0.064-2.607-0.5-2.607-0.5s-0.152-0.064-0.401,0.085    c-0.249,0.149-2.135,1.557-2.135,1.557l-5.306,3.968c0,0-1.254,0.837-2.33,3.885c-0.776,2.2-0.893,4.484-0.893,4.484l-0.615,8.089    c0,0-0.126,2.456,0.633,2.807c1.004,0.464,3.117,1.187,3.117,1.187s-0.009-0.006-0.021-0.016c0.062,0.014,0.123,0.023,0.188,0.024    c0.009,0,0.019,0,0.027,0c0.475,0,0.837-0.354,0.861-0.382c0.066-0.086,6.655-8.501,7.024-8.975    c0.602-0.777,1.181-1.185,1.185-1.189l0.05-0.033l0.006-0.059c0.091-0.754,0.23-1.762,0.23-1.762    c0.012-0.072,1.143-7.361,1.55-9.792C316.987,412.954,316.913,411.962,316.91,411.933">
+                                                    <opacity>1</opacity>
+                                                    <fill>
+                                                        <Color>
+                                                            <red>0.01568627450980392</red>
+                                                            <green>0.6509803921568628</green>
+                                                            <blue>0.8549019607843137</blue>
+                                                            <opacity>1</opacity>
+                                                        </Color>
+                                                    </fill>
+                                                </SVGPath>
+                                            </children>
+                                        </Group>
+                                    </graphic>
+                                </Label>
+                                <TableView id="modelTable" fx:id="modelDataTableView" editable="false" minWidth="-1.0" prefWidth="-1.0" tableMenuButtonVisible="false" />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </top>
+            <center>
+                <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="260.0" styleClass="statusPanelChild">
+                    <children>
+                        <VBox fx:id="materialContainer" spacing="36.0" BorderPane.alignment="CENTER"> 
+                            <children>
+                            </children>
+                            <HBox.margin>
+                                <Insets top="30.0" />
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets top="30.0" />
+                    </BorderPane.margin>
+                </HBox>
+            </center>
+            <bottom>
+                <VBox fx:id="selectedItemDetails" prefHeight="-1.0" prefWidth="-1.0" spacing="0.0">
+                    <children>
+                        <Label maxWidth="1.7976931348623157E308" styleClass="sidePanelDivider" text="%sidePanel_layout.PositionLabel" />
+                        <GridPane alignment="CENTER" hgap="5.0" vgap="5.0" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                            <children>
+                                <Label styleClass="colon" text="%sidePanel_layout.xaxis" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label styleClass="colon" text="%sidePanel_layout.yaxis" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <RestrictedNumberField allowedDecimalPlaces="1" maxLength="5" prefColumnCount="4" text="-" GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="xAxisTextField" />
+                                <RestrictedNumberField fx:id="yAxisTextField" allowedDecimalPlaces="1" maxLength="5" prefColumnCount="4" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label styleClass="colon" text="%sidePanel_layout.lean" GridPane.columnIndex="2" />
+                                <RestrictedNumberField fx:id="rotationXTextField" allowNegative="true" allowedDecimalPlaces="0" maxLength="5" prefColumnCount="3" styleClass="rotationField" text="0" GridPane.columnIndex="3" />
+                                <Label styleClass="colon" text="%sidePanel_layout.twist" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                <RestrictedNumberField fx:id="rotationYTextField" allowNegative="true" allowedDecimalPlaces="0" maxLength="5" prefColumnCount="3" styleClass="rotationField" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                <Label styleClass="colon" text="%sidePanel_layout.turn" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                <RestrictedNumberField fx:id="rotationZTextField" allowNegative="true" allowedDecimalPlaces="0" maxLength="5" prefColumnCount="3" styleClass="rotationField" text="0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" percentWidth="30.0" />
+                                <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" percentWidth="20.0" />
+                                <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
+                                <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="-1.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="-1.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                        <Label layoutX="15.0" layoutY="174.0" styleClass="sidePanelDivider" text="%sidePanel_layout.SizeLabel" />
+                        <GridPane alignment="CENTER" hgap="5.0" vgap="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <children>
+                                <Label styleClass="colon" text="%sidePanel_layout.WidthLabel" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label styleClass="colon" text="%sidePanel_layout.DepthLabel" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <HBox alignment="CENTER" spacing="5.0" GridPane.columnIndex="1">
+                                    <children>
+                                        <RestrictedNumberField fx:id="widthTextField" allowedDecimalPlaces="2" maxLength="6" prefColumnCount="4" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <children>
+                                        <RestrictedNumberField fx:id="depthTextField" allowedDecimalPlaces="2" maxLength="6" prefColumnCount="4" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    </children>
+                                </HBox>
+                                <Label styleClass="colon" text="%sidePanel_layout.HeightLabel" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                <HBox alignment="CENTER" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <children>
+                                        <RestrictedNumberField fx:id="heightTextField" allowedDecimalPlaces="2" maxLength="6" prefColumnCount="4" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" prefHeight="-1.0" prefWidth="-1.0" spacing="5.0" GridPane.columnIndex="4">
+                                    <children>
+                                        <RestrictedNumberField fx:id="scaleTextWidthField" allowedDecimalPlaces="2" maxLength="7" prefColumnCount="4" text="100" />
+                                    </children>
+                                </HBox>
+                                <Label styleClass="colon" text="%sidePanel_layout.ScaleLabelY" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                <Label styleClass="colon" text="%sidePanel_layout.ScaleLabelX" GridPane.columnIndex="3" />
+                                <Label styleClass="colon" text="%sidePanel_layout.ScaleLabelZ" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                <RestrictedNumberField fx:id="scaleTextDepthField" allowedDecimalPlaces="2" maxLength="7" prefColumnCount="4" text="100" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                <RestrictedNumberField fx:id="scaleTextHeightField" allowedDecimalPlaces="2" maxLength="7" prefColumnCount="4" text="100" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                <ToggleButton id="preserveAspectRatio" fx:id="preserveAspectRatio" contentDisplay="GRAPHIC_ONLY" maxWidth="27.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="27.0" GridPane.columnIndex="2" GridPane.rowSpan="2147483647" GridPane.vgrow="ALWAYS">
+                                    <graphic>
+                                        <ImageView fitHeight="0.0" fitWidth="0.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/link.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </ToggleButton>
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.0" />
+                                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" percentWidth="22.0" />
+                                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" percentWidth="22.0" prefWidth="100.0" />
+                                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <padding>
+                                <Insets />
+                            </padding>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                    </children>
+                    <padding>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                    </padding>
+                </VBox>
+            </bottom>
+            <HBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+            </HBox.margin>
+        </BorderPane>
+    </children>
+    <styleClass>
+        <String fx:value="sidePanel" />
+        <String fx:value="regularFont" />
+    </styleClass>
+</HBox>

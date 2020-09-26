@@ -1,0 +1,30 @@
+defaultPIN: 1111
+
+server:
+  rootPath: /api/*
+  applicationContextPath: /
+  applicationConnectors:
+  - type: http
+    port: 8080
+    
+  requestLog:
+    appenders: []
+    
+logging:
+  level: ERROR
+  loggers:
+    "io.dropwizard":
+      additive: false
+      appenders:
+        - type: file
+          currentLogFilename: dw.log
+          archivedLogFilenamePattern: dw.log-%d.log.gz
+          archivedFileCount: 5
+    "org.eclipse.jetty.server":
+      additive: false
+      appenders:
+        - type: file
+          currentLogFilename: jetty.log
+          archivedLogFilenamePattern: jetty.log-%d.log.gz
+          archivedFileCount: 5
+

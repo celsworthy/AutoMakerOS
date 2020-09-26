@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import celtech.coreUI.components.buttons.*?>
+
+<fx:root type="celtech.coreUI.components.buttons.GraphicButton" text="" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <graphic>
+<Group xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <SVGPath content="M48,24c0,9.6-6.1,18.6-15,22.2c-9.1,3.8-19.6,1.4-26.4-5.7C-0.1,33.4-2,22.8,2.2,13.9    C6.3,5.2,15.5-0.4,25.2,0C37.7,0.6,48,11.5,48,24z M45.8,24c0-9.7-6.7-18.4-16-21c-9.4-2.6-19.6,1.7-24.6,10    c-5,8.5-3.5,19.4,3.4,26.3c6.8,6.7,17.3,8.4,25.7,3.8C41.3,39.4,45.8,31.9,45.8,24z" fill="#FFFFFF" />
+  <Group>
+    <Polygon fill="#D0CDCD">
+      <points>
+        <Double fx:value="16.8" />
+        <Double fx:value="40.9" />
+        <Double fx:value="16.7" />
+        <Double fx:value="39.4" />
+        <Double fx:value="34.6" />
+        <Double fx:value="33.6" />
+        <Double fx:value="34.6" />
+        <Double fx:value="35.1" />
+      </points>
+    </Polygon>
+    <Polygon fill="#D0CDCD">
+      <points>
+        <Double fx:value="16.7" />
+        <Double fx:value="37.9" />
+        <Double fx:value="16.7" />
+        <Double fx:value="36.4" />
+        <Double fx:value="34.7" />
+        <Double fx:value="30.8" />
+        <Double fx:value="34.7" />
+        <Double fx:value="32.2" />
+      </points>
+    </Polygon>
+    <Polygon fill="#D0CDCD">
+      <points>
+        <Double fx:value="16.6" />
+        <Double fx:value="34.9" />
+        <Double fx:value="16.6" />
+        <Double fx:value="33.4" />
+        <Double fx:value="34.8" />
+        <Double fx:value="27.8" />
+        <Double fx:value="34.8" />
+        <Double fx:value="29.3" />
+      </points>
+    </Polygon>
+    <SVGPath content="M20.4,25L12,27.5l4.6,4.4l8.6-2.6L20.4,25z M14.4,27.8l5.4-1.6l3,2.7l-5.4,1.6L14.4,27.8z" fill="#E1E0E0" />
+    <Polygon fill="#626363">
+      <points>
+        <Double fx:value="16.8" />
+        <Double fx:value="40.9" />
+        <Double fx:value="16.7" />
+        <Double fx:value="39.4" />
+        <Double fx:value="12.3" />
+        <Double fx:value="34.8" />
+        <Double fx:value="12.3" />
+        <Double fx:value="36.2" />
+      </points>
+    </Polygon>
+    <Polygon fill="#626363">
+      <points>
+        <Double fx:value="16.7" />
+        <Double fx:value="37.9" />
+        <Double fx:value="16.7" />
+        <Double fx:value="36.4" />
+        <Double fx:value="12.2" />
+        <Double fx:value="31.9" />
+        <Double fx:value="12.2" />
+        <Double fx:value="33.3" />
+      </points>
+    </Polygon>
+    <Polygon fill="#626363">
+      <points>
+        <Double fx:value="16.6" />
+        <Double fx:value="34.9" />
+        <Double fx:value="16.6" />
+        <Double fx:value="33.4" />
+        <Double fx:value="12.1" />
+        <Double fx:value="29" />
+        <Double fx:value="12.1" />
+        <Double fx:value="30.4" />
+      </points>
+    </Polygon>
+    <Polygon fill="#D0CDCD">
+      <points>
+        <Double fx:value="26.7" />
+        <Double fx:value="28.8" />
+        <Double fx:value="26.7" />
+        <Double fx:value="27.3" />
+        <Double fx:value="34.9" />
+        <Double fx:value="24.9" />
+        <Double fx:value="34.9" />
+        <Double fx:value="26.4" />
+      </points>
+    </Polygon>
+    <Polygon fill="#D0CDCD">
+      <points>
+        <Double fx:value="26.7" />
+        <Double fx:value="25.8" />
+        <Double fx:value="26.7" />
+        <Double fx:value="24.3" />
+        <Double fx:value="35" />
+        <Double fx:value="21.8" />
+        <Double fx:value="35" />
+        <Double fx:value="23.4" />
+      </points>
+    </Polygon>
+    <Polygon fill="#D0CDCD">
+      <points>
+        <Double fx:value="26.7" />
+        <Double fx:value="22.7" />
+        <Double fx:value="26.8" />
+        <Double fx:value="21.1" />
+        <Double fx:value="35.1" />
+        <Double fx:value="18.8" />
+        <Double fx:value="35.1" />
+        <Double fx:value="20.3" />
+      </points>
+    </Polygon>
+    <Polygon fill="#D0CDCD">
+      <points>
+        <Double fx:value="26.8" />
+        <Double fx:value="19.6" />
+        <Double fx:value="26.8" />
+        <Double fx:value="18" />
+        <Double fx:value="35.2" />
+        <Double fx:value="15.6" />
+        <Double fx:value="35.2" />
+        <Double fx:value="17.2" />
+      </points>
+    </Polygon>
+    <Polygon fill="#D0CDCD">
+      <points>
+        <Double fx:value="26.8" />
+        <Double fx:value="16.4" />
+        <Double fx:value="26.8" />
+        <Double fx:value="14.7" />
+        <Double fx:value="35.3" />
+        <Double fx:value="12.5" />
+        <Double fx:value="35.3" />
+        <Double fx:value="14.1" />
+      </points>
+    </Polygon>
+    <SVGPath content="M30.2,7.1l-8.3,2.1l5,3.8l8.5-2.3L30.2,7.1z M24.3,9.5l5.2-1.3l3.3,2.4L27.5,12L24.3,9.5z" fill="#E1E0E0" />
+    <Polygon fill="#E1E0E0">
+      <points>
+        <Double fx:value="26.7" />
+        <Double fx:value="9.8" />
+        <Double fx:value="29" />
+        <Double fx:value="9.2" />
+        <Double fx:value="30.4" />
+        <Double fx:value="10.3" />
+        <Double fx:value="28.1" />
+        <Double fx:value="10.8" />
+      </points>
+    </Polygon>
+    <Polygon fill="#E1E0E0">
+      <points>
+        <Double fx:value="16.8" />
+        <Double fx:value="28.1" />
+        <Double fx:value="19.1" />
+        <Double fx:value="27.4" />
+        <Double fx:value="20.3" />
+        <Double fx:value="28.6" />
+        <Double fx:value="18" />
+        <Double fx:value="29.3" />
+      </points>
+    </Polygon>
+    <Polygon fill="#626363">
+      <points>
+        <Double fx:value="21.9" />
+        <Double fx:value="24.6" />
+        <Double fx:value="21.9" />
+        <Double fx:value="23.1" />
+        <Double fx:value="26.7" />
+        <Double fx:value="27.3" />
+        <Double fx:value="26.7" />
+        <Double fx:value="28.8" />
+      </points>
+    </Polygon>
+    <Polygon fill="#626363">
+      <points>
+        <Double fx:value="21.9" />
+        <Double fx:value="21.6" />
+        <Double fx:value="21.9" />
+        <Double fx:value="20.1" />
+        <Double fx:value="26.7" />
+        <Double fx:value="24.3" />
+        <Double fx:value="26.7" />
+        <Double fx:value="25.8" />
+      </points>
+    </Polygon>
+    <Polygon fill="#626363">
+      <points>
+        <Double fx:value="21.9" />
+        <Double fx:value="18.6" />
+        <Double fx:value="21.9" />
+        <Double fx:value="17.1" />
+        <Double fx:value="26.8" />
+        <Double fx:value="21.1" />
+        <Double fx:value="26.7" />
+        <Double fx:value="22.7" />
+      </points>
+    </Polygon>
+    <Polygon fill="#626363">
+      <points>
+        <Double fx:value="21.9" />
+        <Double fx:value="15.6" />
+        <Double fx:value="21.8" />
+        <Double fx:value="14" />
+        <Double fx:value="26.8" />
+        <Double fx:value="18" />
+        <Double fx:value="26.8" />
+        <Double fx:value="19.6" />
+      </points>
+    </Polygon>
+    <Polygon fill="#626363">
+      <points>
+        <Double fx:value="21.8" />
+        <Double fx:value="12.4" />
+        <Double fx:value="21.8" />
+        <Double fx:value="10.8" />
+        <Double fx:value="26.8" />
+        <Double fx:value="14.7" />
+        <Double fx:value="26.8" />
+        <Double fx:value="16.4" />
+      </points>
+    </Polygon>
+  </Group>
+</Group>
+    </graphic>
+</fx:root>

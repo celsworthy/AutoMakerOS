@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import celtech.coreUI.components.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import celtech.coreUI.components.buttons.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox fx:id="container" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" styleClass="inset-panel" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <GridPane alignment="TOP_CENTER" hgap="10.0" vgap="8.0">
+            <children>
+                <Button fx:id="sendGCodeSDButton" layoutX="10.0" layoutY="19.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sendGCodeSD" styleClass="preferenceControl" text="%maintenancePanel.sendGCodeSD" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+                <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                    <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                    </padding>
+                </Separator>
+
+                <Button fx:id="T0CleanButton" layoutX="23.0" layoutY="152.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cleanNozzleT0" styleClass="preferenceControl" text="%maintenancePanel.nozzle0Clean" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Button fx:id="T1CleanButton" layoutX="23.0" layoutY="152.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cleanNozzleT1" styleClass="preferenceControl" text="%maintenancePanel.nozzle1Clean" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button fx:id="LevelGantryButton" layoutX="18.0" layoutY="48.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#levelGantry" styleClass="preferenceControl" text="%maintenancePanel.LevelGantry" GridPane.rowIndex="3" />
+                <Button fx:id="XTestButton" layoutX="23.0" layoutY="120.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#testX" styleClass="preferenceControl" text="%maintenancePanel.XTest" GridPane.rowIndex="4" />
+                <Button fx:id="YTestButton" layoutX="23.0" layoutY="88.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#testY" styleClass="preferenceControl" text="%maintenancePanel.YTest" GridPane.rowIndex="5" />
+                <Button fx:id="ZTestButton" layoutX="23.0" layoutY="24.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#testZ" styleClass="preferenceControl" text="%maintenancePanel.ZTest" GridPane.rowIndex="6" />               
+                <Button fx:id="SpeedTestButton" layoutX="23.0" layoutY="152.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#speedTest" styleClass="preferenceControl" text="%maintenancePanel.SpeedTest" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Button fx:id="PurgeMaterialButton" layoutX="23.0" layoutY="152.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#purge" styleClass="preferenceControl" text="%maintenancePanel.purgeMaterial" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Button fx:id="EjectStuckMaterialButton2" layoutX="23.0" layoutY="152.0" maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="60.0" mnemonicParsing="false" onAction="#ejectStuckMaterial2" prefHeight="60.0" styleClass="preferenceControl" text="%maintenancePanel.ejectStuckMaterial2" wrapText="true" GridPane.rowIndex="7" />
+
+                <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="11">
+                    <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                    </padding>
+                </Separator>
+
+                <Label styleClass="preferenceControl" text="%maintenancePanel.firmwareCurrentVersion" GridPane.halignment="RIGHT" GridPane.rowIndex="12" />
+                <Label fx:id="currentFirmwareField" prefWidth="200.0" styleClass="preferenceControl" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                <Button fx:id="loadFirmwareButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loadFirmware" styleClass="preferenceControl" text="%maintenancePanel.firmwareLoad" GridPane.columnSpan="2" GridPane.rowIndex="13" />
+                <Button fx:id="EjectStuckMaterialButton1" maxHeight="60.0" maxWidth="1.7976931348623157E308" minHeight="60.0" mnemonicParsing="false" onAction="#ejectStuckMaterial1" prefHeight="60.0" styleClass="preferenceControl" text="%maintenancePanel.ejectStuckMaterial1" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            </children>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50.0" />
+                <ColumnConstraints percentWidth="50.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints minHeight="10.0" prefHeight="60.0" />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </children>
+</VBox>

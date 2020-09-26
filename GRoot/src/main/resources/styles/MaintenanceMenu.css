@@ -1,0 +1,23 @@
+.menu-button-1 {
+    -fx-graphic: url("/image/menu-purge-grey.png");
+}
+
+.menu-button-2 {
+    -fx-graphic: url("/image/menu-eject-stuck-grey.png");
+}
+
+.menu-button-3 {
+    -fx-graphic: url("/image/menu-clean-nozzles-grey.png");
+}
+
+.menu-button-4 {
+    -fx-graphic: url("/image/menu-remove-head-grey.png");
+}
+
+.menu-button-5 {
+    -fx-graphic: url("/image/menu-level-gantry-grey.png");
+}
+
+.menu-button-6 {
+    -fx-graphic: url("/image/menu-test-axis-speed-grey.png");
+}

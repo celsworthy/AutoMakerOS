@@ -1,0 +1,7 @@
+.menu-button-1 {
+    -fx-graphic: url("/image/menu-printer-name-grey.png");
+}
+
+.menu-button-2 {
+    -fx-graphic: url("/image/menu-printer-colour-grey.png");
+}

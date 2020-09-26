@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 84.651833 70.696716"
+   version="1.1"
+   sodipodi:docname="Icon-Tick-White.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   width="84.651833"
+   height="70.696716">
+  <defs
+     id="defs4552" />
+  <metadata
+     id="metadata839">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-Play</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview837"
+     showgrid="false"
+     inkscape:zoom="7.0666667"
+     inkscape:cx="18.616221"
+     inkscape:cy="58.524033"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <title
+     id="title832">Icon-Play</title>
+  <g
+     id="g4560"
+     transform="rotate(-45,24.516549,59.914354)"
+     style="fill:#ffffff;fill-opacity:1">
+    <path
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.70021236"
+       inkscape:connector-curvature="0"
+       id="path838"
+       d="m 96.716605,49.574401 v 0 a 5.3426204,5.3426204 0 0 1 2.037618,0.399122 5.1675673,5.1675673 0 0 1 1.680507,1.127344 5.4406501,5.4406501 0 0 1 1.14835,1.680508 5.0555333,5.0555333 0 0 1 0.42713,2.037613 v 10.503181 a 4.9925142,4.9925142 0 0 1 -0.42713,2.030618 5.433648,5.433648 0 0 1 -1.14835,1.687512 5.1325567,5.1325567 0 0 1 -1.680508,1.120337 5.2445906,5.2445906 0 0 1 -2.037619,0.399121 l -73.424264,2e-6 A 5.2445906,5.2445906 0 0 1 21.254721,70.160638 5.097546,5.097546 0 0 1 19.581214,69.040299 5.4056395,5.4056395 0 0 1 18.41886,67.359789 4.9014866,4.9014866 0 0 1 17.984729,65.322171 V 54.818985 a 4.9505014,4.9505014 0 0 1 0.434132,-2.037611 5.4056395,5.4056395 0 0 1 1.15535,-1.68051 5.1325567,5.1325567 0 0 1 1.673508,-1.127343 5.3496225,5.3496225 0 0 1 2.04462,-0.399121 z" />
+    <path
+       d="m 38.933558,67.995417 v 0 a 5.3426204,2.5893438 0 0 1 -0.399122,0.987548 5.1675673,2.5045029 0 0 1 -1.127344,0.814471 5.4406501,2.6368546 0 0 1 -1.680508,0.556557 5.0555333,2.4502047 0 0 1 -2.037613,0.207012 H 23.18579 A 4.9925142,2.419662 0 0 1 21.155172,70.353993 5.433648,2.633461 0 0 1 19.46766,69.797436 5.1325567,2.4875347 0 0 1 18.347323,68.982965 5.2445906,2.5418328 0 0 1 17.948202,67.995416 l -2e-6,-35.585657 a 5.2445906,2.5418328 0 0 1 0.399121,-0.987548 5.097546,2.4705665 0 0 1 1.120339,-0.811079 5.4056395,2.6198865 0 0 1 1.68051,-0.563344 4.9014866,2.3755447 0 0 1 2.037618,-0.210405 h 10.503186 a 4.9505014,2.3993002 0 0 1 2.037611,0.210405 5.4056395,2.6198865 0 0 1 1.68051,0.55995 5.1325567,2.4875347 0 0 1 1.127343,0.811079 5.3496225,2.5927374 0 0 1 0.399121,0.990942 z"
+       id="path4554"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.48746952" />
+  </g>
+</svg>

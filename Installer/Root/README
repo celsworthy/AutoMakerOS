@@ -1,0 +1,6 @@
+Image
+dd bs=1m if=2015-11-21-raspbian-jessie.img of=/dev/rdisk<3>
+roboxroot is the init.d script
+install it using update-rc.d roboxroot enable
+
+https://github.com/saper-2/rpi-5inch-hdmi-touchscreen-driver/blob/master/README.md

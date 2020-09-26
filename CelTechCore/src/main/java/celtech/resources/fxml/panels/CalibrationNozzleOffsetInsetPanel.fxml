@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="container" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" styleClass="inset-panel" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.panels.CalibrationNozzleOffsetInsetPanelController">
+    <children>
+        <BorderPane pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </VBox.margin>
+            <center>
+                <VBox alignment="CENTER" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <StackPane VBox.vgrow="ALWAYS">
+                            <children>
+                                <Text fx:id="calibrationStatus" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="500.0" BorderPane.alignment="CENTER">
+                                    <font>
+                                        <Font name="Segoe UI" size="18.0" />
+                                    </font>
+                                </Text>
+                                <ImageView fx:id="headImage" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/HeadOutlineImage.png" />
+                                    </image>
+                                </ImageView>
+                                <VBox fx:id="nudgeControlVBox" alignment="CENTER">
+                                    <children>
+                                        <HBox fx:id="manualAdjustmentControls" alignment="CENTER" spacing="35.0" StackPane.alignment="CENTER">
+                                            <children>
+                                                <NudgeControlVertical fx:id="fineNozzleNudge" />
+                                                <NudgeControlVertical fx:id="coarseNozzleNudge" />
+                                            </children>
+                                            <padding>
+                                                <Insets top="50.0" />
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <VBox fx:id="nudgeOrRecalibrateVBox" alignment="CENTER" spacing="10.0">
+                                    <children>
+                                        <Text fill="WHITE" layoutX="278.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%calibrationPanel.chooseNozzleOffsetMode" textAlignment="CENTER">
+                                            <font>
+                                                <Font name="Segoe UI" size="18.0" />
+                                            </font>
+                                        </Text>
+                                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#adjustOffsets" text="%calibrationPanel.adjustNozzleOffsets" />
+                                        <Button layoutX="215.0" layoutY="185.0" mnemonicParsing="false" onAction="#recalibrate" text="%calibrationPanel.recalibrate" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </StackPane>
+                    </children>
+                </VBox>
+            </center>
+            <top>
+                <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+                    <children>
+                        <Text fill="WHITE" layoutX="10.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%calibrationPanel.nozzleOffsetCalibrationTitle">
+                            <font>
+                                <Font name="Segoe UI" size="18.0" />
+                            </font>
+                        </Text>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+            </top>
+            <bottom>
+                <VBox alignment="CENTER" pickOnBounds="false" spacing="5.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Text fx:id="calibrationInstruction" fill="WHITE" layoutX="278.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER">
+                            <font>
+                                <Font name="Segoe UI" size="18.0" />
+                            </font>
+                        </Text>
+                        <StackPane pickOnBounds="false">
+                            <children>
+                                <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" pickOnBounds="false" spacing="10.0">
+                                    <children>
+                                        <Button fx:id="yesButton" mnemonicParsing="false" onAction="#yesButtonAction" text="%misc.Yes" />
+                                        <Button fx:id="noButton" layoutX="5.0" mnemonicParsing="false" onAction="#noButtonAction" text="%misc.No" AnchorPane.rightAnchor="425.0" BorderPane.alignment="CENTER" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" pickOnBounds="false" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Button fx:id="startCalibrationButton" layoutX="5.0" mnemonicParsing="false" onAction="#startCalibration" text="%calibrationPanel.startCalibration" AnchorPane.rightAnchor="425.0" BorderPane.alignment="CENTER" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" pickOnBounds="false">
+                                    <children>
+                                        <Button fx:id="cancelCalibrationButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelCalibration" text="%calibrationPanel.cancelCalibration">
+                                            <StackPane.margin>
+                                                <Insets />
+                                            </StackPane.margin>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" pickOnBounds="false" spacing="10.0">
+                                    <children>
+                                        <Button fx:id="tooLooseButton" mnemonicParsing="false" onAction="#tooLooseAction" text="%calibrationPanel.tooLoose" />
+                                        <Button fx:id="justRightButton" layoutX="5.0" mnemonicParsing="false" onAction="#justRightAction" text="%calibrationPanel.justRight" AnchorPane.rightAnchor="425.0" BorderPane.alignment="CENTER" />
+                                        <Button fx:id="tooTightButton" layoutX="306.0" layoutY="10.0" mnemonicParsing="false" onAction="#tooTightAction" text="%calibrationPanel.tooTight" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" pickOnBounds="false">
+                                    <children>
+                                        <Button fx:id="saveSettingsButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#saveSettings" text="%calibrationPanel.saveSettings">
+                                            <StackPane.margin>
+                                                <Insets />
+                                            </StackPane.margin>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </StackPane>
+                    </children>
+                </VBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</VBox>

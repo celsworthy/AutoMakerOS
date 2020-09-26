@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Robox :: Live Adjustments</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/OldCss.css">
+    <link rel="stylesheet" href="assets/css/RoboxRoot.css">
+    <link rel="stylesheet" href="assets/css/RootFonts.css">
+</head>
+
+<body id="print-adjust" class="canvas-grey no-touch-action">
+    <div class="container page">
+        <div class="row panel rbx-colour-material-1 hidden" id="pa-right-nozzle" style="height: 34.75vh; padding: 1.25vh; margin-bottom: 1.25vh">
+            <div>
+                <div class="row vertical-align" style="height: 4vh">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center no-padding" style="margin-top: 1vh"><img style="height: 3.5vh; margin-bottom: 1.5vh;" src="assets/img/Icon-Tweak-Mat1.svg"><span class="rbx-text-bigbody rbx-white localised" data-i18n="right-nozzle" style="margin-left: 1.25vh;">Right Nozzle</span><span class="rbx-text-bigbody localised"
+                            data-i18n="material-one" style="margin-left: 1vh; font-style: italic;">- Material 1</span></div>
+                </div>
+                <div class="row" style="margin: 0.5vh 0vh;">
+                    <div class="no-padding text-center">
+                        <p id="pa-material-1-name" class="rbx-text-bigbody rbx-white no-margins">&nbsp;</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin: 1.25vh 0vh;">
+                    <div style="width: 23vh;">
+                        <p class="no-margins localised rbx-field-title small" data-i18n="print-speed">Print Speed</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <form class="form-inline">
+                            <div class="form-group no-margins"><button class="btn btn-default rbx-spinner minus mat1" data-dir="down" type="button"></button><input class="form-control rbx-numeric-input small print-speed" type="text" id="pa-print-speed-r" step="10" callback="printSpeedChanged"
+                                    nozzle="r" style="width: 11.25vh" no-update="true" readonly=""><button class="btn btn-default rbx-spinner add mat1" data-dir="up" type="button"></button></div>
+                        </form>
+                    </div>
+                    <div style="width: 7.125vh">
+                        <p class="no-margins localised rbx-field-title units" style="padding-left: 1vh">10%</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin: 1.25vh 0vh;">
+                    <div style="width: 23vh;">
+                        <p class="no-margins localised rbx-field-title small" data-i18n="flow-rate">Flow Rate</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <form class="form-inline">
+                            <div class="form-group no-margins"><button class="btn btn-default rbx-spinner minus mat1" data-dir="down" type="button"></button><input class="form-control rbx-numeric-input small flow-rate" type="text" id="pa-flow-rate-r" step="2" callback="flowRateChanged"
+                                    nozzle="r" style="width: 11.25vh" no-update="true" readonly=""><button class="btn btn-default rbx-spinner add mat1" data-dir="up" type="button"></button></div>
+                        </form>
+                    </div>
+                    <div style="width: 7.125vh">
+                        <p class="no-margins localised rbx-field-title units" style="padding-left: 1vh">2%</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin: 1.25vh 0vh;">
+                    <div style="width: 23vh;">
+                        <p class="no-margins localised rbx-field-title small" data-i18n="temperature">Temperature</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <form class="form-inline">
+                            <div class="form-group no-margins"><button class="btn btn-default rbx-spinner minus mat1" data-dir="down" type="button"></button><input class="form-control rbx-numeric-input small temperature" type="text" id="pa-temp-r" step="2" callback="nozzleTempChanged"
+                                    nozzle="r" style="width: 11.25vh" no-update="true" readonly=""><button class="btn btn-default rbx-spinner add mat1" data-dir="up" type="button"></button></div>
+                        </form>
+                    </div>
+                    <div style="width: 7.125vh">
+                        <p class="no-margins localised rbx-field-title units" style="padding-left: 1vh">2°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row panel rbx-colour-material-2 hidden" id="pa-left-nozzle" style="height: 34.75vh; padding: 1.25vh; margin-bottom: 1.25vh">
+            <div>
+                <div class="row vertical-align" style="height: 4vh">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center no-padding" style="margin-top: 1vh"><img style="height: 3.5vh; margin-bottom: 1.5vh;" src="assets/img/Icon-Tweak-Mat2.svg"><span class="rbx-text-bigbody rbx-white localised" data-i18n="left-nozzle" style="margin-left: 1.25vh;">Left Nozzle</span><span class="rbx-text-bigbody localised"
+                            data-i18n="material-two" style="margin-left: 1vh; font-style: italic;">- Material 2</span></div>
+                </div>
+                <div class="row" style="margin: 0.5vh 0vh;">
+                    <div class="no-padding text-center">
+                        <p id="pa-material-2-name" class="rbx-text-bigbody rbx-white no-margins">&nbsp;</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin: 1.25vh 0vh;">
+                    <div style="width: 23vh;">
+                        <p class="no-margins localised rbx-field-title small" data-i18n="print-speed">Print Speed</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <form class="form-inline">
+                            <div class="form-group no-margins"><button class="btn btn-default rbx-spinner minus mat2" data-dir="down" type="button"></button><input class="form-control rbx-numeric-input small print-speed" type="text" id="pa-print-speed-l" step="10" callback="printSpeedChanged"
+                                    nozzle="l" style="width: 11.25vh" no-update="true" readonly=""><button class="btn btn-default rbx-spinner add mat2" data-dir="up" type="button"></button></div>
+                        </form>
+                    </div>
+                    <div style="width: 7.125vh">
+                        <p class="no-margins localised rbx-field-title units" style="padding-left: 1vh">10%</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin: 1.25vh 0vh;">
+                    <div style="width: 23vh;">
+                        <p class="no-margins localised rbx-field-title small" data-i18n="flow-rate">Flow Rate</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <form class="form-inline">
+                            <div class="form-group no-margins"><button class="btn btn-default rbx-spinner minus mat2" data-dir="down" type="button"></button><input class="form-control rbx-numeric-input small flow-rate" type="text" id="pa-flow-rate-l" step="2" callback="flowRateChanged"
+                                    nozzle="l" style="width: 11.25vh" no-update="true" readonly=""><button class="btn btn-default rbx-spinner add mat2" data-dir="up" type="button"></button></div>
+                        </form>
+                    </div>
+                    <div style="width: 7.125vh">
+                        <p class="no-margins localised rbx-field-title units" style="padding-left: 1vh">2%</p>
+                    </div>
+                </div>
+                <div class="row vertical-align" style="margin: 1.25vh 0vh;">
+                    <div style="width: 23vh;">
+                        <p class="no-margins localised rbx-field-title small" data-i18n="temperature">Temperature</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <form class="form-inline">
+                            <div class="form-group no-margins"><button class="btn btn-default rbx-spinner minus mat2" data-dir="down" type="button"></button><input class="form-control rbx-numeric-input small temperature" type="text" id="pa-temp-l" step="2" callback="nozzleTempChanged"
+                                    nozzle="l" style="width: 11.25vh" no-update="true" readonly=""><button class="btn btn-default rbx-spinner add mat2" data-dir="up" type="button"></button></div>
+                        </form>
+                    </div>
+                    <div style="width: 7.125vh">
+                        <p class="no-margins localised rbx-field-title units" style="padding-left: 1vh">2°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row panel rbx-colour-bed" style="height: 14.75vh; padding: 1.25vh; margin-bottom: 1.25vh">
+            <div>
+                <div class="row vertical-align" style="height: 4vh">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center no-padding" style="margin-top: 1vh"><img style="height: 3.5vh; margin-bottom: 1.5vh;" src="assets/img/Icon-Tweak-Bed.svg"><span class="rbx-text-bigbody rbx-white localised" data-i18n="heated-bed" style="margin-left: 1.25vh;">Heated Bed</span></div>
+                </div>
+                <div class="row vertical-align" style="margin: 1.25vh 0vh;">
+                    <div style="width: 23vh;">
+                        <p class="no-margins localised rbx-field-title small" data-i18n="temperature">Temperature</p>
+                    </div>
+                    <div style="width: 27.125vh">
+                        <form class="form-inline">
+                            <div class="form-group no-margins"><button class="btn btn-default rbx-spinner minus bed" data-dir="down" type="button"></button><input class="form-control rbx-numeric-input small temperature" type="text" id="pa-bed-temp" step="5" callback="bedTempChanged" style="width: 11.25vh"
+                                    no-update="true" readonly=""><button class="btn btn-default rbx-spinner add bed" data-dir="up" type="button"></button></div>
+                        </form>
+                    </div>
+                    <div style="width: 7.125vh">
+                        <p class="no-margins localised rbx-field-title units" style="padding-left: 1vh">5°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer">
+        <div class="btn-group btn-group-justified" role="group"><a class="btn btn-default menu-bottom-button" role="button" id="left-button" href="home.html"> <img class="menu-bottom-button-icon" src="assets/img/Icon_Menu_Back.svg"></a><a class="btn btn-default menu-bottom-button" role="button" id="middle-button" href="menu-grid.html?id=main"> <img style="height:6.5vh;" src="assets/img/Icon-Menu.svg"></a>
+            <a
+                class="btn btn-default menu-bottom-button invisible" role="button" id="right-button" href="#"> <img class="menu-bottom-button-icon" src="assets/img/Icon_Menu_Next.svg"></a>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/i18next.min.js"></script>
+    <script src="assets/js/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="assets/js/i18nextXHRBackend.min.js"></script>
+    <script src="assets/js/jquery-i18next.min.js"></script>
+    <script src="assets/js/core-vars.js"></script>
+    <script src="assets/js/jquery.base64.js"></script>
+    <script src="assets/js/core-funcs.js"></script>
+    <script src="assets/js/promise-funcs.js"></script>
+    <script src="assets/js/access-pin.js"></script>
+    <script src="assets/js/error-handling.js"></script>
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/console.js"></script>
+    <script src="assets/js/control.js"></script>
+    <script src="assets/js/head-eeprom.js"></script>
+    <script src="assets/js/job-progress.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/menu-horz.js"></script>
+    <script src="assets/js/pin-reset.js"></script>
+    <script src="assets/js/print-adjust.js"></script>
+    <script src="assets/js/printer-colour.js"></script>
+    <script src="assets/js/printer-name.js"></script>
+    <script src="assets/js/server-name.js"></script>
+    <script src="assets/js/printer-select.js"></script>
+    <script src="assets/js/purge-intro.js"></script>
+    <script src="assets/js/purge.js"></script>
+    <script src="assets/js/reprint.js"></script>
+    <script src="assets/js/wireless-settings.js"></script>
+    <script src="assets/js/usb-print.js"></script>
+    <script src="assets/js/page-init.js"></script>
+</body>
+
+</html>

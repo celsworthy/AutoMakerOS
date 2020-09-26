@@ -1,0 +1,14 @@
+.backspace-key {
+	-fx-graphic:url("/image/keyboard-backspace.png");
+}
+
+.enter-key {
+	-fx-graphic:url("/image/keyboard-enter.png");
+}
+
+.keyboard-key {
+    -fx-background-color: -robox-light-grey;
+    -fx-font-size: 12pt;
+    -fx-font-weight: 300;
+    -fx-text-fill: white;
+}

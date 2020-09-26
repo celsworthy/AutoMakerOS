@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Robox :: In Progress...</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/OldCss.css">
+    <link rel="stylesheet" href="assets/css/RoboxRoot.css">
+    <link rel="stylesheet" href="assets/css/RootFonts.css">
+</head>
+
+<body id="job-progress" class="canvas-grey no-touch-action">
+    <div class="container page macro-progress">
+        <div style="position: relative; transform: translatey(-50%); top: 50%;">
+            <div class="row panel" style="margin: 0vh 1.25vh 0vh; padding:2.5vh 2.5vh 0vh;">
+                <div>
+                    <h1 id="title-text">&nbsp;</h1>
+                </div>
+            </div>
+            <div class="row panel" style="margin: 0vh 1.25vh;">
+                <div class="text-center"><img id="image" class="rbx-macro-panel" src="assets/img/Blank.svg"></div>
+            </div>
+            <div class="row panel rbx-white" style="margin: 0vh 1.25vh; padding:0vh 2.5vh 1.25vh;">
+                <div class="text-center">
+                    <p class="text-left rbx-text-medium" id="description-text" style="font-weight: 300">&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container current-macro">
+        <div class="row current-macro" id="progress-row">
+            <div>
+                <div class="row panel rbx-currentjob" id="current-job">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 no-padding" style="font-size: 4.5vh; color: #fff; line-height: 3vh">
+                        <p id="status-text" class="no-margins">&nbsp;</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align: right; font-size: 4.5vh; color: #fff; line-height: 3vh; padding: 0vh 1.25vh 0vh 0vh">
+                        <p id="etc-text" class="no-margins">&nbsp;</p>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 no-padding" style="width: 3vh"><img style="height:3vh" src="assets/img/Icon-Remaining-White.svg"></div>
+                </div>
+                <div class="row">
+                    <div class="clearfix"></div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                        <div class="progress rbx-progress" id="progress-bar">
+                            <div class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"><span class="sr-only">0%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer">
+        <div class="btn-group btn-group-justified" role="group"><a class="btn btn-default menu-bottom-button rbx-invisible" role="button" id="left-button" href="#"> <img class="menu-bottom-button-icon" style="height:6.5vh;" src="assets/img/Blank.svg"></a><a class="btn btn-default menu-bottom-button rbx-invisible"
+                role="button" id="middle-button" href="menu-grid.html?id=main"> <img class="menu-bottom-button-icon" style="height:6.5vh;" src="assets/img/Blank.svg"></a><a class="btn btn-default menu-bottom-button" role="button" id="right-button" href="#"> <img class="menu-bottom-button-icon" src="assets/img/Blank.svg"></a></div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/i18next.min.js"></script>
+    <script src="assets/js/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="assets/js/i18nextXHRBackend.min.js"></script>
+    <script src="assets/js/jquery-i18next.min.js"></script>
+    <script src="assets/js/core-vars.js"></script>
+    <script src="assets/js/jquery.base64.js"></script>
+    <script src="assets/js/core-funcs.js"></script>
+    <script src="assets/js/promise-funcs.js"></script>
+    <script src="assets/js/access-pin.js"></script>
+    <script src="assets/js/error-handling.js"></script>
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/console.js"></script>
+    <script src="assets/js/control.js"></script>
+    <script src="assets/js/head-eeprom.js"></script>
+    <script src="assets/js/job-progress.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/menu-horz.js"></script>
+    <script src="assets/js/pin-reset.js"></script>
+    <script src="assets/js/print-adjust.js"></script>
+    <script src="assets/js/printer-colour.js"></script>
+    <script src="assets/js/printer-name.js"></script>
+    <script src="assets/js/server-name.js"></script>
+    <script src="assets/js/printer-select.js"></script>
+    <script src="assets/js/purge-intro.js"></script>
+    <script src="assets/js/purge.js"></script>
+    <script src="assets/js/reprint.js"></script>
+    <script src="assets/js/wireless-settings.js"></script>
+    <script src="assets/js/usb-print.js"></script>
+    <script src="assets/js/page-init.js"></script>
+</body>
+
+</html>

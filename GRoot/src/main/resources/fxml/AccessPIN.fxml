@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane id="AccessPINPane" fx:id="accessPINPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800" prefWidth="480.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celuk.groot.controllers.AccessPINController">
+   <children>
+      <VBox fx:id="accessPINVBox" alignment="TOP_CENTER">
+         <children>
+            <Label fx:id="accessPINTitle" styleClass="page-title" text="accessPIN.title" />
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0" styleClass="panel">
+               <children>
+                  <Label fx:id="pinLabel" styleClass="pin-label" text="accessPIN.pinLabel">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="BASELINE_CENTER" maxWidth="1.7976931348623157E308">
+                     <children>
+                        <PasswordField fx:id="pinField" maxWidth="1.7976931348623157E308" styleClass="pin-field" HBox.hgrow="SOMETIMES" />
+                        <Button id="PINClear" fx:id="pinClear" mnemonicParsing="false" onAction="#clearAction" styleClass="pin-clear" text="X" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="confirmLabel" styleClass="pin-label" text="accessPIN.confirmLabel">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="BASELINE_CENTER" maxWidth="1.7976931348623157E308">
+                     <children>
+                        <PasswordField fx:id="confirmField" maxWidth="1.7976931348623157E308" styleClass="pin-field" HBox.hgrow="SOMETIMES" />
+                        <Button id="ConfirmClear" fx:id="confirmClear" mnemonicParsing="false" onAction="#clearAction" styleClass="pin-clear" text="X" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label fx:id="savePrompt" text="common.savePrompt">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="panel-label" />
+                        <String fx:value="italic-text" />
+                     </styleClass>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <GridPane hgap="5.0" vgap="5.0" VBox.vgrow="SOMETIMES">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="25.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="25.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="25.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="25.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="33.333333333333" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="33.333333333333" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" percentHeight="33.333333333333" prefHeight="30.0" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <Button id="zeroKey" fx:id="zeroKey" contentDisplay="TEXT_ONLY" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keypadAction" styleClass="keypad-key" text="0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button id="oneKey" fx:id="oneKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keypadAction" styleClass="keypad-key" text="1" />
+                  <Button id="twoKey" fx:id="twoKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keypadAction" styleClass="keypad-key" text="2" GridPane.columnIndex="1" />
+                  <Button id="threeKey" fx:id="threeKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keypadAction" styleClass="keypad-key" text="3" GridPane.columnIndex="2" />
+                  <Button id="fourKey" fx:id="fourKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keypadAction" styleClass="keypad-key" text="4" GridPane.rowIndex="1" />
+                  <Button id="backspaceKey" fx:id="backspaceKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keypadAction" text="keypad.backspace" GridPane.columnIndex="3" GridPane.rowSpan="2">
+                     <styleClass>
+                        <String fx:value="keypad-key" />
+                        <String fx:value="backspace-key" />
+                     </styleClass></Button>
+                  <Button id="fiveKey" fx:id="fiveKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keypadAction" styleClass="keypad-key" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button id="sixKey" fx:id="sixKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keypadAction" styleClass="keypad-key" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button id="sevenKey" fx:id="sevenKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keypadAction" styleClass="keypad-key" text="7" GridPane.rowIndex="2" />
+                  <Button id="eightKey" fx:id="eightKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keypadAction" styleClass="keypad-key" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button id="nineKey" fx:id="nineKey" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#keypadAction" styleClass="keypad-key" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="bottomBarGrid" styleClass="bottom-bar">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="leftButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#leftButtonAction" prefHeight="63.0">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-back" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="middleButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#middleButtonAction" prefHeight="63.0" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-main-menu" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="rightButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rightButtonAction" prefHeight="63.0" GridPane.columnIndex="2">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-save" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <String fx:value="styles/Styles.css" />
+      <String fx:value="styles/PIN.css" />
+   </stylesheets>
+</StackPane>

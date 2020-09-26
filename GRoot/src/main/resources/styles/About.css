@@ -1,0 +1,58 @@
+.about-panel {
+    -fx-background-color: -robox-blue;
+    -fx-text-fill: white;
+}
+
+.about-header {
+	-fx-background-image: url("/image/logo-root-text-white.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.about-version {
+    -fx-font-size: 18pt;
+    -fx-font-weight: 300;
+}
+
+.about-para-1 {
+    -fx-font-size: 12pt;
+    -fx-font-weight: 300;
+}
+
+.about-para-2 {
+    -fx-font-size: 12pt;
+    -fx-font-weight: 300;
+}
+
+.about-para-3 {
+    -fx-font-size: 10pt;
+    -fx-font-weight: 300;
+	-fx-font-style: italic;
+}
+
+.about-para-4 {
+    -fx-font-size: 12pt;
+    -fx-font-weight: 300;
+}
+
+.about-para-5 {
+    -fx-font-size: 12pt;
+    -fx-font-weight: 100;
+}
+
+.about-para-6 {
+    -fx-font-size: 12pt;
+    -fx-font-weight: 300;
+}
+
+.about-para-7 {
+    -fx-font-size: 12pt;
+    -fx-font-weight: 100;
+}
+
+.about-footer {
+	-fx-background-image: url("/image/logo-robox-black-50pc.png");
+    -fx-background-position: bottom right;
+    -fx-background-repeat: no-repeat;
+}
+

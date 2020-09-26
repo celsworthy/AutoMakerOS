@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.controlsfx.control.textfield.*?>
+
+<VBox fx:id="container" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="520.0" spacing="5.0" styleClass="slideOutPanel" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.popups.CreateNewMaterialController">
+    <children>
+        <HBox alignment="CENTER" spacing="5.0">
+            <children>
+                <Label text="%sidePanel_settings.MaterialName" />
+                <CustomTextField fx:id="materialNameField" />
+            </children>
+        </HBox>
+        <fx:include fx:id="materialDetails" source="../utilityPanels/materialDetails.fxml" />
+    </children>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+</VBox>

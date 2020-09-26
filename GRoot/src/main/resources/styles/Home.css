@@ -1,0 +1,133 @@
+.filament-description {
+    -fx-text-fill: black;
+    -fx-font-size: 18pt;
+    -fx-font-weight: 300;
+    -fx-background-color: white;
+}
+
+.filament-length {
+    -fx-font-size: 18pt;
+    -fx-font-weight: 300;
+}
+
+.filament-type {
+    -fx-font-size: 30pt;
+    -fx-font-weight: 900;
+}
+
+.job-cancel {
+    -fx-graphic: url("/image/job-cancel-white.png");
+}
+
+.job-description-icon {
+    -fx-background-image: url("/image/job-profile-blue.png");
+    -fx-background-position: bottom 10 right 10;
+    -fx-background-repeat: no-repeat;
+}
+
+.job-description-text {
+    -fx-font-size: 18pt;
+    -fx-font-weight: 300;
+}
+
+.job-description-title {
+    -fx-font-size: 18pt;
+    -fx-font-weight: 600;
+    -fx-text-fill: -robox-blue;
+}
+
+.job-progress-panel {
+    -fx-background-color: -robox-blue;
+}
+
+.job-pause {
+    -fx-graphic: url("/image/job-pause-white.png");
+}
+
+.job-pause:paused {
+    -fx-graphic: url("/image/job-resume-white.png");
+}
+
+.job-remaining-icon {
+    -fx-background-image: url("/image/job-remaining-icon.png");
+    -fx-background-position: center;
+}
+
+.job-remaining-text {
+    -fx-font-size: 24pt;
+}
+
+.job-status-icon {
+    -fx-background-position: center;
+}
+
+.job-status-icon:playing {
+    -fx-background-image: url("/image/job-play-icon.png");
+}
+
+.job-status-icon:idle {
+    -fx-background-image: url("/image/job-ready-icon.png");
+}
+
+.job-status-icon:paused {
+    -fx-background-image: url("/image/job-pause-icon.png");
+}
+
+.job-status-text {
+    -fx-font-size: 24pt;
+}
+
+.job-tweak {
+    -fx-graphic: url("/image/job-tweak-white.png");
+}
+
+.machine-address {
+    -fx-font-weight: normal;
+    -fx-font-size: 12pt;
+}
+
+.machine-icon {
+	-fx-border-color: white;
+	-fx-border-width: 2px;
+}
+
+.machine-model {
+    -fx-text-fill: -robox-blue;
+    -fx-font-weight: normal;
+    -fx-font-size: 18pt;
+}
+
+.machine-name {
+    -fx-font-weight: normal;
+    -fx-font-size: 18pt;
+}
+
+.material-1-eject {
+    -fx-graphic: url("/image/material-1-eject.png");
+    -fx-background-color: transparent;
+}
+
+.material-2-eject {
+    -fx-graphic: url("/image/material-2-eject.png");
+    -fx-background-color: transparent;
+}
+
+.half-reel-image {
+    -fx-background-position: center bottom;
+    -fx-background-repeat: no-repeat;
+}
+
+.reel-image {
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.temperature-text {
+    -fx-font-weight: 900;
+    -fx-font-size: 24pt;
+}
+
+.temperature-title {
+    -fx-font-weight: normal;
+    -fx-font-size: 12pt;
+}

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane id="TweakPane" fx:id="tweakPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800" prefWidth="480.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celuk.groot.controllers.TweakController">
+   <children>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" StackPane.alignment="TOP_CENTER">
+         <children>
+            <VBox fx:id="tweakVBox" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <GridPane fx:id="m1Pane" hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="panel" vgap="5.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="40.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="36.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="36.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="15.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="m1TempLabel" text="tweak.temperature" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                           <styleClass>
+                              <String fx:value="material-1" />
+                              <String fx:value="field-label" />
+                           </styleClass>
+                        </Label>
+                        <Button id="m1Temp" fx:id="m1TempDec" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m1-decrement" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField id="m1Temp" fx:id="m1TempValue" maxWidth="1.7976931348623157E308" minWidth="10.0" prefColumnCount="4" styleClass="field-value" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Button id="m1Temp" fx:id="m1TempInc" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m1-increment" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label fx:id="m1TempSuffix" text="tweak.matTempSuffix" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                           <styleClass>
+                              <String fx:value="material-1" />
+                              <String fx:value="field-suffix" />
+                           </styleClass>
+                        </Label>
+                        <HBox alignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="2147483647">
+                           <children>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" styleClass="m1-icon">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin></ImageView>
+                              <Label fx:id="m1Title" styleClass="panel-title" text="common.rightNozzle" />
+                              <Label fx:id="m1Description" text="common.material1">
+                                 <styleClass>
+                                    <String fx:value="material-1" />
+                                    <String fx:value="panel-description" />
+                                 </styleClass>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="m1FlowRateLabel" text="tweak.flowRate" GridPane.rowIndex="3">
+                           <styleClass>
+                              <String fx:value="material-1" />
+                              <String fx:value="field-label" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="m1FlowRateSuffix" text="tweak.flowRateSuffix" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                           <styleClass>
+                              <String fx:value="material-1" />
+                              <String fx:value="field-suffix" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="m1PrintSpeedLabel" text="tweak.printSpeed" GridPane.rowIndex="2">
+                           <styleClass>
+                              <String fx:value="material-1" />
+                              <String fx:value="field-label" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="m1PrintSpeedSuffix" text="tweak.printSpeedSuffix" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <styleClass>
+                              <String fx:value="material-1" />
+                              <String fx:value="field-suffix" />
+                           </styleClass>
+                        </Label>
+                        <Button id="m1PrintSpeed" fx:id="m1PrintSpeedDec" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m1-decrement" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button id="m1FlowRate" fx:id="m1FlowRateDec" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m1-decrement" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button id="m1PrintSpeed" fx:id="m1PrintSpeedInc" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m1-increment" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Button id="m1FlowRate" fx:id="m1FlowRateInc" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m1-increment" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField id="m1PrintSpeed" fx:id="m1PrintSpeedValue" maxWidth="1.7976931348623157E308" minWidth="10.0" prefColumnCount="4" styleClass="field-value" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField id="m1FlowRate" fx:id="m1FlowRateValue" maxWidth="1.7976931348623157E308" minWidth="10.0" prefColumnCount="4" styleClass="field-value" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label fx:id="m1Material" styleClass="panel-material" text="tweak.m1Material" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </GridPane>
+                  <GridPane fx:id="m2Pane" hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="panel" vgap="5.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="40.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" prefWidth="36.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" prefWidth="36.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="15.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="m2TempLabel" text="tweak.temperature" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                           <styleClass>
+                              <String fx:value="material-2" />
+                              <String fx:value="field-label" />
+                           </styleClass>
+                        </Label>
+                        <Button id="m2Temp" fx:id="m2TempDec" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m2-decrement" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField id="m2Temp" fx:id="m2TempValue" maxWidth="1.7976931348623157E308" minWidth="10.0" prefColumnCount="4" styleClass="field-value" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Button id="m2Temp" fx:id="m2TempInc" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m2-increment" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label fx:id="m2TempSuffix" text="tweak.matTempSuffix" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                           <styleClass>
+                              <String fx:value="material-2" />
+                              <String fx:value="field-suffix" />
+                           </styleClass></Label>
+                        <HBox alignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="2147483647">
+                           <children>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" styleClass="m2-icon">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin></ImageView>
+                              <Label fx:id="m2Title" styleClass="panel-title" text="common.leftNozzle" />
+                              <Label fx:id="m2Description" text="common.material2">
+                                 <styleClass>
+                                    <String fx:value="material-2" />
+                                    <String fx:value="panel-description" />
+                                 </styleClass>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label fx:id="m2FlowRateLabel" text="tweak.flowRate" GridPane.rowIndex="3">
+                           <styleClass>
+                              <String fx:value="material-2" />
+                              <String fx:value="field-label" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="m2FlowRateSuffix" text="tweak.flowRateSuffix" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                           <styleClass>
+                              <String fx:value="material-2" />
+                              <String fx:value="field-suffix" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="m2PrintSpeedLabel" text="tweak.printSpeed" GridPane.rowIndex="2">
+                           <styleClass>
+                              <String fx:value="material-2" />
+                              <String fx:value="field-label" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="m2PrintSpeedSuffix" text="tweak.printSpeedSuffix" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                           <styleClass>
+                              <String fx:value="material-2" />
+                              <String fx:value="field-suffix" />
+                           </styleClass>
+                        </Label>
+                        <Button id="m2PrintSpeed" fx:id="m2PrintSpeedDec" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m2-decrement" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button id="m2FlowRate" fx:id="m2FlowRateDec" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m2-decrement" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button id="m2PrintSpeed" fx:id="m2PrintSpeedInc" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m2-increment" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Button id="m2FlowRate" fx:id="m2FlowRateInc" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="m2-increment" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <TextField id="m2PrintSpeed" fx:id="m2PrintSpeedValue" maxWidth="1.7976931348623157E308" minWidth="10.0" prefColumnCount="4" styleClass="field-value" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <TextField id="m2FlowRate" fx:id="m2FlowRateValue" maxWidth="1.7976931348623157E308" minWidth="10.0" prefColumnCount="4" styleClass="field-value" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label fx:id="m2Material" styleClass="panel-material" text="tweak.m2Material" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </GridPane>
+                  <GridPane fx:id="bedPane" hgap="5.0" layoutX="15.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="panel" vgap="5.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="40.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" prefWidth="36.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" prefWidth="36.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="15.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="bedTempLabel" text="tweak.temperature" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                           <styleClass>
+                              <String fx:value="bed" />
+                              <String fx:value="field-label" />
+                           </styleClass>
+                        </Label>
+                        <Button id="bedTemp" fx:id="bedTempDec" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="bed-decrement" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField id="bedTemp" fx:id="bedTempValue" maxWidth="1.7976931348623157E308" minWidth="10.0" prefColumnCount="4" styleClass="field-value" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button id="bedTemp" fx:id="bedTempInc" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="bed-increment" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label fx:id="bedTempSuffix" text="tweak.bedTempSuffix" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <styleClass>
+                              <String fx:value="bed" />
+                              <String fx:value="field-suffix" />
+                           </styleClass>
+                        </Label>
+                        <HBox alignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="0">
+                           <children>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" styleClass="bed-icon">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin></ImageView>
+                              <Label fx:id="bedTitle" styleClass="panel-title" text="common.bed" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+            <GridPane layoutX="5.0" layoutY="732.0" styleClass="bottom-bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="leftButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#leftButtonAction" prefHeight="63.0">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-back" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="middleButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#middleButtonAction" prefHeight="63.0" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-main-menu" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="rightButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rightButtonAction" prefHeight="63.0" GridPane.columnIndex="2">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-none" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <String fx:value="styles/Styles.css" />
+      <String fx:value="styles/Tweak.css" />
+   </stylesheets>
+</StackPane>

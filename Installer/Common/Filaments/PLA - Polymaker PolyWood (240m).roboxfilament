@@ -1,0 +1,21 @@
+############################################################################
+#                   Robox Filament Definition File v1.0                    #
+############################################################################
+
+name = Polymaker\u00AE PolyWood\u2122 
+material = PLA
+reelID = RBX-SPC-WD001
+brand = Polymaker\u00AE
+category = PolyWood\u2122
+diameter_mm = 1.75
+filled = no
+filament_multiplier = 0.93
+feed_rate_multiplier = 1.00
+ambient_temperature_C = 30
+first_layer_bed_temperature_C = 65
+bed_temperature_C = 65
+first_layer_nozzle_temperature_C = 200
+nozzle_temperature_C = 190
+display_colour = #CFA075
+cost_gbp_per_kg = 82.39
+default_length_m = 240

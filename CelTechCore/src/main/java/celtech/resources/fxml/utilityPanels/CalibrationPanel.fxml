@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="container" styleClass="sidePanel" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.utilityPanels.CalibrationPanelController">
+    <children>
+        <GridPane alignment="TOP_CENTER" hgap="15.0" layoutX="18.0" layoutY="24.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints maxWidth="1.7976931348623157E308" prefWidth="180.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button layoutX="10.0" layoutY="19.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#calibrateB" text="%calibrationPanel.calibrateB" />
+<Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#calibrateZOffset" text="%calibrationPanel.calibrateZOffset" GridPane.rowIndex="1" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

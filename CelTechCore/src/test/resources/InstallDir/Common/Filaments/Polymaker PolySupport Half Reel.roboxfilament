@@ -1,0 +1,20 @@
+#
+# Robox filament definition file
+#
+name =Polymaker PolySupport\u2122
+material = PLA
+reelID = RLH-SPC-SP001
+brand = Polymaker
+category = PolySupport
+diameter_mm = 1.750
+filament_multiplier = 1.000
+feed_rate_multiplier = 1.000
+ambient_temperature_C = 30
+first_layer_bed_temperature_C = 70
+bed_temperature_C = 70
+first_layer_nozzle_temperature_C = 210
+nozzle_temperature_C = 205
+display_colour = #E6E6E6
+cost_gbp_per_kg = 74.72
+default_length_m = 120
+filled = no

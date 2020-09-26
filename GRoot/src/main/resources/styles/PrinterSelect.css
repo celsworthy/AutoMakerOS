@@ -1,0 +1,86 @@
+.no-printers-icon {
+    -fx-background-image: url("/image/no-printers.png");
+}
+
+.no-printers-title {
+    -fx-font-size: 24pt;
+    -fx-text-fill: -robox-blue;
+}
+
+.no-printers-description {
+    -fx-font-size: 18pt;
+    -fx-text-fill: white;
+}
+
+.printer-name {
+    -fx-text-fill: inherit;
+}
+
+.printer-panel {
+    -fx-text-fill: white;
+    -fx-font-size: 18pt;
+}
+
+.printer-panel:dark {
+    -fx-text-fill: black;
+    -fx-font-size: 18pt;
+}
+
+.printer-error {
+    -fx-image: url("/image/error-white.png");
+}
+
+.printer-error:dark {
+    -fx-image: url("/image/error-black.png");
+}
+
+.printer-status {
+    -fx-image: url("/image/tick-white.png");
+}
+
+.printer-status:paused {
+    -fx-image: url("/image/pause-white.png");
+}
+
+.printer-status:printing {
+    -fx-image: url("/image/play-white.png");
+}
+
+.printer-status:dark {
+    -fx-image: url("/image/tick-black.png");
+}
+
+.printer-status:dark:paused {
+    -fx-image: url("/image/pause-black.png");
+}
+
+.printer-status:dark:printing {
+    -fx-image: url("/image/play-black.png");
+}
+
+.printing-progress {
+	-fx-opacity: 0.6;
+	-fx-background-color: transparent;
+}
+
+.printing-progress > .bar {
+    -fx-background-color: grey;
+}
+
+.printing-progress > .track {
+     -fx-background-color: white;
+}
+
+.printing-progress:dark {
+	-fx-opacity: 0.6;
+	-fx-background-color: transparent;
+}
+
+.printing-progress:dark > .bar {
+    -fx-background-color: white;
+}
+
+
+.printing-progress:dark > .track {
+     -fx-background-color: grey;
+}

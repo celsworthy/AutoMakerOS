@@ -1,0 +1,206 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  font-style: normal;
+  src: url('/fonts/SourceSansPro-Light.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
+  font-style: italic;
+  src: url('/fonts/SourceSansPro-LightIt.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/SourceSansPro-Regular.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-style: italic;
+  src: url('/fonts/SourceSansPro-It.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-style: normal;
+  src: url('/fonts/SourceSansPro-Semibold.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+  font-style: italic;
+  src: url('/fonts/SourceSansPro-SemiboldIt.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/fonts/SourceSansPro-Bold.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  font-style: italic;
+  src: url('/fonts/SourceSansPro-BoldIt.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-weight: 300;
+  font-style: normal;
+  src: url('/fonts/SourceCodePro-Light.otf.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/fonts/SourceCodePro-Regular.otf.woff') format('woff');
+}
+
+.root {
+    -robox-blue: #0093ff;
+    -robox-orange: #eb672a;
+    -robox-grey: #303030;
+    -robox-light-grey: #414141;
+    -robox-yellow: #ffc800;
+    -robox-green: #1eb43c;
+
+    -fx-background-color: #414141;
+    -fx-font-family: "Source Sans Pro", "sans-serif";
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-color: inherit;
+    -fx-font-family: "Source Sans Pro", "sans-serif";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.button:armed {
+    -fx-background-color: derive(-robox-grey, +20%);
+}
+
+.label {
+    -fx-font-family: "Source Sans Pro", "sans-serif";
+    -fx-text-fill: white;
+}
+
+.text-area {
+    -fx-font-family: "Source Sans Pro", "sans-serif";
+}
+
+.text-field {
+    -fx-font-family: "Source Sans Pro", "sans-serif";
+}
+
+.bottom-bar-back {
+    -fx-graphic: url("/image/bottom-bar-back.png");
+}
+
+.bottom-bar-console {
+    -fx-graphic: url("/image/bottom-bar-console.png");
+}
+
+.bottom-bar-home {
+    -fx-graphic: url("/image/bottom-bar-home.png");
+}
+
+.bottom-bar-login {
+    -fx-graphic: url("/image/bottom-bar-key.png");
+}
+
+.bottom-bar-main-menu {
+    -fx-graphic: url("/image/bottom-bar-main-menu.png");
+}
+
+.bottom-bar-next {
+    -fx-graphic: url("/image/bottom-bar-next.png");
+}
+
+.bottom-bar-play {
+    -fx-graphic: url("/image/bottom-bar-play.png");
+}
+
+.bottom-bar-reset {
+    -fx-graphic: url("/image/bottom-bar-reset.png");
+}
+
+.bottom-bar-save {
+    -fx-graphic: url("/image/bottom-bar-save.png");
+}
+
+.bottom-bar-settings {
+    -fx-graphic: url("/image/bottom-bar-settings.png");
+}
+
+.bottom-bar-unlock {
+    -fx-graphic: url("/image/bottom-bar-unlock.png");
+}
+
+.bottom-bar {
+    -fx-background-color: black;
+}
+
+.centered-background-image {
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.ambient {
+    -fx-text-fill: -robox-green;
+}
+
+.bed {
+    -fx-text-fill: -robox-yellow;
+}
+
+.italic-text {
+    -fx-font-style: italic;
+}
+
+.large-text {
+    -fx-font-size: 24pt;
+}
+
+.material-1 {
+    -fx-text-fill: -robox-blue;
+}
+
+.material-2 {
+    -fx-text-fill: -robox-orange;
+}
+
+.medium-text {
+    -fx-font-size: 12pt;
+}
+
+.page-title {
+    -fx-text-fill: -robox-blue;
+    -fx-font-size: 32pt;
+    -fx-font-weight: 300;
+}
+
+.panel {
+    -fx-background-color: -robox-grey;
+}
+
+.panel-title {
+    -fx-text-fill: -robox-blue;
+    -fx-font-size: 24pt;
+}
+
+.panel-label {
+    -fx-font-size: 12pt;
+}

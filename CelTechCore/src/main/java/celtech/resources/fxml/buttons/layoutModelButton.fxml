@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<fx:root type="celtech.coreUI.components.buttons.GraphicButton" stylesheets="@../../css/JMetroDarkTheme.css" text="" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <graphic>
+        <Group>
+            <children>
+                <Polygon points="415.443,283.752,419.383,282.295,419.383,292.869,411.682,297.032,411.682,292.272,415.438,290.579">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8156862745098039</red>
+                            <green>0.807843137254902</green>
+                            <blue>0.803921568627451</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="415.443,283.752,411.333,282.454,415.455,281.156,419.383,282.295">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8823529411764706</red>
+                            <green>0.8823529411764706</green>
+                            <blue>0.8784313725490196</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="411.333,282.454,411.333,288.951,415.438,290.579,415.443,283.752">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.38823529411764707</red>
+                            <green>0.38823529411764707</green>
+                            <blue>0.38823529411764707</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="415.438,290.579,411.682,292.272,407.499,290.376,411.333,288.951">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8823529411764706</red>
+                            <green>0.8823529411764706</green>
+                            <blue>0.8784313725490196</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="411.683,297.032,407.574,294.836,407.5,290.377,411.683,292.272">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.38823529411764707</red>
+                            <green>0.38823529411764707</green>
+                            <blue>0.38823529411764707</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="429.407,283.752,433.347,282.295,433.347,292.869,425.649,297.032,425.649,292.272,429.401,290.579">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8156862745098039</red>
+                            <green>0.807843137254902</green>
+                            <blue>0.803921568627451</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="429.407,283.752,425.295,282.454,429.418,281.156,433.347,282.295">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8823529411764706</red>
+                            <green>0.8823529411764706</green>
+                            <blue>0.8784313725490196</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="425.295,282.454,425.295,288.951,429.402,290.579,429.407,283.752">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.38823529411764707</red>
+                            <green>0.38823529411764707</green>
+                            <blue>0.38823529411764707</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="429.402,290.579,425.649,292.272,421.461,290.376,425.295,288.951">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8823529411764706</red>
+                            <green>0.8823529411764706</green>
+                            <blue>0.8784313725490196</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="425.649,297.032,421.536,294.836,421.461,290.377,425.649,292.272">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.38823529411764707</red>
+                            <green>0.38823529411764707</green>
+                            <blue>0.38823529411764707</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="415.443,300.869,419.383,299.41,419.383,309.984,411.682,314.147,411.682,309.388,415.438,307.694">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8156862745098039</red>
+                            <green>0.807843137254902</green>
+                            <blue>0.803921568627451</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="415.443,300.869,411.333,299.569,415.455,298.271,419.383,299.41">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8823529411764706</red>
+                            <green>0.8823529411764706</green>
+                            <blue>0.8784313725490196</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="411.333,299.569,411.333,306.065,415.438,307.694,415.443,300.869">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.38823529411764707</red>
+                            <green>0.38823529411764707</green>
+                            <blue>0.38823529411764707</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="415.438,307.694,411.682,309.386,407.499,307.492,411.333,306.065">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8823529411764706</red>
+                            <green>0.8823529411764706</green>
+                            <blue>0.8784313725490196</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="411.683,314.147,407.574,311.952,407.5,307.492,411.683,309.386">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.38823529411764707</red>
+                            <green>0.38823529411764707</green>
+                            <blue>0.38823529411764707</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="429.407,300.869,433.347,299.41,433.347,309.984,425.649,314.147,425.649,309.388,429.401,307.694">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8156862745098039</red>
+                            <green>0.807843137254902</green>
+                            <blue>0.803921568627451</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="429.407,300.869,425.295,299.569,429.418,298.271,433.347,299.41">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8823529411764706</red>
+                            <green>0.8823529411764706</green>
+                            <blue>0.8784313725490196</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="425.295,299.569,425.295,306.065,429.402,307.694,429.407,300.869">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.38823529411764707</red>
+                            <green>0.38823529411764707</green>
+                            <blue>0.38823529411764707</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="429.402,307.694,425.649,309.386,421.461,307.492,425.295,306.065">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.8823529411764706</red>
+                            <green>0.8823529411764706</green>
+                            <blue>0.8784313725490196</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <Polygon points="425.649,314.147,421.536,311.952,421.461,307.492,425.649,309.386">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>0.38823529411764707</red>
+                            <green>0.38823529411764707</green>
+                            <blue>0.38823529411764707</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </Polygon>
+                <SVGPath content="M420.966,275.932c-11.822,0-21.437,9.618-21.437,21.439c0,11.82,9.615,21.438,21.437,21.438   c11.82,0,21.438-9.617,21.438-21.438C442.404,285.549,432.787,275.932,420.966,275.932L420.966,275.932z M420.966,321.371   c-13.235,0-24.002-10.767-24.002-24s10.767-23.999,24.002-23.999c13.232,0,23.998,10.765,23.998,23.999   C444.964,310.604,434.198,321.371,420.966,321.371z">
+                    <opacity>1</opacity>
+                    <fill>
+                        <Color>
+                            <red>1</red>
+                            <green>1</green>
+                            <blue>1</blue>
+                            <opacity>1</opacity>
+                        </Color>
+                    </fill>
+                </SVGPath>
+            </children>
+        </Group>                    
+    </graphic>
+</fx:root>

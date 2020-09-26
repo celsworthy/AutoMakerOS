@@ -1,0 +1,15 @@
+.loading {
+  background-color: #009ee3;
+  background-image: url("../../assets/img/RoboxLoading.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 60vh;
+  height: 100vh;
+  padding: 1.25vh;
+  background-color: #414141;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+

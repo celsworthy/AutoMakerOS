@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.printerstatus.*?>
+<?import celtech.coreUI.components.material.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-preview-i18n-resource ../../i18n/LanguageData.properties?>
+<?scenebuilder-stylesheet ../../css/AutoMaker.css?>
+
+<VBox fx:id="statusPane" alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" maxHeight="2000" prefWidth="300.0" styleClass="statusPanel" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.panels.PrinterStatusSidePanelController">
+    <children>
+        <VBox id="StatusPanel" VBox.vgrow="ALWAYS" alignment="TOP_CENTER" spacing="20" maxHeight="1.7976931348623157E308" maxWidth="260" prefHeight="-1.0" styleClass="sidePanel">
+            <children> 
+                <PrinterGridComponent fx:id="printerGridComponent" styleClass="printerGrid" />
+                <VBox fx:id="headPanel" minHeight="80" maxHeight="-1" prefHeight="80.0" maxWidth="-1" prefWidth="260.0" styleClass="statusPanelChild">
+                    <children>
+                        <HBox spacing="18" alignment="CENTER_LEFT" minHeight="80" maxHeight="-1" prefHeight="80.0" >
+                            <children>
+                                <StackPane minWidth="50" minHeight="52" maxWidth="50" maxHeight="52" prefWidth="50" prefHeight="52">
+                                    <children>
+                                        <Group fx:id="noHead">
+                                            <Group>
+                                                <Group>
+                                                    <SVGPath fill="#FF661B" content="M7,38.631l12.634-12.633L7,13.367L12.345,8l12.635,12.631L37.633,8L43,13.342L30.343,25.999L43,38.653L37.633,44L24.979,31.366L12.345,44L7,38.631z"/>
+                                                </Group>
+                                            </Group>
+                                        </Group>
+                                        <Group fx:id="singleRubyNozzleHead">
+											<Polygon fill="#FFFFFF" points="31,0.4,35.6,0.4,35.6,8.7,30.1,15.8,29.2,15.8,29.2,14.6,25.6,14.6,25.6,13.9,26.4,13.9,31,9.5"/>
+											<Polygon fill="#FFFFFF" points="19.3,0.4,14.6,0.4,14.6,8.7,20.2,15.8,21.1,15.8,21.1,14.6,24.7,14.6,24.7,13.9,23.9,13.9,19.3,9.5"/>
+                                            <Polygon fill="#009EE3" points="20.6,0.2,20.6,8.9,24.7,13,24.7,52.2,25.6,52.2,25.6,13,29.6,8.9,29.6,0.2"/>
+											<Polygon fill="#F200A8" points="29.2,14.6,29.2,16.5,26.1,19.6,25.6,19.6,25.6,14.6"/>
+											<Polygon fill="#F200A8" points="21.1,14.6,21.1,16.5,24.2,19.6,24.7,19.6,24.7,14.6"/>
+                                        </Group>
+                                        <Group fx:id="singleNozzleHead">
+                                            <Group>
+                                                <Group>
+                                                    <Polygon fill="#FFFFFF" points="33.658,0.102,29,0.102,29,8.403,29,8.403,29,8.403,37.971,17.102,39.13,17.102,39.13,14.365,33.658,9.22"/>
+                                                    <Polygon fill="#FFFFFF" points="45.34,0.102,50,0.102,50,8.403,50,8.403,50,8.403,41.028,17.102,39.869,17.102,39.869,14.365,45.34,9.22"/>
+                                                </Group>
+                                            </Group>
+                                            <Polygon fill="#009EE3" points="39.035,52,39.965,52,39.965,12.745,43.998,8.67,43.998,0,34.998,0,34.998,8.67,39.035,12.745"/>
+                                        </Group>
+                                        <Group fx:id="singleMaterialHead">
+                                            <Group>
+                                                <Group>
+                                                    <Polygon fill="#FFFFFF" points="4.658,0.102,0,0.102,0,8.403,0,8.403,0,8.403,8.971,17.102,10.129,17.102,10.129,14.364,4.658,9.22"/>
+                                                    <Polygon fill="#FFFFFF" points="16.34,0.102,21,0.102,21,8.403,21,8.403,21,8.403,12.027,17.102,10.869,17.102,10.869,14.364,16.34,9.22"/>
+                                                </Group>
+                                            </Group>
+                                            <Group>
+                                                <Group>
+                                                    <Polygon fill="#FFFFFF" points="33.658,0.102,29,0.102,29,8.403,29,8.403,29,8.403,37.971,17.102,39.129,17.102,39.129,14.364,33.658,9.22"/>
+                                                    <Polygon fill="#FFFFFF" points="45.34,0.102,50,0.102,50,8.403,50,8.403,50,8.403,41.027,17.102,39.869,17.102,39.869,14.364,45.34,9.22"/>
+                                                </Group>
+                                            </Group>
+                                            <Polygon fill="#009EE3" points="5.997,0,5.997,8.67,10.035,12.745,10.035,52,10.965,52,10.965,12.745,14.997,8.67,14.997,0"/>
+                                            <Polygon fill="#009EE3" points="38.035,52,40.965,52,40.965,11.745,43.997,8.67,43.997,0,34.997,0,34.997,8.67,38.035,11.745"/>
+                                        </Group>
+                                        <Group fx:id="dualMaterialHead">
+                                            <Group>
+                                                <Group>
+                                                    <Polygon fill="#FFFFFF" points="4.658,0.102,0,0.102,0,8.403,0,8.403,0,8.403,8.971,17.102,10.13,17.102,10.13,14.365,4.658,9.22"/>
+                                                    <Polygon fill="#FFFFFF" points="16.34,0.102,21,0.102,21,8.403,21,8.403,21,8.403,12.028,17.102,10.869,17.102,10.869,14.365,16.34,9.22"/>
+                                                </Group>
+                                            </Group>
+                                            <Group>
+                                                <Group>
+                                                    <Polygon fill="#FFFFFF" points="33.658,0.102,29,0.102,29,8.403,29,8.403,29,8.403,37.971,17.102,39.13,17.102,39.13,14.365,33.658,9.22"/>
+                                                    <Polygon fill="#FFFFFF" points="45.34,0.102,50,0.102,50,8.403,50,8.403,50,8.403,41.028,17.102,39.869,17.102,39.869,14.365,45.34,9.22"/>
+                                                </Group>
+                                            </Group>
+                                            <Polygon fill="#FF661B" points="5.999,0,5.999,8.67,10.035,12.745,10.035,52,10.965,52,10.965,12.745,14.999,8.67,14.999,0"/>
+                                            <Polygon fill="#009EE3" points="39.035,52,39.965,52,39.965,12.745,43.998,8.67,43.998,0,34.998,0,34.998,8.67,39.035,12.745"/>
+                                        </Group>
+                                    </children>
+                                </StackPane>
+                                <StackPane alignment="CENTER" minHeight="0" prefHeight="60">
+                                    <children>
+                                        <VBox fx:id="headDataBox" minHeight="0" prefHeight="60">
+                                            <children>
+                                                <HBox alignment="BASELINE_LEFT" minHeight="0.0" prefHeight="24">
+                                                    <children>
+                                                        <Label fx:id="headTitleBold" style="-fx-font-size: 20px;" styleClass="regularText" text="Label" minHeight="0"/>
+                                                        <Label fx:id="headTitleLight" style="-fx-font-size: 20px;" styleClass="lightText" text="Label" minHeight="0"/>
+                                                    </children>
+                                                </HBox>
+                                                <Label fx:id="headDescription" style="-fx-font-size: 10px;" styleClass="regularText" text="Label" minHeight="0" maxHeight="13"/>
+                                                <Label fx:id="headNozzles" style="-fx-font-size: 10px;" styleClass="regularText" text="Label" minHeight="0" maxHeight="13"/>
+                                                <Label fx:id="headFeeds" style="-fx-font-size: 10px;" styleClass="regularText" text="Label" minHeight="0" maxHeight="13"/>
+                                            </children>
+                                        </VBox>
+                                        <VBox fx:id="noheadDataBox" alignment="CENTER_LEFT" >
+                                            <children>
+                                                <Label style="-fx-font-size: 20px;" styleClass="regularText" text="%headPanel.noHead.titleLight" />
+                                                <Label style="-fx-font-size: 10px;" styleClass="regularText" text="%headPanel.noHead.description" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </StackPane>
+                            </children>
+                            <padding>
+                                <Insets left="17.0" top="5.0" bottom="5.0"/>
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox fx:id="materialContainer" alignment="CENTER" prefWidth="260.0" minHeight="-Infinity" styleClass="statusPanelChild"/>
+                <VBox fx:id="uberContainer" VBox.vgrow="ALWAYS" alignment="BOTTOM_CENTER" maxHeight="1000" minHeight="-1">
+                    <children>
+                        <VBox fx:id="graphContainer" VBox.vgrow="NEVER" prefHeight="-1" maxHeight="-1" minHeight="0">
+                            <children>
+                                <LineChart id="temperatureChart" fx:id="temperatureChart" alternativeColumnFillVisible="true" alternativeRowFillVisible="true" animated="false" horizontalGridLinesVisible="false" legendVisible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100" minWidth="-Infinity" prefHeight="160.0" prefWidth="260.0" verticalGridLinesVisible="false">
+                                    <xAxis>
+                                        <NumberAxis fx:id="timeAxis" animated="false" autoRanging="false" lowerBound="0.0" minorTickCount="2" side="BOTTOM" tickLabelsVisible="false" tickUnit="30.0" upperBound="210.0" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis id="temperatureGraphTempAxis" fx:id="temperatureAxis" animated="false" autoRanging="false" label="%misc.degreesC" minorTickCount="2" side="RIGHT" tickUnit="50.0" upperBound="300.0">
+                                            <tickLabelFont>
+                                                <Font size="9.0" />
+                                            </tickLabelFont>
+                                        </NumberAxis>
+                                    </yAxis>
+                                </LineChart>
+                                <HBox id="temperatureChartXLabels" fx:id="temperatureChartXLabels" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="260.0" style="-fx-background-color: dark_grey;">
+                                    <children>
+                                        <Text fill="#ffffff" style="-fx-font-size: 9;" styleClass="temperatureXLabel, lightText" text="-3" translateX="-57.0" translateY="-4.0" HBox.hgrow="NEVER">
+                                        </Text>
+                                        <Text fill="#ffffff" style="-fx-font-size: 9;" styleClass="temperatureXLabel, lightText" text="-2" translateX="-12.0" translateY="-4.0">
+                                        </Text>
+                                        <Text fill="#ffffff" style="-fx-font-size: 12;" styleClass="temperatureXLabel, lightText" text="%printerStatus.temperatureGraphMinutes" translateX="-5.0" translateY="-4.0" />
+                                        <Text fill="#ffffff" style="-fx-font-size: 9;" styleClass="temperatureXLabel, lightText" text="-1" translateX="3.0" translateY="-4.0">
+                                        </Text>
+                                        <Text fill="#ffffff" style="-fx-font-size: 9;" styleClass="temperatureXLabel, lightText" text="%printerStatus.temperatureGraphNow" translateX="36.0" translateY="-4.0" HBox.hgrow="NEVER">
+                                        </Text>
+                                    </children>
+                                </HBox>
+
+                                <GridPane fx:id="legendContainer" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="0.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="legendMaterial2" text="%printerStatus.temperatureGraphNozzleLabel0" GridPane.columnIndex="1">
+                                            <styleClass>
+                                                <String fx:value="graph-orange" />
+                                                <String fx:value="temperatureChartLegend" />
+                                            </styleClass>
+                                        </Label>
+                                        <Label fx:id="legendMaterial1" text="%printerStatus.temperatureGraphNozzleLabel1" GridPane.columnIndex="0">
+                                            <styleClass>
+                                                <String fx:value="graph-blue" />
+                                                <String fx:value="temperatureChartLegend" />
+                                            </styleClass>
+                                        </Label>
+                                        <Label fx:id="legendBed" text="B" GridPane.columnIndex="2">
+                                            <styleClass>
+                                                <String fx:value="graph-yellow" />
+                                                <String fx:value="temperatureChartLegend" />
+                                            </styleClass>
+                                        </Label>
+                                        <Label fx:id="legendAmbient" text="A" GridPane.columnIndex="3">
+                                            <styleClass>
+                                                <String fx:value="graph-green" />
+                                                <String fx:value="temperatureChartLegend" />
+                                            </styleClass>
+                                        </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </VBox>
+                        <VBox fx:id="graphAlternativeGrid" minHeight="0">
+                            <children>
+                                <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="260.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints />
+                                        <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label fx:id="graphAlternativeMaterial1Temp" layoutX="15.0" layoutY="18.0" style="-fx-font-size: 24; -fx-text-fill: #009EE3;" styleClass="regularFont" text="Label" GridPane.columnIndex="0" />
+                                        <Label fx:id="graphAlternativeMaterial2Temp" style="-fx-font-size: 24; -fx-text-fill: #FF661B;" styleClass="regularFont" text="Label" GridPane.columnIndex="1"/>
+                                        <Label fx:id="graphAlternativeBedTemp" style="-fx-font-size: 24; -fx-text-fill: #ffc800;" styleClass="regularFont" text="Label" GridPane.columnIndex="2" />
+                                        <Label fx:id="graphAlternativeAmbientTemp" layoutX="15.0" layoutY="10.0" style="-fx-font-size: 24; -fx-text-fill: #1eb43c;" styleClass="regularFont" text="Label" GridPane.columnIndex="3" />
+                                        <Label fx:id="graphAlternativeMaterial1Legend" layoutX="22.0" layoutY="64.0" style="-fx-font-size: 12; -fx-text-fill: #009EE3;" styleClass="regularFont" text="%printerStatus.Material1Label" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                        <Label fx:id="graphAlternativeMaterial2Legend" style="-fx-font-size: 12; -fx-text-fill: #FF661B;" styleClass="regularFont" text="%printerStatus.Material2Label" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                                        <Label fx:id="graphAlternativeBedLegend" layoutX="22.0" layoutY="64.0" style="-fx-font-size: 12; -fx-text-fill: #ffc800;" styleClass="regularFont" text="%printerStatus.temperatureGraphBedLabel" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                        <Label fx:id="graphAlternativeAmbientLegend" layoutX="22.0" layoutY="14.0" style="-fx-font-size: 12; -fx-text-fill: #1eb43c;" styleClass="regularFont" text="%printerStatus.temperatureGraphAmbientLabel" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets top="20.0" bottom="20" />
+    </padding>
+</VBox>

@@ -1,0 +1,20 @@
+#
+# Robox filament definition file
+#
+name = Polymaker PolyFlex\u2122 White
+material = TPU
+reelID = RLH-TPU-PMWH1
+brand = Polymaker
+category = PolyFlex
+diameter_mm = 1.75
+filament_multiplier = 1.0
+feed_rate_multiplier = 1.0
+ambient_temperature_C = 35
+first_layer_bed_temperature_C = 35
+bed_temperature_C = 35
+first_layer_nozzle_temperature_C = 230
+nozzle_temperature_C = 225
+display_colour = #FFFFFF
+cost_gbp_per_kg = 85.43
+default_length_m = 120
+filled = no

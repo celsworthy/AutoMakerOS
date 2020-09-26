@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.RestrictedNumberField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox id="settingsInsetRoot" fx:id="settingsInsetRoot" alignment="CENTER" maxWidth="360.0" minWidth="-Infinity" prefWidth="360.0" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.panels.SettingsInsetPanelController">
+    <children>
+        <VBox alignment="CENTER" fillWidth="true" spacing="10.0">
+            <children>
+                <HBox fx:id="customProfileBox" alignment="CENTER" spacing="5.0">
+                    <children>
+                        <StackPane>
+                            <children>
+                                <ComboBox fx:id="customProfileChooser" prefWidth="270.0" promptText="%sidePanel_settings.customProfileSelectionLabel" styleClass="cmbCleanCombo">
+                                </ComboBox>
+                                <Label id="pleaseCreateProfile" fx:id="createProfileLabel" text="%sidePanel_settings.pleaseCreateProfile" />
+                            </children>
+                        </StackPane>
+                        <Button fx:id="editPrintProfileButton" mnemonicParsing="false" onAction="#editPrintProfile" scaleY="0.9" style="-fx-background-color: light_grey; -fx-padding: 2;" text="..." />
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+                <HBox alignment="CENTER" spacing="45.0">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <children>
+                        <HBox fx:id="raftHBox" alignment="CENTER" spacing="5.0">
+                            <children>
+                                <Label text="%settingsInsetPanel.raft" />
+                                <CheckBox fx:id="raftButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" />
+                            </children>
+                        </HBox>
+                        <HBox fx:id="supportHBox" alignment="CENTER" spacing="5.0">
+                            <children>
+                                <Label text="%extrusion.support" />
+                                <CheckBox fx:id="supportButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" />
+                            </children>
+                        </HBox>
+                        <HBox fx:id="supportGapHBox" alignment="CENTER" layoutX="76.0" layoutY="10.0" spacing="5.0">
+                            <children>
+                                <Label text="%support.supportGap" />
+                                <CheckBox fx:id="supportGapButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" />
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <HBox fx:id="brimHBox" alignment="CENTER_LEFT" spacing="5.0">
+                    <children>
+                        <Label text="%settingsInsetPanel.brim" />
+                        <Slider fx:id="brimSlider" blockIncrement="1.0" majorTickUnit="2.0" max="8.0" minorTickCount="1" showTickLabels="true" snapToTicks="true" HBox.hgrow="ALWAYS">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </Slider>
+                    </children>
+                </HBox>
+                <HBox fx:id="raftSupportBrimChooserBox" alignment="CENTER_LEFT" spacing="10.0"> 
+                    <children>
+                        <Label text="%settingsInsetPanel.raftSupportBrim" />
+                        <ComboBox fx:id="supportComboBox" prefWidth="208.0" />
+                    </children>
+                </HBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT">
+                            <children>
+                                <HBox fx:id="spiralPrintHBox" alignment="CENTER" spacing="5.0">
+                                    <children>
+                                        <Label text="%extrusion.spiralVase" />
+                                        <CheckBox fx:id="spiralPrintCheckbox" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT">
+                            <children>
+                                <HBox fx:id="overrideFillDensityHBox" alignment="CENTER" spacing="5.0">
+                                    <children>
+                                        <Label text="%settingsInsetPanel.overrideFillDensity" />
+                                        <CheckBox fx:id="overrideFillDensityCheckbox" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" />
+                                    </children>
+                                </HBox>
+                                <HBox fx:id="fillDensityHBox" alignment="CENTER_RIGHT" spacing="5.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label text="%sidePanel_settings.fillDensityLabel">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                        </Label>
+                                        <RestrictedNumberField fx:id="fillDensityPercentEntry" maxLength="3" maxValue="100.0" maxValueSet="true" minValue="0.0" minValueSet="true" prefColumnCount="3" prefWidth="28.0" text="100" />
+                                        <Label layoutX="10.0" layoutY="14.0" text="\%" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                        <Slider fx:id="fillDensitySlider" majorTickUnit="10.0" max="100.0" minorTickCount="5" showTickLabels="true" snapToTicks="true" />
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets left="5.0" right="5.0" />
+            </padding>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+    </padding>
+</HBox>

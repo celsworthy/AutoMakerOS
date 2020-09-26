@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Robox :: RePrint</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/OldCss.css">
+    <link rel="stylesheet" href="assets/css/RoboxRoot.css">
+    <link rel="stylesheet" href="assets/css/RootFonts.css">
+</head>
+
+<body id="usb-print" class="canvas-grey no-touch-action">
+    <div class="container page reprint">
+        <div class="row">
+            <div>
+                <h1 class="localised page-title" data-i18n="usb-print-title">Print from USB</h1>
+            </div>
+        </div>
+        <div class="row rbx-hidden" id="job-row-none" style="height: 70vh;display: flex;align-items: center;flex-wrap: wrap;">
+            <div><img style="height: 30vh;margin: auto;display: block;" src="assets/img/Icon-NoPrintJobs.svg">
+                <h1 class="localised" style="width: 58.25vh;padding-top: 2vh;" data-i18n="no-usb-job-heading">&nbsp;</h1>
+                <p id="no-usb-job-details" class="rbx-text-note-white localised" data-i18n="no-usb-job-details">&nbsp;</p>
+            </div>
+        </div>
+        <div class="row panel rbx-reprint-job rbx-hidden" id="job-row-1" role="button">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 rbx-text-medium rbx-home-job-headings">
+                <p class="no-margins localised" data-i18n="name-label">Name:</p>
+                <p class="no-margins localised" data-i18n="created-label">Created:</p>
+                <p class="no-margins localised" data-i18n="duration-label">Duration:</p>
+                <p class="no-margins localised" data-i18n="profile-label">Profile:</p>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 rbx-home-job-details rbx-text-medium pull-right">
+                <p class="job-name no-margins">&nbsp;</p>
+                <p class="job-created no-margins">&nbsp;</p>
+                <p class="job-duration no-margins">&nbsp;</p>
+                <p class="job-profile no-margins">&nbsp;</p>
+            </div>
+        </div>
+        <div class="row panel rbx-reprint-job rbx-hidden" id="job-row-2" role="button">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 rbx-text-medium rbx-home-job-headings">
+                <p class="no-margins localised" data-i18n="name-label">Name:</p>
+                <p class="no-margins localised" data-i18n="created-label">Created:</p>
+                <p class="no-margins localised" data-i18n="duration-label">Duration:</p>
+                <p class="no-margins localised" data-i18n="profile-label">Profile:</p>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 rbx-home-job-details rbx-text-medium pull-right">
+                <p class="job-name no-margins">&nbsp;</p>
+                <p class="job-created no-margins">&nbsp;</p>
+                <p class="job-duration no-margins">&nbsp;</p>
+                <p class="job-profile no-margins">&nbsp;</p>
+            </div>
+        </div>
+        <div class="row panel rbx-reprint-job rbx-hidden" id="job-row-3" role="button">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 rbx-text-medium rbx-home-job-headings">
+                <p class="no-margins localised" data-i18n="name-label">Name:</p>
+                <p class="no-margins localised" data-i18n="created-label">Created:</p>
+                <p class="no-margins localised" data-i18n="duration-label">Duration:</p>
+                <p class="no-margins localised" data-i18n="profile-label">Profile:</p>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 rbx-home-job-details rbx-text-medium pull-right">
+                <p class="job-name no-margins">&nbsp;</p>
+                <p class="job-created no-margins">&nbsp;</p>
+                <p class="job-duration no-margins">&nbsp;</p>
+                <p class="job-profile no-margins">&nbsp;</p>
+            </div>
+        </div>
+        <div class="row panel rbx-reprint-job rbx-hidden" id="job-row-4" role="button">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 rbx-text-medium rbx-home-job-headings">
+                <p class="no-margins localised" data-i18n="name-label">Name:</p>
+                <p class="no-margins localised" data-i18n="created-label">Created:</p>
+                <p class="no-margins localised" data-i18n="duration-label">Duration:</p>
+                <p class="no-margins localised" data-i18n="profile-label">Profile:</p>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 rbx-home-job-details rbx-text-medium pull-right">
+                <p class="job-name no-margins">&nbsp;</p>
+                <p class="job-created no-margins">&nbsp;</p>
+                <p class="job-duration no-margins">&nbsp;</p>
+                <p class="job-profile no-margins">&nbsp;</p>
+            </div>
+        </div>
+    </div>
+    <div class="container page next-prev inactive">
+        <div class="row vertical-align rbx-hidden" id="navigator">
+            <div class="no-padding text-center"><a class="btn btn-default menu-sub-button prev" role="button" id="previous-sub-button" href="#"></a></div>
+            <div class="no-padding" style="width: 20vh">
+                <p id="page-number" class="rbx-text-medium no-margins text-center rbx-white" style="text-align: center; color: #fff;">-</p>
+            </div>
+            <div class="no-padding text-center"><a class="btn btn-default menu-sub-button next" role="button" id="next-sub-button" href="#"> </a></div>
+        </div>
+    </div>
+    <div class="container footer">
+        <div class="btn-group btn-group-justified" role="group"><a class="btn btn-default menu-bottom-button" role="button" id="left-button" href="/menu-horz.html?id=print"> <img class="menu-bottom-button-icon" src="assets/img/Icon_Menu_Back.svg"></a><a class="btn btn-default menu-bottom-button" role="button" id="middle-button"
+                href="/home.html"> <img style="height:6.5vh;" src="assets/img/Icon-Home.svg"></a><a class="btn btn-default menu-bottom-button rbx-invisible" role="button" id="right-button" href="#"> <img class="menu-bottom-button-icon" src="assets/img/Icon-Border.svg"></a></div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/i18next.min.js"></script>
+    <script src="assets/js/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="assets/js/i18nextXHRBackend.min.js"></script>
+    <script src="assets/js/jquery-i18next.min.js"></script>
+    <script src="assets/js/core-vars.js"></script>
+    <script src="assets/js/jquery.base64.js"></script>
+    <script src="assets/js/core-funcs.js"></script>
+    <script src="assets/js/promise-funcs.js"></script>
+    <script src="assets/js/access-pin.js"></script>
+    <script src="assets/js/error-handling.js"></script>
+    <script src="assets/js/about.js"></script>
+    <script src="assets/js/console.js"></script>
+    <script src="assets/js/control.js"></script>
+    <script src="assets/js/head-eeprom.js"></script>
+    <script src="assets/js/job-progress.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/menu-horz.js"></script>
+    <script src="assets/js/pin-reset.js"></script>
+    <script src="assets/js/print-adjust.js"></script>
+    <script src="assets/js/printer-colour.js"></script>
+    <script src="assets/js/printer-name.js"></script>
+    <script src="assets/js/server-name.js"></script>
+    <script src="assets/js/printer-select.js"></script>
+    <script src="assets/js/purge-intro.js"></script>
+    <script src="assets/js/purge.js"></script>
+    <script src="assets/js/reprint.js"></script>
+    <script src="assets/js/wireless-settings.js"></script>
+    <script src="assets/js/usb-print.js"></script>
+    <script src="assets/js/page-init.js"></script>
+</body>
+
+</html>

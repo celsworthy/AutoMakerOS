@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane id="PrintPane" fx:id="printPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800" prefWidth="480.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celuk.groot.controllers.PrintController">
+   <children>
+      <VBox fx:id="printVBox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" StackPane.alignment="CENTER">
+         <children>
+            <Label fx:id="printTitle" styleClass="page-title" text="print.title" />
+            <VBox fx:id="noPrintPanel" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <Pane fx:id="noPrintIcon" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="10.0" minWidth="10.0" prefHeight="400.0" prefWidth="350.0">
+                     <styleClass>
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="no-print-icon" />
+                     </styleClass></Pane>
+                  <Label fx:id="noPrintJobsTitle" styleClass="no-print-jobs-title" text="print.noPrintJobsTitle">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="noPrintJobsDetails" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="no-print-jobs-details" text="print.noPrintJobsDetails" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+            <VBox fx:id="jobsPanel" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <GridPane id="job1" fx:id="jobGrid1" hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMousePressed="#jobMouseAction" onMouseReleased="#jobMouseAction" VBox.vgrow="SOMETIMES">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="job1NameTitle" styleClass="print-job-label" text="printJob.name" />
+                        <Label fx:id="job1CreatedTitle" styleClass="print-job-label" text="printJob.created" GridPane.rowIndex="1" />
+                        <Label fx:id="job1DurationTitle" styleClass="print-job-label" text="printJob.duration" GridPane.rowIndex="2" />
+                        <Label fx:id="job1Name" styleClass="print-job-field" text="print.jobName" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                        <Label fx:id="job1Created" styleClass="print-job-field" text="print.jobCreated" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <Label fx:id="job1Duration" styleClass="print-job-field" text="print.jobDuration" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="job1ProfileTitle" styleClass="print-job-label" text="printJob.profile" GridPane.rowIndex="3" />
+                        <Label fx:id="job1Profile" styleClass="print-job-field" text="print.jobProfile" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Pane fx:id="job1ProfileIcon" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                           <styleClass>
+                              <String fx:value="centered-background-image" />
+                              <String fx:value="print-job-profile-icon" />
+                           </styleClass>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="panel" />
+                        <String fx:value="print-job-panel" />
+                     </styleClass>
+                  </GridPane>
+                  <GridPane id="job2" fx:id="jobGrid2" hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMousePressed="#jobMouseAction" onMouseReleased="#jobMouseAction" VBox.vgrow="SOMETIMES">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="job2NameTitle" styleClass="print-job-label" text="printJob.name" />
+                        <Label fx:id="job2CreatedTitle" styleClass="print-job-label" text="printJob.created" GridPane.rowIndex="1" />
+                        <Label fx:id="job2DurationTitle" styleClass="print-job-label" text="printJob.duration" GridPane.rowIndex="2" />
+                        <Label fx:id="job2Name" styleClass="print-job-field" text="print.jobName" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                        <Label fx:id="job2Created" styleClass="print-job-field" text="print.jobCreated" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <Label fx:id="job2Duration" styleClass="print-job-field" text="print.jobDuration" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="job2ProfileTitle" styleClass="print-job-label" text="printJob.profile" GridPane.rowIndex="3" />
+                        <Label fx:id="job2Profile" styleClass="print-job-field" text="print.jobProfile" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Pane fx:id="job2ProfileIcon" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                           <styleClass>
+                              <String fx:value="centered-background-image" />
+                              <String fx:value="print-job-profile-icon" />
+                           </styleClass>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="panel" />
+                        <String fx:value="print-job-panel" />
+                     </styleClass>
+                  </GridPane>
+                  <GridPane id="job3" fx:id="jobGrid3" hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMousePressed="#jobMouseAction" onMouseReleased="#jobMouseAction" VBox.vgrow="SOMETIMES">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="job3NameTitle" styleClass="print-job-label" text="printJob.name" />
+                        <Label fx:id="job3CreatedTitle" styleClass="print-job-label" text="printJob.created" GridPane.rowIndex="1" />
+                        <Label fx:id="job3DurationTitle" styleClass="print-job-label" text="printJob.duration" GridPane.rowIndex="2" />
+                        <Label fx:id="job3Name" styleClass="print-job-field" text="print.jobName" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                        <Label fx:id="job3Created" styleClass="print-job-field" text="print.jobCreated" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <Label fx:id="job3Duration" styleClass="print-job-field" text="print.jobDuration" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="job3ProfileTitle" styleClass="print-job-label" text="printJob.profile" GridPane.rowIndex="3" />
+                        <Label fx:id="job3Profile" styleClass="print-job-field" text="print.jobProfile" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Pane fx:id="job3ProfileIcon" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                           <styleClass>
+                              <String fx:value="centered-background-image" />
+                              <String fx:value="print-job-profile-icon" />
+                           </styleClass>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="panel" />
+                        <String fx:value="print-job-panel" />
+                     </styleClass>
+                  </GridPane>
+                  <GridPane id="job4" fx:id="jobGrid4" hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMousePressed="#jobMouseAction" onMouseReleased="#jobMouseAction" VBox.vgrow="SOMETIMES">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="job4NameTitle" styleClass="print-job-label" text="printJob.name" />
+                        <Label fx:id="job4CreatedTitle" styleClass="print-job-label" text="printJob.created" GridPane.rowIndex="1" />
+                        <Label fx:id="job4DurationTitle" styleClass="print-job-label" text="printJob.duration" GridPane.rowIndex="2" />
+                        <Label fx:id="job4Name" styleClass="print-job-field" text="print.jobName" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                        <Label fx:id="job4Created" styleClass="print-job-field" text="print.jobCreated" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <Label fx:id="job4Duration" styleClass="print-job-field" text="print.jobDuration" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="job4ProfileTitle" styleClass="print-job-label" text="printJob.profile" GridPane.rowIndex="3" />
+                        <Label fx:id="job4Profile" styleClass="print-job-field" text="print.jobProfile" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Pane fx:id="job4ProfileIcon" prefHeight="48.0" prefWidth="48.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="2">
+                           <styleClass>
+                              <String fx:value="centered-background-image" />
+                              <String fx:value="print-job-profile-icon" />
+                           </styleClass>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                     <styleClass>
+                        <String fx:value="panel" />
+                        <String fx:value="print-job-panel" />
+                     </styleClass>
+                  </GridPane>
+                  <GridPane fx:id="navigatorBar" styleClass="navigator-panel" VBox.vgrow="SOMETIMES">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="20.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="60.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="20.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Button fx:id="previousPageButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#previousPageAction" styleClass="navigator-previous">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Button>
+                        <Label fx:id="pageLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="navigator-page-number" text="print.pageNumber" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="-5.0" right="-5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Button fx:id="nextPageButton" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#nextPageAction" styleClass="navigator-next" GridPane.columnIndex="2" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="-5.0" right="-5.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </VBox>
+            <GridPane styleClass="bottom-bar">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" percentWidth="33.333" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="leftButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#leftButtonAction" prefHeight="63.0">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-back" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="middleButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#middleButtonAction" prefHeight="63.0" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-home" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="rightButton" contentDisplay="GRAPHIC_ONLY" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#rightButtonAction" prefHeight="63.0" GridPane.columnIndex="2">
+                     <styleClass>
+                        <String fx:value="bottom-bar" />
+                        <String fx:value="centered-background-image" />
+                        <String fx:value="bottom-bar-settings" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </VBox>
+   </children>
+   <stylesheets>
+      <String fx:value="styles/Styles.css" />
+      <String fx:value="styles/Print.css" />
+   </stylesheets>
+</StackPane>

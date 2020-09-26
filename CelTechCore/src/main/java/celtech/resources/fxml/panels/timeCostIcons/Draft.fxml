@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Group>
+  <Rectangle fill="#A8A8A8" width="40" x="0" y="30.768" height="9.231" />
+  <Rectangle y="20.512" x="0" width="29.744" fill="#A8A8A8" height="9.23" />
+  <Rectangle width="19.486" height="9.23" fill="#A8A8A8" x="0" y="10.255" />
+  <Rectangle fill="#A8A8A8" width="9.23" x="0" y="-0.001" height="9.231" />
+</Group>

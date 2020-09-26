@@ -1,0 +1,10 @@
+AutoMakerInstaller.installingWindowsDrivers=Installing windows drivers for Robox
+AutoMakerInstaller.commonFilesRequiredByAllPlatforms=Common files required by all CEL applications
+AutoMakerInstaller.migratingLastInstallation=Migrating last installation
+AutoMakerInstaller.doYouWantToLaunch_part1=Do you want to launch
+AutoMakerInstaller.doYouWantToLaunch_part2=now?
+AutoMakerInstaller.specifyInstallationDirectory=Please specify the CEL product installation directory
+AutoMakerInstaller.addAShortcutToTheDesktop=Add a shortcut to the desktop?
+AutoMakerInstaller.addAShortcutToTheStartMenu=Add a shortcut to the Start Menu?
+AutoMakerInstaller.createShortcuts=Create Shortcuts
+AutoMakerInstaller.creatingLauncher=Creating Launcher

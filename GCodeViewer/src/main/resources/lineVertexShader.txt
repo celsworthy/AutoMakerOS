@@ -1,0 +1,13 @@
+#version 150
+
+uniform mat4 compositeMatrix;
+
+in vec4 position;
+in vec4 colour;
+
+out vec4 vColour;
+
+void main(void) {
+    gl_Position = compositeMatrix * position;
+	vColour = colour;
+}

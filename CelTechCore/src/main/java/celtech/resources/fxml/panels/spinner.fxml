@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.panels.SpinnerController">
+   <children>
+      <VBox fx:id="outerArcs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <StackPane>
+               <children>
+                  <Arc fill="DODGERBLUE" length="90.0" radiusX="100.0" radiusY="100.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="spinnerOuter" type="ROUND" />
+                  <Arc fill="#f5f5f2" length="90.0" radiusX="80.0" radiusY="80.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="spinnerInner" translateY="10.0" type="ROUND" />
+               </children>
+            </StackPane>
+            <StackPane>
+               <children>
+                  <Arc fill="DODGERBLUE" length="90.0" radiusX="100.0" radiusY="100.0" startAngle="225.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="spinnerOuter" type="ROUND" />
+                  <Arc fill="#f5f5f2" length="90.0" radiusX="80.0" radiusY="80.0" startAngle="225.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="spinnerInner" translateY="-10.0" type="ROUND" />
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <VBox fx:id="innerArcs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" rotate="90.0">
+         <children>
+            <StackPane>
+               <children>
+                  <Arc fill="DODGERBLUE" length="94.0" radiusX="75.0" radiusY="75.0" startAngle="43.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="spinnerOuter" type="ROUND" />
+                  <Arc fill="#f5f5f2" length="94.0" radiusX="55.0" radiusY="55.0" startAngle="43.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="spinnerInner" translateY="10.0" type="ROUND" />
+               </children>
+            </StackPane>
+            <StackPane>
+               <children>
+                  <Arc fill="DODGERBLUE" length="94.0" radiusX="75.0" radiusY="75.0" startAngle="223.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="spinnerOuter" type="ROUND" />
+                  <Arc fill="#f5f5f2" length="94.0" radiusX="55.0" radiusY="55.0" startAngle="223.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="spinnerInner" translateY="-10.0" type="ROUND" />
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

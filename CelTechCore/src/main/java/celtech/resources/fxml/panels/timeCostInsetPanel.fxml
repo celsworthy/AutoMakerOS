@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import celtech.coreUI.components.printerstatus.*?>
+<?import celtech.coreUI.components.material.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import jfxtras.styles.jmetro8.*?>
+
+<HBox id="timeCostInsetRoot" fx:id="timeCostInsetRoot" maxWidth="360.0" minWidth="-Infinity" prefWidth="360.0" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.panels.TimeCostInsetPanelController">
+   <children>
+      <VBox>
+         <children>
+            <Label fx:id="headAndSlicerType" styleClass="sidePanelDivider" text="Label" />
+            <GridPane>
+              <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="lblDraftTime" text="..." GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="lblNormalTime" text="..." GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label fx:id="lblFineTime" text="..." GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label fx:id="lblCustomTime" text="..." GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Label fx:id="lblDraftWeight" text="..." GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label fx:id="lblNormalWeight" text="..." GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label fx:id="lblFineWeight" text="..." GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label fx:id="lblCustomWeight" text="..." GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Label fx:id="lblDraftCost" text="..." GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Label fx:id="lblNormalCost" text="..." GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label fx:id="lblFineCost" text="..." GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Label fx:id="lblCustomCost" text="..." GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <SVGPath content="M15,15c8.281,0,15-3.359,15-7.5S23.281,0,15,0C6.715,0,0,3.359,0,7.5S6.715,15,15,15z M17.07,8.579  c-0.42-0.137-1.357-0.303-2.803-0.508c-1.303-0.181-2.318-0.361-3.053-0.537c-0.73-0.176-1.328-0.422-1.785-0.74  c-0.455-0.32-0.684-0.691-0.684-1.111c0-0.554,0.41-1.055,1.225-1.496c0.816-0.442,2.1-0.713,3.854-0.813V2.5h2.367v0.874  c2.648,0.127,4.361,0.728,5.137,1.797l-3.262,0.538c-0.633-0.735-1.617-1.104-2.949-1.104c-0.668,0-1.205,0.083-1.611,0.247  c-0.404,0.163-0.604,0.363-0.604,0.598c0,0.236,0.193,0.42,0.584,0.547c0.385,0.127,1.227,0.286,2.506,0.474  c1.406,0.205,2.51,0.4,3.305,0.581c0.801,0.184,1.441,0.438,1.92,0.757c0.473,0.323,0.713,0.698,0.713,1.128  c0,0.664-0.494,1.214-1.475,1.656c-0.986,0.439-2.408,0.701-4.264,0.779v1.13h-2.367v-1.125c-3.102-0.127-5.016-0.848-5.758-2.161  l3.664-0.38c0.34,0.825,1.463,1.238,3.367,1.238c0.895,0,1.555-0.088,1.973-0.267c0.42-0.176,0.629-0.391,0.629-0.64  C17.699,8.906,17.49,8.711,17.07,8.579z M0,12.5c0-0.444,0.088-0.877,0.24-1.299C2.783,14.204,8.359,16.25,15,16.25  c1.904,0,3.707-0.186,5.391-0.496c-1.758,1.067-3.256,2.507-4.385,4.221C15.668,19.985,15.338,20,15,20C6.715,20,0,16.641,0,12.5z   M30,12.5c0,0.493-0.102,0.977-0.287,1.445c-0.723-0.117-1.455-0.195-2.213-0.195c-0.41,0-0.811,0.027-1.211,0.061  c1.432-0.744,2.627-1.618,3.473-2.609C29.908,11.623,30,12.056,30,12.5z M20.699,39.436C18.941,39.798,17.018,40,15,40  c-8.285,0-15-3.359-15-7.5c0-0.444,0.088-0.877,0.24-1.299C2.783,34.204,8.359,36.25,15,36.25c0.631,0,1.24-0.034,1.846-0.07  C17.916,37.488,19.225,38.592,20.699,39.436z M0,27.5c0-0.444,0.088-0.877,0.24-1.299c2.451,2.891,7.725,4.875,14.037,5.021  c0.375,1.346,0.953,2.608,1.699,3.753C15.65,34.985,15.328,35,15,35C6.715,35,0,31.641,0,27.5z M0,22.5  c0-0.444,0.088-0.877,0.24-1.299c2.393,2.82,7.471,4.773,13.574,5.003c-0.039,0.427-0.064,0.859-0.064,1.296  c0,0.845,0.088,1.67,0.234,2.476C6.178,29.712,0,26.47,0,22.5z M0,17.5c0-0.444,0.088-0.877,0.24-1.299  C2.783,19.204,8.359,21.25,15,21.25c0.094,0,0.182-0.01,0.273-0.01c-0.596,1.16-1.035,2.412-1.279,3.735  C6.182,24.715,0,21.47,0,17.5z M27.5,15C20.59,15,15,20.601,15,27.5C15,34.406,20.59,40,27.5,40C34.404,40,40,34.406,40,27.5  C40,20.601,34.404,15,27.5,15z M31.865,33.68c-0.785,0.884-1.928,1.401-3.412,1.558v2.261h-1.895v-2.249  c-2.477-0.254-4.01-1.696-4.6-4.323l2.924-0.762c0.273,1.65,1.172,2.476,2.701,2.476c0.707,0,1.234-0.176,1.572-0.53  c0.336-0.354,0.508-0.778,0.508-1.279c0-0.518-0.172-0.91-0.508-1.174c-0.338-0.27-1.084-0.608-2.242-1.018  c-1.039-0.359-1.855-0.716-2.441-1.072c-0.586-0.352-1.059-0.845-1.43-1.479c-0.361-0.638-0.547-1.38-0.547-2.222  c0-1.108,0.326-2.107,0.98-2.994s1.68-1.425,3.082-1.624V17.5h1.895v1.748c2.119,0.254,3.49,1.45,4.111,3.592l-2.607,1.074  c-0.508-1.473-1.295-2.205-2.363-2.205c-0.533,0-0.963,0.164-1.285,0.493c-0.328,0.33-0.488,0.726-0.488,1.191  c0,0.479,0.156,0.843,0.469,1.099c0.313,0.254,0.982,0.569,2.002,0.945c1.127,0.41,2.012,0.798,2.646,1.164  c0.641,0.364,1.152,0.871,1.539,1.514c0.375,0.645,0.57,1.396,0.57,2.256C33.047,31.694,32.652,32.795,31.865,33.68z" fill="#24195e" scaleX="0.6" scaleY="0.6" scaleZ="0.6" styleClass="timeCostIcons" GridPane.columnIndex="4" />
+                  <SVGPath content="M10.289,30c0-5.364,4.348-9.712,9.711-9.712c5.361,0,9.709,4.348,9.711,9.712H40v-2.839  c0-0.226-0.07-0.43-0.209-0.612c-0.139-0.182-0.322-0.29-0.547-0.325l-4.766-0.729c-0.26-0.833-0.617-1.684-1.068-2.552  c0.313-0.434,0.781-1.046,1.406-1.836s1.068-1.366,1.328-1.731c0.139-0.191,0.209-0.391,0.209-0.599  c0-0.243-0.061-0.435-0.182-0.573c-0.625-0.886-2.059-2.361-4.297-4.427c-0.209-0.174-0.426-0.261-0.652-0.261  c-0.26,0-0.469,0.078-0.625,0.234L26.9,16.536c-0.713-0.364-1.494-0.686-2.344-0.964l-0.73-4.791  c-0.018-0.226-0.115-0.412-0.299-0.56C23.346,10.074,23.133,10,22.889,10h-5.779c-0.504,0-0.816,0.243-0.938,0.729  c-0.227,0.869-0.479,2.483-0.756,4.844c-0.816,0.262-1.605,0.591-2.369,0.99l-3.596-2.786C9.227,13.603,9,13.516,8.775,13.516  c-0.383,0-1.203,0.621-2.461,1.862c-1.26,1.241-2.113,2.174-2.564,2.799c-0.156,0.226-0.236,0.426-0.236,0.6  c0,0.208,0.088,0.416,0.262,0.625c1.162,1.405,2.092,2.604,2.787,3.593c-0.436,0.799-0.773,1.598-1.016,2.396l-4.846,0.729  c-0.189,0.035-0.355,0.148-0.494,0.339C0.068,26.649,0,26.849,0,27.057V30H10.289z" fill="#A8A8A8" styleClass="timeCostIcons" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Group scaleX="0.6" scaleY="0.6" scaleZ="0.6" styleClass="timeCostIcons" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                       <Rectangle fill="#A8A8A8" height="9.231" width="40" x="0" y="30.768" />
+                       <Rectangle fill="#A8A8A8" height="9.23" width="29.744" x="0" y="20.512" />
+                       <Rectangle fill="#A8A8A8" height="9.23" width="19.486" x="0" y="10.255" />
+                       <Rectangle fill="#A8A8A8" height="9.231" width="9.23" x="0" y="-0.001" />
+                     </children>
+                  </Group>
+                  <Group scaleX="0.6" scaleY="0.6" styleClass="timeCostIcons" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="40" x="0" y="39.594" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="38.984" x="0" y="38.578" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="37.969" x="0" y="37.563" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="36.953" x="0" y="36.549" />
+                       <Rectangle fill="#A8A8A8" height="0.405" styleClass="timeCostIcons" width="35.938" x="0" y="35.533" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="34.922" x="0" y="34.518" />
+                       <Rectangle fill="#A8A8A8" height="0.405" styleClass="timeCostIcons" width="33.906" x="0" y="33.503" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="32.893" x="0" y="32.487" />
+                       <Rectangle fill="#A8A8A8" height="0.407" styleClass="timeCostIcons" width="31.877" x="0" y="31.472" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="30.863" x="0" y="30.457" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="29.848" x="0" y="29.441" />
+                       <Rectangle fill="#A8A8A8" height="0.407" styleClass="timeCostIcons" width="28.832" x="0" y="28.426" />
+                       <Rectangle fill="#A8A8A8" height="0.405" styleClass="timeCostIcons" width="27.816" x="0" y="27.412" />
+                       <Rectangle fill="#A8A8A8" height="0.405" styleClass="timeCostIcons" width="26.801" x="0" y="26.396" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="25.787" x="0" y="25.381" />
+                       <Rectangle fill="#A8A8A8" height="0.407" styleClass="timeCostIcons" width="24.771" x="0" y="24.365" />
+                       <Rectangle fill="#A8A8A8" height="0.405" styleClass="timeCostIcons" width="23.756" x="0" y="23.351" />
+                       <Rectangle fill="#A8A8A8" height="0.405" styleClass="timeCostIcons" width="22.74" x="0" y="22.336" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="21.725" x="0" y="21.32" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="20.711" x="0" y="20.305" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="19.695" x="0" y="19.289" />
+                       <Rectangle fill="#A8A8A8" height="0.406" width="18.68" x="0" y="18.274" />
+                       <Rectangle fill="#A8A8A8" height="0.406" width="17.664" x="0" y="17.26" />
+                       <Rectangle fill="#A8A8A8" height="0.405" width="16.648" x="0" y="16.244" />
+                       <Rectangle fill="#A8A8A8" height="0.406" width="15.635" x="0" y="15.229" />
+                       <Rectangle fill="#A8A8A8" height="0.406" width="14.619" x="0" y="14.214" />
+                       <Rectangle fill="#A8A8A8" height="0.406" width="13.604" x="0" y="13.198" />
+                       <Rectangle fill="#A8A8A8" height="0.407" width="12.588" x="0" y="12.183" />
+                       <Rectangle fill="#A8A8A8" height="0.406" width="11.572" x="0" y="11.168" />
+                       <Rectangle fill="#A8A8A8" height="0.405" width="10.557" x="0" y="10.153" />
+                       <Rectangle fill="#A8A8A8" height="0.406" width="9.543" x="0" y="9.138" />
+                       <Rectangle fill="#A8A8A8" height="0.405" width="8.527" x="0" y="8.123" />
+                       <Rectangle fill="#A8A8A8" height="0.406" width="7.514" x="0" y="7.106" />
+                       <Rectangle fill="#A8A8A8" height="0.406" width="6.498" x="0" y="6.092" />
+                       <Rectangle fill="#A8A8A8" height="0.406" width="5.482" x="0" y="5.076" />
+                       <Rectangle fill="#A8A8A8" height="0.405" styleClass="timeCostIcons" width="4.467" x="0" y="4.062" />
+                       <Rectangle fill="#A8A8A8" height="0.405" styleClass="timeCostIcons" width="3.451" x="0" y="3.047" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="2.436" x="0" y="2.031" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="1.422" x="0" y="1.016" />
+                       <Rectangle fill="#A8A8A8" height="0.406" styleClass="timeCostIcons" width="0.406" x="0" y="0" />
+                     </children>
+                  </Group>
+                  <Group scaleX="0.6" scaleY="0.6" scaleZ="0.6" styleClass="timeCostIcons" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                       <Rectangle fill="#A8A8A8" height="4.103" styleClass="timeCostIcons" width="40" x="0" y="35.897" />
+                       <Rectangle fill="#A8A8A8" height="4.103" styleClass="timeCostIcons" width="34.873" x="0" y="30.77" />
+                       <Rectangle fill="#A8A8A8" height="4.104" styleClass="timeCostIcons" width="29.744" x="0" y="25.641" />
+                       <Rectangle fill="#A8A8A8" height="4.103" styleClass="timeCostIcons" width="24.615" x="0" y="20.513" />
+                       <Rectangle fill="#A8A8A8" height="4.103" styleClass="timeCostIcons" width="19.488" x="0" y="15.385" />
+                       <Rectangle fill="#A8A8A8" height="4.103" styleClass="timeCostIcons" width="14.359" x="0" y="10.256" />
+                       <Rectangle fill="#A8A8A8" height="4.102" styleClass="timeCostIcons" width="9.23" x="0" y="5.129" />
+                       <Rectangle fill="#A8A8A8" height="4.103" styleClass="timeCostIcons" width="4.104" x="0" y="0" />
+                     </children>
+                  </Group>
+                  <SVGPath content="M39.906,34.718l-4.523-17.336c-0.42-1.61-2.123-2.927-3.787-2.927h-5.561  c0.953-1.266,1.527-2.834,1.527-4.537c0-4.17-3.393-7.563-7.562-7.563c-4.17,0-7.563,3.393-7.563,7.563  c0,1.703,0.574,3.271,1.527,4.537h-5.56c-1.664,0-3.369,1.316-3.789,2.927L0.094,34.718c-0.42,1.61,0.598,2.927,2.262,2.927h35.289  C39.309,37.645,40.326,36.328,39.906,34.718z M15.463,9.918c0-2.506,2.029-4.538,4.537-4.538c2.507,0,4.537,2.032,4.537,4.538  S22.508,14.455,20,14.455C17.493,14.455,15.463,12.424,15.463,9.918z" fill="#A8A8A8" scaleX="0.6" scaleY="0.6" scaleZ="0.6" styleClass="timeCostIcons" GridPane.columnIndex="3" />
+                  <Group scaleX="0.6" scaleY="0.6" GridPane.columnIndex="2">
+                     <children>
+                       <Rectangle fill="#A8A8A8" height="0" width="0" x="0" y="0" />
+                     </children>
+                  </Group>
+                  <Group scaleX="0.6" scaleY="0.6" styleClass="timeCostIcons" GridPane.columnIndex="2">
+                     <children>
+                       <Circle centerX="20.001" centerY="3.09" fill="#A8A8A8" radius="3.085" />
+                       <SVGPath content="M20,40c-5.342,0-10.363-2.082-14.143-5.863C2.08,30.355,0,25.328,0,19.98c0-2.674,0.52-5.272,1.543-7.721   c0.414-0.992,1.553-1.46,2.545-1.044c0.99,0.414,1.459,1.555,1.045,2.547c-0.824,1.971-1.242,4.062-1.242,6.218   c0,8.892,7.229,16.125,16.109,16.125c8.883,0,16.109-7.233,16.109-16.125c0-6.146-3.412-11.674-8.908-14.428   c-0.959-0.481-1.348-1.651-0.867-2.613s1.648-1.351,2.611-0.869c3.27,1.639,6.031,4.145,7.984,7.246   C38.938,12.506,40,16.193,40,19.98c0,5.348-2.08,10.375-5.857,14.156S25.342,40,20,40z" fill="#A8A8A8" />
+                       <SVGPath content="M22.184,17.796C4.336,3.401,5.262,5.205,5.262,5.205S3.32,4.301,17.818,22.165   c1.074,1.323,3.16,1.206,4.365,0C23.387,20.958,23.51,18.867,22.184,17.796z" fill="#A8A8A8" />
+                     </children>
+                  </Group>
+                  <RadioButton fx:id="rbDraft" mnemonicParsing="false" GridPane.rowIndex="1" />
+                  <RadioButton fx:id="rbNormal" mnemonicParsing="false" GridPane.rowIndex="2" />
+                  <RadioButton fx:id="rbFine" mnemonicParsing="false" GridPane.rowIndex="3" />
+                  <RadioButton fx:id="rbCustom" mnemonicParsing="false" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <Group>
+         <children>
+           <Rectangle fill="#A8A8A8" height="0" width="0" x="0" y="0" />
+         </children>
+      </Group>
+   </children>
+</HBox>

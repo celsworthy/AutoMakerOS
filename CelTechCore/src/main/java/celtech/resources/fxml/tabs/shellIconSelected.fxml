@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Group xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <SVGPath content="M2,26" stroke="#FFFFFF" />
+  <SVGPath stroke="#FFFFFF" content="M8,20" />
+  <SVGPath content="M27,1v26H1V1H27 M28,0H0v28h28V0L28,0z" stroke="#FFFFFF" />
+  <Group>
+    <Polygon fill="#1683C6">
+      <points>
+        <Double fx:value="14.2" />
+        <Double fx:value="2.5" />
+        <Double fx:value="12.8" />
+        <Double fx:value="2.5" />
+        <Double fx:value="2.5" />
+        <Double fx:value="12.8" />
+        <Double fx:value="2.5" />
+        <Double fx:value="14.2" />
+      </points>
+    </Polygon>
+    <Polygon fill="#1683C6">
+      <points>
+        <Double fx:value="2.5" />
+        <Double fx:value="22.1" />
+        <Double fx:value="2.5" />
+        <Double fx:value="22.2" />
+        <Double fx:value="22.2" />
+        <Double fx:value="2.5" />
+        <Double fx:value="20.8" />
+        <Double fx:value="2.5" />
+        <Double fx:value="2.5" />
+        <Double fx:value="20.8" />
+      </points>
+    </Polygon>
+    <Polygon fill="#1683C6">
+      <points>
+        <Double fx:value="21.8" />
+        <Double fx:value="25.5" />
+        <Double fx:value="23.2" />
+        <Double fx:value="25.5" />
+        <Double fx:value="25.5" />
+        <Double fx:value="23.2" />
+        <Double fx:value="25.5" />
+        <Double fx:value="21.8" />
+      </points>
+    </Polygon>
+    <Polygon fill="#1683C6">
+      <points>
+        <Double fx:value="6.2" />
+        <Double fx:value="2.5" />
+        <Double fx:value="4.8" />
+        <Double fx:value="2.5" />
+        <Double fx:value="2.5" />
+        <Double fx:value="4.8" />
+        <Double fx:value="2.5" />
+        <Double fx:value="6.2" />
+      </points>
+    </Polygon>
+    <Polygon fill="#1683C6">
+      <points>
+        <Double fx:value="7.2" />
+        <Double fx:value="25.5" />
+        <Double fx:value="25.5" />
+        <Double fx:value="7.2" />
+        <Double fx:value="25.5" />
+        <Double fx:value="5.8" />
+        <Double fx:value="5.8" />
+        <Double fx:value="25.5" />
+      </points>
+    </Polygon>
+    <Polygon fill="#1683C6">
+      <points>
+        <Double fx:value="13.8" />
+        <Double fx:value="25.5" />
+        <Double fx:value="15.2" />
+        <Double fx:value="25.5" />
+        <Double fx:value="25.5" />
+        <Double fx:value="15.2" />
+        <Double fx:value="25.5" />
+        <Double fx:value="13.8" />
+      </points>
+    </Polygon>
+  </Group>
+  <SVGPath stroke="#FFFFFF" content="M25.5,2.5v23h-23v-23H25.5 M26.5,1.5h-25v25h25V1.5L26.5,1.5z" />
+</Group>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Group xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <Group>
+    <Polygon fill="#FFFFFF">
+      <points>
+        <Double fx:value="8.988" />
+        <Double fx:value="7.588" />
+        <Double fx:value="3.398" />
+        <Double fx:value="7.588" />
+        <Double fx:value="3.398" />
+        <Double fx:value="17.557" />
+        <Double fx:value="3.396" />
+        <Double fx:value="17.557" />
+        <Double fx:value="3.398" />
+        <Double fx:value="17.557" />
+        <Double fx:value="14.165" />
+        <Double fx:value="28" />
+        <Double fx:value="14.607" />
+        <Double fx:value="28" />
+        <Double fx:value="14.607" />
+        <Double fx:value="24.713" />
+        <Double fx:value="8.988" />
+        <Double fx:value="18.533" />
+      </points>
+    </Polygon>
+    <Polygon fill="#FFFFFF">
+      <points>
+        <Double fx:value="23.012" />
+        <Double fx:value="7.588" />
+        <Double fx:value="28.604" />
+        <Double fx:value="7.588" />
+        <Double fx:value="28.604" />
+        <Double fx:value="17.557" />
+        <Double fx:value="28.604" />
+        <Double fx:value="17.557" />
+        <Double fx:value="28.604" />
+        <Double fx:value="17.557" />
+        <Double fx:value="17.835" />
+        <Double fx:value="28" />
+        <Double fx:value="17.393" />
+        <Double fx:value="28" />
+        <Double fx:value="17.393" />
+        <Double fx:value="24.713" />
+        <Double fx:value="23.012" />
+        <Double fx:value="18.533" />
+      </points>
+    </Polygon>
+  </Group>
+  <Polygon fill="#FFFFFF">
+    <points>
+      <Double fx:value="18.83" />
+      <Double fx:value="10.205" />
+      <Double fx:value="18.83" />
+      <Double fx:value="0" />
+      <Double fx:value="13.164" />
+      <Double fx:value="0" />
+      <Double fx:value="13.164" />
+      <Double fx:value="10.205" />
+      <Double fx:value="13.162" />
+      <Double fx:value="10.205" />
+      <Double fx:value="16.006" />
+      <Double fx:value="14.791" />
+      <Double fx:value="18.847" />
+      <Double fx:value="10.205" />
+    </points>
+  </Polygon>
+</Group>

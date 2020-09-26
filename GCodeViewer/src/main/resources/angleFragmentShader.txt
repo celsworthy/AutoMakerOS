@@ -1,0 +1,12 @@
+#version 150
+
+in vec4 gColour;
+
+out vec4 out_Colour;
+
+void main(void) {
+    
+	if (gColour.a <= 0.001)
+		discard;
+    out_Colour = gColour;
+}

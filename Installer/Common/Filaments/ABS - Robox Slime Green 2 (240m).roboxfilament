@@ -1,0 +1,21 @@
+############################################################################
+#                   Robox Filament Definition File v1.0                    #
+############################################################################
+
+name = Robox\u00AE Slime Green
+material = ABS
+reelID = RBX-ABS-GR002
+brand = Robox\u00AE
+category = Generic
+diameter_mm = 1.75
+filled = no
+filament_multiplier = 0.95
+feed_rate_multiplier = 1.00
+ambient_temperature_C = 60
+first_layer_bed_temperature_C = 120
+bed_temperature_C = 120
+first_layer_nozzle_temperature_C = 240
+nozzle_temperature_C = 230
+display_colour = #3BD42E
+cost_gbp_per_kg = 41.5
+default_length_m = 240

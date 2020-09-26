@@ -1,0 +1,21 @@
+############################################################################
+#                   Robox Filament Definition File v1.0                    #
+############################################################################
+
+name = colorFabb nGen\u2122 Orange
+material = CPE
+reelID = RBX-PET-NGOR1
+brand = colorFabb
+category = nGen\u2122
+diameter_mm = 1.75
+filled = no
+filament_multiplier = 0.97
+feed_rate_multiplier = 1.00
+ambient_temperature_C = 35
+first_layer_bed_temperature_C = 85
+bed_temperature_C = 80
+first_layer_nozzle_temperature_C = 235
+nozzle_temperature_C = 230
+display_colour = #FF7900
+cost_gbp_per_kg = 46.23
+default_length_m = 240

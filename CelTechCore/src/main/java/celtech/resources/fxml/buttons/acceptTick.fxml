@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<fx:root type="celtech.coreUI.components.buttons.GraphicButton" stylesheets="@../../css/JMetroDarkTheme.css" text="" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <graphic>
+        <SVGPath fill="#ffffff" content="M0.7,9.6L0.1,8.9C0,8.8,0,8.7,0,8.6c0-0.1,0-0.2,0.1-0.3l1.7-1.7C1.9,6.6,2,6.6,2.2,6.6c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0.1,0.1,0.1l4.7,5.2l8.2-10.8C15.5,1.1,15.6,1,15.7,1c0.1,0,0.2,0,0.3,0.1l1.9,1.5c0,0,0.1,0.1,0.1,0.1C18,2.8,18,2.8,18,2.9c0,0.1,0,0.2-0.1,0.3L7.4,17L0.7,9.6z" />
+    </graphic>
+</fx:root>

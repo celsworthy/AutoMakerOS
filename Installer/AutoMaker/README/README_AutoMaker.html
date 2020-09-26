@@ -1,0 +1,1759 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/TR/REC-html40">
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=windows-1252">
+    <title>CEL AutoMaker README</title>
+    <meta content="Ian Hudson" name="author">
+  </head>
+  <style>
+	a {
+	  color: #0096e1;
+	  text-decoration: none;
+	}
+	a:hover {
+	  text-decoration: underline;
+	}
+  </style>
+  <body style="tab-interval:36.0pt" alink="#FFFFFF" bgcolor="#636363"
+    lang="EN-GB" text="#FFFFFF">
+    <font face="sans-serif"> </font>
+    <div>
+      <p> <font face="sans-serif"><big><big><big>CEL AutoMaker README</big></big></big><u><big><big><big><br>
+                </big></big></big></u></font></p>
+      <font face="sans-serif">If you experience any problems with your
+        Robox printer or have questions about operating it visit </font><font
+        face="sans-serif"><a href="http://www.cel-robox.com/support"><font
+            face="sans-serif"></font></a><font face="sans-serif"><a
+            href="http://www.cel-robox.com/support/">http://www.cel-robox.com/support/</a></font>.
+        We're here to help!<br>
+        <br>
+        If this is the first time you are using Robox <a
+          href="#GettingStarted">click here </a>to get started.<br>
+        <br>
+        You can view this README anytime from within AutoMaker by
+        navigating to the About page (press the question mark icon) and
+        then click on 'View README'.<br>
+      </font>
+	  <p><font face="sans-serif"><u>Version 4.02.00<br></u></font></p>
+	  <ul>
+		<li><font face="sans-serif">Add timelapse photo facility using USB camera on Root.</font></li>
+		<li><font face="sans-serif">Update firmware to version 781</font></li>
+	  </ul>
+	  <p><font face="sans-serif"><u>Version 4.01.02<br></u></font></p>
+	  <ul>
+		<li><font face="sans-serif">Include missing SingleLite head definition file.</font></li>
+	  </ul>
+	  <p><font face="sans-serif"><u>Version 4.01.01<br></u></font></p>
+	  <ul>
+		<li><font face="sans-serif">Add support for SingleLite RBXDV-S3 head</font></li>
+		<li><font face="sans-serif">Add Robox ASA Black filament profile</font></li>
+		<li><font face="sans-serif">Update firmware to version 780</font></li>
+		<li><font face="sans-serif">Fix disabled preview button</font></li>
+		<li><font face="sans-serif">Fix race condition when adding/removing offline printer</font></li>
+		<li><font face="sans-serif">Fix interface lock-up when starting GCodePreview</font></li>
+	  </ul>
+	  <p><font face="sans-serif"><u>Version 4.01.00<br></u></font></p>
+	  <ul>
+		<li><font face="sans-serif">Rebuild of Mote and Pro interfaces providing a more responsive experience</font></li>
+		<li><font face="sans-serif">Improvements to the GCodeviewer, including better scroll bars and a line by line scrollthrough and animation</font></li>
+		<li><font face="sans-serif">Fix use of multiple printers on Root causing firmware errors</font></li>
+		<li><font face="sans-serif">Fix print correctly starts after slicing when quickly moving through preview and settings then selecting print</font></li>
+		<li><font face="sans-serif">Fix projects not saved after closing AutoMaker. Project state is now saved at more regular intervals</font></li>
+		<li><font face="sans-serif">Fix clear filament clear filament eject failed dialog once user has selected an option</font></li>
+		<li><font face="sans-serif">Fix printing on a single extruder machine with a dual head correctly assigns printing to one nozzle when slicing with Cura 4</font></li>
+		<li><font face="sans-serif">Support for Robox Pro on Windows 32bit machines has been removed</font></li>
+	  </ul>
+	  <p><font face="sans-serif"><u>Version 4.00.02<br></u></font></p>
+      <ul>
+		<li><font face="sans-serif">AutoMaker</font></li>
+		<ul>
+			<li><font face="sans-serif">Filament database updated</font></li>
+			<li><font face="sans-serif">Network table - wrong version now offers upgrade or downgrade depending on version</font></li>
+			<li><font face="sans-serif">Network table - downgrade has warning dialog</font></li>
+			<li><font face="sans-serif">Network table - incorrect PIN notification added</font></li>
+			<li><font face="sans-serif">Network table - PIN must be entered before updating or downgrading root</font></li>
+			<li><font face="sans-serif">Network table - PIN restricted to 4 characters</font></li>
+			<li><font face="sans-serif">Network table - "Software upload failed" no longer displayed when software upload successful</font></li>
+			<li><font face="sans-serif">Printer name added to update firmware dialog</font></li>
+			<li><font face="sans-serif">Network table - PIN restricted to 4 characters</font></li>
+			<li><font face="sans-serif">Fix, GCode splicing (strange GCode artifacts), CuraEngine correctly killed off when restarting slice</font></li>
+			<li><font face="sans-serif">Fix, Brim material selection fixed</font></li>
+			<li><font face="sans-serif">Fix, spiral print for default Cura</font></li>
+			<li><font face="sans-serif">Fix, last directory selected issues for firmware load and GCode upload</font></li>
+			<li><font face="sans-serif">Fix, DM head purge will properly default to purge only one nozzle if one reel is attached</font></li>
+			<li><font face="sans-serif">Fix, tabbing order on filament library page</font></li>
+			<li><font face="sans-serif">Fix, nozzle alignment page picture corrected</font></li>
+			<li><font face="sans-serif">Fix, various translation errors</font></li>
+			<li><font face="sans-serif">Fix, material selection for project opened on printer with different head from saved</font></li>
+			<li><font face="sans-serif">Fix, PLA not incorrectly ejected when 'use profile' selected for support material</font></li>
+			<li><font face="sans-serif">Fix, autolayout will not crash AutoMaker if model cannot fit on bed</font></li>
+			<li><font face="sans-serif">Fix, resume print button now available if pausing a print that only uses the second extruder</font></li>
+			<li><font face="sans-serif">Tooltip added to printer icon displaying any errors, if they are present</font></li>
+			<li><font face="sans-serif">Incorrect firmware detection now offers upgrade or downgrade according version number</font></li>
+			<li><font face="sans-serif">Tooltips now last until mouse moved away and are quicker to appear</font></li>
+			<li><font face="sans-serif">Darker colours within G-Code viewer given better lighting</font></li>
+			<li><font face="sans-serif">Default support pattern changed to zigzag for Cura4</font></li>
+			<li><font face="sans-serif">Firmware version 769</font></li>
+		</ul>
+		<li><font face="sans-serif">Root</font></li>
+		<ul>
+			<li><font face="sans-serif">Fix, remove error message spam. If an error has already been raised it should not be re-raised unless a new instance of the error</font></li>
+			<li><font face="sans-serif">Fix, eject error add option to run eject filament routine</font></li>
+			<li><font face="sans-serif">Fix, purge temperature no longer set to -1 when only one reel attached</font></li>
+			<li><font face="sans-serif">Fix, USB print working again</font></li>
+			<li><font face="sans-serif">Fix, long project names on root no longer overflow onto next line</font></li>
+			<li><font face="sans-serif">Fix, reset PIN keyboard now working and character input limited to 4</font></li>
+			<li><font face="sans-serif">Fix, reset PIN page moves to login on success</font></li>
+			<li><font face="sans-serif">Fix, calibration homing and remove head buttons now disabled if no head installed</font></li>
+			<li><font face="sans-serif">Fix, calibration null text and empty image removed when no head installed</font></li>
+			<li><font face="sans-serif">Fix, calibration page will update when head removed or attached</font></li>
+		</ul>
+	  </ul>
+	  <p><font face="sans-serif"><u>Version 4.00.01<br></u></font></p>
+      <ul>
+		<li><font face="sans-serif">Fix support pattern setting for Cura slicing engine, values also renamed to 'Grid' and 'Lines'</font></li>
+		<li><font face="sans-serif">Fix changing language</font></li>
+		<li><font face="sans-serif">Fix languages using delimeter ',' for decimals can now save and use profiles correctly</font></li>
+		<li><font face="sans-serif">Fix changing language not working</font></li>
+		<li><font face="sans-serif">Fix transfering GCode files to printer fails when remote project directory has not been created</font></li>
+		<li><font face="sans-serif">Fix problem slicing when home directory exists over a network</font></li>
+		<li><font face="sans-serif">Fix default support material for Cura dual material prints</font></li>
+		<li><font face="sans-serif">Fix path to Java in GCodeviewer</font></li>
+		<li><font face="sans-serif">Fix model moving erratically on bed when no head attached to printer</font></li>
+		<li><font face="sans-serif">Fix infill speed on Fine profile for SM head</font></li>
+		<li><font face="sans-serif">Fix purge from Mote where printer only has one extruder</font></li>
+		<li><font face="sans-serif">Add display names to offline printer for type of printer and head type</font></li>
+		<li><font face="sans-serif">Various minor fixes</font></li>
+	  </ul>
+	  <p><font face="sans-serif"><u>Version 4.00.00<br></u></font></p>
+      <ul>
+        <li><font face="sans-serif">Introducing AutoMaker Pro, purchase a licence at the <a href="https://www.cel-uk.com/shop/automakerpro/">Robox shop</a></font></li>
+		<ul>
+			<li><font face="sans-serif">Slice using a multitude of advanced settings for highly customizable and accurate printing</font></li>
+			<li><font face="sans-serif">A new GCode visualisation tool for detailed pre-print analysis</font></li>
+			<li><font face="sans-serif">A new Offline Printer enables saving sliced files easily for any Robox setup</font></li>				
+		</ul>
+		<li><font face="sans-serif">Printing from USB on Mote or Robox Pro</font></li>
+		<li><font face="sans-serif">Projects will only slice once unless some change is made</font></li>
+		<li><font face="sans-serif">Colour column in the networks panel shows the colour of the first printer on that IP</font></li>
+		<li><font face="sans-serif">Old robox profiles will be automatically converted to the new format. The original files will be stored in an Archive directory</font></li>
+	  </ul>
+      <p><font face="sans-serif"><u>Version 3.02.00<br></u></font></p>
+      <ul>
+        <li><font face="sans-serif">Improve speed of file transfer from AutoMaker to Mote</font></li>
+	    <li><font face="sans-serif">Update printer firmware to version 765.</font></li>
+        <li><font face="sans-serif">Fix display of MyMiniFactory page on Mac</font></li>
+        <li><font face="sans-serif">Fix bed heat button on Mote</font></li>
+        <li><font face="sans-serif">Fix purge for dual material head on Mote</font></li>
+        <li><font face="sans-serif">Fix rounding of displayed nozzle and bed temperature values in AutoMaker</font></li>
+	    <li><font face="sans-serif">Fix display of reel remaining lengths on Mote</font></li>
+	    <li><font face="sans-serif">Fix appearence of Control page on Mote.</font></li>
+	    <li><font face="sans-serif">Improve behaviour of wireless settings page on Mote.</font></li>
+	    <li><font face="sans-serif">Show up to 32 previous jobs on Mote reprint page.</font></li>		
+	  </ul>
+      <p><font face="sans-serif"><u>Version 3.01.01<br></u></font></p>
+      <ul>
+        <li><font face="sans-serif">Repair facility for corrupt printer serial numbers.
+		</font></li>
+        <li><font face="sans-serif">Firmware fix to USB data transfer on Root and RoboxPro.
+		</font></li>
+        <li><font face="sans-serif">Many changes to printer automation macros including new condensed purge routine for easier removal.
+		</font></li>
+	  </ul>
+       <p><font face="sans-serif"><u>Version 3.01.00<br></u></font></p>
+      <ul>
+        <li><font face="sans-serif">Support for 
+			<a href="http://www.cel-robox.com">Robox Pro</a>
+		</font></li>
+        <li><font face="sans-serif">Support for 
+			<a href="http://www.cel-robox.com">Single X™ ruby head</a>
+		</font></li>
+		<li><font face="sans-serif">Numerous bug fixes</font></li>
+	  </ul>
+      <p><font face="sans-serif"><u>Version 3.00.00<br></u></font></p>
+      <ul>
+        <li><font face="sans-serif">Major updates to support <a
+              href="http://www.cel-robox.com/root/">Root and Mote</a></font></li>
+        <ul>
+          <li><font face="sans-serif">Root provides remote control of
+              printers via AutoMaker or a web interface<br>
+            </font></li>
+          <li><font face="sans-serif">Mote is an integrated control screen
+              for Root<br>
+            </font></li>
+        </ul>
+        <li><font face="sans-serif">Added Reprint function</font></li>
+        <ul>
+          <li><font face="sans-serif">Allows recent projects to be printed
+              without going through settings/slicing steps</font></li>
+          <li><font face="sans-serif">Only displays those jobs that match
+              the head type and that have loaded Robox filament</font></li>
+        </ul>
+        <li><font face="sans-serif">Language files are now in the install
+            directory and can be user-edited</font></li>
+        <ul>
+          <li><font face="sans-serif">Three files are required for each
+              language</font></li>
+          <li><font face="sans-serif">For example - the japanese
+              translation is in these three files for Windows (depends
+              on install directory):<br>
+            </font></li>
+          <ul>
+            <li><font face="sans-serif">C:\Program
+                Files\CEL\AutoMaker\Language\LanguageData_ja.properties</font></li>
+            <li><font face="sans-serif">C:\Program
+                Files\CEL\Common\Language\NoUI_LanguageData_ja.properties</font></li>
+            <li><font face="sans-serif">C:\Program
+                Files\CEL\Common\Language\UI_LanguageData_ja.properties</font></li>
+          </ul>
+          <li><font face="sans-serif">or on Mac</font></li>
+          <ul>
+            <li><font face="sans-serif">/Applications/CEL/AutoMaker/Language/</font><font
+                face="sans-serif">LanguageData_ja.properties</font></li>
+            <li><font face="sans-serif">/Applications/CEL/Common/Language/NoUI_</font><font
+                face="sans-serif">LanguageData_ja.properties</font></li>
+            <li><font face="sans-serif">/Applications/CEL/Common/Language/</font><font
+                face="sans-serif">UI_LanguageData_ja.properties</font></li>
+          </ul>
+        </ul>
+        <li><font face="sans-serif">Many minor bug fixes</font></li>
+      </ul>
+      <ul>
+        <ul>
+        </ul>
+      </ul>
+      <p><font face="sans-serif"><u><font face="sans-serif"><u><font
+                  face="sans-serif"><u><font face="sans-serif"><u><font
+                          face="sans-serif"><u><font face="sans-serif"><u><font
+                                  face="sans-serif"><u><font face="Segoe
+                                      UI"><u>Version 2.01.0<font
+                                          face="sans-serif">4</font></u></font></u></font></u></font></u></font></u></font></u></font></u></font></u><br>
+        </font></p>
+      <ul>
+        <li><font face="sans-serif">Added AutoMaker news flash feature</font></li>
+        <ul>
+          <li><font face="sans-serif">AutoMaker checks for related news on
+              the CEL website periodically and indicates that there are
+              unread news articles</font></li>
+          <li><font face="sans-serif">Clicking on the <i>i</i> button
+              launches the AutoMaker news section of the CEL website in
+              the default browser</font></li>
+        </ul>
+        <li><font face="sans-serif">Improved auto-layout function</font></li>
+        <li><font face="sans-serif">Reduced support spacing for all
+            profiles to improve print quality</font></li>
+        <li><font face="sans-serif">Improved Eject Stuck Material sequence<br>
+          </font></li>
+        <li><font face="sans-serif">Fixed issue preventing interface
+            language selection from appearing<br>
+          </font></li>
+        <li><font face="sans-serif">Fixed issue where using the delete key
+            with an isolated group element selected causes an exception</font></li>
+        <ul>
+        </ul>
+        <li><font face="sans-serif">Fixed issue where dragging and
+            dropping a project after printing a project, closing
+            AutoMaker and switching print heads could cause incorrect
+            gcode to be sent to printer</font></li>
+        <ul>
+        </ul>
+        <li><font face="sans-serif">Fixed issue where closing the only
+            open project and pressing the forward button fails to create
+            a new project<br>
+          </font></li>
+        <ul>
+        </ul>
+        <li><font face="sans-serif">Fixed issue where changing a project
+            name causes the model edit panel to permanently disappear</font></li>
+      </ul>
+      <p><font face="sans-serif"><u><font face="sans-serif"><u><font
+                  face="sans-serif"><u><font face="sans-serif"><u><font
+                          face="sans-serif"><u><font face="sans-serif"><u><font
+                                  face="sans-serif"><u><font face="Segoe
+                                      UI"><u>Version 2.01.03<br>
+                                      </u></font></u></font></u></font></u></font></u></font></u></font></u></font></u></font>
+      </p>
+      <ul>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">SurePrint
+                  enhancements</font></font></font></font></li>
+        <ul>
+          <li><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif">Off-bed model
+                    checks occur at project load time</font></font></font></font></li>
+          <li><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif">PLA is ejected
+                    if not required during a print with high bed
+                    temperatures</font></font></font></font></li>
+          <li><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif">Bed temperature
+                    is lowered to PLA levels and raft is enabled if PLA
+                    and a different material are in use simultaneously<br>
+                  </font></font></font></font></li>
+          <li><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif">Prints cannot be
+                    started if a model is off-bed<br>
+                  </font></font></font></font></li>
+          <li><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif">Improved
+                    post-processor and slicer failure indications<br>
+                  </font></font></font></font></li>
+        </ul>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Fixed macro
+                  selection issue - DM macro incorrectly selected in
+                  some situations when SM head mounted on dual-extruder
+                  printer.<br>
+                </font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Settings for
+                  Support, Raft, Brim now fit on the screen correctly</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Bed axes move
+                  correctly when AutoMaker is resized</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Calibration
+                  improvement - prevents apparent leak of nozzle when
+                  starting nozzle open calibration (only experienced by
+                  a minority of customers)<br>
+                </font></font></font></font></li>
+      </ul>
+      <p><font face="sans-serif"><u><font face="sans-serif"><u><font
+                  face="sans-serif"><u><font face="sans-serif"><u><font
+                          face="sans-serif"><u><font face="sans-serif"><u><font
+                                  face="sans-serif"><u><font face="Segoe
+                                      UI"><u>Version 2.01.0<font
+                                          face="sans-serif">2</font><br>
+                                      </u></font></u></font></u></font></u></font></u></font></u></font></u></font></u></font>
+      </p>
+      <ul>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Autoupdate now
+                  uses port 80 rather than port 8001</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Added Support Gap
+                  function</font></font></font></font></li>
+        <ul>
+          <li><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif">This controls
+                    the vertical distance between the support material
+                    and model material which affects how easily support
+                    material can be removed<br>
+                  </font></font></font></font></li>
+          <li><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif">Disabled
+                    automatically if support material is different to
+                    model material (useful when using specialised
+                    peel-off support material)<br>
+                  </font></font></font></font></li>
+          <li><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif">Horizontal
+                    (Support XY Distance) and vertical (Support Z
+                    Distance) offsets are configured in the Print
+                    Profiles page</font></font></font></font></li>
+          <li><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif">If Support Gap
+                    is enabled the system will introduce a vertical gap
+                    between support and model material</font></font></font></font></li>
+          <li><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif">If Support Gap
+                    is disabled there will be no gap between support and
+                    model material<br>
+                  </font></font></font></font></li>
+        </ul>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Improved filament
+                  saver function for dual material printing (automatic
+                  heater control during prints)</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Grouped advanced
+                  mode controls onto an Advanced Mode menu on the
+                  Preferences page</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Automatic
+                  selection of correct head type on profile page</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Modified status
+                  display to make use of Material 1 and Material 2
+                  clearer<br>
+                </font></font></font></font></li>
+      </ul>
+      <p> <font face="sans-serif"><u><font face="sans-serif"><u><font
+                  face="sans-serif"><u><font face="sans-serif"><u><font
+                          face="sans-serif"><u><font face="sans-serif"><u><font
+                                  face="sans-serif"><u><font face="Segoe
+                                      UI"><u>Version 2.01.01<br>
+                                      </u></font></u></font></u></font></u></font></u></font></u></font></u></font></u><font
+            face="sans-serif"><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif"><font
+                      face="sans-serif"><font face="sans-serif">Introduces
+                        improvements to print time calculation.</font></font></font></font></font></font></font></font></p>
+      <ul>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Post-processor
+                  improvements to estimated time calculation</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Firmware update
+                  allows for material bed temperature of 0 (off) to be
+                  selected</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Nozzle open/close
+                  and selection buttons now work correctly with multiple
+                  printers attached</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Flip materials
+                  fixed for dual-material models<br>
+                </font></font></font></font></li>
+      </ul>
+      <p><br>
+        <font face="sans-serif"><u><font face="sans-serif"><u><font
+                  face="sans-serif"><u><font face="sans-serif"><u><font
+                          face="sans-serif"><u><font face="sans-serif"><u><font
+                                  face="sans-serif"><u><font face="Segoe
+                                      UI"><u>Version 2.01.00<br>
+                                      </u></font></u></font></u></font></u></font></u></font></u></font></u></font></u><font
+            face="sans-serif"><font face="sans-serif"><font face="sans-serif"><font
+                  face="sans-serif"><font face="sans-serif"><font
+                      face="sans-serif"><font face="sans-serif">Introduces
+                        improvements to print quality and filament
+                        management.</font></font></font></font></font></font></font></font></p>
+      <ul>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Post-processor
+                  improvements to ensure material is replenished
+                  properly for small areas</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Dual-material
+                  print filament saver - switches off a nozzle heater
+                  during a print if it is not required for a preset
+                  period of time<br>
+                </font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Spiral prints -
+                  only valid for a single model, single material print
+                  of a closed object. Creates a single wall print with
+                  continuous Z change (rather than layer-by-layer Z
+                  change)</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Print speed now
+                  affects estimated time to complete - this is
+                  differentially applied for each filament in use<br>
+                </font></font></font></font></li>
+      </ul>
+      <p><font face="sans-serif">Numerous bug fixes and improvements have
+          also been included<br>
+        </font></p>
+      <ul>
+        <li><font face="sans-serif">Head serial programming and display
+            fixed</font></li>
+        <li><font face="sans-serif">New version of Java - fixes issue
+            found by Linux users where AutoMaker fails to run</font></li>
+        <li><font face="sans-serif">Custom filament editing improved</font></li>
+        <li><font face="sans-serif">Removed notification that you have the
+            latest version of AutoMaker</font></li>
+        <li><font face="sans-serif">Migration of AutoMaker downloads to
+            the CEL web server on port 80</font></li>
+        <li><font face="sans-serif">Disconnection of multiple printers at
+            once (e.g. unplugging a hub) no longer causes AutoMaker to
+            lock up<br>
+          </font></li>
+      </ul>
+      <p><font face="sans-serif"><u><font face="sans-serif"><u><font
+                  face="sans-serif"><u><font face="sans-serif"><u>Version
+                        2.00.03</u></font></u></font></u></font></u></font><font
+          face="sans-serif"><u><font face="sans-serif"><u><font face="Segoe
+                  UI"><u><font face="sans-serif"><u><br>
+                      </u></font></u></font></u></font></u></font></p>
+      <font face="sans-serif"><font face="sans-serif"><font face="sans-serif"><font
+              face="sans-serif">Mac and Linux users only: fixes failure to
+              slice/post-process models - fault introduced in 2.00.02.<br>
+              <br>
+              <i>Apologies </i></font></font></font></font><font
+        face="sans-serif"><font face="sans-serif"><font face="sans-serif"><font
+              face="sans-serif"><i><font face="sans-serif"><font face="Segoe
+                    UI"><font face="sans-serif"><font face="sans-serif"><i>from
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          the CEL Team </i></font></font></font></font>to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                any of our customers who had problems</i><i> with
+                2.00.02.</i><i> </i><i><br>
+              </i></font></font></font></font>
+      <p><font face="sans-serif"><u><font face="sans-serif"><u>Version
+                2.00.02<br>
+              </u></font></u><font face="sans-serif">This is a bug-fix
+            release.<br>
+          </font></font></p>
+      <p><font face="sans-serif"><font face="sans-serif">Key changes:<br>
+          </font></font></p>
+      <ul>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Increased number
+                  of solid top and bottom layers to 10 in default fine
+                  profiles.</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Increased number
+                  of solid bottom layers to 3 in default draft profiles.</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Fixed fill density
+                  slider so that dragging to 0% and 100% correctly
+                  adjust the printed parts.</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Made fill density
+                  editable on settings page.<br>
+                </font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Improved firmware
+                  upgrade process and compatibility with old versions of
+                  firmware.</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Improved display
+              on small screens (e.g. 1366x768) - fixed issue where
+              settings panel was not visible.</font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif"><font
+                face="sans-serif"><font face="sans-serif">Manual Jog Arrows
+                  and Extrusion buttons now have correct cursor.</font></font></font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Y Motion Jog
+              Arrows positions corrected.</font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">It is possible
+              to create projects when no printers are connected
+              (again!).<br>
+            </font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Ungrouping of
+              stl's on plating page does not allow parts to move under
+              the bed.</font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Head Reset to
+              Defaults now offers different head types.</font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Temperature
+              graph on status side panel appears/disappears dependent on
+              available space.</font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Update java to
+              u74 - stability + videos in My Mini Factory cloud model
+              repository now work.<br>
+            </font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Changing
+              user-selected filament or head or reselecting a printer
+              now forces time and cost recalculation.</font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Split win32 and
+              win64 installers to reduce windows installer size.<br>
+            </font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Inhibited
+              filament library / settings selection during calibration /
+              purge.<br>
+            </font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Decimal
+              Separator on Layout Page - resizing using dimension entry
+              boxes now works when separator is a comma.</font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">'Eject Stuck
+              Material 2' now inhibited when a single material head is
+              installed.</font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">User is informed
+              that no model are on bed on the settings page and the make
+              button is inhibited.<br>
+            </font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Settings panel
+              stays on screen even when zoomed in close to model on
+              layout page.</font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Filament library
+              panel now allows spaces to be entered in name field.<br>
+            </font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Fixed support
+              material setting logic - now preserves settings correctly
+              on save.<br>
+            </font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Manual filament
+              selection persists when switching between printers.</font></font></li>
+        <li><font face="sans-serif"><font face="sans-serif">Slic3r no longer
+              selectable as it has been deprecated.</font></font></li>
+        <li><font face="sans-serif">Improvements around filament slip
+            detection and the settings that control it.</font></li>
+        <li><font face="sans-serif">Large filament slip thresholds now
+            permitted.</font></li>
+        <li><font face="sans-serif">Support for new head types.</font></li>
+        <li><font face="sans-serif">Filament slip retries suppressed
+            during pause.</font></li>
+        <li><font face="sans-serif">Loading filament now moves the head to
+            X190 to ensure smooth travel of the filament down the bowden
+            tube. If the robox has not been homed, it homes X first.</font></li>
+        <li><font face="sans-serif">Feed rate multiplier now selected
+            according to the extruder which is active.</font></li>
+        <li><font face="sans-serif">Feed rate multiplier only applied to
+            moves which involve one or more of {X,Y,Z} and one or more
+            of {E,D,B}.</font></li>
+        <li><font face="sans-serif">Bug Fixed around Feed rate multiplier
+            and head types.</font></li>
+        <li><font face="sans-serif">Reprint (double-click eject button)
+            now suppressed if smart reel(s) not present.</font></li>
+        <li><font face="sans-serif">Altered purge required logic.</font></li>
+        <li><font face="sans-serif"><font face="sans-serif">First layer
+              nozzle is now correctly chosen from profile when using a
+              single material head.</font></font></li>
+      </ul>
+      <ul>
+      </ul>
+      <font face="sans-serif"><u>Version 2.00.01</u></font>
+      <p><font face="sans-serif"><u> </u>This release introduces
+          dual-material printing to Robox. By upgrading to dual-material
+          hardware you can print in two colours or choose to print with
+          two different materials.<br>
+        </font><br>
+        <font face="sans-serif">We've changed AutoMaker to make it easier
+          to create successful prints. </font><font face="sans-serif">More
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          information about this release can be found <a
+            href="http://www.cel-robox.com/downloads/automaker-2-00-01/">here</a><br>
+        </font> </p>
+      <ul>
+        <li><font face="sans-serif"><a
+href="http://www.cel-robox.com/downloads/automaker-2-00-01/#multiMaterial">Dual-material
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              head</a> upgrade</font></li>
+        <ul>
+          <li><font face="sans-serif">This version of AutoMaker supports
+              the RBX01-SM single material head as well as the new
+              RBX01-DM dual-material head. Using this head you can print
+              in two colours or use one material as support for the
+              print.</font></li>
+          <li><font face="sans-serif">Supports .obj multi-material files</font></li>
+          <li><font face="sans-serif">Import more than one stl at once to
+              group aligned parts together.<br>
+            </font></li>
+          <li><font face="sans-serif"><a
+                href="http://robox.cel-uk.com/modules/rbx01-dmkit.html">Buy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                a Dual Material Kit now</a> at the Robox shop in the UK
+              or <a href="http://www.cel-robox.com/where-to-buy/">click
+                here</a> to find out how to buy locally.</font></li>
+        </ul>
+      </ul>
+      <ul>
+        <li><font face="sans-serif"><a
+              href="http://www.cel-robox.com/downloads/automaker-2-00-01/#status">Status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Page</a><br>
+          </font></li>
+        <ul>
+          <li><font face="sans-serif">Printer status is now displayed on
+              the left hand side of the screen at all times.</font></li>
+          <li><font face="sans-serif">If you're not using Robox reels you
+              can choose your filament as soon as the material is
+              loaded.</font></li>
+          <li><font face="sans-serif">The 'advanced' pull out tab has been
+              removed. All of the functions that were in this tab can be
+              found on the Preferences page - just click the gear icon
+              at the top of the screen.</font></li>
+        </ul>
+        <li><font face="sans-serif"><a
+              href="http://www.cel-robox.com/downloads/automaker-2-00-01/#layout"><u>Layout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                Page</u></a></font></li>
+        <ul>
+          <li><font face="sans-serif">The Layout page no longer allows
+              colours to be chosen - we felt this was confusing. Instead
+              you will see blue objects where material 1 is chosen and
+              orange objects where material 2 is chosen.</font></li>
+        </ul>
+        <li><font face="sans-serif"><a
+              href="http://www.cel-robox.com/downloads/automaker-2-00-01/#settings">Settings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Page</a><br>
+          </font></li>
+        <ul>
+          <li><font face="sans-serif">Filament and Print profiles can now
+              be accessed from any screen using the library icon at the
+              top of the screen.<br>
+            </font></li>
+          <li><font face="sans-serif">Print settings (for example material
+              choices) will be automatically altered based on the
+              hardware configuration you have.</font></li>
+          <li><font face="sans-serif">The Settings page shows the printed
+              parts in their correct colour based on the material loaded
+              or chosen.</font></li>
+        </ul>
+        <ul>
+          <li><font face="sans-serif">Material choices are changed
+              automatically on the Settings screen if they aren't
+              supported by your current hardware configuration.</font></li>
+          <li><font face="sans-serif">Try to print a dual colour model
+              with a single material head and you'll see a single colour
+              model on the settings page.</font></li>
+        </ul>
+        <li><font face="sans-serif"><a
+href="http://www.cel-robox.com/downloads/automaker-2-00-01/#supportMaterial">Support
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Material</a></font></li>
+        <ul>
+          <li><font face="sans-serif">If you're using a dual-material head
+              you can choose which material you want to use to print
+              raft, brim and support.</font></li>
+        </ul>
+        <li><a
+href="http://www.cel-robox.com/downloads/automaker-2-00-01/#printManagement"><font
+              face="sans-serif">Print Management</font></a></li>
+        <ul>
+          <li><font face="sans-serif">We've introduced SurePrint - a
+              behind the scenes print management system which detects
+              and attempts to resolve problems then alerts the operator
+              if more input is required.<br>
+            </font></li>
+          <li><font face="sans-serif">&nbsp;SurePrint works even when
+              Robox isn't connected to AutoMaker.</font></li>
+        </ul>
+      </ul>
+      <ul>
+        <li><font face="sans-serif">Beta features - use with caution<br>
+          </font></li>
+        <ul>
+          <li><a
+              href="http://www.cel-robox.com/downloads/automaker-2-00-01/#timelapse"><font
+                face="sans-serif">Timelapse images</font></a></li>
+          <ul>
+            <li><font face="sans-serif">We've added GoPro WiFi support.
+                Now you can make your own timelapse videos of the
+                awesome things you print!<br>
+              </font></li>
+          </ul>
+        </ul>
+      </ul>
+      <a
+href="http://www.cel-robox.com/downloads/automaker-2-00-00/#printManagement"></a>
+      <p><font face="sans-serif"><u>Version 1.03.00</u><u><br>
+          </u></font></p>
+      <ul>
+        <li><font face="sans-serif">NEW!! ColorFabb material profiles</font></li>
+        <ul>
+          <li><font face="sans-serif">CEL and colorFabb are proud to
+              announce that Robox owners can print with a rainbow of
+              colours in colorFabb’s co-polyester filament
+              ‘colorFabb_XT’. <br>
+            </font></li>
+          <li><font face="sans-serif">colorFabb_XT is widely regarded as
+              the best 3D printer filament available. This is mainly due
+              to the fact that it is dimensionally stable while printing
+              so shrinkage is almost non existent, this makes printing
+              complex models much easier. Now colorFabb's co-polyester
+              filament is available on Robox SmartReels to offer users
+              what we think is best filament on the best 3D
+              printer.&nbsp; The colour range is beautiful and 3D
+              printing just got even easier, so get printing!<br>
+            </font></li>
+          <li><font face="sans-serif">CEL Robox is the first 3D printing
+              manufacturer to have this filament brand spooled directly
+              onto their SmartReels. Buy now at <a
+                href="http://robox.cel-uk.com/">the Robox shop</a> in
+              the UK or <a
+                href="http://www.cel-robox.com/where-to-buy/">click here</a>&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              to find out how to buy locally. <br>
+            </font></li>
+        </ul>
+      </ul>
+      <div align="center"><a href="http://www.cel-robox.com/"><font
+            face="sans-serif"><img alt="Image of ColorFabb reels"
+              src="colorFabbSplash.jpg" border="0" height="286"
+              hspace="10" vspace="10" width="600"></font></a></div>
+      <ul>
+        <li><font face="sans-serif"></font><font face="sans-serif">Reinstated
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            layer number display whilst printing<br>
+          </font></li>
+        <li><font face="sans-serif">Added R symbol to currency options</font></li>
+        <li><font face="sans-serif">Windows driver installation activates
+            even on upgrades - just in case the driver has been deleted<br>
+          </font></li>
+        <li><font face="sans-serif">Silent installation in default
+            directory is now possible. Run the installer on the command
+            line with parameters --mode unattended</font></li>
+        <ul>
+          <li><font face="sans-serif">Example:
+              AutoMaker-1.03.00-windows-installer.exe --mode unattended<br>
+            </font></li>
+        </ul>
+      </ul>
+      <p><font face="sans-serif"><u>Version 1.02.00</u><u><br>
+          </u>&nbsp;&nbsp; Updated to version 731 firmware<br>
+          <br>
+          &nbsp;&nbsp; New features:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Undo/Redo - all changes
+          to models on the bed can be undone<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Apply lean/twist/turn of
+          an object on the bed<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Scale in X/Y/Z
+          independently<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Display Time and Cost
+          estimates for Draft/Normal/Fine/Custom profiles<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Rafts<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; Print area extent box is shown
+          on the layout page<br>
+          &nbsp;&nbsp; <br>
+          &nbsp;&nbsp; Improved filament and print profile management<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filament and print
+          profile management have been moved to the Settings area (click<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on the gear icon in the
+          top right of the application) and made simpler to user.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writing to the reel is
+          now located on the Filament Library page (which is accessed<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from Settings).<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <br>
+          &nbsp;&nbsp; Improved consistency of look &amp;
+          feel&nbsp;&nbsp;&nbsp; <br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Modified status page and
+          progress bars<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Double-tap reprint
+          functionality improved<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+          &nbsp;&nbsp; Improved error handling<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Includes warnings if the
+          printer is switched off without <br>
+          &nbsp;&nbsp; <br>
+          &nbsp;&nbsp; Improvements to Cura handling of skin/solid
+          layers<br>
+          &nbsp;&nbsp; <br>
+          &nbsp;&nbsp; Improvements to default print profiles<br>
+          <br>
+          &nbsp;&nbsp; Changes to the first layer print process<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The thickness of the
+          first layer on each of the fine, normal and draft profiles has
+          been increased<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to 0.3mm and the first
+          layer speed has been slowed down. This has been done to
+          improve<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the quality, reliability
+          and repeatability of the first layer<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <br>
+          &nbsp;&nbsp; Plus... Lots of minor bug fixes and preparation
+          for the dual-material head release<br>
+          <br>
+          Lean/Twist/Turn<br>
+          ---------------<br>
+          It is now possible to set the lean, twist and turn of an
+          object on the bed. Currently this can only be done using <br>
+          text fields but a future release will provide a graphical
+          interface:<br>
+          Turn&nbsp;&nbsp; - when looking down on the object from above
+          the bed, the turn rotates the object clockwise on the bed.<br>
+          Lean&nbsp;&nbsp; - this indicates how many degrees to lean the
+          object away from the vertical. 90 degrees will lay the object<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on its side
+          and 180 degrees will turn it upside down.<br>
+          Twist&nbsp; - when looking from the top of the object down its
+          vertical axis, the twist rotates the object clockwise around<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that vertical
+          axis.<br>
+          <br>
+          The lean is applied first, then the twist and finally the
+          turn.<br>
+          <br>
+          ===============<br>
+          version 1.01.04<br>
+          ===============<br>
+          Firmware update to v723<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;Improvements to filament load / eject<br>
+          <br>
+          New user preference allowing disablement of filament loaded
+          detection<br>
+          Rotation allows negative numbers<br>
+          Scaling allows larger numbers<br>
+          Added automated handling for filament out detection and
+          hyperlinks to web content for filament errors<br>
+          <br>
+          ===============<br>
+          version 1.01.03<br>
+          ===============<br>
+          Firmware update to v721<br>
+          &nbsp;&nbsp;&nbsp; Robox will re-print last print job whether
+          AutoMaker is attached on not - activate using two short
+          presses of the eject button on the printer<br>
+          &nbsp;&nbsp;&nbsp; Change in default steps per unit to improve
+          part accuracy<br>
+          &nbsp;&nbsp;&nbsp; Improvement in auto-levelling for long
+          extrusions<br>
+          &nbsp;&nbsp;&nbsp; Fixed pause/resume feed rate issue<br>
+          <br>
+          Print job / firmware transfer speeds significantly increased<br>
+          Resume failed data transfer added (allows unplug/replug during
+          transfer)<br>
+          Auto-display scale added for displays less than 800 pixels
+          high.<br>
+          Fixed an issue when filament slip is detected during purge -
+          options were switched over<br>
+          STL load optimised<br>
+          Language files updated for German, Finnish, Swedish, Japanese,
+          Russian, Korean and Traditional Chinese - added Spanish<br>
+          Added drag and drop for Robox project files<br>
+          Fixed minor issues on About page - added copy buttons for
+          serial numbers<br>
+          Allow 1 decimal place for scaling operations<br>
+          Fixed issue where print status disappears when filament is
+          ejected and reloaded during a print<br>
+          <br>
+          User Preferences - accessed via the gear icon at the top right
+          of the screen:<br>
+-----------------------------------------------------------------------------<br>
+          Safety features on/off<br>
+          &nbsp;&nbsp;&nbsp; Safety features are on by default. This
+          prevents door open when the bed is hot, printing from starting
+          when the door is open and forces cool-down before opening the
+          door at the end of a print.<br>
+          First use<br>
+          &nbsp;&nbsp;&nbsp; Causes a first use print project to be
+          opened automatically - all users are encouraged to print this
+          Robox robot first<br>
+          Advanced mode - !!IMPORTANT!!<br>
+          &nbsp;&nbsp;&nbsp; Some controls have been disabled by
+          default. Switch advanced mode on to access them but you must
+          agree with warranty conditions before enabling this function.<br>
+          ===============<br>
+          <br>
+          version 1.01.02<br>
+          Firmware update to v713<br>
+          Modified PLA temperature settings<br>
+          Modified Draft, Normal and Fine profiles<br>
+          Improved nozzle position control handling<br>
+          Added mini-purge to nozzle opening calibration sequence<br>
+          Improved Remove Head function<br>
+          Modified filament load to ensure filament is moved as far into
+          the head as possible<br>
+          Improved filament eject function<br>
+          Improved error handling during purge and calibration<br>
+          Removed colour change button as this can now be achieved using
+          pause/eject/reload/resume<br>
+          <br>
+          version 1.01.01<br>
+          Firmware update to v703<br>
+          Refines multi-point bed levelling and height calibration<br>
+          <br>
+          version 1.01.00<br>
+          Major GUI update<br>
+          &nbsp;&nbsp;&nbsp; - Look and feel refresh<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - Text labels for
+          buttons<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - Clear indication of
+          why make button is not available<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - Added change head
+          button<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - Status page buttons
+          re-organised<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - User preferences added<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -
+          Default slicer<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -
+          Language<br>
+          &nbsp;&nbsp;&nbsp; - Calibration sequences updated<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - X Y alignment added<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - Graphical instructions
+          added<br>
+          &nbsp;&nbsp;&nbsp; - Improved error handling<br>
+          &nbsp;&nbsp;&nbsp; <br>
+          Model Handling<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;- Incorporated My Mini Factory model
+          library<br>
+          &nbsp;&nbsp;&nbsp; &nbsp;<br>
+          Slicing<br>
+          &nbsp;&nbsp;&nbsp; - Cura slicing engine now incorporated in
+          addition to Slic3r<br>
+          &nbsp;&nbsp;&nbsp; - Print profiles updated<br>
+          &nbsp;&nbsp;&nbsp; - Postprocessor improvements<br>
+          <br>
+          Firmware<br>
+          &nbsp;&nbsp;&nbsp; - Updated to v700<br>
+          &nbsp;&nbsp;&nbsp; - Improvements in homing, levelling and <br>
+          <br>
+          Plus many other bug fixes and minor changes.<br>
+          <br>
+          Note: Country specific language data will follow in a later
+          release once translations are complete<br>
+          <br>
+          version 1.00.17<br>
+          Revision 684.2 firmware<br>
+          Fixes:<br>
+          ROB-263 - Filament saves incorrectly for countries using ,
+          decimal separator<br>
+          ROB-216 - Selection box corners sized incorrectly<br>
+          ROB-238 - Snap to ground does not cause reslice<br>
+          ROB-228 - Layout view rotates when it shouldn't<br>
+          ROB-294 - Correct problem with Orange PLA filament definition
+          file<br>
+          ROB-226 - Model should go red when height is above maximum<br>
+          ROB-308 - Fix issue with firmware upgrade/downgrade<br>
+          <br>
+          version 1.00.16 - Affects Mac OS X only<br>
+          Fixes ROB-299 - Cannot load models due to an incompatibility
+          with Mac OS X 10.7.x<br>
+          <br>
+          version 1.00.15<br>
+          Fix to nozzle opening calibration routine<br>
+          <br>
+          version 1.00.14<br>
+          Updates to default print profiles and macros.<br>
+          Fixed issue in post-processor affecting very small extrusions
+          where nozzle did not always close before travel.<br>
+          Reduced settings screen bed rotation load on CPU.<br>
+          Temperature graph is now visible during purge.<br>
+          Minor purge handling modifications.<br>
+          Version and date is written to post-processed gcode files.<br>
+          Update to version 684 firmware.<br>
+          <br>
+          version 1.00.13<br>
+          Fixed post-processing issue causing under-extrusion and large
+          blobs of material on some models.<br>
+          Added languages - complete set is:<br>
+          &nbsp;&nbsp;&nbsp; English<br>
+          &nbsp;&nbsp;&nbsp; Finnish<br>
+          &nbsp;&nbsp;&nbsp; German<br>
+          &nbsp;&nbsp;&nbsp; Korean<br>
+          &nbsp;&nbsp;&nbsp; Russian<br>
+          &nbsp;&nbsp;&nbsp; Simplified Chinese<br>
+          &nbsp;&nbsp;&nbsp; Swedish<br>
+          &nbsp;&nbsp;&nbsp; Traditional Chinese<br>
+          Fixed ROB-239 - Check for updates does not timeout on Linux if
+          web site down.<br>
+          Updated to version 683 firmware.<br>
+          <br>
+          version 1.00.12<br>
+          Major update to postprocessor to improve print quality -
+          specifically nozzle open/close.<br>
+          All default profiles updated.<br>
+          Automatic update of user profiles included.<br>
+          Numerous minor fixes to UI behaviour (including purge and
+          filament detection).<br>
+          <br>
+          version 1.00.11<br>
+          Fixed an issue preventing Slicing when a user's home directory
+          a UNC drive (Windows only)<br>
+          <br>
+          version 1.00.10<br>
+          IMPORTANT: The way Projects are saved and loaded has changed.
+          The first time you run this release your current projects will
+          not load correctly and will need to be closed. You will need
+          to recreate your Projects, and also your Custom Material and
+          Print Profiles.<br>
+          Integrated v679 firmware<br>
+          Fixed encoding issue for Chinese language<br>
+          Moved GCode display to bottom of status slideout<br>
+          Fixed decimal separator issue in post processor. Fixed
+          calibration integration. Fixed post-processor issue where
+          absence of T command in sliced code caused a failure.<br>
+          Printer Status tabs changed, merged Program into Reel and
+          Head, removed PrinterID, improved Reel for better filament
+          management.<br>
+          Tidy up Diagnostics panel<br>
+          Add name/colour/material to reel eeprom<br>
+          Updated head auto-programming<br>
+          Add Reset To Default for head offsets<br>
+          Add Reel tab to AutoMaker<br>
+          Fixes ROB-220 - don't preheat nozzle<br>
+          Fixes ROB-26 Current firmware version should be in a label<br>
+          Fixes ROB-192 ETC saying &lt; 1minute when it is at start of
+          job, before first line number comes back from printer<br>
+          Fixes ROB-74 disable changing the profile name in the profile
+          name editor<br>
+          Fixed post processor errors - retract distance being used in
+          autounretract<br>
+          Fixes ROB-43 Snap to ground, also Multi-select and Ctrl-A
+          select all on Layout page<br>
+          Remove speed modifiers and hold down Ctrl/Command key to
+          activate translate bed on Layout page<br>
+          Modifications to post processor - added open over volume and
+          multi-stage close<br>
+          Check for collided models after auto layout<br>
+          Fixes ROB-203 ETC going wrong, thinks it has finished when it
+          hasn't<br>
+          Fixes ROB-80 Open multiple files &amp; ROB-199 D&amp;D for
+          upper case files &amp; ROB-206 spaces in project names<br>
+          Fixed post processor issues with single-segment line and close
+          with travels between extrudes in one segment<br>
+          Make filament loading more robust by trimming lines read in
+          from file.<br>
+          Fixes ROB-184 - increase the resolution of the nozzle
+          calibration increments to 0.05<br>
+          <br>
+          version 1.00.09<br>
+          Hard reset for heads<br>
+          <br>
+          version 1.00.08<br>
+          Included version 1.1.5 Slic3r<br>
+          Update to nozzle offset calibration - now includes ability to
+          nudge height offsets manually.<br>
+          Fixes ROB-85 - brim control on settings page.<br>
+          Fixes ROB-179 - AutoMaker can hang under certain conditions
+          with a popup progress dialog being displayed<br>
+          Fixes ROB-173 - Degree symbol incorrect in graph axis label
+          and target field labels<br>
+          Fixes ROB-182 - Can't type unicode characters into text boxes<br>
+          Fixes ROB-189 - Change wording of calibration routine to
+          request door open<br>
+          Fixes ROB-186 - Heater target temperatures do not update
+          unless return is pressed<br>
+          Fixes ROB-188 - Add close button to calibration dialogs<br>
+          ROB-189 - Change wording of calibration routine to request
+          door open<br>
+          Fixes ROB-190 - Check for 3D support after autoupdate<br>
+          Fixes ROB-35 - ETA on print time<br>
+          Fixes ROB-126 - print progress goes beyond 100%<br>
+          Added z switch error handling<br>
+          Included Simplified Chinese language.<br>
+          <br>
+          version 1.00.07<br>
+          Hotfix for material temperature entry issue (material profile
+          page).<br>
+          <br>
+          version 1.00.06<br>
+          Fixes ROB-10 - Change to version 1.1.2 of Slic3r<br>
+          Fixes ROB-22 - Deleting custom profiles deletes the file but
+          leaves it in the selection box.<br>
+          Fixes ROB-127 - Save As Profile - needs to select after
+          saving.<br>
+          Fixes ROB-129 - Print Profiles - Auto remember and select
+          profile last used on project, even if custom<br>
+          Fixes ROB-145 - Print quality control text is too large<br>
+          Fixes ROB-146 - Incorrect font on print quality control
+          (Linux/Mac)<br>
+          Fixes ROB-148 - Text alignment on Profile-&gt;Nozzles<br>
+          Fixes ROB-150 - The print is always at the centre of the bed<br>
+          Fixes ROB-152 - First tab top on status pullout is different
+          size when deselected<br>
+          Fixes ROB-159 - Create print profile keeps reappearing<br>
+          Fixes ROB-162 - Save profile behaviour<br>
+          Fixes ROB-167 - Temperature display/entry incorrect for
+          locales using . as a separator<br>
+          Fixes ROB-172 - Copy draft profile using save as command
+          creates bug in gcode<br>
+          Fixes windows driver failure to install on some non-english
+          windows versions.<br>
+          Fixes error in text of nozzle calibration screen.<br>
+          Added head reset to defaults control.<br>
+          <br>
+          version 1.00.05<br>
+          Fixes windows driver failure to install on some non-english
+          windows version.<br>
+          Fixes error in text of nozzle calibration screen.<br>
+          <br>
+          version 1.00.04<br>
+          Added automatic update of erroneous/out of date head and reel
+          data (ROB-144)<br>
+          Print button visibility when filament is loaded and no manual
+          selection has been made (ROB-147)<br>
+          Single homing button (ROB-109)<br>
+          Ambient LED colour selection and printer name issues (ROB-140)<br>
+          Resign windows driver for Windows 8.1<br>
+          <br>
+          version 1.00.03<br>
+          Added prompt for purge if required when a macro is started
+          (ROB-139)<br>
+          Added prompt to clear bed after purge (ROB-137)<br>
+          Fixed Slic3r failure on Mac (ROB-135)<br>
+          Fixed Slic3r failure when non latin-1 characters are in the
+          user data directory path (ROB-135)<br>
+          Removed dependency on .NET runtime and included all necessary
+          redistributable files (Windows)<br>
+          <br>
+          version 1.00.02<br>
+          Suppress purge errors and send restart when out-of-sync purge
+          request occurs<br>
+          <br>
+          version 1.00.01<br>
+          Fixed popup of material create dialog on startup when user
+          Filaments directory is empty<br>
+          <br>
+          version 1.00.00<br>
+          Initial Beta release<br>
+        </font></p>
+      <hr size="2" width="100%"> </div>
+    <p> <font face="sans-serif"> <a name="GettingStarted"></a></font><u><big><big>
+            <font face="sans-serif">Using Robox for the first time</font></big></big></u></p>
+    <p><font face="sans-serif">After unpacking, removing internal
+        packaging and checking all items are present and correct, plug
+        the printer in while the software is running. It will ask to
+        update the firmware, you should always allow this so firmware
+        and software are matched.<br>
+      </font></p>
+    <p><font face="sans-serif">It is best to stick with one filament type,
+        this reduces contamination of materials and just keeps things
+        simpler, avoiding blockages due to degraded or mixed <br>
+      </font></p>
+    <ul>
+      <li><font face="sans-serif">Snip any bent or deformed filament from
+          the start of the reel.</font></li>
+      <li><font face="sans-serif">Poke this filament into the feed path,
+          there are 2 inlets, use the top one.</font></li>
+      <li><font face="sans-serif">Keep pushing it in, you will hear a
+          motor start but keep pushing until you feel the filament being
+          dragged from your fingers, the print head will also move to
+          the right hand side.</font></li>
+    </ul>
+    <p><br>
+      <font face="sans-serif"><img
+src="data:image/png;base64,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"
+          alt=""><br>
+      </font><font face="sans-serif">Once loaded you should “purge”, you
+        will find the button to do this at the bottom of the main status
+        screen. This heats the bed and nozzles and flushes out the
+        previous material in the head. All heads are tested with so
+        there will be a coloured material in the nozzles already. Follow
+        the instructions on the screen. If it asks for a purge
+        temperature you should choose one which is suitable for both the
+        new and the old material. 230°C is fairly safe for most but some
+        require a higher temperature to make them liquid enough.</font><br>
+    </p>
+    <p><font face="sans-serif">It will take around 3 mins to heat the bed,
+        as the bed gets near temperature the nozzles will heat taking
+        around 1 min.</font></p>
+    <p><font face="sans-serif">The head will move around probing the bed,
+        setting and testing heights. Then the nozzles will draw lines of
+        filament across the bed surface.&nbsp;</font></p>
+    <p><font face="sans-serif">You can try a print once this process is
+        finished.<br>
+        <br>
+      </font></p>
+    <p><font face="sans-serif"><img
+src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAABZCAIAAAD0LD5qAAAF6UlEQVR4nO2ar1PzTBDHT0REnDgREYGoRCAQEQxTEVGBQCAqIhAVTCcCUfGIyswgKiLSGQSion8AAsFMKyIqKhAIBKKiogIRUREREVFxr1g4jjRNL0nTwjv3UUy5H/vN7e7tXYKQRCKRSCQSiUQiEUPXdcuyPM/zfX+xWMRxTCmllMZxvFgsfN/3PM+yLE3TDm1pITDGtm1Pp1MqzHQ6tW0bY3xo28UghNzd3YVhyATEcTyZTDzPs2272Wyapmma5tXVlW3bruuOx+MoiljjMAwdxyGEHFrHZhRFsW2bKYzjeDgcNhoNVVW3djRN8+HhgfUNw9C27f2YnY9arca8tPCaYIw7nU4QBDDOZDI5OjqqwtqCmKa5XC7BuMFgUDKpEEI8z1utVpTS5XJpmuaOzCxHs9lkNl1cXOxq2Hq9/vHxQSldrVbNZnNXwxaEiXx/f9+5j+m6DrFwYKmNRgNETqfTivYDjPFkMgGp9Xq9iim2UKvVID2+v78LilRVtV6v67qeayKMMaxqEAT7TkuKory8vOSaW9O0+XwOKzMcDk9PT8Wn0zRtsVhABi5qciE6nQ5k11yJ5/HxkS+AfN8X724YBsTI/vZVQgh47GAwyNVRUZSEVHB727a31hIIobu7O9ic91Qtua5beL5UqZTS2Wx2fHyc3VdVVSghHMcpaLo4GGNYTJHJCCGvr6+JPLlJahAEtVote0CIlzAMKy/3bdumlEZRJLKYt7e30FhQ6mw2y87GqqpC4VV5lEKKF4zMVqsFAnYoFaJmOp2WkpGNrutgTaPREGnPHv8OpRqGAc3y7sM5sCwLLFYURbCL4zhMQBRFiY2EpZYE2csFXSzLKq4kG8/zKKXj8Vi8CyGEP0bzlWpGQsrOvdDL87xSYjLwfZ9S2uv1cvWCp5OQWlgkQqjb7VJKfd8vISUTKL5ubm5y9arValDK8FI3XR0ZhrF1QAifxWJRVMc24LauwCEzdel47u/vwb1Fjj6maVJK4zguqmMbYFOBA/7JyUliSXk6nQ5CqF6vC0oFnZTSwkK2UFgnQujfv3+pIofDIWvDpPI/rlO5TjCigN8eHx+n7h907a5A13XTNLPL+sr9Fg6QufKQoiiWZW0SCQGf91qk8jw0Ho+p8L6iKIrruqweWmc2mx0dHUGKiqJIvL6BfSXXNp6PXHXC9fX1JoWUK+7YRioe9pXXCc1mkwrXfYPBYKtIQFGU+/t78aNW5XUfIQS2B5E6niXPbJF5gTp+tVpV+4oNSr+t5zJY8HWpJUWir3NZ5RdicKTMPmdDyEH88FLLi2QHvby1Z/GZNt2b8AU6L7W8SMTdm4jcm5UFjpSb7sHYlSfgui5CyDCM8uGEMd7fPRhCiBAC8z08PKz/l1/P3b4X6fV6lNLlcrm/t8Ds4ic18YLU3Ypk99SVR2aC5+dnSmkQBKlRpyjKDl/7EEIO894BIaTrOnjv29tbpbeph3yPBBiGIX44LgbGGKL9YO8FgcvLy+re82qa9ive8wKXl5ewqkEQCN7rinB2dgYx+StEAoZhwLcEsNmUzPsYY9d1f913GICmaZCBaYnvalRV/dXf1TBarRazMoqiwWDQaDREDnGnp6e9Xo8dyn/vd1IMQojjOPw1QhiGT09PjuNcX1+bHJZldbvdx8dH/lblD3z3xqOqaqvV8n0/4zozwR/7jjGBpmnwXep4PP4ffpcqkUgkkpKc9+ef+92ondls1D9HCKH26LMh++UPcN6ff8tjCtJbJlUV1Xne72c90Cpoj+aipu5OZ3uU6TgVkGHplzez58Dacn/02+3Rp89z7T5/nX+1+jnQVwfm/EJRU45NT/a8P/8yizlZms4fPj9P+TVtIH5W3p8qXOYsz2MPer4mL/nHDzPXxkwOxAli3pDwiZ2zIT7bIxF5AjrTBvqhc1+RmuplnKnfjpfqt3zXUcK/0YaBfvotN/t5tZvUdybgY4X91O8z88AmPg+N1tLQ2iqvD/T5I3ThZh+1/8puLJFIJBKJRCKRSCRb+A9+fefN8eji0gAAAABJRU5ErkJggg=="
+          alt=""><br>
+        You may need to calibrate nozzle height and nozzle opening,
+        leave nozzle alignment until you have done more prints. The
+        calibrations are step by step and fairly simple, be sure to read
+        each step as the calibrations set up various numbers which are
+        used in the print process. The button to start calibration is in
+        the status screen at the bottom.<br>
+        &nbsp;</font></p>
+    <p><font face="sans-serif"><img
+src="data:image/png;base64,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"
+          alt=""><br>
+        Some models will load into AutoMaker in the wrong orientation,
+        there is a button called “lay flat” click this and then click
+        the surface you want to be the bottom. There are controls to
+        change scale and orientation. If your model was designed in
+        inches you will need to scale it 2540% to get the correct size.</font></p>
+    <p><font face="sans-serif">&nbsp;<br>
+        Use the default settings for a few prints, try each one, draft,
+        normal, fine. Small details may be missing on draft, if details
+        are smaller than the nozzle used they may be ignored during a
+        print, this mainly effects the XY plane, details on the side of
+        items are built using Z and are less effected. There is more
+        information about this limitation which is true of all FFF
+        printers available online.</font></p>
+    <p><font face="sans-serif">Support structures are generated
+        automatically if the box is ticked, if you aren’t sure just tick
+        the box. You will soon see how support works and is generated.</font></p>
+    <p><font face="sans-serif">Fill density can be kept around or below
+        30% in most cases, parts are still very strong. Lower fill
+        density uses less material and is much faster, there is also
+        less shrinkage.<br>
+      </font></p>
+    <hr size="2" width="100%"><u><font size="+2"><font face="sans-serif">Care
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          and Maintenance</font></font></u><br>
+    <p><font face="sans-serif">ThermoSurface is the print surface of a
+        standard Robox. Sanding the bed surface will help with adhesion
+        for all materials apart from Nylon. All new beds are pre-sanded
+        on one side at the factory, but if yours is shiny on both sides
+        or whenever </font><font face="sans-serif"><font face="sans-serif">parts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          are peeling up on their edges or not sticking at all </font>you
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        may wish to follow <a
+href="http://www.cel-robox.com/forums/topic/getting-started-2/#post-27708">these
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          instructions</a>.<br>
+      </font></p>
+    <p><font face="sans-serif"> Regular cleaning with Isopropyl Alcohol is
+        the only other care required. NEVER put masking tape, hairspray
+        or any other reprap recommended print surface on the Robox print
+        surface, none of these come close to the bonding potential of
+        ThermoSurface.<br>
+      </font></p>
+    <font face="sans-serif">Remove the mini purge from the tip wipe blade
+      before each print. Clear small bits of debris from inside the
+      build chamber regularly. You can slide the black plastic cover
+      under the front door out to the front of Robox and tip the whole
+      unit forward to clear debris which falls into the space below the
+      bed.</font>
+    <p><big><u><font face="sans-serif">Lubrication</font></u></big><font
+        face="sans-serif"><br>
+        After 100 hours of printing you may need to put a drop of the
+        included lubricant on some rails but never the top horizontal
+        rail. Take care not to get any on the print surface. There are
+        further directions for this online.</font></p>
+    <p><small><u><big><big><font face="sans-serif">Head</font></big></big></u></small><font
+        face="sans-serif"><br>
+        Purge anytime a material is changed, purging when the same
+        material is used but a different colour is up to the user. Check
+        the head is tight occasionally, the screw is behind the head and
+        is tightened by hand.<br>
+      </font></p>
+    <p><small><u><big><big><font face="sans-serif">Extruder</font></big></big></u></small><font
+        face="sans-serif"><br>
+        This may get debris build up with some materials. Ask the
+        support team for advice.<br>
+      </font></p>
+    <hr size="2" width="100%">
+    <p><font face="sans-serif"><big><u><big>Help!</big></u><big><u> </u><u>Error-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Filament not moving as expected</u></big></big><br>
+        <br>
+        This error has many causes and most users will see it from time
+        to time. It is there to prevent damage to hardware caused by
+        excessive pressure in the nozzles or where filament is not
+        moving when it should be.</font></p>
+    <p><font face="sans-serif">Common causes are simple to diagnose.
+        Report findings via a support ticket if printing is not
+        possible.</font></p>
+    <p><font face="sans-serif"><u>Feed problem</u><u><br>
+        </u>Prepare the end of the material before feeding it in, snip
+        the end square and remove any damaged or bent material, after
+        extended slipping a small groove can been worn from the filament
+        around 200mm from the end, this needs to be removed.</font></p>
+    <p><font face="sans-serif">Is the material reaching the back of the
+        head when loaded? If it does not flow, eject the material and
+        inspect the end, is it melted? If not then the problem is a feed
+        problem and no alterations to the nozzles will make material
+        come out. It is best to eject the material, power off and remove
+        the head. Check for obvious debris or obstructions in the
+        extruder, the bowden tube and in the back of the head, ask for
+        advice. DO NOT poke things into the back the the head, the feed
+        path is curved, you will break it if you stick a screwdriver or
+        something inside. When fitting the head ensure the power is off
+        and the head is tightened firmly. Prepare the filament end and
+        load again.<br>
+      </font></p>
+    <p><font face="sans-serif"><u>Flow problem</u><br>
+        The simple way to test flow is to perform a purge, this is a
+        controlled extrusion of material which is not effected by all
+        the print settings and variables which are used in a normal
+        print. Check the temperature graph, temperatures should be
+        stable and not vary excessively.&nbsp; Material should flow
+        smoothly and easily making wiggly lines of extruded material on
+        the print surface as it travels back and forth along the bed.
+        Use a temperature which is suitable for your material, it can
+        sometimes be beneficial to have a slightly higher temperature to
+        make the material flow more easily but should be kept at a point
+        where it will not burn any material which could remain in the
+        nozzles. 230°C is a good purge temperature for standard Robox
+        PLA and ABS. Do not increase the temperature excessively as this
+        can burn material in your head and will void the warranty,
+        always ask for support advice from a CEL service agent.<br>
+        <br>
+        Try a nozzle opening calibration, this will open the needle
+        valves fully to send material through the nozzle during the
+        test. If the material does not come out see Feed Problem above
+        to confirm the material is reaching the head and melting. If it
+        is not melted on the end it will not be pushing material through
+        the nozzles and is therefore not a flow issue.<br>
+        <br>
+        After calibrating nozzles do another purge and watch for the
+        slip error.<br>
+        <br>
+        If after calibrating nozzle and checking for feed problems the
+        slip error is still present during a purge. Check your filament
+        profile. Filament diameter can be altered to match a physical
+        measurement of the filament taken in several places along 3
+        metres of filament, your temperature settings need to be
+        suitable for the filament and if needed reset the filament
+        profile to a default as supplied with AutoMaker. Report your
+        fault via a support ticket.<br>
+        <br>
+        <i>You do not have a blocked nozzle.</i><br>
+        <br>
+        The needle valve clears the nozzle every time it closes, it
+        closes a lot. From thousands of heads and through hundreds of
+        hours of testing crazy materials at crazy temperatures we can
+        count the blocked nozzles on one hand.<br>
+      </font></p>
+    <p><font face="sans-serif"><u>Reprap expert?</u><br>
+        The common methods of resolving reprap flow issues do not apply
+        to Robox, please read above.<br>
+      </font></p>
+    <hr size="2" width="100%"><u><big><big><big><font face="sans-serif">Problems?</font></big></big></big></u><br>
+    <p><font face="sans-serif">If you have any problems or prints aren't
+        as good as you expect then please create a support ticket here <a
+          href="http://www.cel-robox.com/support/">http://www.cel-robox.com/support/</a></font></p>
+  </body>
+</html>

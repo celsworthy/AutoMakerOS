@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet ../css/AutoMaker.css?>
+
+<StackPane fx:id="progressDialog" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" styleClass="inset-panel" stylesheets="@../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.ProgressDialogController">
+  <children>
+    <VBox alignment="CENTER" fillWidth="false" prefHeight="-1.0" prefWidth="-1.0">
+      <children>
+        <Label fx:id="progressTitle" alignment="CENTER" contentDisplay="CENTER" prefWidth="-1.0" styleClass="titleText" text="Label" textAlignment="CENTER">
+          <VBox.margin>
+            <Insets top="5.0" />
+          </VBox.margin>
+        </Label>
+        <Label id="progressBarTitleText" fx:id="progressMessage" alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="-1.0" styleClass="labelText" text="This is another long message to check that the box gets bigger" textAlignment="CENTER">
+          <VBox.margin>
+            <Insets top="6.0" />
+          </VBox.margin>
+        </Label>
+        <HBox alignment="CENTER" fillHeight="false" prefHeight="-1.0" prefWidth="-1.0">
+          <children>
+            <ProgressBar fx:id="progressBar" prefWidth="252.542236328125" progress="0.0">
+              <HBox.margin>
+                <Insets left="5.0" top="6.0" />
+              </HBox.margin>
+            </ProgressBar>
+            <Label id="progressBarTitleText" fx:id="progressPercent" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.85198974609375" prefWidth="36.80741037597909" style="-fx-font-size: 12px;" styleClass="labelText" text="100%" textAlignment="CENTER" />
+          </children>
+        </HBox>
+        <Button fx:id="progressCancelButton" alignment="CENTER" cancelButton="true" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onMouseClicked="#cancelOperation" styleClass="standardButton" text="Cancel" textAlignment="CENTER" VBox.vgrow="NEVER">
+          <VBox.margin>
+            <Insets top="8.0" />
+          </VBox.margin>
+        </Button>
+      </children>
+      <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" />
+      </padding>
+    </VBox>
+  </children>
+</StackPane>

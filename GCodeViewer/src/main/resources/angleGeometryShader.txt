@@ -1,0 +1,44 @@
+#version 150
+
+layout(points) in;
+layout(line_strip, max_vertices = 4) out;
+
+uniform mat4 compositeMatrix;
+uniform vec3 lightPosition;
+
+in vec4 vColour[]; // Output from vertex shader for each vertex
+in vec4 vNormal[];
+in vec4 vDimensions[]; // x = length, y = width, z = thickness, w = 1.0.
+in vec4 vDirection[];
+in vec4 vAngles[]; // x = cos(a), y = sin(a), z = cos(b), y = sin(b)
+
+out vec4 gColour; // Output to fragment shader
+
+void main()
+{
+	if (vColour[0].a > 0.01)
+	{
+		vec4 p = gl_in[0].gl_Position;
+		vec4 aa = 2.0 * vec4(vAngles[0].y * vAngles[0].z, vAngles[0].y * vAngles[0].w, vAngles[0].x, 0.0);
+		
+		gColour = vec4(1.0, 0.0, 0.0, 1.0);
+		gl_Position = compositeMatrix * p;
+		EmitVertex();
+		gl_Position = compositeMatrix * (p + aa);
+		EmitVertex();
+		EndPrimitive();
+		
+		//if (vAngles[0].y < 0.5)
+		{
+			vec4 bb = vec4(vAngles[0].z, vAngles[0].w, 0.0, 0.0);
+
+			// Tool angle is steep or negative so display B angle.
+			gColour = vec4(0.0, 1.0, 1.0, 1.0);
+			gl_Position = compositeMatrix * p;
+			EmitVertex();
+			gl_Position = compositeMatrix * (p + bb);
+			EmitVertex();
+			EndPrimitive();
+		}
+	}
+}

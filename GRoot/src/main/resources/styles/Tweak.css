@@ -1,0 +1,67 @@
+.bed-decrement {
+    -fx-graphic:url("/image/dec-yellow.png");
+    -fx-background-color: transparent;
+}
+
+.bed-icon {
+    -fx-image:url("/image/bed-yellow.png");
+}
+.bed-increment {
+    -fx-graphic:url("/image/inc-yellow.png");
+    -fx-background-color: transparent;
+}
+
+.field-label {
+    -fx-font-size: 16pt;
+}
+
+.field-value {
+    -fx-font-weight: 200;
+    -fx-font-size: 16pt;
+}
+
+.field-suffix {
+    -fx-font-size: 16pt;
+}
+
+.m1-decrement {
+    -fx-graphic:url("/image/dec-blue.png");
+    -fx-background-color: transparent;
+}
+
+.m1-icon {
+    -fx-image:url("/image/nozzle-blue.png");
+}
+
+.m1-increment {
+    -fx-graphic:url("/image/inc-blue.png");
+    -fx-background-color: transparent;
+}
+
+.m2-decrement {
+    -fx-graphic:url("/image/dec-orange.png");
+    -fx-background-color: transparent;
+}
+
+.m2-icon {
+    -fx-image:url("/image/nozzle-orange.png");
+}
+
+.m2-increment {
+    -fx-graphic:url("/image/inc-orange.png");
+    -fx-background-color: transparent;
+}
+
+.panel-description {
+    -fx-font-size: 18pt;
+    -fx-font-style: italic;
+}
+
+.panel-material {
+    -fx-font-size: 18pt;
+}
+
+.panel-title {
+    -fx-font-weight: 200;
+    -fx-font-size: 18pt;
+}

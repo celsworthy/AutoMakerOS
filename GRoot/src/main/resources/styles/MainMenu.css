@@ -1,0 +1,30 @@
+.main-menu-button {
+    -fx-background-color: -robox-grey;
+    -fx-font-size: 20pt;
+    -fx-font-weight: 300;
+    -fx-text-fill: -robox-blue;
+}
+
+.main-menu-calibration {
+    -fx-graphic: url("/image/main-menu-calibration.png");
+}
+
+.main-menu-console {
+    -fx-graphic: url("/image/main-menu-console.png");
+}
+
+.main-menu-control {
+    -fx-graphic: url("/image/main-menu-control.png");
+}
+
+.main-menu-maintenance {
+    -fx-graphic: url("/image/main-menu-maintenance.png");
+}
+
+.main-menu-print {
+    -fx-graphic: url("/image/main-menu-print.png");
+}
+
+.main-menu-purge {
+    -fx-graphic: url("/image/main-menu-purge.png");
+}

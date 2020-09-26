@@ -1,0 +1,27 @@
+#version 150
+
+uniform mat4 transformationMatrix;
+uniform mat4 viewMatrix;
+uniform mat4 projectionMatrix;
+
+uniform vec3 lightPosition;
+uniform vec3 modelColour;
+
+in vec3 position;
+in vec3 normal;
+
+out vec3 colour;
+out vec3 surfaceNormal;
+out vec3 toLightNormal;
+
+void main(void) {
+    
+    vec4 worldPosition = transformationMatrix * vec4(position, 1.0);
+
+    gl_Position = projectionMatrix * viewMatrix * worldPosition;
+    
+    surfaceNormal = (transformationMatrix * vec4(normal, 0.0)).xyz;
+    toLightNormal = lightPosition - worldPosition.xyz;
+
+    colour = modelColour;
+}

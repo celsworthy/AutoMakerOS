@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Group xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <Polygon fill="#FFFFFF">
+    <points>
+      <Double fx:value="2" />
+      <Double fx:value="27.998" />
+      <Double fx:value="2" />
+      <Double fx:value="0" />
+      <Double fx:value="30" />
+      <Double fx:value="0" />
+    </points>
+  </Polygon>
+  <Polygon fill="#FFFFFF">
+    <points>
+      <Double fx:value="8.8" />
+      <Double fx:value="21.199" />
+      <Double fx:value="7.6" />
+      <Double fx:value="23.998" />
+      <Double fx:value="7.6" />
+      <Double fx:value="27.998" />
+      <Double fx:value="10" />
+      <Double fx:value="27.998" />
+      <Double fx:value="10" />
+      <Double fx:value="23.998" />
+    </points>
+  </Polygon>
+  <Polygon fill="#FFFFFF">
+    <points>
+      <Double fx:value="12.8" />
+      <Double fx:value="17.201" />
+      <Double fx:value="11.6" />
+      <Double fx:value="20" />
+      <Double fx:value="11.6" />
+      <Double fx:value="28" />
+      <Double fx:value="14" />
+      <Double fx:value="28" />
+      <Double fx:value="14" />
+      <Double fx:value="20" />
+    </points>
+  </Polygon>
+  <Polygon fill="#FFFFFF">
+    <points>
+      <Double fx:value="16.801" />
+      <Double fx:value="13.2" />
+      <Double fx:value="15.6" />
+      <Double fx:value="16" />
+      <Double fx:value="15.6" />
+      <Double fx:value="28" />
+      <Double fx:value="18" />
+      <Double fx:value="28" />
+      <Double fx:value="18" />
+      <Double fx:value="16" />
+    </points>
+  </Polygon>
+  <Polygon fill="#FFFFFF">
+    <points>
+      <Double fx:value="20.799" />
+      <Double fx:value="9.201" />
+      <Double fx:value="19.6" />
+      <Double fx:value="12.001" />
+      <Double fx:value="19.6" />
+      <Double fx:value="28" />
+      <Double fx:value="22" />
+      <Double fx:value="28" />
+      <Double fx:value="22" />
+      <Double fx:value="12.001" />
+    </points>
+  </Polygon>
+  <Polygon fill="#FFFFFF">
+    <points>
+      <Double fx:value="24.799" />
+      <Double fx:value="5.201" />
+      <Double fx:value="23.6" />
+      <Double fx:value="8.001" />
+      <Double fx:value="23.6" />
+      <Double fx:value="28" />
+      <Double fx:value="26" />
+      <Double fx:value="28" />
+      <Double fx:value="26" />
+      <Double fx:value="8.001" />
+    </points>
+  </Polygon>
+  <Polygon fill="#FFFFFF">
+    <points>
+      <Double fx:value="28.799" />
+      <Double fx:value="1.201" />
+      <Double fx:value="27.6" />
+      <Double fx:value="4.001" />
+      <Double fx:value="27.6" />
+      <Double fx:value="28" />
+      <Double fx:value="30" />
+      <Double fx:value="28" />
+      <Double fx:value="30" />
+      <Double fx:value="4.001" />
+    </points>
+  </Polygon>
+</Group>

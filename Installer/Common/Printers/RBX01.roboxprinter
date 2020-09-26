@@ -1,0 +1,64 @@
+{
+  "version" : 1,
+  "typeCode" : "RBX01",
+  "friendlyName" : "Robox",
+  "editions" : [ {
+    "typeCode" : "KS",
+    "friendlyName" : "Robox (Kickstarter Edition)"
+  },
+  {
+    "typeCode" : "TS",
+    "friendlyName" : "Robox (Trade Sample)"
+  },
+  {
+    "typeCode" : "BK",
+    "friendlyName" : "Robox (UK)"
+  },
+  {
+    "typeCode" : "BE",
+    "friendlyName" : "Robox (Europe)"
+  },
+  {
+    "typeCode" : "BU",
+    "friendlyName" : "Robox (USA/Canada)"
+  },
+  {
+    "typeCode" : "BA",
+    "friendlyName" : "Robox (SAA)"
+  },
+  {
+    "typeCode" : "BN",
+    "friendlyName" : "Robox (Japan)"
+  },
+  {
+    "typeCode" : "BC",
+    "friendlyName" : "Robox (China)"
+  },
+  {
+    "typeCode" : "BV",
+    "friendlyName" : "Robox (Switzerland)"
+  },
+  {
+    "typeCode" : "BW",
+    "friendlyName" : "Robox (Worldwide)"
+  },
+  {
+    "typeCode" : "BR",
+    "friendlyName" : "Robox (Korea)"
+  },
+  {
+    "typeCode" : "BI",
+    "friendlyName" : "Robox (Israel)"
+  }
+  ],
+    "compatibleHeads" : [
+	"RBX01-SM",
+	"RBX01-DM",
+	"RBX01-S2",
+	"RBXDV-S1",
+	"RBXDV-S3"
+  ],
+  "printVolumeWidth" : 210,
+  "printVolumeDepth" : 150,
+  "printVolumeHeight" : 100
+}

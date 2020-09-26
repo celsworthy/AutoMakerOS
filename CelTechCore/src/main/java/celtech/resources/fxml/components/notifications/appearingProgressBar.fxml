@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.buttons.GraphicButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root fx:id="statusBar" maxHeight="60.0" maxWidth="1.7976931348623157E308" prefHeight="60.0" prefWidth="400.0" styleClass="statusBar" type="StackPane" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox fillWidth="false" maxHeight="60.0" mouseTransparent="true" prefHeight="60.0" StackPane.alignment="TOP_LEFT">
+            <children>
+                <Label id="mainLabel" fx:id="largeProgressDescription" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" maxHeight="-Infinity" prefHeight="28.0" text="blah blah">
+                    <VBox.margin>
+                        <Insets top="12.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+            <StackPane.margin>
+                <Insets left="20.0" />
+            </StackPane.margin>
+        </VBox>
+        <VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="60.0" mouseTransparent="true" prefHeight="60.0" StackPane.alignment="TOP_CENTER">
+            <children>
+                <ProgressBar id="progBar" fx:id="progressBar" maxHeight="30.0" maxWidth="300.0" minHeight="30.0" minWidth="300.0" prefWidth="300.0" progress="0.39">
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </ProgressBar>
+            </children>
+        </VBox>
+        <HBox alignment="TOP_RIGHT" fillHeight="false" maxHeight="60.0" prefHeight="60.0" StackPane.alignment="TOP_RIGHT">
+            <children>
+                <VBox fx:id="layerData" alignment="TOP_CENTER" mouseTransparent="true" prefWidth="100">
+                    <children>
+                        <Label fx:id="layerTitle" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="smallerText" textAlignment="CENTER" />
+                        <HBox alignment="CENTER" spacing="0.0">
+                            <children>
+                                <Label fx:id="layerN" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="largerText" text="" textAlignment="CENTER" />
+                                <Label fx:id="layerOf" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="largerText" text="/" textAlignment="CENTER" />
+                                <Label fx:id="layerTotal" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="largerText" text="" textAlignment="CENTER" />
+                            </children>
+                        </HBox>
+                    </children>
+                    <HBox.margin>
+                        <Insets top="8.0" />
+                    </HBox.margin>  
+                </VBox>
+                <VBox alignment="TOP_CENTER" mouseTransparent="true">
+                    <children>
+                        <HBox alignment="CENTER" spacing="5.0">
+                            <children>
+                                <Label fx:id="largeTargetLegend" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="smallerText" text="Target Temperature:" textAlignment="CENTER" />
+                                <Label fx:id="largeTargetValue" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="smallerText" textAlignment="CENTER" />
+                            </children>
+                        </HBox>
+                        <Label fx:id="currentValue" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="largerText" textAlignment="CENTER" />
+                    </children>
+                    <HBox.margin>
+                        <Insets top="8.0" />
+                    </HBox.margin>  
+                </VBox>
+                <HBox spacing="20.0">
+                    <children>
+                        <StackPane pickOnBounds="false">
+                            <children>
+                                <GraphicButton fx:id="pauseButton" fxmlFileName="pauseButton" />
+                                <GraphicButton fx:id="resumeButton" fxmlFileName="printButton" />
+                            </children>
+                        </StackPane>
+                        <GraphicButton fx:id="cancelButton" fxmlFileName="cancelButton" />
+                    </children>
+                    <HBox.margin>
+                        <Insets top="4.0" />
+                    </HBox.margin>
+                </HBox>
+            </children>
+            <StackPane.margin>
+                <Insets right="20.0" />
+            </StackPane.margin>
+        </HBox>
+    </children>
+</fx:root>

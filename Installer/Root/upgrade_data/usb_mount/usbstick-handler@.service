@@ -1,0 +1,10 @@
+[Unit]
+Description=Mount USB sticks
+BindsTo=dev-%i.device
+After=dev-%i.device
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/cpmount /dev/%I
+ExecStop=/usr/bin/pumount /dev/%I

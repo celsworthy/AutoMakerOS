@@ -1,0 +1,112 @@
+.head-params-bold {
+    -fx-font-weight: bold;
+}
+
+.head-params-normal {
+    -fx-font-weight: 300;
+}
+
+.head-params-field {
+    -fx-font-size: 18pt;
+    -fx-font-weight: 300;
+    -fx-text-fill: black;
+    -fx-padding: 0 0 0 0;
+}
+
+.head-params-gap {
+    -fx-background-color: -robox-light-grey;
+}
+
+.head-params-head-change {
+    -fx-graphic:url("/image/head-change-white.png");
+}
+
+.head-params-head-description {
+    -fx-font-size: 14pt;
+    -fx-font-weight: 300;
+    -fx-text-fill: white;
+}
+
+.head-params-head-icon {
+}
+
+.head-params-head-title {
+    -fx-font-size: 20pt;
+    -fx-text-fill: white;
+}
+
+.head-params-data {
+    -fx-font-size: 16pt;
+	-fx-font-weight: 300;
+    -fx-text-fill: white;
+}
+
+.head-params-label {
+    -fx-font-size: 16pt;
+    -fx-font-weight: 300;
+    -fx-text-fill: -robox-blue;
+}
+
+.head-params-left-dec {
+    -fx-graphic:url("/image/dec-orange.png");
+    -fx-background-color: transparent;
+}
+
+.head-params-left-inc {
+    -fx-graphic:url("/image/inc-orange.png");
+    -fx-background-color: transparent;
+}
+
+.head-params-left-nozzle-icon {
+    -fx-background-image: url("/image/nozzle-orange.png");
+}
+
+.head-params-left-subtitle {
+    -fx-font-size: 18pt;
+	-fx-font-style: italic;
+	-fx-font-weight: 300;
+    -fx-text-fill: -robox-orange;
+}
+
+.head-params-left-title {
+    -fx-font-size: 18pt;
+	-fx-font-weight: 300;
+    -fx-text-fill: white;
+}
+
+.head-params-param-title {
+    -fx-font-size: 20pt;
+	-fx-font-weight: 300;
+    -fx-text-fill: white;
+}
+
+.head-params-right-dec {
+    -fx-graphic:url("/image/dec-blue.png");
+    -fx-background-color: transparent;
+}
+
+.head-params-right-inc {
+    -fx-graphic:url("/image/inc-blue.png");
+    -fx-background-color: transparent;
+}
+
+.head-params-right-nozzle-icon {
+    -fx-background-image: url("/image/nozzle-blue.png");
+}
+
+.head-params-right-subtitle {
+    -fx-font-size: 18pt;
+	-fx-font-style: italic;
+	-fx-font-weight: 300;
+    -fx-text-fill: -robox-blue;
+}
+
+.head-params-right-title {
+    -fx-font-size: 18pt;
+	-fx-font-weight: 300;
+    -fx-text-fill: white;
+}
+
+.head-params-separator {
+    -fx-background-color: grey;
+}

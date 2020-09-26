@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import celtech.coreUI.components.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox fx:id="mainVBox" alignment="TOP_CENTER" spacing="10" style="-fx-padding:10" styleClass="inset-panel-redux" stylesheets="@../../css/JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="celtech.coreUI.controllers.billing.SignInController">
+   <children>
+      <TextField fx:id="usernameField" promptText="%signIn.username" />
+      <TextField fx:id="emailField" promptText="%signIn.email" />
+      <Button fx:id="createAccountButton" onAction="#createAccount" mnemonicParsing="false" text="%signIn.createAccount" />
+   </children>
+</VBox>
