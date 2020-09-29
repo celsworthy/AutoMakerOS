@@ -17,16 +17,6 @@
     </properties>
     
     <distributionManagement>
-        <repository>
-            <id>celtechRepo</id>
-            <name>CELTech releases</name>
-            <url>http://54.229.31.30:8080/artifactory/libs-release-local</url>
-        </repository>        
-        <snapshotRepository>
-            <id>celtechRepo</id>
-            <name>CELTech snapshots</name>
-            <url>http://54.229.31.30:8080/artifactory/libs-snapshot-local</url>
-        </snapshotRepository>
     </distributionManagement>
 
     <organization>

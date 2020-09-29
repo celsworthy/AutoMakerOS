@@ -17,18 +17,7 @@
     </properties>
     
     <distributionManagement>
-        <repository>
-            <id>celtechRepo</id>
-            <name>CELTech releases</name>
-            <url>http://build.cel-robox.com:8080/artifactory/libs-release-local</url>
-        </repository>        
-        <snapshotRepository>
-            <id>celtechRepo</id>
-            <name>CELTech snapshots</name>
-            <url>http://build.cel-robox.com:8080/artifactory/libs-snapshot-local</url>
-        </snapshotRepository>
     </distributionManagement>
-
 
     <organization>
         <!-- Used as the 'Vendor' for JNLP generation -->
